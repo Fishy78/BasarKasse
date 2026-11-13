@@ -1,0 +1,42 @@
+
+services:
+  web:
+    build: .
+    container_name: basarkasse
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - media_data:/app/media
+      - private_media_data:/app/private_media
+      - static_data:/app/static
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: docker.io/postgres:17
+    container_name: basarkasse-db
+    environment:
+      POSTGRES_DB: basar
+      POSTGRES_USER: basar
+      POSTGRES_PASSWORD: basar-local
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U basar -d basar"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  media_data:
+  private_media_data:
+  static_data:
