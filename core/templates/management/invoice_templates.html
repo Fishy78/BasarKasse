@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Verkäuferrechnungsvorlagen" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Verkäuferrechnungsvorlagen" %}</h1>
+<p>{% translate "Die Standardvorlage ist schreibgeschützt. Über „Kopie“ kannst du eine bearbeitbare Vorlage daraus erstellen. Das globale Logo wird automatisch eingefügt." %}</p>
+<p><a class="button" href="{% url 'manage_seller_invoice_template_create' %}">{% translate "Neue Vorlage anlegen" %}</a></p>
+<form class="card" method="post">
+  {% csrf_token %}
+  <table>
+    <thead><tr><th>{% translate "Standard für neue Basare" %}</th><th>{% translate "Name" %}</th><th>{% translate "Verwendet von Basaren" %}</th><th>{% translate "Aktionen" %}</th></tr></thead>
+    <tbody>
+      {% for invoice_template in templates %}
+        <tr>
+          <td>
+            <input type="radio" name="{{ default_form.template.html_name }}" id="default-template-{{ invoice_template.pk }}"
+                   value="{{ invoice_template.pk }}" aria-label="{% blocktranslate with name=invoice_template.name %}Als Standardvorlage verwenden: {{ name }}{% endblocktranslate %}"
+                   {% if default_template_id == invoice_template.pk %}checked{% endif %}>
+          </td>
+          <td>{{ invoice_template.name }}{% if invoice_template.is_read_only %} <small>({% translate "schreibgeschützt" %})</small>{% endif %}</td>
+          <td>{{ invoice_template.bazaar_count }}</td>
+          <td>
+            {% if not invoice_template.is_read_only %}
+              <button type="submit" name="edit_template" value="{{ invoice_template.pk }}">{% translate "Bearbeiten" %}</button>
+              <button type="submit" name="delete_template" value="{{ invoice_template.pk }}">{% translate "Löschen" %}</button>
+            {% endif %}
+            <button type="submit" name="copy_template" value="{{ invoice_template.pk }}">{% translate "Kopie" %}</button>
+          </td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="4">{% translate "Es gibt noch keine Vorlagen." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% for error in default_form.template.errors %}<p role="alert">{{ error }}</p>{% endfor %}
+  <button type="submit" name="save_default" value="1">{% translate "Standardvorlage speichern" %}</button>
+</form>
+<a class="button secondary" href="{% url 'manage_settings' %}">{% translate "Zurück zu den Systemeinstellungen" %}</a>
+{% endblock %}

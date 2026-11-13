@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Cookie-Einstellungen" %}{% endblock %}
+{% block content %}
+<div class="cookie-backdrop" aria-hidden="true"></div>
+<section class="card cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-title">
+  <h1 id="cookie-title">{% translate "Notwendige Cookies" %}</h1>
+  <p>{% translate "Damit diese Seite funktioniert, ist deine Zustimmung zur Verwendung der erforderlichen Cookies notwendig. Die Seite bleibt bis zur Zustimmung gesperrt." %}</p>
+  {% include "partials/cookie_details.html" %}
+  <p>{% translate "Weitere Informationen findest du in der" %} <a href="{% url 'privacy_policy' %}">{% translate "Datenschutzerklärung" %}</a>.</p>
+  <form method="post" class="cookie-actions">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next_url }}">
+    <button type="submit">{% translate "Zustimmen und fortfahren" %}</button>
+  </form>
+</section>
+{% endblock %}

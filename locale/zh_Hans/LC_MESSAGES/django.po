@@ -1,0 +1,2846 @@
+# Deutscher Ausgangskatalog der Basar-Anwendung.
+msgid ""
+msgstr ""
+"Project-Id-Version: Basar-Kassensystem\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 15:51+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: 简体中文\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: core/admin.py:17 core/admin.py:18
+msgid "Basarverwaltung"
+msgstr "跳蚤市场管理"
+
+#: core/admin.py:19 core/templates/base.html:268
+#: core/templates/management/home.html:3 core/templates/management/home.html:5
+#: core/tests.py:215
+msgid "Verwaltung"
+msgstr "管理"
+
+#: core/admin.py:33
+msgid "Kontaktdaten"
+msgstr "联系信息"
+
+#: core/admin.py:34
+msgid "Berechtigungen"
+msgstr "权限"
+
+#: core/admin.py:35
+msgid "Zeitstempel"
+msgstr "时间戳"
+
+#: core/emailing.py:17
+msgid "Basar-Konto bestätigen"
+msgstr "确认跳蚤市场账户"
+
+#: core/emailing.py:18
+#, python-format
+msgid "Bitte bestätige deine E-Mail-Adresse über diesen Link: %(verify_url)s"
+msgstr "请通过此链接确认你的电子邮件地址：%(verify_url)s"
+
+#: core/forms.py:23
+msgid "Passwort"
+msgstr "密码"
+
+#: core/forms.py:24
+msgid "Passwort wiederholen"
+msgstr "再次输入密码"
+
+#: core/forms.py:26 core/forms.py:45
+msgid "Ich stimme der aktuellen Datenschutzerklärung zu."
+msgstr "我同意当前的隐私政策。"
+
+#: core/forms.py:52
+msgid "Die Passwörter stimmen nicht überein."
+msgstr "两次输入的密码不一致。"
+
+#: core/forms.py:88 core/templates/registration/accept_consent.html:12
+msgid "Ich stimme den Datenschutzhinweisen zu."
+msgstr "我同意隐私声明。"
+
+#: core/forms.py:107
+msgid "Der Benutzer stimmt den Datenschutzhinweisen zu."
+msgstr "用户同意隐私声明。"
+
+#: core/forms.py:113
+msgid ""
+"Bitte hinterlege zuerst die Datenschutzhinweise in den Systemeinstellungen."
+msgstr "请先在系统设置中填写隐私声明。"
+
+#: core/forms.py:150
+#, python-format
+msgid ""
+"HTML-Formatierung ist erlaubt, zum Beispiel <p>, <br>, <strong>, <em>, <ul>, "
+"<ol>, <li>, <h2> und sichere <a href=\"%(example_url)s\">Links</a>. "
+"Unsichere Elemente und Attribute werden entfernt."
+msgstr ""
+"允许使用 HTML 格式，例如 <p>、<br>、<strong>、<em>、<ul>、<ol>、<li>、<h2> 和"
+"安全的 <a href=\"%(example_url)s\">链接</a>。不安全的元素和属性将被移除。"
+
+#: core/forms.py:161
+msgid "Übliche Preise müssen als JSON-Liste angegeben werden."
+msgstr "常用价格必须以 JSON 列表的形式提供。"
+
+#: core/forms.py:167
+msgid "Jeder Schnellpreis muss eine gültige Zahl sein."
+msgstr "每个快捷价格都必须是有效数字。"
+
+#: core/forms.py:170
+msgid "Schnellpreise müssen größer als 0 und höchstens 999999,99 sein."
+msgstr "快捷价格必须大于 0，且不得超过 999999,99。"
+
+#: core/forms.py:174
+msgid "Schnellpreise dürfen höchstens zwei Nachkommastellen haben."
+msgstr "快捷价格最多只能有两位小数。"
+
+#: core/forms.py:183
+msgid "Bitte hinterlege die Standardvorgaben für Plakat-Prompts."
+msgstr "请先填写海报提示词的默认要求。"
+
+#: core/forms.py:203
+msgid ""
+"Verwende einfache Formatierung mit <b>, <i>, <u> und <br>. Verfügbare "
+"Variablen:\n"
+msgstr "请使用 <b>、<i>、<u> 和 <br> 进行简单格式化。可用变量：\n"
+
+#: core/forms.py:217
+#, python-format
+msgid "Unbekannte Vorlagenvariablen: %(names)s."
+msgstr "未知模板变量：%(names)s。"
+
+#: core/forms.py:219
+msgid "Vorlagenvariablen müssen das Format {{ variablenname }} haben."
+msgstr "模板变量必须采用 {{ variablenname }} 格式。"
+
+#: core/forms.py:227
+msgid "Standardvorlage für neue Basare"
+msgstr "新跳蚤市场的默认模板"
+
+#: core/forms.py:274
+msgid "Der Basar ist abgerechnet und kann nicht wieder geöffnet werden."
+msgstr "该跳蚤市场已完成结算，无法重新开放。"
+
+#: core/forms.py:316
+msgid "Superadministrator"
+msgstr "超级管理员"
+
+#: core/forms.py:318
+msgid "Voller Zugriff auf alle Funktionen und die Verwaltung."
+msgstr "可完全访问所有功能和管理功能。"
+
+#: core/forms.py:321 core/models.py:83
+msgid "Kassenrecht"
+msgstr "收银权限"
+
+#: core/forms.py:323
+msgid "Darf die Kasse bedienen."
+msgstr "允许操作收银台。"
+
+#: core/forms.py:326
+#| msgid "Konto anonymisiert"
+msgid "Konto aktiviert"
+msgstr "账户已激活"
+
+#: core/forms.py:328
+msgid "Inaktive Konten können sich nicht anmelden."
+msgstr "未启用的账户无法登录。"
+
+#: core/forms.py:364
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Du kannst deine eigenen Superadmin-Rechte nicht entfernen. Richte zuerst "
+"einen anderen Administrator ein."
+msgstr "您无法移除自己的超级管理员权限。请先设置另一位管理员。"
+
+#: core/forms.py:369
+msgid "Du kannst dein eigenes Konto nicht deaktivieren."
+msgstr "你不能停用自己的账户。"
+
+#: core/forms.py:386
+#| msgid "Benutzer"
+msgid "Alle Benutzer"
+msgstr "所有用户"
+
+#: core/forms.py:387 core/templates/admin/user_management_list.html:58
+#| msgid "Aktiv"
+msgid "Aktiviert"
+msgstr "已启用"
+
+#: core/forms.py:388 core/templates/admin/user_management_list.html:60
+msgid "Deaktiviert"
+msgstr "已停用"
+
+#: core/forms.py:389
+#| msgid "Kassenrecht"
+msgid "Mit Kassenrecht"
+msgstr "拥有收银权限"
+
+#: core/forms.py:390
+msgid "Administratoren"
+msgstr "管理员"
+
+#: core/forms.py:394
+msgid "Nach Name oder E-Mail suchen"
+msgstr "按姓名或电子邮件地址搜索"
+
+#: core/forms.py:396
+#| msgid "E-Mail-Adresse"
+msgid "Name, E-Mail-Adresse..."
+msgstr "姓名、电子邮件地址……"
+
+#: core/forms.py:399
+msgid "Filtern nach"
+msgstr "筛选条件"
+
+#: core/invoice_templates.py:8
+msgid "Name des Basars"
+msgstr "跳蚤市场名称"
+
+#: core/invoice_templates.py:9
+msgid "Datum des Basars"
+msgstr "跳蚤市场日期"
+
+#: core/invoice_templates.py:10 core/models.py:499 core/models.py:589
+#: core/templates/cashier/cashier.html:66
+#: core/templates/cashier/receipt_complete.html:10
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/scanner/join.html:26 core/templates/seller/dashboard.html:63
+#: core/views.py:1877
+msgid "Verkäufernummer"
+msgstr "卖家编号"
+
+#: core/invoice_templates.py:11
+msgid "Nachname des Verkäufers"
+msgstr "卖家姓氏"
+
+#: core/invoice_templates.py:12
+msgid "Vorname des Verkäufers"
+msgstr "卖家名字"
+
+#: core/invoice_templates.py:13
+msgid "Artikeltabelle mit Preis, Anzahl und rechtsbündiger Summe"
+msgstr "包含价格、数量和右对齐金额的商品表格"
+
+#: core/invoice_templates.py:14
+msgid "Tabelle mit Bruttoumsatz, Abzügen und Auszahlungsbetrag"
+msgstr "包含总销售额、扣款和应付金额的表格"
+
+#: core/invoice_templates.py:15
+msgid "Umsatz vor Abzügen"
+msgstr "扣款前销售额"
+
+#: core/invoice_templates.py:16
+msgid "Feste Verkäufergebühr"
+msgstr "卖家固定费用"
+
+#: core/invoice_templates.py:17
+msgid "Prozentualer Betreiberanteil"
+msgstr "运营方分成比例"
+
+#: core/invoice_templates.py:18
+msgid "Betrag des Betreiberanteils"
+msgstr "运营方分成金额"
+
+#: core/invoice_templates.py:19
+msgid "Auszahlungsbetrag nach Abzügen"
+msgstr "扣款后应付金额"
+
+#: core/invoice_templates.py:20 core/models.py:150
+msgid "Währung"
+msgstr "货币"
+
+#: core/invoice_templates.py:23
+msgid ""
+"<b>Verkäuferabrechnung</b><br>\n"
+"Basar: {{ basar_name }}<br>\n"
+"Datum: {{ basar_datum }}<br>\n"
+"Verkäufernummer: {{ verkaeufernummer }}<br><br>\n"
+"Verkäufer: {{ vorname }} {{ name }}<br><br>\n"
+"<b>Abrechnung</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+msgstr ""
+"<b>卖家结算单</b><br>\n"
+"跳蚤市场：{{ basar_name }}<br>\n"
+"日期：{{ basar_datum }}<br>\n"
+"卖家编号：{{ verkaeufernummer }}<br><br>\n"
+"卖家：{{ vorname }} {{ name }}<br><br>\n"
+"<b>结算</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+
+#: core/middleware.py:142
+msgid ""
+"Schließe zuerst den offenen Kassenbeleg ab oder korrigiere seine Artikel."
+msgstr "请先完成未结账单，或更正其中的商品。"
+
+#: core/models.py:41
+msgid "Eine E-Mail-Adresse ist erforderlich."
+msgstr "必须提供电子邮件地址。"
+
+#: core/models.py:53
+msgid "Ein Administrator muss is_staff und is_superuser aktiviert haben."
+msgstr "管理员必须启用 is_staff 和 is_superuser。"
+
+#: core/models.py:60
+msgid "E-Mail-Adresse"
+msgstr "电子邮件地址"
+
+#: core/models.py:61
+msgid "Vorname"
+msgstr "名字"
+
+#: core/models.py:62
+msgid "Nachname"
+msgstr "姓氏"
+
+#: core/models.py:63
+msgid "Telefonnummer"
+msgstr "电话号码"
+
+#: core/models.py:64
+msgid "Straße und Hausnummer"
+msgstr "街道和门牌号"
+
+#: core/models.py:66
+msgid "Postleitzahl"
+msgstr "邮政编码"
+
+#: core/models.py:72
+msgid "Bitte eine fünfstellige deutsche Postleitzahl eingeben."
+msgstr "请输入五位数的德国邮政编码。"
+
+#: core/models.py:76
+msgid "Ort"
+msgstr "城市"
+
+#: core/models.py:78 core/models.py:334 core/models.py:705
+msgid "Aktiv"
+msgstr "启用"
+
+#: core/models.py:80
+msgid "Wird nach Bestätigung der E-Mail-Adresse aktiviert."
+msgstr "确认电子邮件地址后启用。"
+
+#: core/models.py:85
+msgid "Kassenrecht wird durch einen Administrator vergeben."
+msgstr "收银权限由管理员授予。"
+
+#: core/models.py:88
+msgid "Konto anonymisiert"
+msgstr "账户已匿名化"
+
+#: core/models.py:98 core/models.py:99
+msgid "Benutzer"
+msgstr "用户"
+
+#: core/models.py:102
+msgid "Gelöschter Benutzer"
+msgstr "已删除的用户"
+
+#: core/models.py:107
+msgid "Klassisches einfaches Design"
+msgstr "经典简约设计"
+
+#: core/models.py:108
+msgid "Dunkelmodus"
+msgstr "深色模式"
+
+#: core/models.py:109
+msgid "Modernes Design"
+msgstr "现代设计"
+
+#: core/models.py:110
+msgid "Buntes Kindergartendesign"
+msgstr "彩色幼儿园风格"
+
+#: core/models.py:113
+msgid "Oben"
+msgstr "顶部"
+
+#: core/models.py:114
+msgid "Links"
+msgstr "左侧"
+
+#: core/models.py:115
+msgid "Rechts"
+msgstr "右侧"
+
+#: core/models.py:118
+msgid "Euro (€)"
+msgstr "欧元 (€)"
+
+#: core/models.py:119
+msgid "Schweizer Franken (CHF)"
+msgstr "瑞士法郎 (CHF)"
+
+#: core/models.py:120
+msgid "US-Dollar (USD)"
+msgstr "美元 (USD)"
+
+#: core/models.py:121
+msgid "Britisches Pfund (GBP)"
+msgstr "英镑 (GBP)"
+
+#: core/models.py:123
+msgid "Übliche Preise"
+msgstr "常用价格"
+
+#: core/models.py:125
+msgid "Seitentitel"
+msgstr "网站标题"
+
+#: core/models.py:128
+msgid "Wird in der Kopfzeile und im Seitentitel angezeigt."
+msgstr "显示在页眉和页面标题中。"
+
+#: core/models.py:131
+msgid "Logo für Verkäuferabrechnungen"
+msgstr "卖家结算单徽标"
+
+#: core/models.py:139
+msgid "Standard-Verkäuferrechnungsvorlage"
+msgstr "默认卖家账单模板"
+
+#: core/models.py:145
+msgid "Standard-Anzahl Verkäufernummern"
+msgstr "卖家编号默认数量"
+
+#: core/models.py:156
+msgid "Oberflächendesign"
+msgstr "界面设计"
+
+#: core/models.py:162
+msgid "Menüposition"
+msgstr "菜单位置"
+
+#: core/models.py:167
+msgid "Menü beim Scrollen fixieren"
+msgstr "滚动时固定菜单"
+
+#: core/models.py:169
+msgid "Standardsprache"
+msgstr "默认语言"
+
+#: core/models.py:173
+msgid "Wird für Benutzer ohne eigene Sprachauswahl verwendet."
+msgstr "用户尚未选择语言时使用。"
+
+#: core/models.py:175
+msgid "Einwilligungsversion"
+msgstr "同意书版本"
+
+#: core/models.py:176 core/models.py:316
+msgid "Einwilligungstext"
+msgstr "同意书文本"
+
+#: core/models.py:178
+msgid "Standard-Verkäufergebühr für neue Basare"
+msgstr "新跳蚤市场的默认卖家费用"
+
+#: core/models.py:185
+msgid "Standard-Betreiberanteil für neue Basare"
+msgstr "新跳蚤市场的默认运营方分成比例"
+
+#: core/models.py:192
+msgid "Standardvorgaben für Plakat-Prompts"
+msgstr "海报提示词的默认要求"
+
+#: core/models.py:194
+msgid ""
+"Erstelle ein übersichtliches, gut lesbares Basarplakat. Verwende "
+"ausschließlich die unten angegebenen Veranstaltungsdaten und erfinde keine "
+"zusätzlichen Angaben."
+msgstr ""
+"请制作一张清晰易读的跳蚤市场海报。请仅使用以下提供的活动信息，不要编造任何其"
+"他内容。"
+
+#: core/models.py:200
+msgid "E-Mail-Bestätigung erforderlich"
+msgstr "需要确认电子邮件"
+
+#: core/models.py:202
+msgid ""
+"Gilt für neue Konten. Bei Aktivierung muss der Benutzer die Adresse "
+"bestätigen."
+msgstr "适用于新账户。启用后，用户必须确认其电子邮件地址。"
+
+#: core/models.py:205
+msgid "Mindestlänge des Passworts"
+msgstr "密码最短长度"
+
+#: core/models.py:208
+msgid "Zulässiger Bereich: 8 bis 128 Zeichen."
+msgstr "允许范围：8 到 128 个字符。"
+
+#: core/models.py:211
+msgid "Großbuchstaben verlangen"
+msgstr "要求包含大写字母"
+
+#: core/models.py:215
+msgid "Kleinbuchstaben verlangen"
+msgstr "要求包含小写字母"
+
+#: core/models.py:219
+msgid "Ziffer verlangen"
+msgstr "要求包含数字"
+
+#: core/models.py:223
+msgid "Sonderzeichen verlangen"
+msgstr "要求包含特殊字符"
+
+#: core/models.py:227
+msgid "Häufige Passwörter ablehnen"
+msgstr "拒绝常见密码"
+
+#: core/models.py:231
+msgid "Reine Zahlenpasswörter ablehnen"
+msgstr "拒绝纯数字密码"
+
+#: core/models.py:235
+msgid "Ähnlichkeit zu Benutzerdaten prüfen"
+msgstr "检查与用户数据的相似度"
+
+#: core/models.py:239
+msgid "Preisschilder: Spalten pro A4"
+msgstr "价签：每张 A4 的列数"
+
+#: core/models.py:242
+msgid "Anzahl der Spalten bei der Preisschild-Generierung (2-10)."
+msgstr "生成价签时的列数（2–10）。"
+
+#: core/models.py:245
+msgid "Preisschilder: Reihen pro A4"
+msgstr "价签：每张 A4 的行数"
+
+#: core/models.py:248
+msgid "Anzahl der Reihen bei der Preisschild-Generierung (4-30)."
+msgstr "生成价签时的行数（4–30）。"
+
+#: core/models.py:252
+msgid "Globale Einstellung"
+msgstr "全局设置"
+
+#: core/models.py:253 core/models.py:256 core/models.py:292
+msgid "Globale Einstellungen"
+msgstr "全局设置"
+
+#: core/models.py:276
+msgid ""
+"Bei einer Änderung des Einwilligungstextes muss auch die Version erhöht "
+"werden."
+msgstr "更改同意书文本时，也必须更新版本号。"
+
+#: core/models.py:294
+msgid "Vorlagenname"
+msgstr "模板名称"
+
+#: core/models.py:295
+msgid "Vorlageninhalt"
+msgstr "模板内容"
+
+#: core/models.py:296
+msgid "Schreibgeschützt"
+msgstr "只读"
+
+#: core/models.py:306 core/models.py:396
+msgid "Verkäuferrechnungsvorlage"
+msgstr "卖家账单模板"
+
+#: core/models.py:307 core/templates/management/invoice_templates.html:3
+#: core/templates/management/invoice_templates.html:5
+msgid "Verkäuferrechnungsvorlagen"
+msgstr "卖家账单模板"
+
+#: core/models.py:315
+msgid "Version"
+msgstr "版本"
+
+#: core/models.py:317
+msgid "Zugestimmt am"
+msgstr "同意时间"
+
+#: core/models.py:321
+msgid "Benutzereinwilligung"
+msgstr "用户同意记录"
+
+#: core/models.py:322
+msgid "Benutzereinwilligungen"
+msgstr "用户同意记录"
+
+#: core/models.py:325
+#, python-format
+msgid "%(email)s: %(version)s"
+msgstr "%(email)s：%(version)s"
+
+#: core/models.py:333
+msgid "Geplant"
+msgstr "计划中"
+
+#: core/models.py:335 core/models.py:527
+msgid "Abgeschlossen"
+msgstr "已完成"
+
+#: core/models.py:337 core/templates/admin/user_management_list.html:40
+#: core/templates/management/invoice_templates.html:11
+msgid "Name"
+msgstr "名称"
+
+#: core/models.py:338 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Beginn"
+msgstr "开始时间"
+
+#: core/models.py:340
+msgid "Nummernvergabe möglich bis"
+msgstr "编号分配截止时间"
+
+#: core/models.py:341
+msgid "Muss am oder vor dem Beginn des Basars liegen."
+msgstr "必须在跳蚤市场开始日期当天或之前。"
+
+#: core/models.py:344 core/models.py:543
+#: core/templates/admin/user_management_list.html:42
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:199
+#: core/templates/management/bazaars.html:9
+#: core/templates/settlement_confirm.html:62
+msgid "Status"
+msgstr "状态"
+
+#: core/models.py:350
+msgid "Verkäuferanmeldung geöffnet"
+msgstr "开放卖家注册"
+
+#: core/models.py:352
+msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgstr "启用跳蚤市场时将自动关闭。"
+
+#: core/models.py:355
+msgid "Stellenzahl"
+msgstr "摊位数量"
+
+#: core/models.py:359
+msgid "Erste Nummer"
+msgstr "起始编号"
+
+#: core/models.py:361
+msgid "Maximale Anzahl Verkäufernummern"
+msgstr "卖家编号上限"
+
+#: core/models.py:366
+msgid "Nächste Belegnummer"
+msgstr "下一个账单编号"
+
+#: core/models.py:371 core/templates/seller/bazaar_details.html:45
+#: core/views.py:1827
+msgid "Verkäufergebühr"
+msgstr "卖家费用"
+
+#: core/models.py:378
+msgid "Betreiberanteil in Prozent"
+msgstr "运营方分成百分比"
+
+#: core/models.py:385
+msgid "Verkäufer sehen aktuellen Stand"
+msgstr "卖家可查看当前情况"
+
+#: core/models.py:389
+msgid "Verkäufer sehen Historie"
+msgstr "卖家可查看历史记录"
+
+#: core/models.py:400
+msgid "Plakat-Prompt"
+msgstr "海报提示词"
+
+#: core/models.py:402
+msgid "Abrechnung erstellt am"
+msgstr "结算创建时间"
+
+#: core/models.py:416 core/models.py:491 core/models.py:533 core/models.py:642
+#: core/models.py:691 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Basar"
+msgstr "跳蚤市场"
+
+#: core/models.py:417 core/templates/management/home.html:8
+msgid "Basare"
+msgstr "跳蚤市场"
+
+#: core/models.py:446
+msgid "Ein bereits abgerechneter Basar kann nicht wieder geöffnet werden."
+msgstr "已结算的跳蚤市场无法重新开放。"
+
+#: core/models.py:458
+msgid "Die Nummernvergabe darf nicht nach dem Beginn des Basars enden."
+msgstr "编号分配截止日期不得晚于跳蚤市场开始日期。"
+
+#: core/models.py:467
+msgid ""
+"Die Nummernbegrenzung darf nicht unter der bereits vergebenen Anzahl liegen."
+msgstr "编号上限不得低于已分配的编号数量。"
+
+#: core/models.py:497 core/templates/role.html:9
+msgid "Verkäufer"
+msgstr "卖家"
+
+#: core/models.py:501
+msgid "Verkäufernummer vergeben am"
+msgstr "卖家编号分配时间"
+
+#: core/models.py:517
+msgid "Verkäuferanmeldung"
+msgstr "卖家注册"
+
+#: core/models.py:518
+msgid "Verkäuferanmeldungen"
+msgstr "卖家注册"
+
+#: core/models.py:526
+msgid "Offen"
+msgstr "未结账"
+
+#: core/models.py:539 core/models.py:697
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Kassierer"
+msgstr "收银员"
+
+#: core/models.py:541 core/templates/management/bazaar_statistics.html:94
+msgid "Belegnummer"
+msgstr "账单编号"
+
+#: core/models.py:548 core/models.py:644 core/models.py:699
+msgid "Erstellt am"
+msgstr "创建时间"
+
+#: core/models.py:550
+msgid "Erster Artikel erfasst am"
+msgstr "首件商品录入时间"
+
+#: core/models.py:554
+msgid "Abgeschlossen am"
+msgstr "结账时间"
+
+#: core/models.py:561 core/models.py:583
+msgid "Kassenbeleg"
+msgstr "收银账单"
+
+#: core/models.py:562
+msgid "Kassenbelege"
+msgstr "收银账单"
+
+#: core/models.py:565
+#, python-format
+msgid "%(bazaar)s, Beleg Nr. %(number)s"
+msgstr "%(bazaar)s，账单编号 %(number)s"
+
+#: core/models.py:592 core/models.py:761 core/templates/cashier/cashier.html:66
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/scanner/join.html:35
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Preis"
+msgstr "价格"
+
+#: core/models.py:597
+msgid "Erfasst am"
+msgstr "录入时间"
+
+#: core/models.py:598 core/models.py:648
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert am"
+msgstr "撤销时间"
+
+#: core/models.py:605 core/models.py:657
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert von"
+msgstr "撤销人"
+
+#: core/models.py:613
+msgid "Belegposition"
+msgstr "账单明细项"
+
+#: core/models.py:614
+msgid "Belegpositionen"
+msgstr "账单明细项"
+
+#: core/models.py:624
+msgid "Die Verkäufernummer muss zum Basar des Kassenbelegs gehören."
+msgstr "卖家编号必须属于该收银账单所在的跳蚤市场。"
+
+#: core/models.py:630
+#, python-format
+msgid "%(seller_number)s: %(price)s %(currency)s"
+msgstr "%(seller_number)s：%(price)s %(currency)s"
+
+#: core/models.py:645
+msgid "Abrechnungsdaten"
+msgstr "结算数据"
+
+#: core/models.py:646
+msgid "PDF"
+msgstr "PDF"
+
+#: core/models.py:671 core/templates/settlement_confirm.html:3
+msgid "Basarabrechnung"
+msgstr "跳蚤市场结算"
+
+#: core/models.py:672
+msgid "Basarabrechnungen"
+msgstr "跳蚤市场结算"
+
+#: core/models.py:675
+#, python-format
+msgid "Abrechnung: %(bazaar)s"
+msgstr "结算：%(bazaar)s"
+
+#: core/models.py:682
+#| msgid "Anmelden"
+msgid "Anmeldecode"
+msgstr "登录代码"
+
+#: core/models.py:701
+msgid "Ablaufzeit"
+msgstr "过期时间"
+
+#: core/models.py:702
+msgid "Session verfällt nach 30 Minuten"
+msgstr "会话将在 30 分钟后过期"
+
+#: core/models.py:707
+#| msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgid "Wird deaktiviert, wenn Session abläuft oder manuell geschlossen wird"
+msgstr "会在会话过期或手动关闭时停用"
+
+#: core/models.py:710
+msgid "Gerätenname (optional)"
+msgstr "设备名称（可选）"
+
+#: core/models.py:713
+msgid "Z.B. 'iPhone 14 Pro'"
+msgstr "例如：‘iPhone 14 Pro’"
+
+#: core/models.py:718 core/models.py:746
+msgid "Scanner-Session"
+msgstr "扫描器会话"
+
+#: core/models.py:719
+msgid "Scanner-Sessions"
+msgstr "扫描器会话"
+
+#: core/models.py:722
+#, python-format
+msgid "Scanner: %(code)s (%(bazaar)s)"
+msgstr "扫描器：%(code)s（%(bazaar)s）"
+
+#: core/models.py:754 core/views.py:1876
+msgid "Beleg"
+msgstr "账单"
+
+#: core/models.py:757
+#| msgid "Verkäufernummer"
+msgid "Verkäufernummer-ID"
+msgstr "卖家编号标识"
+
+#: core/models.py:758
+msgid "Referenz auf SellerRegistration.id"
+msgstr "对 SellerRegistration.id 的引用"
+
+#: core/models.py:766
+msgid "Eingescannt um"
+msgstr "扫描时间"
+
+#: core/models.py:770
+#| msgid "Bearbeiten"
+msgid "Verarbeitet"
+msgstr "已处理"
+
+#: core/models.py:772
+msgid "True, wenn Artikel bereits zur Kasse hinzugefügt wurde"
+msgstr "商品已添加到收银台时为 True"
+
+#: core/models.py:775
+#| msgid "Bearbeiten"
+msgid "Verarbeitet um"
+msgstr "处理时间"
+
+#: core/models.py:782
+msgid "Scanner-Eingabe"
+msgstr "扫描器输入"
+
+#: core/models.py:783
+msgid "Scanner-Eingaben"
+msgstr "扫描器输入"
+
+#: core/models.py:786
+#, python-format
+msgid "Scan: VKNr %(reg)s, %(price)s€"
+msgstr "扫描：卖家编号 %(reg)s，%(price)s€"
+
+#: core/password_validation.py:18
+#, python-format
+msgid "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgid_plural "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgstr[0] "密码长度至少为 %(count)d 个字符。"
+
+#: core/password_validation.py:25
+msgid "Das Passwort muss mindestens einen Großbuchstaben enthalten."
+msgstr "密码必须至少包含一个大写字母。"
+
+#: core/password_validation.py:27
+msgid "Das Passwort muss mindestens einen Kleinbuchstaben enthalten."
+msgstr "密码必须至少包含一个小写字母。"
+
+#: core/password_validation.py:29
+msgid "Das Passwort muss mindestens eine Ziffer enthalten."
+msgstr "密码必须至少包含一个数字。"
+
+#: core/password_validation.py:33
+msgid "Das Passwort muss mindestens ein Sonderzeichen enthalten."
+msgstr "密码必须至少包含一个特殊字符。"
+
+#: core/password_validation.py:38
+msgid "Dieses Passwort ist zu häufig und darf nicht verwendet werden."
+msgstr "该密码过于常见，不能使用。"
+
+#: core/password_validation.py:40
+msgid "Das Passwort darf nicht ausschließlich aus Zahlen bestehen."
+msgstr "密码不能全部由数字组成。"
+
+#: core/password_validation.py:45
+msgid "Das Passwort ähnelt zu stark deinen Benutzerdaten."
+msgstr "密码与您的用户数据过于相似。"
+
+#: core/password_validation.py:55
+#, python-format
+msgid "Mindestens %(count)d Zeichen"
+msgid_plural "Mindestens %(count)d Zeichen"
+msgstr[0] "至少 %(count)d 个字符"
+
+#: core/password_validation.py:62
+msgid "ein Großbuchstabe"
+msgstr "一个大写字母"
+
+#: core/password_validation.py:64
+msgid "ein Kleinbuchstabe"
+msgstr "一个小写字母"
+
+#: core/password_validation.py:66
+msgid "eine Ziffer"
+msgstr "一个数字"
+
+#: core/password_validation.py:68
+msgid "ein Sonderzeichen"
+msgstr "一个特殊字符"
+
+#: core/password_validation.py:70
+msgid "kein häufig verwendetes Passwort"
+msgstr "不是常见密码"
+
+#: core/password_validation.py:72
+msgid "nicht ausschließlich Zahlen"
+msgstr "不全是数字"
+
+#: core/password_validation.py:74
+msgid "nicht zu ähnlich zu deinen Benutzerdaten"
+msgstr "与您的用户数据不要过于相似"
+
+#: core/password_validation.py:75
+#, python-format
+msgid "Passwortregeln: %(rules)s."
+msgstr "密码规则：%(rules)s。"
+
+#: core/permissions.py:21
+#| msgid "Abrechnung erstellen und PDF herunterladen"
+msgid "Kann Abrechnungen anzeigen und herunterladen"
+msgstr "可查看并下载结算单"
+
+#: core/templates/admin/core/user/add_form.html:7
+msgid "Datenschutzvereinbarung"
+msgstr "隐私协议"
+
+#: core/templates/admin/user_management_edit.html:4
+#: core/templates/admin/user_management_edit.html:10
+#| msgid "Benutzerdaten bearbeiten"
+msgid "Benutzer bearbeiten"
+msgstr "编辑用户"
+
+#: core/templates/admin/user_management_edit.html:26
+#| msgid "Kontaktdaten"
+msgid "Kontaktinformationen"
+msgstr "联系信息"
+
+#: core/templates/admin/user_management_edit.html:58
+msgid "E-Mail-Adressen können nicht über diese Verwaltung geändert werden."
+msgstr "无法通过此管理页面更改电子邮件地址。"
+
+#: core/templates/admin/user_management_edit.html:116
+msgid "Rechte und Status"
+msgstr "权限和状态"
+
+#: core/templates/admin/user_management_edit.html:176
+#| msgid "Speicherdauer"
+msgid "Speichern"
+msgstr "保存"
+
+#: core/templates/admin/user_management_edit.html:179
+#: core/templates/management/invoice_template_form.html:18
+#: core/templates/seller/price_labels.html:16
+#: core/templates/seller/price_labels.html:61
+msgid "Abbrechen"
+msgstr "取消"
+
+#: core/templates/admin/user_management_edit.html:183
+msgid "Benutzer wirklich löschen?"
+msgstr "确定要删除用户吗？"
+
+#: core/templates/admin/user_management_edit.html:186
+#| msgid "Konto löschen"
+msgid "Benutzer löschen"
+msgstr "删除用户"
+
+#: core/templates/admin/user_management_edit.html:195
+#, python-format
+msgid ""
+"\n"
+"                    Benutzer erstellt: "
+"%(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n"
+"                    "
+msgstr "\n                    用户创建时间：%(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n                    "
+
+#: core/templates/admin/user_management_edit.html:200
+#, python-format
+msgid ""
+"\n"
+"                        Letzte Anmeldung: "
+"%(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n"
+"                        "
+msgstr "\n                        上次登录时间：%(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n                        "
+
+#: core/templates/admin/user_management_edit.html:205
+msgid "Hat sich noch nicht angemeldet."
+msgstr "尚未登录。"
+
+#: core/templates/admin/user_management_list.html:4
+#: core/templates/admin/user_management_list.html:8
+#: core/templates/management/home.html:13
+#| msgid "Benutzereinwilligung"
+msgid "Benutzerverwaltung"
+msgstr "用户管理"
+
+#: core/templates/admin/user_management_list.html:9
+msgid "Verwalte Benutzer und vergebe Rechte ohne Django Admin zu nutzen."
+msgstr "无需使用 Django 管理后台即可管理用户和分配权限。"
+
+#: core/templates/admin/user_management_list.html:21
+msgid "Filtern"
+msgstr "筛选"
+
+#: core/templates/admin/user_management_list.html:41
+#| msgid "E-Mail-Adresse"
+msgid "E-Mail"
+msgstr "电子邮件"
+
+#: core/templates/admin/user_management_list.html:43
+#| msgid "Rechts"
+msgid "Rechte"
+msgstr "权限"
+
+#: core/templates/admin/user_management_list.html:44
+#: core/templates/management/invoice_templates.html:11
+msgid "Aktionen"
+msgstr "操作"
+
+#: core/templates/admin/user_management_list.html:65
+msgid "Administrator"
+msgstr "管理员"
+
+#: core/templates/admin/user_management_list.html:68
+#: core/templates/base.html:266 core/templates/cashier/cashier.html:3
+#: core/templates/cashier/cashier.html:7 core/templates/role.html:16
+msgid "Kasse"
+msgstr "收银台"
+
+#: core/templates/admin/user_management_list.html:71
+#| msgid "Standardsprache"
+msgid "Standard"
+msgstr "默认"
+
+#: core/templates/admin/user_management_list.html:76
+#: core/templates/management/bazaars.html:18
+#: core/templates/management/invoice_templates.html:24
+msgid "Bearbeiten"
+msgstr "编辑"
+
+#: core/templates/admin/user_management_list.html:83
+#| msgid "Link erneut senden"
+msgid "Keine Benutzer gefunden."
+msgstr "未找到用户。"
+
+#: core/templates/admin/user_management_list.html:93
+#| msgid "Zur Verwaltung"
+msgid "Zurück zur Verwaltung"
+msgstr "返回管理页面"
+
+#: core/templates/base.html:4
+msgid "Menü öffnen"
+msgstr "打开菜单"
+
+#: core/templates/base.html:5
+msgid "Menü schließen"
+msgstr "关闭菜单"
+
+#: core/templates/base.html:259
+msgid "Menü"
+msgstr "菜单"
+
+#: core/templates/base.html:265 core/templates/seller/dashboard.html:3
+#: core/templates/seller/dashboard.html:5
+msgid "Verkäuferbereich"
+msgstr "卖家专区"
+
+#: core/templates/base.html:269 core/templates/management/bazaars.html:19
+#: core/templates/management/home.html:23
+#: core/templates/management/statistics.html:3
+#: core/templates/management/statistics.html:5
+msgid "Statistiken"
+msgstr "统计数据"
+
+#: core/templates/base.html:271
+msgid "Django-Admin"
+msgstr "Django 管理后台"
+
+#: core/templates/base.html:275 core/templates/base.html:278
+msgid "Abmelden"
+msgstr "退出登录"
+
+#: core/templates/base.html:282 core/templates/home.html:9
+#: core/templates/registration/login.html:3
+#: core/templates/registration/login.html:6
+#: core/templates/registration/login.html:13
+msgid "Anmelden"
+msgstr "登录"
+
+#: core/templates/base.html:283 core/templates/home.html:8
+#: core/templates/registration/register.html:4
+#: core/templates/registration/register.html:7
+#: core/templates/registration/register.html:20
+msgid "Konto erstellen"
+msgstr "创建账户"
+
+#: core/templates/base.html:285 core/templates/cookie_consent.html:10
+#: core/templates/privacy_policy.html:4 core/templates/privacy_policy.html:6
+msgid "Datenschutzerklärung"
+msgstr "隐私政策"
+
+#: core/templates/base.html:289
+msgid "Sprache"
+msgstr "语言"
+
+#: core/templates/cashier/cashier.html:5
+msgid "Diesen Artikel wirklich stornieren?"
+msgstr "确定要撤销此商品吗？"
+
+#: core/templates/cashier/cashier.html:6
+msgid ""
+"Beleg wirklich abschließen? Danach können keine Artikel mehr korrigiert "
+"werden."
+msgstr "确定要完成此账单吗？完成后将无法再更正商品。"
+
+#: core/templates/cashier/cashier.html:14
+#, python-format
+msgid "Beleg %(number)s"
+msgstr "账单 %(number)s"
+
+#: core/templates/cashier/cashier.html:16
+msgid "Verkäufernummer wählen"
+msgstr "选择卖家编号"
+
+#: core/templates/cashier/cashier.html:28
+msgid "Für diesen Basar sind noch keine Verkäufernummern vergeben."
+msgstr "此跳蚤市场尚未分配任何卖家编号。"
+
+#: core/templates/cashier/cashier.html:33
+#, python-format
+msgid "Artikel für %(number)s"
+msgstr "%(number)s 的商品"
+
+#: core/templates/cashier/cashier.html:43
+msgid "Es sind keine Schnellpreise eingerichtet."
+msgstr "尚未设置快捷价格。"
+
+#: core/templates/cashier/cashier.html:49
+msgid "Anderen Preis eingeben"
+msgstr "输入其他价格"
+
+#: core/templates/cashier/cashier.html:51 core/templates/scanner/join.html:46
+msgid "Artikel hinzufügen"
+msgstr "添加商品"
+
+#: core/templates/cashier/cashier.html:54
+msgid "Wähle die Verkäufernummer, danach kannst du die Artikelpreise erfassen."
+msgstr "选择卖家编号后，即可录入商品价格。"
+
+#: core/templates/cashier/cashier.html:58
+#: core/templates/cashier/cashier.html:60
+msgid "Kassenzettel"
+msgstr "收银小票"
+
+#: core/templates/cashier/cashier.html:61
+#, python-format
+msgid "%(name)s · Beleg %(number)s"
+msgstr "%(name)s · 账单 %(number)s"
+
+#: core/templates/cashier/cashier.html:63
+#, python-format
+msgid "Erster Artikel erfasst: %(date)s"
+msgstr "首件商品录入时间：%(date)s"
+
+#: core/templates/cashier/cashier.html:70
+#: core/templates/management/bazaar_receipt_detail.html:18
+#: core/templates/settlement_confirm.html:68
+msgid "Storniert"
+msgstr "已撤销"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Artikel stornieren"
+msgstr "撤销商品"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Storno"
+msgstr "撤销"
+
+#: core/templates/cashier/cashier.html:83
+msgid "Noch keine Artikel erfasst."
+msgstr "尚未录入商品。"
+
+#: core/templates/cashier/cashier.html:89
+msgid "Gesamt:"
+msgstr "总计："
+
+#: core/templates/cashier/cashier.html:94
+msgid "Beleg abschließen"
+msgstr "完成账单"
+
+#: core/templates/cashier/cashier.html:103
+msgid "Basar für diese Kasse auswählen"
+msgstr "为此收银台选择跳蚤市场"
+
+#: core/templates/cashier/cashier.html:111
+msgid "Zurzeit ist kein Basar aktiv."
+msgstr "目前没有正在进行的跳蚤市场。"
+
+#: core/templates/cashier/cashier.html:163
+msgid "QR-Scanner"
+msgstr "二维码扫描器"
+
+#: core/templates/cashier/cashier.html:165
+msgid "Laden..."
+msgstr "加载中…"
+
+#: core/templates/cashier/cashier.html:168
+msgid "Stop"
+msgstr "停止"
+
+#: core/templates/cashier/cashier.html:169
+#| msgid "Menü schließen"
+msgid "Schließen"
+msgstr "关闭"
+
+#: core/templates/cashier/cashier.html:179
+msgid "Scanner"
+msgstr "扫描器"
+
+#: core/templates/cashier/cashier.html:276
+msgid "Scanner aktiv"
+msgstr "扫描器已启用"
+
+#: core/templates/cashier/cashier.html:278
+msgid "QR-Code zum Scannen"
+msgstr "用于扫描的二维码"
+
+#: core/templates/cashier/cashier.html:281
+msgid "Scannen Sie einen QR-Code mit dem Handy-Scanner"
+msgstr "请使用手机扫描器扫描二维码"
+
+#: core/templates/cashier/cashier.html:300
+msgid "Fehler:"
+msgstr "错误："
+
+#: core/templates/cashier/cashier.html:436
+msgid "Fehler beim Hinzufügen des Artikels"
+msgstr "添加商品时出错"
+
+#: core/templates/cashier/cashier.html:445
+msgid "VKNr"
+msgstr "卖家编号"
+
+#: core/templates/cashier/cashier.html:448
+msgid "Fehler beim Scannen"
+msgstr "扫描时出错"
+
+#: core/templates/cashier/receipt_complete.html:3
+#: core/templates/cashier/receipt_complete.html:6
+msgid "Verkauf abgeschlossen"
+msgstr "销售已完成"
+
+#: core/templates/cashier/receipt_complete.html:7
+#, python-format
+msgid "Beleg %(number)s · %(name)s"
+msgstr "账单 %(number)s · %(name)s"
+
+#: core/templates/cashier/receipt_complete.html:8
+msgid "Umsatz je Verkäufernummer"
+msgstr "各卖家编号的销售额"
+
+#: core/templates/cashier/receipt_complete.html:10
+msgid "Zwischensumme"
+msgstr "小计"
+
+#: core/templates/cashier/receipt_complete.html:17
+msgid "Gesamtbetrag:"
+msgstr "总金额："
+
+#: core/templates/cashier/receipt_complete.html:18
+msgid "Kein Ausdruck erforderlich."
+msgstr "无需打印。"
+
+#: core/templates/cashier/receipt_complete.html:21
+msgid "Nächsten Verkauf erfassen"
+msgstr "录入下一笔销售"
+
+#: core/templates/cookie_consent.html:3
+msgid "Cookie-Einstellungen"
+msgstr "Cookie 设置"
+
+#: core/templates/cookie_consent.html:7
+msgid "Notwendige Cookies"
+msgstr "必要 Cookie"
+
+#: core/templates/cookie_consent.html:8
+msgid ""
+"Damit diese Seite funktioniert, ist deine Zustimmung zur Verwendung der "
+"erforderlichen Cookies notwendig. Die Seite bleibt bis zur Zustimmung "
+"gesperrt."
+msgstr ""
+"此网站正常运行需要你同意使用必要的 Cookie。在你同意之前，页面将保持锁定。"
+
+#: core/templates/cookie_consent.html:10
+msgid "Weitere Informationen findest du in der"
+msgstr "更多信息请参阅"
+
+#: core/templates/cookie_consent.html:14
+msgid "Zustimmen und fortfahren"
+msgstr "同意并继续"
+
+#: core/templates/home.html:7
+msgid "Verkäufernummern verwalten, Verkäufe erfassen und Basare abrechnen."
+msgstr "管理卖家编号、录入销售并结算跳蚤市场。"
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+msgid "Basar bearbeiten"
+msgstr "编辑跳蚤市场"
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+#: core/templates/management/bazaars.html:6
+msgid "Neuen Basar anlegen"
+msgstr "新建跳蚤市场"
+
+#: core/templates/management/bazaar_form.html:17
+msgid "Basar speichern"
+msgstr "保存跳蚤市场"
+
+#: core/templates/management/bazaar_form.html:18
+msgid "Zurück zur Liste"
+msgstr "返回列表"
+
+#: core/templates/management/bazaar_form.html:22
+#: core/templates/management/bazaar_form.html:23
+msgid "Prompt für die Plakatgenerierung"
+msgstr "海报生成提示词"
+
+#: core/templates/management/bazaar_form.html:27
+msgid "Abrechnung öffnen"
+msgstr "打开结算"
+
+#: core/templates/management/bazaar_receipt_detail.html:3
+#, python-format
+msgid "Rechnung %(number)s · %(name)s"
+msgstr "账单 %(number)s · %(name)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:5
+#, python-format
+msgid "Rechnung %(number)s"
+msgstr "账单 %(number)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:7
+msgid "Basar:"
+msgstr "跳蚤市场："
+
+#: core/templates/management/bazaar_receipt_detail.html:8
+msgid "Zeit:"
+msgstr "时间："
+
+#: core/templates/management/bazaar_receipt_detail.html:9
+msgid "Status:"
+msgstr "状态："
+
+#: core/templates/management/bazaar_receipt_detail.html:10
+msgid "Positionen"
+msgstr "明细项"
+
+#: core/templates/management/bazaar_receipt_detail.html:12
+msgid "Erfasst"
+msgstr "录入时间"
+
+#: core/templates/management/bazaar_receipt_detail.html:18
+msgid "Gültig"
+msgstr "有效"
+
+#: core/templates/management/bazaar_receipt_detail.html:22
+msgid "Der Beleg enthält noch keine Artikelpositionen."
+msgstr "此账单尚无商品明细。"
+
+#: core/templates/management/bazaar_receipt_detail.html:26
+msgid "Gesamtbetrag"
+msgstr "总金额"
+
+#: core/templates/management/bazaar_receipt_detail.html:30
+msgid ""
+"Der Beleg ist noch offen; der angezeigte Gesamtbetrag ist ein Zwischenstand."
+msgstr "此账单尚未结账；显示的总金额为当前暂计金额。"
+
+#: core/templates/management/bazaar_receipt_detail.html:33
+msgid "Zurück zu den Basarstatistiken"
+msgstr "返回跳蚤市场统计"
+
+#: core/templates/management/bazaar_statistics.html:3
+#: core/templates/management/bazaar_statistics.html:16
+#, python-format
+msgid "Statistiken: %(name)s"
+msgstr "统计数据：%(name)s"
+
+#: core/templates/management/bazaar_statistics.html:5
+msgid "Verkaufte Artikel je 5 Minuten"
+msgstr "每 5 分钟售出的商品"
+
+#: core/templates/management/bazaar_statistics.html:6
+msgid "Artikelanzahl"
+msgstr "商品数量"
+
+#: core/templates/management/bazaar_statistics.html:7
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+msgid "Artikel"
+msgstr "商品"
+
+#: core/templates/management/bazaar_statistics.html:8
+msgid "Bruttoumsatz je 5 Minuten"
+msgstr "每 5 分钟总销售额"
+
+#: core/templates/management/bazaar_statistics.html:9
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+#: core/templates/seller/bazaar_details.html:44 core/views.py:1823
+msgid "Bruttoumsatz"
+msgstr "总销售额"
+
+#: core/templates/management/bazaar_statistics.html:10
+msgid "Neue Verkäufernummern je Tag"
+msgstr "每天新增的卖家编号"
+
+#: core/templates/management/bazaar_statistics.html:11
+msgid "Neue Nummern pro Tag"
+msgstr "每天新增编号数"
+
+#: core/templates/management/bazaar_statistics.html:12
+msgid "Neue Nummern"
+msgstr "新增编号"
+
+#: core/templates/management/bazaar_statistics.html:13
+msgid "Kumulierte Vergabe der Verkäufernummern"
+msgstr "卖家编号累计分配情况"
+
+#: core/templates/management/bazaar_statistics.html:14
+msgid "Nummern gesamt"
+msgstr "编号总数"
+
+#: core/templates/management/bazaar_statistics.html:15
+msgid "Gesamtzahl"
+msgstr "总数"
+
+#: core/templates/management/bazaar_statistics.html:17
+msgid ""
+"Verwendet werden abgeschlossene Belege und nicht stornierte "
+"Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr "统计基于已结账的账单和未撤销的商品明细。收入为销售总额。"
+
+#: core/templates/management/bazaar_statistics.html:60
+msgid "Verkäufe und Einnahmen je 5 Minuten"
+msgstr "每 5 分钟的销售和收入"
+
+#: core/templates/management/bazaar_statistics.html:61
+msgid ""
+"Der Zeitstempel eines abgeschlossenen Belegs bestimmt das 5-Minuten-"
+"Intervall. Eine tatsächliche Öffnungs- oder Endzeit wird derzeit nicht "
+"erfasst."
+msgstr ""
+"已结账账单的时间戳决定其所属的 5 分钟区间。目前不会记录实际营业开始或结束时"
+"间。"
+
+#: core/templates/management/bazaar_statistics.html:63
+#: core/templates/seller/bazaar_details.html:25
+msgid "Verkaufte Artikel"
+msgstr "售出商品"
+
+#: core/templates/management/bazaar_statistics.html:65
+msgid "Einnahmen"
+msgstr "收入"
+
+#: core/templates/management/bazaar_statistics.html:70
+#: core/templates/management/bazaar_statistics.html:124
+msgid "Für diesen Basar liegen noch keine abgeschlossenen Verkäufe vor."
+msgstr "此跳蚤市场尚无已完成的销售。"
+
+#: core/templates/management/bazaar_statistics.html:75
+msgid "Verlauf der Verkäufernummernvergabe"
+msgstr "卖家编号分配记录"
+
+#: core/templates/management/bazaar_statistics.html:77
+msgid "Je Tag: neu vergebene Nummern und kumulierte Gesamtzahl."
+msgstr "按天显示：新分配的编号和累计总数。"
+
+#: core/templates/management/bazaar_statistics.html:78
+msgid "Neu vergebene Nummern"
+msgstr "新分配的编号"
+
+#: core/templates/management/bazaar_statistics.html:80
+msgid "Kumulierte Nummern"
+msgstr "累计编号数"
+
+#: core/templates/management/bazaar_statistics.html:83
+msgid ""
+"Für die vorhandenen Verkäufernummern liegen keine Vergabezeitpunkte vor."
+msgstr "现有卖家编号没有记录分配时间。"
+
+#: core/templates/management/bazaar_statistics.html:86
+#, python-format
+msgid ""
+"%(count)s ältere Nummern haben keinen gespeicherten Vergabezeitpunkt und "
+"können im Verlauf nicht berücksichtigt werden."
+msgstr "有 %(count)s 个较早分配的编号没有保存分配时间，无法纳入记录。"
+
+#: core/templates/management/bazaar_statistics.html:91
+msgid "Top-Rechnungen nach Betrag"
+msgstr "金额最高的账单"
+
+#: core/templates/management/bazaar_statistics.html:92
+msgid "Die Rangliste umfasst die zehn höchsten abgeschlossenen Belege."
+msgstr "此排行榜包含金额最高的十张已结账账单。"
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Zeit"
+msgstr "时间"
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Betrag"
+msgstr "金额"
+
+#: core/templates/management/bazaar_statistics.html:101
+msgid "Rechnung ansehen"
+msgstr "查看账单"
+
+#: core/templates/management/bazaar_statistics.html:104
+#: core/templates/management/bazaar_statistics.html:169
+#: core/templates/management/bazaar_statistics.html:189
+msgid "Es gibt noch keine abgeschlossenen Rechnungen."
+msgstr "尚无已结账账单。"
+
+#: core/templates/management/bazaar_statistics.html:111
+msgid "Top-Verkäufer"
+msgstr "销售额最高的卖家"
+
+#: core/templates/management/bazaar_statistics.html:112
+msgid "Sortiert nach Bruttoumsatz; bei Gleichstand nach Artikelanzahl."
+msgstr "按总销售额排序；销售额相同时按商品数量排序。"
+
+#: core/templates/management/bazaar_statistics.html:114
+msgid "Platz"
+msgstr "排名"
+
+#: core/templates/management/bazaar_statistics.html:131
+msgid "Durchschnitt, Median und Stornoquote"
+msgstr "平均值、中位数和撤销率"
+
+#: core/templates/management/bazaar_statistics.html:135
+msgid "Durchschnitt pro abgeschlossener Rechnung"
+msgstr "每张已结账账单的平均值"
+
+#: core/templates/management/bazaar_statistics.html:139
+msgid "Median pro abgeschlossener Rechnung"
+msgstr "每张已结账账单的中位数"
+
+#: core/templates/management/bazaar_statistics.html:144
+msgid ""
+"Für Durchschnitt und Median gibt es noch keine abgeschlossenen Rechnungen."
+msgstr "目前没有已结账账单，无法计算平均值和中位数。"
+
+#: core/templates/management/bazaar_statistics.html:146
+msgid "Stornoquote"
+msgstr "撤销率"
+
+#: core/templates/management/bazaar_statistics.html:148
+#, python-format
+msgid "%(cancelled)s von %(total)s Positionen storniert (%(rate)s %%)."
+msgstr "已撤销 %(total)s 个明细项中的 %(cancelled)s 个（%(rate)s %%）。"
+
+#: core/templates/management/bazaar_statistics.html:149
+msgid "Enthalten sind Positionen aus offenen und abgeschlossenen Belegen."
+msgstr "包含未结账和已结账账单中的明细项。"
+
+#: core/templates/management/bazaar_statistics.html:151
+msgid "Für diesen Basar wurden noch keine Artikelpositionen erfasst."
+msgstr "此跳蚤市场尚未录入任何商品明细。"
+
+#: core/templates/management/bazaar_statistics.html:156
+msgid "Stoßzeiten"
+msgstr "高峰时段"
+
+#: core/templates/management/bazaar_statistics.html:157
+msgid ""
+"Die fünf 5-Minuten-Intervalle mit den meisten abgeschlossenen Rechnungen. "
+"Bei Gleichstand entscheidet der Umsatz."
+msgstr "已结账账单数量最多的五个 5 分钟区间。数量相同时按销售额排序。"
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Intervall"
+msgstr "时间区间"
+
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Rechnungen"
+msgstr "账单"
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Umsatz"
+msgstr "销售额"
+
+#: core/templates/management/bazaar_statistics.html:176
+msgid "Umsatz je Kassierer"
+msgstr "各收银员的销售额"
+
+#: core/templates/management/bazaar_statistics.html:177
+msgid ""
+"Bruttoumsatz aus abgeschlossenen Belegen; stornierte Positionen sind "
+"ausgenommen."
+msgstr "已结账账单的总销售额；不包括已撤销的明细项。"
+
+#: core/templates/management/bazaar_statistics.html:196
+msgid "Alle Rechnungen"
+msgstr "所有账单"
+
+#: core/templates/management/bazaar_statistics.html:197
+msgid ""
+"Offene Belege werden mit dem aktuellen Zwischenbetrag angezeigt und "
+"aktualisieren sich beim erneuten Aufruf."
+msgstr "未结账账单显示当前暂计金额，并会在重新打开页面时更新。"
+
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Nummer"
+msgstr "编号"
+
+#: core/templates/management/bazaar_statistics.html:207
+#: core/templates/management/statistics.html:87
+#: core/templates/seller/dashboard.html:24
+msgid "Details"
+msgstr "详情"
+
+#: core/templates/management/bazaar_statistics.html:210
+msgid "Für diesen Basar gibt es noch keine Rechnungen."
+msgstr "此跳蚤市场尚无账单。"
+
+#: core/templates/management/bazaar_statistics.html:217
+msgid "Neuere"
+msgstr "更新"
+
+#: core/templates/management/bazaar_statistics.html:219
+#, python-format
+msgid "Seite %(current)s von %(total)s"
+msgstr "第 %(current)s 页，共 %(total)s 页"
+
+#: core/templates/management/bazaar_statistics.html:221
+msgid "Ältere"
+msgstr "更早"
+
+#: core/templates/management/bazaar_statistics.html:227
+msgid "Zur Statistikübersicht"
+msgstr "返回统计概览"
+
+#: core/templates/management/bazaars.html:3
+#: core/templates/management/bazaars.html:5
+#: core/templates/management/home.html:10
+msgid "Basare verwalten"
+msgstr "管理跳蚤市场"
+
+#: core/templates/management/bazaars.html:9
+msgid "Nummernvergabe bis"
+msgstr "编号分配截止日期"
+
+#: core/templates/management/bazaars.html:21
+msgid "Abrechnung"
+msgstr "结算"
+
+#: core/templates/management/bazaars.html:26
+#: core/templates/management/statistics.html:90
+msgid "Es wurden noch keine Basare angelegt."
+msgstr "尚未创建任何跳蚤市场。"
+
+#: core/templates/management/bazaars.html:31
+#: core/templates/management/settings.html:19
+msgid "Zur Verwaltung"
+msgstr "返回管理"
+
+#: core/templates/management/home.html:9
+msgid "Basare anlegen und verwalten."
+msgstr "创建和管理跳蚤市场。"
+
+#: core/templates/management/home.html:14
+msgid "Benutzer verwalten und Rechte vergeben."
+msgstr "管理用户并分配权限。"
+
+#: core/templates/management/home.html:15
+#| msgid "Basare verwalten"
+msgid "Benutzer verwalten"
+msgstr "管理用户"
+
+#: core/templates/management/home.html:18
+#: core/templates/management/settings.html:3
+#: core/templates/management/settings.html:5
+msgid "Systemeinstellungen"
+msgstr "系统设置"
+
+#: core/templates/management/home.html:19
+msgid "Globale Preise, Gebühren, Einwilligung und Plakatvorgaben."
+msgstr "全局价格、费用、同意书和海报要求。"
+
+#: core/templates/management/home.html:20
+msgid "Einstellungen bearbeiten"
+msgstr "编辑设置"
+
+#: core/templates/management/home.html:24
+msgid "Verkaufsentwicklung, Einnahmen und Preisverteilung der Basare."
+msgstr "跳蚤市场的销售趋势、收入和价格分布。"
+
+#: core/templates/management/home.html:25
+msgid "Statistiken ansehen"
+msgstr "查看统计数据"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Vorlage bearbeiten"
+msgstr "编辑模板"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Neue Vorlage"
+msgstr "新建模板"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage bearbeiten"
+msgstr "编辑卖家账单模板"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage anlegen"
+msgstr "创建卖家账单模板"
+
+#: core/templates/management/invoice_template_form.html:17
+msgid "Vorlage speichern"
+msgstr "保存模板"
+
+#: core/templates/management/invoice_templates.html:6
+msgid ""
+"Die Standardvorlage ist schreibgeschützt. Über „Kopie“ kannst du eine "
+"bearbeitbare Vorlage daraus erstellen. Das globale Logo wird automatisch "
+"eingefügt."
+msgstr "默认模板为只读。你可以通过“复制”创建可编辑的副本。全局徽标会自动插入。"
+
+#: core/templates/management/invoice_templates.html:7
+msgid "Neue Vorlage anlegen"
+msgstr "新建模板"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Standard für neue Basare"
+msgstr "新跳蚤市场的默认模板"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Verwendet von Basaren"
+msgstr "使用该模板的跳蚤市场"
+
+#: core/templates/management/invoice_templates.html:17
+#, python-format
+msgid "Als Standardvorlage verwenden: %(name)s"
+msgstr "设为默认模板：%(name)s"
+
+#: core/templates/management/invoice_templates.html:20
+msgid "schreibgeschützt"
+msgstr "只读"
+
+#: core/templates/management/invoice_templates.html:25
+msgid "Löschen"
+msgstr "删除"
+
+#: core/templates/management/invoice_templates.html:27 core/views.py:796
+#: core/views.py:800
+msgid "Kopie"
+msgstr "复制"
+
+#: core/templates/management/invoice_templates.html:31
+msgid "Es gibt noch keine Vorlagen."
+msgstr "尚无模板。"
+
+#: core/templates/management/invoice_templates.html:36
+msgid "Standardvorlage speichern"
+msgstr "保存默认模板"
+
+#: core/templates/management/invoice_templates.html:38
+msgid "Zurück zu den Systemeinstellungen"
+msgstr "返回系统设置"
+
+#: core/templates/management/settings.html:17
+msgid "Einstellungen speichern"
+msgstr "保存设置"
+
+#: core/templates/management/settings.html:18
+msgid "Verkäuferrechnungsvorlagen verwalten"
+msgstr "管理卖家账单模板"
+
+#: core/templates/management/settings.html:23
+msgid "Aktuelles Verkäuferabrechnungslogo"
+msgstr "当前卖家结算单徽标"
+
+#: core/templates/management/settings.html:24
+msgid "Aktuelles globales Logo"
+msgstr "当前全局徽标"
+
+#: core/templates/management/statistics.html:6
+msgid ""
+"Berücksichtigt werden ausschließlich abgeschlossene Belege und nicht "
+"stornierte Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr "仅统计已结账的账单和未撤销的商品明细。收入为销售总额。"
+
+#: core/templates/management/statistics.html:20
+msgid "Verkaufsentwicklung je Basar"
+msgstr "各跳蚤市场的销售趋势"
+
+#: core/templates/management/statistics.html:26
+#, python-format
+msgid "%(label)s: %(value)s Artikel"
+msgstr "%(label)s：%(value)s 件商品"
+
+#: core/templates/management/statistics.html:29
+#: core/templates/management/statistics.html:67
+#, python-format
+msgid "%(value)s Artikel"
+msgstr "%(value)s 件商品"
+
+#: core/templates/management/statistics.html:34
+#: core/templates/management/statistics.html:53
+msgid "Es gibt noch keine Basare."
+msgstr "尚无跳蚤市场。"
+
+#: core/templates/management/statistics.html:39
+msgid "Einnahmeentwicklung je Basar"
+msgstr "各跳蚤市场的收入趋势"
+
+#: core/templates/management/statistics.html:45
+#, python-format
+msgid "%(label)s: %(value)s %(currency)s"
+msgstr "%(label)s：%(value)s %(currency)s"
+
+#: core/templates/management/statistics.html:58
+msgid "Artikelverteilung nach Preis"
+msgstr "按价格划分的商品分布"
+
+#: core/templates/management/statistics.html:64
+#, python-format
+msgid "%(value)s Artikel zu %(label)s"
+msgstr "%(label)s 价格的 %(value)s 件商品"
+
+#: core/templates/management/statistics.html:72
+msgid "Es wurden noch keine Artikel verkauft."
+msgstr "尚未售出任何商品。"
+
+#: core/templates/management/statistics.html:77
+msgid "Basarübersicht"
+msgstr "跳蚤市场概览"
+
+#: core/templates/partials/cookie_details.html:2
+msgid ""
+"Wir verwenden keine Cookies von Drittanbietern und binden keine Analyse- "
+"oder Werbedienste ein. Folgende technisch notwendige Cookies werden für den "
+"Betrieb genutzt:"
+msgstr ""
+"我们不使用第三方 Cookie，也不接入分析或广告服务。运行本网站需要使用以下技术性"
+"必要 Cookie："
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Cookie"
+msgstr "Cookie"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Inhalt und Zweck"
+msgstr "内容和用途"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Speicherdauer"
+msgstr "存储期限"
+
+#: core/templates/partials/cookie_details.html:9
+msgid "Signierter Zustimmungsstatus. Enthält keine persönlichen Angaben."
+msgstr "已签名的同意状态。不包含个人信息。"
+
+#: core/templates/partials/cookie_details.html:10
+msgid "1 Jahr"
+msgstr "1 年"
+
+#: core/templates/partials/cookie_details.html:14
+msgid ""
+"Zufällige Sitzungskennung. Anmeldestatus, ausgewählte Rolle und "
+"Kassenkontext werden serverseitig gespeichert, nicht im Cookie."
+msgstr ""
+"随机会话标识。登录状态、所选角色和收银台上下文保存在服务器端，而非 Cookie "
+"中。"
+
+#: core/templates/partials/cookie_details.html:15
+msgid "Bis zu 2 Wochen; die Sitzung kann vorher beendet werden"
+msgstr "最多 2 周；会话可能提前结束"
+
+#: core/templates/partials/cookie_details.html:19
+msgid ""
+"Zufälliger Sicherheitstoken zum Schutz vor gefälschten "
+"Formularübermittlungen. Keine Profil- oder Verkaufsdaten."
+msgstr "用于防止伪造表单提交的随机安全令牌。不包含个人资料或销售数据。"
+
+#: core/templates/partials/cookie_details.html:20
+msgid "Bis zu 1 Jahr"
+msgstr "最多 1 年"
+
+#: core/templates/partials/cookie_details.html:24
+msgid ""
+"Signierte, kurzfristige Statusmeldungen der Anwendung, zum Beispiel Hinweise "
+"nach dem Speichern. Bei größeren Meldungen werden sie serverseitig in der "
+"Sitzung abgelegt."
+msgstr ""
+"应用程序签名的短期状态消息，例如保存后的提示。较长的消息会存储在服务器端会话"
+"中。"
+
+#: core/templates/partials/cookie_details.html:25
+msgid "Kurzzeitig, in der Regel bis zum nächsten Seitenaufruf"
+msgstr "短期，通常持续到下一次页面访问"
+
+#: core/templates/partials/cookie_details.html:29
+msgid "Ausgewählte Sprache der Benutzeroberfläche."
+msgstr "已选择的界面语言。"
+
+#: core/templates/partials/cookie_details.html:30
+msgid "Bis zum Schließen des Browsers (Sitzungscookie)"
+msgstr "直到关闭浏览器（会话 Cookie）"
+
+#: core/templates/partials/cookie_details.html:35
+msgid ""
+"Ohne Zustimmung können die Anmelde-, Verkäufer- und Kassenfunktionen nicht "
+"verwendet werden. Du kannst die Zustimmung jederzeit durch Löschen der "
+"Cookies im Browser zurücknehmen; beim nächsten Besuch fragen wir erneut."
+msgstr ""
+"未同意时，无法使用登录、卖家和收银功能。你可以随时通过删除浏览器中的 Cookie "
+"撤回同意；下次访问时我们会再次询问。"
+
+#: core/templates/partials/line_chart.html:2
+#, python-format
+msgid "%(title)s. Y-Achse: %(axis)s"
+msgstr "%(title)s。Y 轴：%(axis)s"
+
+#: core/templates/partials/line_chart.html:31
+#: core/templates/partials/line_chart.html:32
+#, python-format
+msgid "%(label)s: %(value)s"
+msgstr "%(label)s：%(value)s"
+
+#: core/templates/partials/line_chart.html:41
+msgid "Messwerte als Tabelle anzeigen"
+msgstr "以表格形式显示测量值"
+
+#: core/templates/partials/line_chart.html:44
+msgid "Zeitpunkt"
+msgstr "时间点"
+
+#: core/templates/partials/line_chart.html:49
+msgid "Keine Messwerte vorhanden."
+msgstr "没有可用的测量值。"
+
+#: core/templates/privacy_policy.html:12
+msgid "Die Datenschutzerklärung ist derzeit noch nicht hinterlegt."
+msgstr "尚未提供隐私政策。"
+
+#: core/templates/privacy_policy.html:15
+msgid "Cookies und ähnliche Technologien"
+msgstr "Cookie 和类似技术"
+
+#: core/templates/registration/accept_consent.html:4
+msgid "Datenschutzhinweise bestätigen"
+msgstr "确认隐私声明"
+
+#: core/templates/registration/accept_consent.html:7
+msgid "Aktualisierte Datenschutzhinweise"
+msgstr "已更新的隐私声明"
+
+#: core/templates/registration/accept_consent.html:9
+#, python-format
+msgid "Version %(version)s"
+msgstr "版本 %(version)s"
+
+#: core/templates/registration/accept_consent.html:14
+msgid "Zustimmung speichern"
+msgstr "保存同意"
+
+#: core/templates/registration/account_deleted.html:3
+#: core/templates/registration/account_deleted.html:6
+msgid "Konto gelöscht"
+msgstr "账户已删除"
+
+#: core/templates/registration/account_deleted.html:7
+msgid ""
+"Dein Konto und deine persönlichen Daten wurden gelöscht. Verkäufernummern, "
+"Belege und Basarabrechnungen bleiben anonymisiert erhalten."
+msgstr ""
+"你的账户和个人信息已删除。卖家编号、账单和跳蚤市场结算记录将以匿名形式保留。"
+
+#: core/templates/registration/account_deleted.html:8
+#: core/templates/scanner/error.html:12
+msgid "Zur Startseite"
+msgstr "返回首页"
+
+#: core/templates/registration/login.html:15
+msgid "Passwort vergessen?"
+msgstr "忘记密码？"
+
+#: core/templates/registration/password_reset_complete.html:3
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Passwort geändert"
+msgstr "密码已更改"
+
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Jetzt anmelden"
+msgstr "立即登录"
+
+#: core/templates/registration/password_reset_confirm.html:3
+msgid "Neues Passwort"
+msgstr "新密码"
+
+#: core/templates/registration/password_reset_confirm.html:6
+msgid "Neues Passwort festlegen"
+msgstr "设置新密码"
+
+#: core/templates/registration/password_reset_confirm.html:14
+msgid "Passwort speichern"
+msgstr "保存密码"
+
+#: core/templates/registration/password_reset_confirm.html:16
+msgid "Der Link ist ungültig oder abgelaufen."
+msgstr "链接无效或已过期。"
+
+#: core/templates/registration/password_reset_done.html:3
+msgid "E-Mail versendet"
+msgstr "电子邮件已发送"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid "Prüfe dein Postfach"
+msgstr "请检查收件箱"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid ""
+"Falls ein aktives Konto zu der Adresse existiert, wurde ein Link versendet."
+msgstr "如果存在与此地址关联的有效账户，重置链接已发送。"
+
+#: core/templates/registration/password_reset_email.html:2
+msgid ""
+"Du erhältst diese E-Mail, weil ein Passwort-Reset für dein Basar-Konto "
+"angefordert wurde."
+msgstr "有人请求重置你的跳蚤市场账户密码，因此你收到了这封电子邮件。"
+
+#: core/templates/registration/password_reset_email.html:4
+msgid "Öffne diesen Link, um ein neues Passwort festzulegen:"
+msgstr "打开此链接以设置新密码："
+
+#: core/templates/registration/password_reset_email.html:7
+msgid ""
+"Wenn du den Reset nicht angefordert hast, kannst du diese Nachricht "
+"ignorieren."
+msgstr "如果你没有请求重置密码，可以忽略此消息。"
+
+#: core/templates/registration/password_reset_form.html:3
+#: core/templates/registration/password_reset_form.html:6
+msgid "Passwort zurücksetzen"
+msgstr "重置密码"
+
+#: core/templates/registration/password_reset_form.html:7
+msgid "Wir senden einen Link an die E-Mail-Adresse deines Kontos."
+msgstr "我们会向你的账户电子邮件地址发送链接。"
+
+#: core/templates/registration/password_reset_form.html:14
+msgid "Link senden"
+msgstr "发送链接"
+
+#: core/templates/registration/profile_edit.html:3
+#: core/templates/registration/profile_edit.html:6
+msgid "Benutzerdaten bearbeiten"
+msgstr "编辑用户信息"
+
+#: core/templates/registration/profile_edit.html:7
+msgid "E-Mail-Adresse für die Anmeldung:"
+msgstr "登录电子邮件地址："
+
+#: core/templates/registration/profile_edit.html:17
+msgid "Daten speichern"
+msgstr "保存信息"
+
+#: core/templates/registration/profile_edit.html:21
+#: core/templates/registration/profile_edit.html:29
+msgid "Konto löschen"
+msgstr "删除账户"
+
+#: core/templates/registration/profile_edit.html:22
+msgid ""
+"Deine persönlichen Daten und Einwilligungen werden gelöscht. "
+"Verkäufernummern, Belege und Abrechnungen bleiben anonymisiert erhalten, "
+"damit die Basarsummen korrekt bleiben."
+msgstr ""
+"你的个人信息和同意记录将被删除。卖家编号、账单和结算记录将以匿名形式保留，以"
+"确保跳蚤市场的汇总金额正确。"
+
+#: core/templates/registration/profile_edit.html:27
+msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgstr "我希望永久删除我的账户。"
+
+#: core/templates/registration/register.html:8
+msgid ""
+"Vorname, Nachname, E-Mail-Adresse und Passwort sind erforderlich. "
+"Telefonnummer und Adresse sind freiwillig."
+msgstr "名字、姓氏、电子邮件地址和密码为必填项。电话号码和地址为选填项。"
+
+#: core/templates/registration/register.html:18
+msgid "Konto erstellen und Bestätigungslink anfordern"
+msgstr "创建账户并请求确认链接"
+
+#: core/templates/registration/registration_sent.html:3
+#: core/templates/registration/registration_sent.html:6
+msgid "E-Mail bestätigen"
+msgstr "确认电子邮件"
+
+#: core/templates/registration/registration_sent.html:8
+msgid "Der Bestätigungslink ist abgelaufen. Fordere einen neuen Link an."
+msgstr "确认链接已过期。请请求新的链接。"
+
+#: core/templates/registration/registration_sent.html:10
+msgid ""
+"Falls ein unbestätigtes Konto zu der Adresse existiert, wurde ein neuer Link "
+"versendet."
+msgstr "如果存在与此地址关联的未确认账户，新的链接已发送。"
+
+#: core/templates/registration/registration_sent.html:12
+#, python-format
+msgid "Ein Bestätigungslink wurde an %(email)s gesendet."
+msgstr "确认链接已发送至 %(email)s。"
+
+#: core/templates/registration/registration_sent.html:16
+msgid "Bestätigungslink erneut senden"
+msgstr "重新发送确认链接"
+
+#: core/templates/registration/registration_sent.html:18
+msgid "Link erneut senden"
+msgstr "重新发送链接"
+
+#: core/templates/role.html:3
+msgid "Ansicht auswählen"
+msgstr "选择视图"
+
+#: core/templates/role.html:5
+msgid "Wie möchtest du fortfahren?"
+msgstr "你想如何继续？"
+
+#: core/templates/role.html:10
+msgid "Verkäufernummern, aktuelle Basare und Historie ansehen."
+msgstr "查看卖家编号、当前跳蚤市场和历史记录。"
+
+#: core/templates/role.html:11
+msgid "Verkäuferansicht öffnen"
+msgstr "打开卖家视图"
+
+#: core/templates/role.html:17
+msgid "Verkäufe an einer Kasse erfassen."
+msgstr "在收银台录入销售。"
+
+#: core/templates/role.html:18
+msgid "Kassenansicht öffnen"
+msgstr "打开收银视图"
+
+#: core/templates/scanner/error.html:4
+msgid "Scanner Fehler"
+msgstr "扫描器错误"
+
+#: core/templates/scanner/error.html:9
+msgid "Scanner-Fehler"
+msgstr "扫描器错误"
+
+#: core/templates/scanner/error.html:11
+msgid "Bitte öffnen Sie in der Kasse eine neue Scanner-Session."
+msgstr "请在收银台中开启新的扫描器会话。"
+
+#: core/templates/scanner/join.html:4
+msgid "QR-Code Scanner"
+msgstr "二维码扫描器"
+
+#: core/templates/scanner/join.html:7
+msgid "Basar-QR-Code Scanner"
+msgstr "跳蚤市场二维码扫描器"
+
+#: core/templates/scanner/join.html:8
+#, python-format
+msgid "Verbunden mit: <strong>%(bazaar)s</strong>"
+msgstr "已连接至：<strong>%(bazaar)s</strong>"
+
+#: core/templates/scanner/join.html:11
+msgid "Scanbereit"
+msgstr "准备扫描"
+
+#: core/templates/scanner/join.html:13
+msgid "Initialisiere Kamera..."
+msgstr "正在初始化相机…"
+
+#: core/templates/scanner/join.html:24
+#| msgid "Anderen Preis eingeben"
+msgid "Oder manuell eingeben:"
+msgstr "或手动输入："
+
+#: core/templates/scanner/join.html:29
+#| msgid "Verkäufernummer wählen"
+msgid "Verkäufernummer auswählen"
+msgstr "选择卖家编号"
+
+#: core/templates/scanner/join.html:41
+msgid "z. B. 2,50"
+msgstr "例如 2,50"
+
+#: core/templates/scanner/join.html:52 core/templates/scanner/join.html:262
+#| msgid "Artikel für %(number)s"
+msgid "Artikel übernommen"
+msgstr "商品已接收"
+
+#: core/templates/scanner/join.html:133 core/templates/scanner/join.html:210
+msgid "Scanbereit – halte QR-Code zur Kamera"
+msgstr "准备扫描 — 请将二维码对准相机"
+
+#: core/templates/scanner/join.html:144
+msgid "Kamera-Zugriff wurde verweigert"
+msgstr "相机访问权限被拒绝"
+
+#: core/templates/scanner/join.html:146
+msgid "Keine Kamera gefunden"
+msgstr "未找到相机"
+
+#: core/templates/scanner/join.html:202
+msgid "QR-Code erkannt – nächster Scan in 3 Sekunden"
+msgstr "已识别二维码 — 3 秒后进行下一次扫描"
+
+#: core/templates/scanner/join.html:258
+msgid "Fehler beim Übertragen"
+msgstr "传输时出错"
+
+#: core/templates/scanner/join.html:298
+#| msgid "Bitte wähle einen gültigen Basar."
+msgid "Bitte wähle eine Verkäufernummer aus."
+msgstr "请选择一个卖家编号。"
+
+#: core/templates/scanner/join.html:302 core/views.py:1314
+msgid "Bitte gib einen gültigen Preis ein."
+msgstr "请输入有效价格。"
+
+#: core/templates/seller/bazaar_details.html:3
+#, python-format
+msgid "Verkaufsdetails – %(name)s"
+msgstr "销售详情 – %(name)s"
+
+#: core/templates/seller/bazaar_details.html:6
+#: core/templates/seller/dashboard.html:13
+msgid "Verkäufernummer:"
+msgstr "卖家编号："
+
+#: core/templates/seller/bazaar_details.html:7
+#: core/templates/seller/dashboard.html:38
+msgid "Basartag:"
+msgstr "跳蚤市场日期："
+
+#: core/templates/seller/bazaar_details.html:12
+#: core/templates/seller/price_labels.html:3
+#: core/templates/seller/price_labels.html:5
+msgid "Preisschilder generieren"
+msgstr "生成价签"
+
+#: core/templates/seller/bazaar_details.html:18
+msgid "Endgültige Abrechnung"
+msgstr "最终结算"
+
+#: core/templates/seller/bazaar_details.html:20
+msgid "Derzeitige Auszahlung"
+msgstr "当前应付款"
+
+#: core/templates/seller/bazaar_details.html:21
+msgid "Vorläufiger Stand. Berücksichtigt sind abgeschlossene Kassenbelege."
+msgstr "暂计金额。仅包含已结账的收银账单。"
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/seller/price_labels.html:40
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Anzahl"
+msgstr "数量"
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32
+msgid "Summe"
+msgstr "合计"
+
+#: core/templates/seller/bazaar_details.html:36
+msgid "Bisher wurden keine Artikel verkauft."
+msgstr "目前尚未售出任何商品。"
+
+#: core/templates/seller/bazaar_details.html:47 core/views.py:1831
+#, python-format
+msgid "Betreiberanteil (%(percent)s %%)"
+msgstr "运营方分成（%(percent)s %%）"
+
+#: core/templates/seller/bazaar_details.html:50 core/views.py:1835
+msgid "Auszahlung"
+msgstr "应付款"
+
+#: core/templates/seller/bazaar_details.html:54
+msgid "Zurück zum Verkäuferbereich"
+msgstr "返回卖家专区"
+
+#: core/templates/seller/dashboard.html:8
+msgid "Aktuelle Verkäufernummern"
+msgstr "当前卖家编号"
+
+#: core/templates/seller/dashboard.html:16
+#: core/templates/seller/dashboard.html:64
+msgid "Erfasster Umsatz:"
+msgstr "已录入销售额："
+
+#: core/templates/seller/dashboard.html:21
+msgid "Preisschilder"
+msgstr "价签"
+
+#: core/templates/seller/dashboard.html:33
+msgid "Für einen Basar anmelden"
+msgstr "报名参加跳蚤市场"
+
+#: core/templates/seller/dashboard.html:42
+msgid "Frühere Verkäufernummer wiederverwenden (optional)"
+msgstr "重新使用以前的卖家编号（可选）"
+
+#: core/templates/seller/dashboard.html:44
+msgid "Neue Nummer vergeben"
+msgstr "分配新编号"
+
+#: core/templates/seller/dashboard.html:50
+msgid "Verkäufernummer anfordern"
+msgstr "申请卖家编号"
+
+#: core/templates/seller/dashboard.html:58
+msgid "Basarhistorie"
+msgstr "跳蚤市场历史记录"
+
+#: core/templates/seller/dashboard.html:65
+msgid "Abrechnung ansehen"
+msgstr "查看结算单"
+
+#: core/templates/seller/dashboard.html:71
+msgid "Noch keine aktuellen oder vergangenen Basare vorhanden."
+msgstr "目前没有当前或过往的跳蚤市场。"
+
+#: core/templates/seller/price_labels.html:6
+#, python-format
+msgid ""
+"Basar: <strong>%(name)s</strong> · Verkäufernummer: <strong>%(number)s</"
+"strong>"
+msgstr "跳蚤市场：<strong>%(name)s</strong> · 卖家编号：<strong>%(number)s</strong>"
+
+#: core/templates/seller/price_labels.html:9
+msgid "Wählen Sie die gewünschten Preise und Mengen"
+msgstr "选择所需的价格和数量"
+
+#: core/templates/seller/price_labels.html:19
+#: core/templates/seller/price_labels.html:64
+#: core/templates/settlement_confirm.html:10
+#: core/templates/settlement_confirm.html:74
+#: core/templates/settlement_confirm.html:76
+msgid "PDF herunterladen"
+msgstr "下载 PDF"
+
+#: core/templates/seller/price_labels.html:24
+msgid "Verfügbare Preise:"
+msgstr "可用价格："
+
+#: core/templates/seller/price_labels.html:43
+msgid "Schilder"
+msgstr "标签"
+
+#: core/templates/seller/price_labels.html:49
+msgid "Keine Preise in den Systemeinstellungen konfiguriert."
+msgstr "系统设置中未配置价格。"
+
+#: core/templates/seller/price_labels.html:55
+#, python-format
+msgid ""
+"Jedes A4-Blatt enthält %(cols)s×%(rows)s = %(total)s kleine Preisschilder. "
+"Mit 3mm Rand um jeden QR-Code und raumfüllendem Preis. Perfekt zum "
+"Ausschneiden und Aufkleben!"
+msgstr "每张 A4 纸包含 %(cols)s×%(rows)s = %(total)s 张小价签。每个二维码周围留有 3 毫米边距，价格占满可用空间。非常适合裁剪和粘贴！"
+
+#: core/templates/settlement_confirm.html:6
+#, python-format
+msgid "Abrechnung: %(name)s"
+msgstr "结算：%(name)s"
+
+#: core/templates/settlement_confirm.html:7
+msgid ""
+"Der Basar ist abgeschlossen. Die Abrechnung gruppiert Verkäufe nach Preis "
+"und Anzahl; jede Verkäufernummer beginnt auf einer neuen Seite."
+msgstr ""
+"跳蚤市场已结束。结算单按价格和数量汇总销售；每个卖家编号从新的一页开始。"
+
+#: core/templates/settlement_confirm.html:9
+#, python-format
+msgid "Die Abrechnung wurde am %(created_at)s erstellt."
+msgstr "结算单创建于 %(created_at)s。"
+
+#: core/templates/settlement_confirm.html:14
+msgid ""
+"Beim Stornieren bleibt diese Abrechnung als Historie erhalten. Danach kann "
+"der Basar wieder aktiviert und später neu abgerechnet werden."
+msgstr ""
+"撤销后，此结算单仍会作为历史记录保留。之后可以重新启用跳蚤市场，并在稍后重新"
+"结算。"
+
+#: core/templates/settlement_confirm.html:15
+msgid "Abrechnung stornieren"
+msgstr "撤销结算"
+
+#: core/templates/settlement_confirm.html:19
+msgid ""
+"Beim Erstellen werden der konfigurierte Festbetrag pro Verkäufer und der "
+"prozentuale Betreiberanteil am Bruttoumsatz verwendet."
+msgstr ""
+"创建结算时将使用设定的每位卖家固定费用，以及按总销售额计算的运营方分成比例。"
+
+#: core/templates/settlement_confirm.html:22
+msgid "Abrechnung erstellen und PDF herunterladen"
+msgstr "创建结算并下载 PDF"
+
+#: core/templates/settlement_confirm.html:25
+msgid ""
+"Eine neue Abrechnung kann erst nach Abschluss des Basars erstellt werden."
+msgstr "跳蚤市场结束后才能创建新的结算单。"
+
+#: core/templates/settlement_confirm.html:29
+msgid "Gesamtabrechnung"
+msgstr "总账单"
+
+#: core/templates/settlement_confirm.html:30
+msgid ""
+"Alle abgeschlossenen Verkäufe zusammengefasst nach Artikelpreis. Die Tabelle "
+"hilft beim Abgleichen und Zählen der Verkaufseinnahmen."
+msgstr "按商品价格汇总所有已完成的销售。此表可用于核对和统计销售收入。"
+
+#: core/templates/settlement_confirm.html:41 core/views.py:1688
+msgid "Keine abgeschlossenen Verkäufe."
+msgstr "没有已完成的销售。"
+
+#: core/templates/settlement_confirm.html:47 core/views.py:1709
+msgid "Gesamtumsatz"
+msgstr "总销售额"
+
+#: core/templates/settlement_confirm.html:48 core/views.py:1711
+msgid "Verkäufergebühren"
+msgstr "卖家费用"
+
+#: core/templates/settlement_confirm.html:49 core/views.py:1715
+msgid "Betreiberanteile"
+msgstr "运营方分成"
+
+#: core/templates/settlement_confirm.html:50 core/views.py:1718
+msgid "Gesamtauszahlung"
+msgstr "总应付款"
+
+#: core/templates/settlement_confirm.html:54
+#, python-format
+msgid ""
+"Nicht abgeschlossene Kassenbelege (%(count)s) sind in diesen Summen nicht "
+"enthalten und werden im PDF separat ausgewiesen."
+msgstr "未结账的收银账单（%(count)s）不计入这些总额，并会在 PDF 中单独列出。"
+
+#: core/templates/settlement_confirm.html:59
+msgid "Abrechnungshistorie"
+msgstr "结算历史"
+
+#: core/templates/settlement_confirm.html:62
+msgid "Erstellt"
+msgstr "创建时间"
+
+#: core/templates/settlement_confirm.html:68
+msgid "Aktuell"
+msgstr "当前"
+
+#: core/views.py:116 core/views.py:228
+msgid "Die Datenschutzhinweise sind noch nicht eingerichtet."
+msgstr "尚未设置隐私声明。"
+
+#: core/views.py:131
+msgid "Dein Konto wurde erstellt."
+msgstr "你的账户已创建。"
+
+#: core/views.py:154
+msgid ""
+"Zu viele Verifizierungsanfragen. Bitte versuche es in einer Stunde erneut."
+msgstr "验证请求过多。请在一小时后重试。"
+
+#: core/views.py:192
+msgid "Dein Konto wurde bestätigt."
+msgstr "你的账户已确认。"
+
+#: core/views.py:220
+msgid "Für diese Ansicht hast du keine Berechtigung."
+msgstr "你没有权限访问此视图。"
+
+#: core/views.py:237
+msgid "Deine Zustimmung wurde gespeichert."
+msgstr "已保存你的同意。"
+
+#: core/views.py:247
+msgid "Deine Benutzerdaten wurden gespeichert."
+msgstr "已保存你的用户信息。"
+
+#: core/views.py:256
+msgid "Bitte bestätige zuerst die Löschung deines Kontos."
+msgstr "请先确认删除账户。"
+
+#: core/views.py:281
+msgid ""
+"Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst einen "
+"weiteren Superadmin ein."
+msgstr "无法删除最后一位启用状态的超级管理员。请先设置另一位超级管理员。"
+
+#: core/views.py:782
+msgid "Systemeinstellungen wurden gespeichert."
+msgstr "系统设置已保存。"
+
+#: core/views.py:808
+msgid "Kopie wurde angelegt und kann bearbeitet werden."
+msgstr "已创建副本，可以编辑。"
+
+#: core/views.py:834
+msgid "Standardvorlage für neue Basare wurde gespeichert."
+msgstr "已保存新跳蚤市场的默认模板。"
+
+#: core/views.py:864
+msgid "Verkäuferrechnungsvorlage wurde gespeichert."
+msgstr "卖家账单模板已保存。"
+
+#: core/views.py:887
+msgid "Die schreibgeschützte Standardvorlage kann nicht gelöscht werden."
+msgstr "无法删除只读的默认模板。"
+
+#: core/views.py:891
+msgid "Bitte wähle zuerst eine andere Standardvorlage für neue Basare."
+msgstr "请先为新跳蚤市场选择其他默认模板。"
+
+#: core/views.py:894
+msgid "Mindestens eine Verkäuferrechnungsvorlage muss vorhanden sein."
+msgstr "至少必须保留一个卖家账单模板。"
+
+#: core/views.py:898
+msgid "Verkäuferrechnungsvorlage wurde gelöscht."
+msgstr "卖家账单模板已删除。"
+
+#: core/views.py:902
+msgid "Diese Vorlage wird noch von mindestens einem Basar verwendet."
+msgstr "至少有一个跳蚤市场仍在使用此模板。"
+
+#: core/views.py:921
+msgid "Erstelle ein Plakat für folgende Veranstaltung."
+msgstr "请为以下活动制作海报。"
+
+#: core/views.py:923
+msgid "Standardvorgaben:"
+msgstr "默认要求："
+
+#: core/views.py:926
+msgid "Veranstaltungsdaten:"
+msgstr "活动信息："
+
+#: core/views.py:927
+#, python-format
+msgid "Basar: %(name)s"
+msgstr "跳蚤市场：%(name)s"
+
+#: core/views.py:928
+#, python-format
+msgid "Beginn: %(starts_at)s"
+msgstr "开始时间：%(starts_at)s"
+
+#: core/views.py:935
+#, python-format
+msgid "Nummernvergabe möglich bis: %(deadline)s"
+msgstr "编号分配截止时间：%(deadline)s"
+
+#: core/views.py:954
+msgid "Basar wurde gespeichert."
+msgstr "跳蚤市场已保存。"
+
+#: core/views.py:1131
+msgid "Bitte stimme zuerst den Datenschutzhinweisen zu."
+msgstr "请先同意隐私声明。"
+
+#: core/views.py:1143
+msgid "Die Nummernvergabe für diesen Basar ist geschlossen."
+msgstr "此跳蚤市场的编号分配已关闭。"
+
+#: core/views.py:1147
+msgid "Du bist für diesen Basar bereits registriert."
+msgstr "你已报名参加此跳蚤市场。"
+
+#: core/views.py:1153
+msgid "Für diesen Basar sind bereits alle Verkäufernummern vergeben."
+msgstr "此跳蚤市场的所有卖家编号均已分配。"
+
+#: core/views.py:1175
+msgid "Diese Verkäufernummer ist für den Basar bereits vergeben."
+msgstr "此卖家编号已分配给该跳蚤市场。"
+
+#: core/views.py:1193
+msgid ""
+"Die Verkäufernummer konnte nicht vergeben werden. Bitte erneut versuchen."
+msgstr "无法分配卖家编号。请重试。"
+
+#: core/views.py:1198
+#, python-format
+msgid "Deine Verkäufernummer lautet %(number)s."
+msgstr "你的卖家编号是 %(number)s。"
+
+#: core/views.py:1216
+msgid "Bitte wähle einen gültigen Basar."
+msgstr "请选择有效的跳蚤市场。"
+
+#: core/views.py:1331 core/views.py:1425
+msgid "Dieser Basar ist nicht mehr aktiv."
+msgstr "此跳蚤市场已不再启用。"
+
+#: core/views.py:1357
+msgid "Scanner-Eingabe stimmt nicht mit dem Artikel überein."
+msgstr "扫描器输入与商品不一致。"
+
+#: core/views.py:1428
+msgid "Ein leerer Beleg kann nicht abgeschlossen werden."
+msgstr "空账单无法完成结账。"
+
+#: core/views.py:1475
+msgid "Bitte wähle zuerst einen Basar aus."
+msgstr "请先选择跳蚤市场。"
+
+#: core/views.py:1488
+msgid "Der ausgewählte Basar ist nicht mehr aktiv."
+msgstr "所选跳蚤市场已不再启用。"
+
+#: core/views.py:1644
+#, python-format
+msgid "Abrechnung - %(name)s"
+msgstr "结算 - %(name)s"
+
+#: core/views.py:1664
+#, python-format
+msgid "Gesamtabrechnung: %(name)s"
+msgstr "总账单：%(name)s"
+
+#: core/views.py:1671
+msgid ""
+"Zusammenfassung aller abgeschlossenen Verkäufe; offene Belege sind separat "
+"aufgeführt."
+msgstr "所有已完成销售的摘要；未结账单独列出。"
+
+#: core/views.py:1676 core/views.py:1794
+#, python-format
+msgid "Summe (%(currency)s)"
+msgstr "合计（%(currency)s）"
+
+#: core/views.py:1806
+msgid "Keine verkauften Artikel."
+msgstr "没有售出的商品。"
+
+#: core/views.py:1863
+msgid "Nicht abgerechnete, offene Kassenbelege"
+msgstr "尚未结算的未结账收银账单"
+
+#: core/views.py:1869
+msgid "Diese Belege sind nicht in den Verkäuferabrechnungen enthalten."
+msgstr "这些账单未包含在卖家结算单中。"
+
+#: core/views.py:1875
+msgid "Erste Erfassung"
+msgstr "首次录入"
+
+#: core/views.py:1878
+msgid "Erfasster Betrag"
+msgstr "已录入金额"
+
+#: core/views.py:1977 core/views.py:2008
+msgid "Die Abrechnung ist erst nach Abschluss des Basars verfügbar."
+msgstr "跳蚤市场结束后才能查看结算。"
+
+#: core/views.py:2023 core/views.py:2071
+#, python-format
+msgid "basar-%(id)s-abrechnung.pdf"
+msgstr "basar-%(id)s-abrechnung.pdf"
+
+#: core/views.py:2042
+msgid "Für diesen Basar gibt es keine aktive Abrechnung zum Stornieren."
+msgstr "此跳蚤市场没有可撤销的有效结算单。"
+
+#: core/views.py:2052
+msgid ""
+"Die Abrechnung wurde storniert. Der Basar kann jetzt wieder aktiviert werden."
+msgstr "结算已撤销。现在可以重新启用跳蚤市场。"
+
+#: core/views.py:2087
+#, python-format
+msgid "basar-%(bazaar_id)s-abrechnung-%(settlement_id)s.pdf"
+msgstr "basar-%(bazaar_id)s-abrechnung-%(settlement_id)s.pdf"
+
+#: core/views.py:2154
+#, python-format
+msgid "Benutzer '%(name)s' wurde aktualisiert."
+msgstr "用户“%(name)s”已更新。"
+
+#: core/views.py:2181
+#| msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgid "Du kannst dein eigenes Konto nicht löschen."
+msgstr "您无法删除自己的账户。"
+
+#: core/views.py:2193
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Der letzte aktive Administrator kann nicht gelöscht werden. Richte zuerst "
+"einen weiteren Administrator ein."
+msgstr "无法删除最后一位启用状态的管理员。请先设置另一位管理员。"
+
+#: core/views.py:2221
+msgid "Benutzer wurde anonymisiert und gelöscht."
+msgstr "用户已匿名化并删除。"
+
+#: core/views.py:2238
+msgid "Kein Basar ausgewählt"
+msgstr "未选择跳蚤市场"
+
+#: core/views.py:2243
+#| msgid "Dieser Basar ist nicht mehr aktiv."
+msgid "Basar nicht gefunden oder nicht mehr aktiv"
+msgstr "未找到跳蚤市场，或其已不再启用"
+
+#: core/views.py:2265
+msgid "QR-Code-Bibliothek nicht installiert"
+msgstr "未安装二维码库"
+
+#: core/views.py:2302
+msgid "Ungültiger Code"
+msgstr "无效代码"
+
+#: core/views.py:2307
+msgid "Code nicht gefunden"
+msgstr "未找到代码"
+
+#: core/views.py:2314
+msgid "Session abgelaufen. Neue Session in der Kasse starten."
+msgstr "会话已过期。请在收银台中开启新会话。"
+
+#: core/views.py:2321
+msgid "Scanner-Session wurde geschlossen."
+msgstr "扫描器会话已关闭。"
+
+#: core/views.py:2359
+msgid "Fehlende Parameter"
+msgstr "缺少参数"
+
+#: core/views.py:2364
+msgid "Code ungültig"
+msgstr "代码无效"
+
+#: core/views.py:2369
+msgid "Session abgelaufen"
+msgstr "会话已过期"
+
+#: core/views.py:2375
+msgid "Scanner-Session geschlossen"
+msgstr "扫描器会话已关闭"
+
+#: core/views.py:2385
+msgid "QR-Code-Format ungültig"
+msgstr "二维码格式无效"
+
+#: core/views.py:2394
+msgid "Ungültige Werte im QR-Code"
+msgstr "二维码中的值无效"
+
+#: core/views.py:2406
+msgid "Rate-Limit erreicht. Bitte warten."
+msgstr "已达到速率限制。请稍候。"
+
+#: core/views.py:2442 core/views.py:2492
+#| msgid "Berechtigungen"
+msgid "Keine Berechtigung"
+msgstr "无权限"
+
+#: core/views.py:2446 core/views.py:2496
+#| msgid "Kein Ausdruck erforderlich."
+msgid "Code erforderlich"
+msgstr "需要代码"
+
+#: core/views.py:2451 core/views.py:2501
+#| msgid "Kassenansicht öffnen"
+msgid "Session nicht gefunden"
+msgstr "未找到会话"
+
+#: core/views.py:2623
+#| msgid "Bitte wähle zuerst einen Basar aus."
+msgid "Bitte wählen Sie mindestens einen Preis."
+msgstr "请至少选择一个价格。"
+
+#: core/views.py:2636
+#, python-brace-format
+msgid "Fehler beim Generieren des PDFs: {}"
+msgstr "生成 PDF 时出错：{}"

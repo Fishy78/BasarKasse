@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Basare verwalten" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Basare verwalten" %}</h1>
+<p><a class="button" href="{% url 'manage_bazaar_create' %}">{% translate "Neuen Basar anlegen" %}</a></p>
+<div class="card">
+  <table>
+    <thead><tr><th>{% translate "Basar" %}</th><th>{% translate "Beginn" %}</th><th>{% translate "Nummernvergabe bis" %}</th><th>{% translate "Status" %}</th><th></th></tr></thead>
+    <tbody>
+      {% for bazaar in bazaars %}
+        <tr>
+          <td>{{ bazaar.name }}</td>
+          <td>{{ bazaar.starts_at|date:"SHORT_DATETIME_FORMAT" }}</td>
+          <td>{{ bazaar.seller_registration_deadline|date:"SHORT_DATETIME_FORMAT" }}</td>
+          <td>{{ bazaar.get_status_display }}</td>
+          <td>
+            <a href="{% url 'manage_bazaar_edit' bazaar.pk %}">{% translate "Bearbeiten" %}</a>
+            · <a href="{% url 'bazaar_statistics' bazaar.pk %}">{% translate "Statistiken" %}</a>
+            {% if bazaar.is_settled or bazaar.has_settlement_history or bazaar.status == "closed" or bazaar.starts_at <= now %}
+              · <a href="{% url 'settlement_start' bazaar.pk %}">{% translate "Abrechnung" %}</a>
+            {% endif %}
+          </td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="5">{% translate "Es wurden noch keine Basare angelegt." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<a class="button secondary" href="{% url 'management_home' %}">{% translate "Zur Verwaltung" %}</a>
+{% endblock %}

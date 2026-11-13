@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% blocktranslate with name=bazaar.name %}Statistiken: {{ name }}{% endblocktranslate %}{% endblock %}
+{% block content %}
+{% translate "Verkaufte Artikel je 5 Minuten" as chart_sales_title %}
+{% translate "Artikelanzahl" as chart_sales_axis %}
+{% translate "Artikel" as chart_sales_label %}
+{% translate "Bruttoumsatz je 5 Minuten" as chart_revenue_title %}
+{% translate "Bruttoumsatz" as chart_revenue_label %}
+{% translate "Neue Verkäufernummern je Tag" as chart_registration_new_title %}
+{% translate "Neue Nummern pro Tag" as chart_registration_new_axis %}
+{% translate "Neue Nummern" as chart_registration_new_label %}
+{% translate "Kumulierte Vergabe der Verkäufernummern" as chart_registration_total_title %}
+{% translate "Nummern gesamt" as chart_registration_total_axis %}
+{% translate "Gesamtzahl" as chart_registration_total_label %}
+<h1>{% blocktranslate with name=bazaar.name %}Statistiken: {{ name }}{% endblocktranslate %}</h1>
+<p>{% translate "Verwendet werden abgeschlossene Belege und nicht stornierte Artikelpositionen. Die Einnahmen sind Bruttoumsätze." %}</p>
+<style>
+  .line-chart-scroll { overflow-x: auto; }
+  .line-chart-svg { display: block; width: 100%; min-width: 680px; height: auto; }
+  .line-chart-grid { stroke: #94a3b8; stroke-width: 1; opacity: .55; }
+  .line-chart-line { fill: none; stroke: #1769aa; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .line-chart-point {
+    fill: #1769aa;
+    stroke: white;
+    stroke-width: 1.5;
+    cursor: help;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 140ms ease, filter 140ms ease;
+  }
+  .line-chart-point:hover {
+    transform: scale(1.8);
+    filter: drop-shadow(0 0 3px #1769aa);
+  }
+  .line-chart-axis-label { fill: currentColor; font: 12px system-ui, sans-serif; }
+  .line-chart-axis-value { fill: #17212b; font: 600 14px system-ui, sans-serif; }
+  body[data-theme="dark"] .line-chart-axis-value { fill: #f8fafc; }
+  .line-chart-table-scroll { max-height: 22rem; overflow: auto; }
+  .chart-tooltip {
+    position: fixed;
+    z-index: 200;
+    max-width: min(24rem, calc(100vw - 1rem));
+    padding: .45rem .65rem;
+    border-radius: .35rem;
+    color: #fff;
+    background: #0f172a;
+    box-shadow: 0 .25rem .75rem #0005;
+    font-size: .9rem;
+    line-height: 1.35;
+    pointer-events: none;
+  }
+  .chart-tooltip[hidden] { display: none !important; }
+  @media (prefers-reduced-motion: reduce) {
+    .line-chart-point { transition: none; }
+  }
+</style>
+
+<section class="card">
+  <h2>{% translate "Verkäufe und Einnahmen je 5 Minuten" %}</h2>
+  <p>{% translate "Der Zeitstempel eines abgeschlossenen Belegs bestimmt das 5-Minuten-Intervall. Eine tatsächliche Öffnungs- oder Endzeit wird derzeit nicht erfasst." %}</p>
+  {% if has_completed_sales %}
+    <h3>{% translate "Verkaufte Artikel" %}</h3>
+    {% include "partials/line_chart.html" with chart=sales_chart chart_title=chart_sales_title y_axis_label=chart_sales_axis value_label=chart_sales_label %}
+    <h3>{% translate "Einnahmen" %}</h3>
+    {% with revenue_axis_label="Umsatz ("|add:currency|add:")" %}
+      {% include "partials/line_chart.html" with chart=revenue_chart chart_title=chart_revenue_title y_axis_label=revenue_axis_label value_label=chart_revenue_label %}
+    {% endwith %}
+  {% else %}
+    <p>{% translate "Für diesen Basar liegen noch keine abgeschlossenen Verkäufe vor." %}</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>{% translate "Verlauf der Verkäufernummernvergabe" %}</h2>
+  {% if has_registration_history %}
+    <p>{% translate "Je Tag: neu vergebene Nummern und kumulierte Gesamtzahl." %}</p>
+    <h3>{% translate "Neu vergebene Nummern" %}</h3>
+    {% include "partials/line_chart.html" with chart=registration_new_chart chart_title=chart_registration_new_title y_axis_label=chart_registration_new_axis value_label=chart_registration_new_label %}
+    <h3>{% translate "Kumulierte Nummern" %}</h3>
+    {% include "partials/line_chart.html" with chart=registration_total_chart chart_title=chart_registration_total_title y_axis_label=chart_registration_total_axis value_label=chart_registration_total_label %}
+  {% else %}
+    <p>{% translate "Für die vorhandenen Verkäufernummern liegen keine Vergabezeitpunkte vor." %}</p>
+  {% endif %}
+  {% if registrations_without_time %}
+    <p>{% blocktranslate with count=registrations_without_time %}{{ count }} ältere Nummern haben keinen gespeicherten Vergabezeitpunkt und können im Verlauf nicht berücksichtigt werden.{% endblocktranslate %}</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>{% translate "Top-Rechnungen nach Betrag" %}</h2>
+  <p>{% translate "Die Rangliste umfasst die zehn höchsten abgeschlossenen Belege." %}</p>
+  <table>
+    <thead><tr><th>{% translate "Belegnummer" %}</th><th>{% translate "Zeit" %}</th><th class="right">{% translate "Betrag" %}</th><th></th></tr></thead>
+    <tbody>
+      {% for receipt in top_receipts %}
+        <tr>
+          <td>{{ receipt.receipt_number }}</td>
+          <td>{{ receipt.completed_at|default:receipt.created_at|date:"SHORT_DATETIME_FORMAT" }}</td>
+          <td class="right">{{ receipt.amount|floatformat:2 }} {{ currency }}</td>
+          <td><a href="{% url 'bazaar_receipt_detail' bazaar.pk receipt.pk %}">{% translate "Rechnung ansehen" %}</a></td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="4">{% translate "Es gibt noch keine abgeschlossenen Rechnungen." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>{% translate "Top-Verkäufer" %}</h2>
+  <p>{% translate "Sortiert nach Bruttoumsatz; bei Gleichstand nach Artikelanzahl." %}</p>
+  <table>
+    <thead><tr><th>{% translate "Platz" %}</th><th>{% translate "Verkäufernummer" %}</th><th>{% translate "Artikel" %}</th><th class="right">{% translate "Bruttoumsatz" %}</th></tr></thead>
+    <tbody>
+      {% for seller in top_sellers %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ seller.registration__seller_number }}</td>
+          <td>{{ seller.item_count }}</td>
+          <td class="right">{{ seller.revenue|floatformat:2 }} {{ currency }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="4">{% translate "Für diesen Basar liegen noch keine abgeschlossenen Verkäufe vor." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>{% translate "Durchschnitt, Median und Stornoquote" %}</h2>
+  {% if completed_receipt_count %}
+    <div class="grid">
+      <div>
+        <h3>{% translate "Durchschnitt pro abgeschlossener Rechnung" %}</h3>
+        <p>{{ average_receipt|floatformat:2 }} {{ currency }}</p>
+      </div>
+      <div>
+        <h3>{% translate "Median pro abgeschlossener Rechnung" %}</h3>
+        <p>{{ median_receipt|floatformat:2 }} {{ currency }}</p>
+      </div>
+    </div>
+  {% else %}
+    <p>{% translate "Für Durchschnitt und Median gibt es noch keine abgeschlossenen Rechnungen." %}</p>
+  {% endif %}
+  <h3>{% translate "Stornoquote" %}</h3>
+  {% if total_item_count %}
+    <p>{% blocktranslate with cancelled=cancelled_item_count total=total_item_count rate=cancellation_rate|floatformat:1 %}{{ cancelled }} von {{ total }} Positionen storniert ({{ rate }} %).{% endblocktranslate %}</p>
+    <p>{% translate "Enthalten sind Positionen aus offenen und abgeschlossenen Belegen." %}</p>
+  {% else %}
+    <p>{% translate "Für diesen Basar wurden noch keine Artikelpositionen erfasst." %}</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>{% translate "Stoßzeiten" %}</h2>
+  <p>{% translate "Die fünf 5-Minuten-Intervalle mit den meisten abgeschlossenen Rechnungen. Bei Gleichstand entscheidet der Umsatz." %}</p>
+  <table>
+    <thead><tr><th>{% translate "Intervall" %}</th><th>{% translate "Rechnungen" %}</th><th>{% translate "Artikel" %}</th><th class="right">{% translate "Umsatz" %}</th></tr></thead>
+    <tbody>
+      {% for period in peak_periods %}
+        <tr>
+          <td>{{ period.label }}</td>
+          <td>{{ period.receipt_count }}</td>
+          <td>{{ period.item_count }}</td>
+          <td class="right">{{ period.revenue|floatformat:2 }} {{ currency }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="4">{% translate "Es gibt noch keine abgeschlossenen Rechnungen." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>{% translate "Umsatz je Kassierer" %}</h2>
+  <p>{% translate "Bruttoumsatz aus abgeschlossenen Belegen; stornierte Positionen sind ausgenommen." %}</p>
+  <table>
+    <thead><tr><th>{% translate "Kassierer" %}</th><th>{% translate "Rechnungen" %}</th><th>{% translate "Artikel" %}</th><th class="right">{% translate "Bruttoumsatz" %}</th></tr></thead>
+    <tbody>
+      {% for cashier in cashier_revenue %}
+        <tr>
+          <td>{{ cashier.cashier_name }}</td>
+          <td>{{ cashier.receipt_count }}</td>
+          <td>{{ cashier.item_count }}</td>
+          <td class="right">{{ cashier.revenue|floatformat:2 }} {{ currency }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="4">{% translate "Es gibt noch keine abgeschlossenen Rechnungen." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>{% translate "Alle Rechnungen" %}</h2>
+  <p>{% translate "Offene Belege werden mit dem aktuellen Zwischenbetrag angezeigt und aktualisieren sich beim erneuten Aufruf." %}</p>
+  <table>
+    <thead><tr><th>{% translate "Zeit" %}</th><th>{% translate "Nummer" %}</th><th>{% translate "Status" %}</th><th class="right">{% translate "Betrag" %}</th><th></th></tr></thead>
+    <tbody>
+      {% for receipt in receipt_page %}
+        <tr>
+          <td>{{ receipt.display_time|date:"SHORT_DATETIME_FORMAT" }}</td>
+          <td>{{ receipt.receipt_number }}</td>
+          <td>{{ receipt.get_status_display }}</td>
+          <td class="right">{{ receipt.amount|floatformat:2 }} {{ currency }}</td>
+          <td><a href="{% url 'bazaar_receipt_detail' bazaar.pk receipt.pk %}">{% translate "Details" %}</a></td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="5">{% translate "Für diesen Basar gibt es noch keine Rechnungen." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% if receipt_page.has_other_pages %}
+    <p>
+      {% if receipt_page.has_previous %}
+        <a href="?page={{ receipt_page.previous_page_number }}">{% translate "Neuere" %}</a>
+      {% endif %}
+      {% blocktranslate with current=receipt_page.number total=receipt_page.paginator.num_pages %}Seite {{ current }} von {{ total }}{% endblocktranslate %}
+      {% if receipt_page.has_next %}
+        <a href="?page={{ receipt_page.next_page_number }}">{% translate "Ältere" %}</a>
+      {% endif %}
+    </p>
+  {% endif %}
+</section>
+
+<p><a class="button secondary" href="{% url 'management_statistics' %}">{% translate "Zur Statistikübersicht" %}</a></p>
+{% endblock %}

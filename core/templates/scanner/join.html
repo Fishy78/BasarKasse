@@ -1,0 +1,343 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "QR-Code Scanner" %}{% endblock %}
+
+{% block content %}
+<h1>{% translate "Basar-QR-Code Scanner" %}</h1>
+<p>{% blocktranslate with bazaar=bazaar %}Verbunden mit: <strong>{{ bazaar }}</strong>{% endblocktranslate %}</p>
+
+<div class="card" style="max-width: 600px; margin: 0 auto;">
+  <h2>{% translate "Scanbereit" %}</h2>
+  <p id="scanner-status" style="text-align: center; padding: 1rem; border-radius: 0.4rem; background: #e8f5e9; color: #2e7d32; font-weight: 600;">
+    {% translate "Initialisiere Kamera..." %}
+  </p>
+
+  <!-- Video-Element für QR-Scanner -->
+  <div id="scanner-video-container" style="width: 100%; aspect-ratio: 1; border: 2px solid #dce3ea; border-radius: 0.6rem; overflow: hidden; margin: 1rem 0; background: #000;">
+    <video id="scanner-video" style="width: 100%; height: 100%; object-fit: cover;" autoplay playsinline></video>
+    <div id="scanner-flash" aria-hidden="true"></div>
+  </div>
+
+  <!-- Fallback: Manuelle Eingabe -->
+  <div style="margin-top: 1.5rem;">
+    <h3>{% translate "Oder manuell eingeben:" %}</h3>
+    <label for="manual-registration" style="font-weight: 600; display: block; margin-bottom: 0.5rem;">
+      {% translate "Verkäufernummer" %}
+    </label>
+    <select id="manual-registration" style="margin-bottom: 0.75rem;">
+      <option value="">{% translate "Verkäufernummer auswählen" %}</option>
+      {% for registration in registrations %}
+        <option value="{{ registration.pk }}">{{ registration.seller_number }}</option>
+      {% endfor %}
+    </select>
+    <label for="manual-price" style="font-weight: 600; display: block; margin-bottom: 0.5rem;">
+      {% translate "Preis" %}
+    </label>
+    <input
+      type="text"
+      id="manual-price"
+      inputmode="decimal"
+      placeholder="{% translate 'z. B. 2,50' %}"
+      autocomplete="off"
+      style="margin-bottom: 0.5rem;"
+    >
+    <button id="manual-submit" type="button" class="button" style="width: 100%;">
+      {% translate "Artikel hinzufügen" %}
+    </button>
+  </div>
+
+  <!-- Bestätigungs-Toast -->
+  <div id="scanner-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 0.4rem; text-align: center; background: #c8e6c9; color: #1b5e20; font-weight: 600;">
+    ✓ {% translate "Artikel übernommen" %}
+  </div>
+
+  <!-- Fehler-Toast -->
+  <div id="scanner-error" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 0.4rem; text-align: center; background: #ffcdd2; color: #b71c1c; font-weight: 600;">
+  </div>
+</div>
+
+<style>
+  #scanner-video-container {
+    position: relative;
+  }
+
+  #scanner-flash {
+    position: absolute;
+    inset: 0;
+    background: rgba(76, 175, 80, 0.8);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #scanner-flash.active {
+    animation: scanner-flash 0.6s ease-out;
+  }
+
+  @keyframes scanner-flash {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+
+<script>
+  const code = "{{ code }}";
+  const manualRegistration = document.getElementById("manual-registration");
+  const manualPrice = document.getElementById("manual-price");
+  const manualSubmit = document.getElementById("manual-submit");
+  const scannerStatus = document.getElementById("scanner-status");
+  const scannerFeedback = document.getElementById("scanner-feedback");
+  const scannerError = document.getElementById("scanner-error");
+  const scannerFlash = document.getElementById("scanner-flash");
+
+  let videoStream = null;
+  let scanningActive = false;
+  let visibleQrCode = null;
+  let scanSubmissionInProgress = false;
+  let scanCooldownUntil = 0;
+  let scanCooldownTimeout = null;
+
+  // Scanner initialisieren
+  async function initScanner() {
+    try {
+      const videoElement = document.getElementById("scanner-video");
+      const container = document.getElementById("scanner-video-container");
+      
+      // Kamera-Berechtigung anfordern
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: {
+          facingMode: "environment",
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        },
+        audio: false
+      });
+
+      videoStream = stream;
+      videoElement.srcObject = stream;
+      
+      // Warten, bis Video spielbereit ist
+      await new Promise((resolve) => {
+        videoElement.onloadedmetadata = () => {
+          videoElement.play().then(resolve).catch(err => {
+            console.error("Video play error:", err);
+            resolve();
+          });
+        };
+      });
+
+      scanningActive = true;
+      scannerStatus.textContent = "{% translate 'Scanbereit – halte QR-Code zur Kamera' %}";
+      scannerStatus.style.background = "#e8f5e9";
+      scannerStatus.style.color = "#2e7d32";
+
+      // Scanning-Loop starten
+      scanQRCodes();
+    } catch (err) {
+      console.error("Scanner Error:", err);
+      let errorMsg = err.message;
+      
+      if (err.name === "NotAllowedError") {
+        errorMsg = "{% translate 'Kamera-Zugriff wurde verweigert' %}";
+      } else if (err.name === "NotFoundError") {
+        errorMsg = "{% translate 'Keine Kamera gefunden' %}";
+      }
+      
+      scannerStatus.textContent = "❌ " + errorMsg;
+      scannerStatus.style.background = "#ffcdd2";
+      scannerStatus.style.color = "#b71c1c";
+    }
+  }
+
+  // QR-Codes scannen
+  function scanQRCodes() {
+    if (!scanningActive) return;
+
+    const videoElement = document.getElementById("scanner-video");
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = videoElement.videoWidth;
+    canvas.height = videoElement.videoHeight;
+
+    // Video-Frame in Canvas zeichnen
+    ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+    // QR-Code erkennen (mit jsQR)
+    if (typeof jsQR !== 'undefined') {
+      const qrCode = jsQR(imageData.data, imageData.width, imageData.height, {
+        inversionAttempts: "dontInvert"
+      });
+
+      if (qrCode && qrCode.data) {
+        if (
+          qrCode.data !== visibleQrCode
+          && !scanSubmissionInProgress
+          && Date.now() >= scanCooldownUntil
+        ) {
+          visibleQrCode = qrCode.data;
+          console.log("QR gescannt:", qrCode.data);
+          startScanCooldown();
+          submitScan(qrCode.data);
+        }
+      } else {
+        visibleQrCode = null;
+      }
+    }
+
+    // Kontinuierliches Scanning
+    requestAnimationFrame(scanQRCodes);
+  }
+
+  function startScanCooldown() {
+    scanCooldownUntil = Date.now() + 3000;
+    scannerFlash.classList.remove("active");
+    void scannerFlash.offsetWidth;
+    scannerFlash.classList.add("active");
+    playConfirmationTone();
+    scannerStatus.textContent = "{% translate 'QR-Code erkannt – nächster Scan in 3 Sekunden' %}";
+    scannerStatus.style.background = "#e3f2fd";
+    scannerStatus.style.color = "#1565c0";
+
+    if (scanCooldownTimeout) {
+      clearTimeout(scanCooldownTimeout);
+    }
+    scanCooldownTimeout = setTimeout(() => {
+      scannerStatus.textContent = "{% translate 'Scanbereit – halte QR-Code zur Kamera' %}";
+      scannerStatus.style.background = "#e8f5e9";
+      scannerStatus.style.color = "#2e7d32";
+    }, 3000);
+  }
+
+  function playConfirmationTone() {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) {
+      return;
+    }
+
+    try {
+      const audioContext = new AudioContext();
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      oscillator.type = "sine";
+      oscillator.frequency.value = 1046.5;
+      gain.gain.setValueAtTime(0.08, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.15);
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+      oscillator.start();
+      oscillator.stop(audioContext.currentTime + 0.15);
+      oscillator.addEventListener("ended", () => audioContext.close());
+    } catch (error) {
+      console.warn("Quittungston konnte nicht abgespielt werden:", error);
+    }
+  }
+
+  // Artikel einreichen
+  async function submitScan(qrData) {
+    scanSubmissionInProgress = true;
+    try {
+      const response = await fetch("{% url 'scanner_submit' %}", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-CSRFToken": getCookie("csrftoken"),
+        },
+        body: new URLSearchParams({
+          code: code,
+          qr_data: qrData,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "{% translate 'Fehler beim Übertragen' %}");
+      }
+
+      const data = await response.json();
+      showFeedback(true, "{% translate 'Artikel übernommen' %}");
+      manualPrice.value = "";
+    } catch (error) {
+      console.error("Fehler:", error);
+      showFeedback(false, error.message);
+    } finally {
+      scanSubmissionInProgress = false;
+    }
+  }
+
+  function showFeedback(success, message) {
+    if (success) {
+      scannerFeedback.textContent = "✓ " + message;
+      scannerFeedback.style.display = "block";
+      scannerError.style.display = "none";
+      setTimeout(() => {
+        scannerFeedback.style.display = "none";
+      }, 2000);
+    } else {
+      scannerError.textContent = "⚠️ " + message;
+      scannerError.style.display = "block";
+      setTimeout(() => {
+        scannerError.style.display = "none";
+      }, 3000);
+    }
+  }
+
+  // Manuelle Eingabe
+  manualSubmit.addEventListener("click", () => {
+    if (scanSubmissionInProgress || Date.now() < scanCooldownUntil) {
+      return;
+    }
+
+    const registrationId = manualRegistration.value;
+    const price = Number(manualPrice.value.trim().replace(",", "."));
+    if (!registrationId) {
+      showFeedback(false, "{% translate 'Bitte wähle eine Verkäufernummer aus.' %}");
+      return;
+    }
+    if (!Number.isFinite(price) || price <= 0) {
+      showFeedback(false, "{% translate 'Bitte gib einen gültigen Preis ein.' %}");
+      return;
+    }
+
+    startScanCooldown();
+    submitScan(`VKNr=${registrationId}&price=${price.toFixed(2)}`);
+  });
+
+  manualPrice.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      manualSubmit.click();
+    }
+  });
+
+  // CSRF-Token abrufen
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+      const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.substring(0, name.length + 1) === name + "=") {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
+  // Scanner beim Laden starten
+  document.addEventListener("DOMContentLoaded", initScanner);
+
+  // Cleanup beim Verlassen
+  window.addEventListener("beforeunload", () => {
+    scanningActive = false;
+    if (videoStream) {
+      videoStream.getTracks().forEach(track => track.stop());
+    }
+  });
+</script>
+{% endblock %}

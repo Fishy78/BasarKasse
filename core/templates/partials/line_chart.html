@@ -1,0 +1,54 @@
+{% load i18n %}
+{% blocktranslate with title=chart_title axis=y_axis_label asvar chart_accessible_label %}{{ title }}. Y-Achse: {{ axis }}{% endblocktranslate %}
+<div class="line-chart-scroll">
+  <svg class="line-chart-svg" viewBox="0 0 1000 270" role="img" aria-label="{{ chart_accessible_label }}">
+    <title>{{ chart_accessible_label }}</title>
+    <text
+      class="line-chart-axis-label"
+      x="18"
+      y="125"
+      text-anchor="middle"
+      transform="rotate(-90 18 125)">
+      {{ y_axis_label }}
+    </text>
+    {% for tick in chart.y_ticks %}
+      <line class="line-chart-grid" x1="70" x2="970" y1="{{ tick.y }}" y2="{{ tick.y }}"></line>
+      <text class="line-chart-axis-value" x="62" y="{{ tick.label_y }}" text-anchor="end">{{ tick.label }}</text>
+    {% endfor %}
+    {% if chart.points|length > 1 %}
+      <polyline
+        class="line-chart-line"
+        points="{% for point in chart.points %}{{ point.x }},{{ point.y }}{% if not forloop.last %} {% endif %}{% endfor %}">
+      </polyline>
+    {% endif %}
+    {% for point in chart.points %}
+      <circle
+        class="line-chart-point"
+        cx="{{ point.x }}"
+        cy="{{ point.y }}"
+        r="3.5"
+        role="img"
+        aria-label="{% blocktranslate with label=point.label value=point.display_value %}{{ label }}: {{ value }}{% endblocktranslate %}"
+        data-tooltip="{% blocktranslate with label=point.label value=point.display_value %}{{ label }}: {{ value }}{% endblocktranslate %}">
+      </circle>
+    {% endfor %}
+    {% for tick in chart.x_ticks %}
+      <text class="line-chart-axis-label" x="{{ tick.x }}" y="250" text-anchor="middle">{{ tick.label }}</text>
+    {% endfor %}
+  </svg>
+</div>
+<details>
+  <summary>{% translate "Messwerte als Tabelle anzeigen" %}</summary>
+  <div class="line-chart-table-scroll">
+    <table>
+      <thead><tr><th>{% translate "Zeitpunkt" %}</th><th class="right">{{ value_label }}</th></tr></thead>
+      <tbody>
+        {% for point in chart.points %}
+          <tr><td>{{ point.label }}</td><td class="right">{{ point.display_value }}</td></tr>
+        {% empty %}
+          <tr><td colspan="2">{% translate "Keine Messwerte vorhanden." %}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</details>

@@ -1,0 +1,2928 @@
+# Deutscher Ausgangskatalog der Basar-Anwendung.
+msgid ""
+msgstr ""
+"Project-Id-Version: Basar-Kassensystem\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 15:51+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: core/admin.py:17 core/admin.py:18
+msgid "Basarverwaltung"
+msgstr "Administración del mercadillo"
+
+#: core/admin.py:19 core/templates/base.html:268
+#: core/templates/management/home.html:3 core/templates/management/home.html:5
+#: core/tests.py:215
+msgid "Verwaltung"
+msgstr "Administración"
+
+#: core/admin.py:33
+msgid "Kontaktdaten"
+msgstr "Datos de contacto"
+
+#: core/admin.py:34
+msgid "Berechtigungen"
+msgstr "Permisos"
+
+#: core/admin.py:35
+msgid "Zeitstempel"
+msgstr "Marcas de tiempo"
+
+#: core/emailing.py:17
+msgid "Basar-Konto bestätigen"
+msgstr "Confirma tu cuenta de Basar"
+
+#: core/emailing.py:18
+#, python-format
+msgid "Bitte bestätige deine E-Mail-Adresse über diesen Link: %(verify_url)s"
+msgstr ""
+"Confirma tu dirección de correo electrónico mediante este enlace: "
+"%(verify_url)s"
+
+#: core/forms.py:23
+msgid "Passwort"
+msgstr "Contraseña"
+
+#: core/forms.py:24
+msgid "Passwort wiederholen"
+msgstr "Repetir contraseña"
+
+#: core/forms.py:26 core/forms.py:45
+msgid "Ich stimme der aktuellen Datenschutzerklärung zu."
+msgstr "Acepto la política de privacidad vigente."
+
+#: core/forms.py:52
+msgid "Die Passwörter stimmen nicht überein."
+msgstr "Las contraseñas no coinciden."
+
+#: core/forms.py:88 core/templates/registration/accept_consent.html:12
+msgid "Ich stimme den Datenschutzhinweisen zu."
+msgstr "Acepto la información sobre privacidad."
+
+#: core/forms.py:107
+msgid "Der Benutzer stimmt den Datenschutzhinweisen zu."
+msgstr "El usuario acepta la información sobre privacidad."
+
+#: core/forms.py:113
+msgid ""
+"Bitte hinterlege zuerst die Datenschutzhinweise in den Systemeinstellungen."
+msgstr ""
+"Primero, añade la información sobre privacidad en la configuración del "
+"sistema."
+
+#: core/forms.py:150
+#, python-format
+msgid ""
+"HTML-Formatierung ist erlaubt, zum Beispiel <p>, <br>, <strong>, <em>, <ul>, "
+"<ol>, <li>, <h2> und sichere <a href=\"%(example_url)s\">Links</a>. "
+"Unsichere Elemente und Attribute werden entfernt."
+msgstr ""
+"Se permite el formato HTML, por ejemplo <p>, <br>, <strong>, <em>, <ul>, "
+"<ol>, <li>, <h2> y <a href=\"%(example_url)s\">enlaces</a> seguros. Se "
+"eliminarán los elementos y atributos no seguros."
+
+#: core/forms.py:161
+msgid "Übliche Preise müssen als JSON-Liste angegeben werden."
+msgstr "Los precios habituales deben indicarse como una lista JSON."
+
+#: core/forms.py:167
+msgid "Jeder Schnellpreis muss eine gültige Zahl sein."
+msgstr "Cada precio rápido debe ser un número válido."
+
+#: core/forms.py:170
+msgid "Schnellpreise müssen größer als 0 und höchstens 999999,99 sein."
+msgstr "Los precios rápidos deben ser mayores que 0 y no superar 999999,99."
+
+#: core/forms.py:174
+msgid "Schnellpreise dürfen höchstens zwei Nachkommastellen haben."
+msgstr "Los precios rápidos pueden tener como máximo dos decimales."
+
+#: core/forms.py:183
+msgid "Bitte hinterlege die Standardvorgaben für Plakat-Prompts."
+msgstr "Añade las instrucciones predeterminadas para los prompts del cartel."
+
+#: core/forms.py:203
+msgid ""
+"Verwende einfache Formatierung mit <b>, <i>, <u> und <br>. Verfügbare "
+"Variablen:\n"
+msgstr ""
+"Usa formato sencillo con <b>, <i>, <u> y <br>. Variables disponibles:\n"
+
+#: core/forms.py:217
+#, python-format
+msgid "Unbekannte Vorlagenvariablen: %(names)s."
+msgstr "Variables de plantilla desconocidas: %(names)s."
+
+#: core/forms.py:219
+msgid "Vorlagenvariablen müssen das Format {{ variablenname }} haben."
+msgstr "Las variables de plantilla deben tener el formato {{ variablenname }}."
+
+#: core/forms.py:227
+msgid "Standardvorlage für neue Basare"
+msgstr "Plantilla predeterminada para nuevos mercadillos"
+
+#: core/forms.py:274
+msgid "Der Basar ist abgerechnet und kann nicht wieder geöffnet werden."
+msgstr "El mercadillo ya se ha liquidado y no se puede volver a abrir."
+
+#: core/forms.py:316
+msgid "Superadministrator"
+msgstr "Superadministrador"
+
+#: core/forms.py:318
+msgid "Voller Zugriff auf alle Funktionen und die Verwaltung."
+msgstr "Acceso total a todas las funciones y a la administración."
+
+#: core/forms.py:321 core/models.py:83
+msgid "Kassenrecht"
+msgstr "Permiso de caja"
+
+#: core/forms.py:323
+msgid "Darf die Kasse bedienen."
+msgstr "Puede operar la caja."
+
+#: core/forms.py:326
+#| msgid "Konto anonymisiert"
+msgid "Konto aktiviert"
+msgstr "Cuenta activada"
+
+#: core/forms.py:328
+msgid "Inaktive Konten können sich nicht anmelden."
+msgstr "Las cuentas inactivas no pueden iniciar sesión."
+
+#: core/forms.py:364
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Du kannst deine eigenen Superadmin-Rechte nicht entfernen. Richte zuerst "
+"einen anderen Administrator ein."
+msgstr ""
+"No puedes quitarte tus propios permisos de superadministrador. Configura "
+"primero a otro administrador."
+
+#: core/forms.py:369
+msgid "Du kannst dein eigenes Konto nicht deaktivieren."
+msgstr "No puedes desactivar tu propia cuenta."
+
+#: core/forms.py:386
+#| msgid "Benutzer"
+msgid "Alle Benutzer"
+msgstr "Todos los usuarios"
+
+#: core/forms.py:387 core/templates/admin/user_management_list.html:58
+#| msgid "Aktiv"
+msgid "Aktiviert"
+msgstr "Activado"
+
+#: core/forms.py:388 core/templates/admin/user_management_list.html:60
+msgid "Deaktiviert"
+msgstr "Desactivado"
+
+#: core/forms.py:389
+#| msgid "Kassenrecht"
+msgid "Mit Kassenrecht"
+msgstr "Con permiso de caja"
+
+#: core/forms.py:390
+msgid "Administratoren"
+msgstr "Administradores"
+
+#: core/forms.py:394
+msgid "Nach Name oder E-Mail suchen"
+msgstr "Buscar por nombre o correo electrónico"
+
+#: core/forms.py:396
+#| msgid "E-Mail-Adresse"
+msgid "Name, E-Mail-Adresse..."
+msgstr "Nombre, dirección de correo electrónico..."
+
+#: core/forms.py:399
+msgid "Filtern nach"
+msgstr "Filtrar por"
+
+#: core/invoice_templates.py:8
+msgid "Name des Basars"
+msgstr "Nombre del mercadillo"
+
+#: core/invoice_templates.py:9
+msgid "Datum des Basars"
+msgstr "Fecha del mercadillo"
+
+#: core/invoice_templates.py:10 core/models.py:499 core/models.py:589
+#: core/templates/cashier/cashier.html:66
+#: core/templates/cashier/receipt_complete.html:10
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/scanner/join.html:26 core/templates/seller/dashboard.html:63
+#: core/views.py:1877
+msgid "Verkäufernummer"
+msgstr "Número de vendedor"
+
+#: core/invoice_templates.py:11
+msgid "Nachname des Verkäufers"
+msgstr "Apellidos del vendedor"
+
+#: core/invoice_templates.py:12
+msgid "Vorname des Verkäufers"
+msgstr "Nombre del vendedor"
+
+#: core/invoice_templates.py:13
+msgid "Artikeltabelle mit Preis, Anzahl und rechtsbündiger Summe"
+msgstr "Tabla de artículos con precio, cantidad y total alineado a la derecha"
+
+#: core/invoice_templates.py:14
+msgid "Tabelle mit Bruttoumsatz, Abzügen und Auszahlungsbetrag"
+msgstr "Tabla con ingresos brutos, deducciones y cantidad a pagar"
+
+#: core/invoice_templates.py:15
+msgid "Umsatz vor Abzügen"
+msgstr "Ventas antes de deducciones"
+
+#: core/invoice_templates.py:16
+msgid "Feste Verkäufergebühr"
+msgstr "Cuota fija del vendedor"
+
+#: core/invoice_templates.py:17
+msgid "Prozentualer Betreiberanteil"
+msgstr "Porcentaje de comisión del organizador"
+
+#: core/invoice_templates.py:18
+msgid "Betrag des Betreiberanteils"
+msgstr "Importe de la comisión del organizador"
+
+#: core/invoice_templates.py:19
+msgid "Auszahlungsbetrag nach Abzügen"
+msgstr "Importe a pagar tras las deducciones"
+
+#: core/invoice_templates.py:20 core/models.py:150
+msgid "Währung"
+msgstr "Moneda"
+
+#: core/invoice_templates.py:23
+msgid ""
+"<b>Verkäuferabrechnung</b><br>\n"
+"Basar: {{ basar_name }}<br>\n"
+"Datum: {{ basar_datum }}<br>\n"
+"Verkäufernummer: {{ verkaeufernummer }}<br><br>\n"
+"Verkäufer: {{ vorname }} {{ name }}<br><br>\n"
+"<b>Abrechnung</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+msgstr ""
+"<b>Liquidación del vendedor</b><br>\n"
+"Mercadillo: {{ basar_name }}<br>\n"
+"Fecha: {{ basar_datum }}<br>\n"
+"Número de vendedor: {{ verkaeufernummer }}<br><br>\n"
+"Vendedor: {{ vorname }} {{ name }}<br><br>\n"
+"<b>Liquidación</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+
+#: core/middleware.py:142
+msgid ""
+"Schließe zuerst den offenen Kassenbeleg ab oder korrigiere seine Artikel."
+msgstr "Primero, completa el ticket de caja abierto o corrige sus artículos."
+
+#: core/models.py:41
+msgid "Eine E-Mail-Adresse ist erforderlich."
+msgstr "Se requiere una dirección de correo electrónico."
+
+#: core/models.py:53
+msgid "Ein Administrator muss is_staff und is_superuser aktiviert haben."
+msgstr "Un administrador debe tener activados is_staff e is_superuser."
+
+#: core/models.py:60
+msgid "E-Mail-Adresse"
+msgstr "Dirección de correo electrónico"
+
+#: core/models.py:61
+msgid "Vorname"
+msgstr "Nombre"
+
+#: core/models.py:62
+msgid "Nachname"
+msgstr "Apellidos"
+
+#: core/models.py:63
+msgid "Telefonnummer"
+msgstr "Número de teléfono"
+
+#: core/models.py:64
+msgid "Straße und Hausnummer"
+msgstr "Calle y número"
+
+#: core/models.py:66
+msgid "Postleitzahl"
+msgstr "Código postal"
+
+#: core/models.py:72
+msgid "Bitte eine fünfstellige deutsche Postleitzahl eingeben."
+msgstr "Introduce un código postal alemán de cinco cifras."
+
+#: core/models.py:76
+msgid "Ort"
+msgstr "Localidad"
+
+#: core/models.py:78 core/models.py:334 core/models.py:705
+msgid "Aktiv"
+msgstr "Activo"
+
+#: core/models.py:80
+msgid "Wird nach Bestätigung der E-Mail-Adresse aktiviert."
+msgstr "Se activará después de confirmar la dirección de correo electrónico."
+
+#: core/models.py:85
+msgid "Kassenrecht wird durch einen Administrator vergeben."
+msgstr "Un administrador concede el permiso de caja."
+
+#: core/models.py:88
+msgid "Konto anonymisiert"
+msgstr "Cuenta anonimizada"
+
+#: core/models.py:98 core/models.py:99
+msgid "Benutzer"
+msgstr "Usuario"
+
+#: core/models.py:102
+msgid "Gelöschter Benutzer"
+msgstr "Usuario eliminado"
+
+#: core/models.py:107
+msgid "Klassisches einfaches Design"
+msgstr "Diseño clásico sencillo"
+
+#: core/models.py:108
+msgid "Dunkelmodus"
+msgstr "Modo oscuro"
+
+#: core/models.py:109
+msgid "Modernes Design"
+msgstr "Diseño moderno"
+
+#: core/models.py:110
+msgid "Buntes Kindergartendesign"
+msgstr "Diseño colorido para jardín de infancia"
+
+#: core/models.py:113
+msgid "Oben"
+msgstr "Arriba"
+
+#: core/models.py:114
+msgid "Links"
+msgstr "Izquierda"
+
+#: core/models.py:115
+msgid "Rechts"
+msgstr "Derecha"
+
+#: core/models.py:118
+msgid "Euro (€)"
+msgstr "Euro (€)"
+
+#: core/models.py:119
+msgid "Schweizer Franken (CHF)"
+msgstr "Franco suizo (CHF)"
+
+#: core/models.py:120
+msgid "US-Dollar (USD)"
+msgstr "Dólar estadounidense (USD)"
+
+#: core/models.py:121
+msgid "Britisches Pfund (GBP)"
+msgstr "Libra esterlina (GBP)"
+
+#: core/models.py:123
+msgid "Übliche Preise"
+msgstr "Precios habituales"
+
+#: core/models.py:125
+msgid "Seitentitel"
+msgstr "Título del sitio"
+
+#: core/models.py:128
+msgid "Wird in der Kopfzeile und im Seitentitel angezeigt."
+msgstr "Se muestra en el encabezado y en el título de la página."
+
+#: core/models.py:131
+msgid "Logo für Verkäuferabrechnungen"
+msgstr "Logotipo para las liquidaciones de vendedores"
+
+#: core/models.py:139
+msgid "Standard-Verkäuferrechnungsvorlage"
+msgstr "Plantilla predeterminada de factura del vendedor"
+
+#: core/models.py:145
+msgid "Standard-Anzahl Verkäufernummern"
+msgstr "Cantidad predeterminada de números de vendedor"
+
+#: core/models.py:156
+msgid "Oberflächendesign"
+msgstr "Diseño de la interfaz"
+
+#: core/models.py:162
+msgid "Menüposition"
+msgstr "Posición del menú"
+
+#: core/models.py:167
+msgid "Menü beim Scrollen fixieren"
+msgstr "Fijar el menú al desplazarse"
+
+#: core/models.py:169
+msgid "Standardsprache"
+msgstr "Idioma predeterminado"
+
+#: core/models.py:173
+msgid "Wird für Benutzer ohne eigene Sprachauswahl verwendet."
+msgstr "Se utiliza cuando el usuario no ha elegido un idioma."
+
+#: core/models.py:175
+msgid "Einwilligungsversion"
+msgstr "Versión del consentimiento"
+
+#: core/models.py:176 core/models.py:316
+msgid "Einwilligungstext"
+msgstr "Texto del consentimiento"
+
+#: core/models.py:178
+msgid "Standard-Verkäufergebühr für neue Basare"
+msgstr "Cuota predeterminada del vendedor para nuevos mercadillos"
+
+#: core/models.py:185
+msgid "Standard-Betreiberanteil für neue Basare"
+msgstr "Comisión predeterminada del organizador para nuevos mercadillos"
+
+#: core/models.py:192
+msgid "Standardvorgaben für Plakat-Prompts"
+msgstr "Instrucciones predeterminadas para los prompts del cartel"
+
+#: core/models.py:194
+msgid ""
+"Erstelle ein übersichtliches, gut lesbares Basarplakat. Verwende "
+"ausschließlich die unten angegebenen Veranstaltungsdaten und erfinde keine "
+"zusätzlichen Angaben."
+msgstr ""
+"Crea un cartel de mercadillo claro y fácil de leer. Utiliza exclusivamente "
+"los datos del evento indicados a continuación y no inventes información "
+"adicional."
+
+#: core/models.py:200
+msgid "E-Mail-Bestätigung erforderlich"
+msgstr "Es necesario confirmar el correo electrónico"
+
+#: core/models.py:202
+msgid ""
+"Gilt für neue Konten. Bei Aktivierung muss der Benutzer die Adresse "
+"bestätigen."
+msgstr ""
+"Se aplica a las cuentas nuevas. Si se activa, el usuario debe confirmar su "
+"dirección."
+
+#: core/models.py:205
+msgid "Mindestlänge des Passworts"
+msgstr "Longitud mínima de la contraseña"
+
+#: core/models.py:208
+msgid "Zulässiger Bereich: 8 bis 128 Zeichen."
+msgstr "Rango permitido: de 8 a 128 caracteres."
+
+#: core/models.py:211
+msgid "Großbuchstaben verlangen"
+msgstr "Exigir mayúsculas"
+
+#: core/models.py:215
+msgid "Kleinbuchstaben verlangen"
+msgstr "Exigir minúsculas"
+
+#: core/models.py:219
+msgid "Ziffer verlangen"
+msgstr "Exigir un dígito"
+
+#: core/models.py:223
+msgid "Sonderzeichen verlangen"
+msgstr "Exigir caracteres especiales"
+
+#: core/models.py:227
+msgid "Häufige Passwörter ablehnen"
+msgstr "Rechazar contraseñas habituales"
+
+#: core/models.py:231
+msgid "Reine Zahlenpasswörter ablehnen"
+msgstr "Rechazar contraseñas solo numéricas"
+
+#: core/models.py:235
+msgid "Ähnlichkeit zu Benutzerdaten prüfen"
+msgstr "Comprobar similitud con los datos del usuario"
+
+#: core/models.py:239
+msgid "Preisschilder: Spalten pro A4"
+msgstr "Etiquetas de precio: columnas por A4"
+
+#: core/models.py:242
+msgid "Anzahl der Spalten bei der Preisschild-Generierung (2-10)."
+msgstr "Número de columnas al generar etiquetas de precio (2-10)."
+
+#: core/models.py:245
+msgid "Preisschilder: Reihen pro A4"
+msgstr "Etiquetas de precio: filas por A4"
+
+#: core/models.py:248
+msgid "Anzahl der Reihen bei der Preisschild-Generierung (4-30)."
+msgstr "Número de filas al generar etiquetas de precio (4-30)."
+
+#: core/models.py:252
+msgid "Globale Einstellung"
+msgstr "Configuración global"
+
+#: core/models.py:253 core/models.py:256 core/models.py:292
+msgid "Globale Einstellungen"
+msgstr "Configuración global"
+
+#: core/models.py:276
+msgid ""
+"Bei einer Änderung des Einwilligungstextes muss auch die Version erhöht "
+"werden."
+msgstr ""
+"Si se cambia el texto del consentimiento, también debe aumentarse la versión."
+
+#: core/models.py:294
+msgid "Vorlagenname"
+msgstr "Nombre de la plantilla"
+
+#: core/models.py:295
+msgid "Vorlageninhalt"
+msgstr "Contenido de la plantilla"
+
+#: core/models.py:296
+msgid "Schreibgeschützt"
+msgstr "De solo lectura"
+
+#: core/models.py:306 core/models.py:396
+msgid "Verkäuferrechnungsvorlage"
+msgstr "Plantilla de factura del vendedor"
+
+#: core/models.py:307 core/templates/management/invoice_templates.html:3
+#: core/templates/management/invoice_templates.html:5
+msgid "Verkäuferrechnungsvorlagen"
+msgstr "Plantillas de factura del vendedor"
+
+#: core/models.py:315
+msgid "Version"
+msgstr "Versión"
+
+#: core/models.py:317
+msgid "Zugestimmt am"
+msgstr "Fecha de aceptación"
+
+#: core/models.py:321
+msgid "Benutzereinwilligung"
+msgstr "Consentimiento del usuario"
+
+#: core/models.py:322
+msgid "Benutzereinwilligungen"
+msgstr "Consentimientos de usuarios"
+
+#: core/models.py:325
+#, python-format
+msgid "%(email)s: %(version)s"
+msgstr "%(email)s: %(version)s"
+
+#: core/models.py:333
+msgid "Geplant"
+msgstr "Programado"
+
+#: core/models.py:335 core/models.py:527
+msgid "Abgeschlossen"
+msgstr "Finalizado"
+
+#: core/models.py:337 core/templates/admin/user_management_list.html:40
+#: core/templates/management/invoice_templates.html:11
+msgid "Name"
+msgstr "Nombre"
+
+#: core/models.py:338 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Beginn"
+msgstr "Inicio"
+
+#: core/models.py:340
+msgid "Nummernvergabe möglich bis"
+msgstr "Fecha límite para asignar números"
+
+#: core/models.py:341
+msgid "Muss am oder vor dem Beginn des Basars liegen."
+msgstr "Debe ser el mismo día del inicio del mercadillo o anterior."
+
+#: core/models.py:344 core/models.py:543
+#: core/templates/admin/user_management_list.html:42
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:199
+#: core/templates/management/bazaars.html:9
+#: core/templates/settlement_confirm.html:62
+msgid "Status"
+msgstr "Estado"
+
+#: core/models.py:350
+msgid "Verkäuferanmeldung geöffnet"
+msgstr "Inscripción de vendedores abierta"
+
+#: core/models.py:352
+msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgstr "Se cerrará automáticamente al activar el mercadillo."
+
+#: core/models.py:355
+msgid "Stellenzahl"
+msgstr "Número de cifras"
+
+#: core/models.py:359
+msgid "Erste Nummer"
+msgstr "Primer número"
+
+#: core/models.py:361
+msgid "Maximale Anzahl Verkäufernummern"
+msgstr "Número máximo de vendedores"
+
+#: core/models.py:366
+msgid "Nächste Belegnummer"
+msgstr "Siguiente número de ticket"
+
+#: core/models.py:371 core/templates/seller/bazaar_details.html:45
+#: core/views.py:1827
+msgid "Verkäufergebühr"
+msgstr "Cuota del vendedor"
+
+#: core/models.py:378
+msgid "Betreiberanteil in Prozent"
+msgstr "Comisión del organizador en porcentaje"
+
+#: core/models.py:385
+msgid "Verkäufer sehen aktuellen Stand"
+msgstr "Los vendedores pueden ver el estado actual"
+
+#: core/models.py:389
+msgid "Verkäufer sehen Historie"
+msgstr "Los vendedores pueden ver el historial"
+
+#: core/models.py:400
+msgid "Plakat-Prompt"
+msgstr "Prompt del cartel"
+
+#: core/models.py:402
+msgid "Abrechnung erstellt am"
+msgstr "Fecha de creación de la liquidación"
+
+#: core/models.py:416 core/models.py:491 core/models.py:533 core/models.py:642
+#: core/models.py:691 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Basar"
+msgstr "Mercadillo"
+
+#: core/models.py:417 core/templates/management/home.html:8
+msgid "Basare"
+msgstr "Mercadillos"
+
+#: core/models.py:446
+msgid "Ein bereits abgerechneter Basar kann nicht wieder geöffnet werden."
+msgstr "Un mercadillo ya liquidado no se puede volver a abrir."
+
+#: core/models.py:458
+msgid "Die Nummernvergabe darf nicht nach dem Beginn des Basars enden."
+msgstr ""
+"La fecha límite para asignar números no puede ser posterior al inicio del "
+"mercadillo."
+
+#: core/models.py:467
+msgid ""
+"Die Nummernbegrenzung darf nicht unter der bereits vergebenen Anzahl liegen."
+msgstr "El límite de números no puede ser inferior a la cantidad ya asignada."
+
+#: core/models.py:497 core/templates/role.html:9
+msgid "Verkäufer"
+msgstr "Vendedor"
+
+#: core/models.py:501
+msgid "Verkäufernummer vergeben am"
+msgstr "Fecha de asignación del número de vendedor"
+
+#: core/models.py:517
+msgid "Verkäuferanmeldung"
+msgstr "Inscripción de vendedores"
+
+#: core/models.py:518
+msgid "Verkäuferanmeldungen"
+msgstr "Inscripciones de vendedores"
+
+#: core/models.py:526
+msgid "Offen"
+msgstr "Abierto"
+
+#: core/models.py:539 core/models.py:697
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Kassierer"
+msgstr "Cajero"
+
+#: core/models.py:541 core/templates/management/bazaar_statistics.html:94
+msgid "Belegnummer"
+msgstr "Número de ticket"
+
+#: core/models.py:548 core/models.py:644 core/models.py:699
+msgid "Erstellt am"
+msgstr "Fecha de creación"
+
+#: core/models.py:550
+msgid "Erster Artikel erfasst am"
+msgstr "Fecha de registro del primer artículo"
+
+#: core/models.py:554
+msgid "Abgeschlossen am"
+msgstr "Fecha de cierre"
+
+#: core/models.py:561 core/models.py:583
+msgid "Kassenbeleg"
+msgstr "Ticket de caja"
+
+#: core/models.py:562
+msgid "Kassenbelege"
+msgstr "Tickets de caja"
+
+#: core/models.py:565
+#, python-format
+msgid "%(bazaar)s, Beleg Nr. %(number)s"
+msgstr "%(bazaar)s, ticket n.º %(number)s"
+
+#: core/models.py:592 core/models.py:761 core/templates/cashier/cashier.html:66
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/scanner/join.html:35
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Preis"
+msgstr "Precio"
+
+#: core/models.py:597
+msgid "Erfasst am"
+msgstr "Registrado el"
+
+#: core/models.py:598 core/models.py:648
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert am"
+msgstr "Fecha de anulación"
+
+#: core/models.py:605 core/models.py:657
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert von"
+msgstr "Anulado por"
+
+#: core/models.py:613
+msgid "Belegposition"
+msgstr "Línea del ticket"
+
+#: core/models.py:614
+msgid "Belegpositionen"
+msgstr "Líneas del ticket"
+
+#: core/models.py:624
+msgid "Die Verkäufernummer muss zum Basar des Kassenbelegs gehören."
+msgstr ""
+"El número de vendedor debe pertenecer al mercadillo del ticket de caja."
+
+#: core/models.py:630
+#, python-format
+msgid "%(seller_number)s: %(price)s %(currency)s"
+msgstr "%(seller_number)s: %(price)s %(currency)s"
+
+#: core/models.py:645
+msgid "Abrechnungsdaten"
+msgstr "Datos de liquidación"
+
+#: core/models.py:646
+msgid "PDF"
+msgstr "PDF"
+
+#: core/models.py:671 core/templates/settlement_confirm.html:3
+msgid "Basarabrechnung"
+msgstr "Liquidación del mercadillo"
+
+#: core/models.py:672
+msgid "Basarabrechnungen"
+msgstr "Liquidaciones del mercadillo"
+
+#: core/models.py:675
+#, python-format
+msgid "Abrechnung: %(bazaar)s"
+msgstr "Liquidación: %(bazaar)s"
+
+#: core/models.py:682
+#| msgid "Anmelden"
+msgid "Anmeldecode"
+msgstr "Código de acceso"
+
+#: core/models.py:701
+msgid "Ablaufzeit"
+msgstr "Tiempo de caducidad"
+
+#: core/models.py:702
+msgid "Session verfällt nach 30 Minuten"
+msgstr "La sesión caduca después de 30 minutos"
+
+#: core/models.py:707
+#| msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgid "Wird deaktiviert, wenn Session abläuft oder manuell geschlossen wird"
+msgstr "Se desactiva cuando la sesión caduca o se cierra manualmente."
+
+#: core/models.py:710
+msgid "Gerätenname (optional)"
+msgstr "Nombre del dispositivo (opcional)"
+
+#: core/models.py:713
+msgid "Z.B. 'iPhone 14 Pro'"
+msgstr "P. ej., 'iPhone 14 Pro'"
+
+#: core/models.py:718 core/models.py:746
+msgid "Scanner-Session"
+msgstr "Sesión del escáner"
+
+#: core/models.py:719
+msgid "Scanner-Sessions"
+msgstr "Sesiones del escáner"
+
+#: core/models.py:722
+#, python-format
+msgid "Scanner: %(code)s (%(bazaar)s)"
+msgstr "Escáner: %(code)s (%(bazaar)s)"
+
+#: core/models.py:754 core/views.py:1876
+msgid "Beleg"
+msgstr "Ticket"
+
+#: core/models.py:757
+#| msgid "Verkäufernummer"
+msgid "Verkäufernummer-ID"
+msgstr "ID del número de vendedor"
+
+#: core/models.py:758
+msgid "Referenz auf SellerRegistration.id"
+msgstr "Referencia a SellerRegistration.id"
+
+#: core/models.py:766
+msgid "Eingescannt um"
+msgstr "Escaneado a las"
+
+#: core/models.py:770
+#| msgid "Bearbeiten"
+msgid "Verarbeitet"
+msgstr "Procesado"
+
+#: core/models.py:772
+msgid "True, wenn Artikel bereits zur Kasse hinzugefügt wurde"
+msgstr "Verdadero si el artículo ya se ha añadido a la caja"
+
+#: core/models.py:775
+#| msgid "Bearbeiten"
+msgid "Verarbeitet um"
+msgstr "Procesado a las"
+
+#: core/models.py:782
+msgid "Scanner-Eingabe"
+msgstr "Entrada del escáner"
+
+#: core/models.py:783
+msgid "Scanner-Eingaben"
+msgstr "Entradas del escáner"
+
+#: core/models.py:786
+#, python-format
+msgid "Scan: VKNr %(reg)s, %(price)s€"
+msgstr "Escaneo: VKNr %(reg)s, %(price)s€"
+
+#: core/password_validation.py:18
+#, python-format
+msgid "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgid_plural "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgstr[0] "La contraseña debe tener al menos %(count)d carácter."
+msgstr[1] "La contraseña debe tener al menos %(count)d caracteres."
+
+#: core/password_validation.py:25
+msgid "Das Passwort muss mindestens einen Großbuchstaben enthalten."
+msgstr "La contraseña debe contener al menos una letra mayúscula."
+
+#: core/password_validation.py:27
+msgid "Das Passwort muss mindestens einen Kleinbuchstaben enthalten."
+msgstr "La contraseña debe contener al menos una letra minúscula."
+
+#: core/password_validation.py:29
+msgid "Das Passwort muss mindestens eine Ziffer enthalten."
+msgstr "La contraseña debe contener al menos un dígito."
+
+#: core/password_validation.py:33
+msgid "Das Passwort muss mindestens ein Sonderzeichen enthalten."
+msgstr "La contraseña debe contener al menos un carácter especial."
+
+#: core/password_validation.py:38
+msgid "Dieses Passwort ist zu häufig und darf nicht verwendet werden."
+msgstr "Esta contraseña es demasiado habitual y no se puede utilizar."
+
+#: core/password_validation.py:40
+msgid "Das Passwort darf nicht ausschließlich aus Zahlen bestehen."
+msgstr "La contraseña no puede estar formada únicamente por números."
+
+#: core/password_validation.py:45
+msgid "Das Passwort ähnelt zu stark deinen Benutzerdaten."
+msgstr "La contraseña se parece demasiado a tus datos de usuario."
+
+#: core/password_validation.py:55
+#, python-format
+msgid "Mindestens %(count)d Zeichen"
+msgid_plural "Mindestens %(count)d Zeichen"
+msgstr[0] "Al menos %(count)d carácter"
+msgstr[1] "Al menos %(count)d caracteres"
+
+#: core/password_validation.py:62
+msgid "ein Großbuchstabe"
+msgstr "una letra mayúscula"
+
+#: core/password_validation.py:64
+msgid "ein Kleinbuchstabe"
+msgstr "una letra minúscula"
+
+#: core/password_validation.py:66
+msgid "eine Ziffer"
+msgstr "un dígito"
+
+#: core/password_validation.py:68
+msgid "ein Sonderzeichen"
+msgstr "un carácter especial"
+
+#: core/password_validation.py:70
+msgid "kein häufig verwendetes Passwort"
+msgstr "que no sea una contraseña habitual"
+
+#: core/password_validation.py:72
+msgid "nicht ausschließlich Zahlen"
+msgstr "que no esté formada solo por números"
+
+#: core/password_validation.py:74
+msgid "nicht zu ähnlich zu deinen Benutzerdaten"
+msgstr "que no se parezca demasiado a tus datos de usuario"
+
+#: core/password_validation.py:75
+#, python-format
+msgid "Passwortregeln: %(rules)s."
+msgstr "Reglas de la contraseña: %(rules)s."
+
+#: core/permissions.py:21
+#| msgid "Abrechnung erstellen und PDF herunterladen"
+msgid "Kann Abrechnungen anzeigen und herunterladen"
+msgstr "Puede ver y descargar liquidaciones"
+
+#: core/templates/admin/core/user/add_form.html:7
+msgid "Datenschutzvereinbarung"
+msgstr "Acuerdo de privacidad"
+
+#: core/templates/admin/user_management_edit.html:4
+#: core/templates/admin/user_management_edit.html:10
+#| msgid "Benutzerdaten bearbeiten"
+msgid "Benutzer bearbeiten"
+msgstr "Editar usuario"
+
+#: core/templates/admin/user_management_edit.html:26
+#| msgid "Kontaktdaten"
+msgid "Kontaktinformationen"
+msgstr "Información de contacto"
+
+#: core/templates/admin/user_management_edit.html:58
+msgid "E-Mail-Adressen können nicht über diese Verwaltung geändert werden."
+msgstr "Las direcciones de correo electrónico no se pueden cambiar desde esta administración."
+
+#: core/templates/admin/user_management_edit.html:116
+msgid "Rechte und Status"
+msgstr "Permisos y estado"
+
+#: core/templates/admin/user_management_edit.html:176
+#| msgid "Speicherdauer"
+msgid "Speichern"
+msgstr "Guardar"
+
+#: core/templates/admin/user_management_edit.html:179
+#: core/templates/management/invoice_template_form.html:18
+#: core/templates/seller/price_labels.html:16
+#: core/templates/seller/price_labels.html:61
+msgid "Abbrechen"
+msgstr "Cancelar"
+
+#: core/templates/admin/user_management_edit.html:183
+msgid "Benutzer wirklich löschen?"
+msgstr "¿Eliminar realmente al usuario?"
+
+#: core/templates/admin/user_management_edit.html:186
+#| msgid "Konto löschen"
+msgid "Benutzer löschen"
+msgstr "Eliminar usuario"
+
+#: core/templates/admin/user_management_edit.html:195
+#, python-format
+msgid ""
+"\n"
+"                    Benutzer erstellt: "
+"%(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n"
+"                    "
+msgstr "\n                    Usuario creado: %(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n                    "
+
+#: core/templates/admin/user_management_edit.html:200
+#, python-format
+msgid ""
+"\n"
+"                        Letzte Anmeldung: "
+"%(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n"
+"                        "
+msgstr "\n                        Último inicio de sesión: %(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n                        "
+
+#: core/templates/admin/user_management_edit.html:205
+msgid "Hat sich noch nicht angemeldet."
+msgstr "Aún no ha iniciado sesión."
+
+#: core/templates/admin/user_management_list.html:4
+#: core/templates/admin/user_management_list.html:8
+#: core/templates/management/home.html:13
+#| msgid "Benutzereinwilligung"
+msgid "Benutzerverwaltung"
+msgstr "Gestión de usuarios"
+
+#: core/templates/admin/user_management_list.html:9
+msgid "Verwalte Benutzer und vergebe Rechte ohne Django Admin zu nutzen."
+msgstr "Administra usuarios y asigna permisos sin usar el administrador de Django."
+
+#: core/templates/admin/user_management_list.html:21
+msgid "Filtern"
+msgstr "Filtrar"
+
+#: core/templates/admin/user_management_list.html:41
+#| msgid "E-Mail-Adresse"
+msgid "E-Mail"
+msgstr "Correo electrónico"
+
+#: core/templates/admin/user_management_list.html:43
+#| msgid "Rechts"
+msgid "Rechte"
+msgstr "Permisos"
+
+#: core/templates/admin/user_management_list.html:44
+#: core/templates/management/invoice_templates.html:11
+msgid "Aktionen"
+msgstr "Acciones"
+
+#: core/templates/admin/user_management_list.html:65
+msgid "Administrator"
+msgstr "Administrador"
+
+#: core/templates/admin/user_management_list.html:68
+#: core/templates/base.html:266 core/templates/cashier/cashier.html:3
+#: core/templates/cashier/cashier.html:7 core/templates/role.html:16
+msgid "Kasse"
+msgstr "Caja"
+
+#: core/templates/admin/user_management_list.html:71
+#| msgid "Standardsprache"
+msgid "Standard"
+msgstr "Predeterminado"
+
+#: core/templates/admin/user_management_list.html:76
+#: core/templates/management/bazaars.html:18
+#: core/templates/management/invoice_templates.html:24
+msgid "Bearbeiten"
+msgstr "Editar"
+
+#: core/templates/admin/user_management_list.html:83
+#| msgid "Link erneut senden"
+msgid "Keine Benutzer gefunden."
+msgstr "No se encontraron usuarios."
+
+#: core/templates/admin/user_management_list.html:93
+#| msgid "Zur Verwaltung"
+msgid "Zurück zur Verwaltung"
+msgstr "Volver a la administración"
+
+#: core/templates/base.html:4
+msgid "Menü öffnen"
+msgstr "Abrir menú"
+
+#: core/templates/base.html:5
+msgid "Menü schließen"
+msgstr "Cerrar menú"
+
+#: core/templates/base.html:259
+msgid "Menü"
+msgstr "Menú"
+
+#: core/templates/base.html:265 core/templates/seller/dashboard.html:3
+#: core/templates/seller/dashboard.html:5
+msgid "Verkäuferbereich"
+msgstr "Área de vendedores"
+
+#: core/templates/base.html:269 core/templates/management/bazaars.html:19
+#: core/templates/management/home.html:23
+#: core/templates/management/statistics.html:3
+#: core/templates/management/statistics.html:5
+msgid "Statistiken"
+msgstr "Estadísticas"
+
+#: core/templates/base.html:271
+msgid "Django-Admin"
+msgstr "Administración de Django"
+
+#: core/templates/base.html:275 core/templates/base.html:278
+msgid "Abmelden"
+msgstr "Cerrar sesión"
+
+#: core/templates/base.html:282 core/templates/home.html:9
+#: core/templates/registration/login.html:3
+#: core/templates/registration/login.html:6
+#: core/templates/registration/login.html:13
+msgid "Anmelden"
+msgstr "Iniciar sesión"
+
+#: core/templates/base.html:283 core/templates/home.html:8
+#: core/templates/registration/register.html:4
+#: core/templates/registration/register.html:7
+#: core/templates/registration/register.html:20
+msgid "Konto erstellen"
+msgstr "Crear cuenta"
+
+#: core/templates/base.html:285 core/templates/cookie_consent.html:10
+#: core/templates/privacy_policy.html:4 core/templates/privacy_policy.html:6
+msgid "Datenschutzerklärung"
+msgstr "Política de privacidad"
+
+#: core/templates/base.html:289
+msgid "Sprache"
+msgstr "Idioma"
+
+#: core/templates/cashier/cashier.html:5
+msgid "Diesen Artikel wirklich stornieren?"
+msgstr "¿Seguro que quieres anular este artículo?"
+
+#: core/templates/cashier/cashier.html:6
+msgid ""
+"Beleg wirklich abschließen? Danach können keine Artikel mehr korrigiert "
+"werden."
+msgstr ""
+"¿Seguro que quieres cerrar el ticket? Después no se podrán corregir los "
+"artículos."
+
+#: core/templates/cashier/cashier.html:14
+#, python-format
+msgid "Beleg %(number)s"
+msgstr "Ticket %(number)s"
+
+#: core/templates/cashier/cashier.html:16
+msgid "Verkäufernummer wählen"
+msgstr "Elegir número de vendedor"
+
+#: core/templates/cashier/cashier.html:28
+msgid "Für diesen Basar sind noch keine Verkäufernummern vergeben."
+msgstr "Todavía no se han asignado números de vendedor para este mercadillo."
+
+#: core/templates/cashier/cashier.html:33
+#, python-format
+msgid "Artikel für %(number)s"
+msgstr "Artículos del número %(number)s"
+
+#: core/templates/cashier/cashier.html:43
+msgid "Es sind keine Schnellpreise eingerichtet."
+msgstr "No hay precios rápidos configurados."
+
+#: core/templates/cashier/cashier.html:49
+msgid "Anderen Preis eingeben"
+msgstr "Introducir otro precio"
+
+#: core/templates/cashier/cashier.html:51 core/templates/scanner/join.html:46
+msgid "Artikel hinzufügen"
+msgstr "Añadir artículo"
+
+#: core/templates/cashier/cashier.html:54
+msgid "Wähle die Verkäufernummer, danach kannst du die Artikelpreise erfassen."
+msgstr ""
+"Elige el número de vendedor y después podrás introducir los precios de los "
+"artículos."
+
+#: core/templates/cashier/cashier.html:58
+#: core/templates/cashier/cashier.html:60
+msgid "Kassenzettel"
+msgstr "Ticket"
+
+#: core/templates/cashier/cashier.html:61
+#, python-format
+msgid "%(name)s · Beleg %(number)s"
+msgstr "%(name)s · ticket %(number)s"
+
+#: core/templates/cashier/cashier.html:63
+#, python-format
+msgid "Erster Artikel erfasst: %(date)s"
+msgstr "Primer artículo registrado: %(date)s"
+
+#: core/templates/cashier/cashier.html:70
+#: core/templates/management/bazaar_receipt_detail.html:18
+#: core/templates/settlement_confirm.html:68
+msgid "Storniert"
+msgstr "Anulado"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Artikel stornieren"
+msgstr "Anular artículo"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Storno"
+msgstr "Anulación"
+
+#: core/templates/cashier/cashier.html:83
+msgid "Noch keine Artikel erfasst."
+msgstr "Todavía no se han registrado artículos."
+
+#: core/templates/cashier/cashier.html:89
+msgid "Gesamt:"
+msgstr "Total:"
+
+#: core/templates/cashier/cashier.html:94
+msgid "Beleg abschließen"
+msgstr "Cerrar ticket"
+
+#: core/templates/cashier/cashier.html:103
+msgid "Basar für diese Kasse auswählen"
+msgstr "Seleccionar mercadillo para esta caja"
+
+#: core/templates/cashier/cashier.html:111
+msgid "Zurzeit ist kein Basar aktiv."
+msgstr "Ahora mismo no hay ningún mercadillo activo."
+
+#: core/templates/cashier/cashier.html:163
+msgid "QR-Scanner"
+msgstr "Escáner QR"
+
+#: core/templates/cashier/cashier.html:165
+msgid "Laden..."
+msgstr "Cargando..."
+
+#: core/templates/cashier/cashier.html:168
+msgid "Stop"
+msgstr "Detener"
+
+#: core/templates/cashier/cashier.html:169
+#| msgid "Menü schließen"
+msgid "Schließen"
+msgstr "Cerrar"
+
+#: core/templates/cashier/cashier.html:179
+msgid "Scanner"
+msgstr "Escáner"
+
+#: core/templates/cashier/cashier.html:276
+msgid "Scanner aktiv"
+msgstr "Escáner activo"
+
+#: core/templates/cashier/cashier.html:278
+msgid "QR-Code zum Scannen"
+msgstr "Código QR para escanear"
+
+#: core/templates/cashier/cashier.html:281
+msgid "Scannen Sie einen QR-Code mit dem Handy-Scanner"
+msgstr "Escanee un código QR con el escáner del móvil"
+
+#: core/templates/cashier/cashier.html:300
+msgid "Fehler:"
+msgstr "Error:"
+
+#: core/templates/cashier/cashier.html:436
+msgid "Fehler beim Hinzufügen des Artikels"
+msgstr "Error al añadir el artículo"
+
+#: core/templates/cashier/cashier.html:445
+msgid "VKNr"
+msgstr "VKNr"
+
+#: core/templates/cashier/cashier.html:448
+msgid "Fehler beim Scannen"
+msgstr "Error al escanear"
+
+#: core/templates/cashier/receipt_complete.html:3
+#: core/templates/cashier/receipt_complete.html:6
+msgid "Verkauf abgeschlossen"
+msgstr "Venta completada"
+
+#: core/templates/cashier/receipt_complete.html:7
+#, python-format
+msgid "Beleg %(number)s · %(name)s"
+msgstr "Ticket %(number)s · %(name)s"
+
+#: core/templates/cashier/receipt_complete.html:8
+msgid "Umsatz je Verkäufernummer"
+msgstr "Ventas por número de vendedor"
+
+#: core/templates/cashier/receipt_complete.html:10
+msgid "Zwischensumme"
+msgstr "Subtotal"
+
+#: core/templates/cashier/receipt_complete.html:17
+msgid "Gesamtbetrag:"
+msgstr "Importe total:"
+
+#: core/templates/cashier/receipt_complete.html:18
+msgid "Kein Ausdruck erforderlich."
+msgstr "No hace falta imprimir."
+
+#: core/templates/cashier/receipt_complete.html:21
+msgid "Nächsten Verkauf erfassen"
+msgstr "Registrar la siguiente venta"
+
+#: core/templates/cookie_consent.html:3
+msgid "Cookie-Einstellungen"
+msgstr "Configuración de cookies"
+
+#: core/templates/cookie_consent.html:7
+msgid "Notwendige Cookies"
+msgstr "Cookies necesarias"
+
+#: core/templates/cookie_consent.html:8
+msgid ""
+"Damit diese Seite funktioniert, ist deine Zustimmung zur Verwendung der "
+"erforderlichen Cookies notwendig. Die Seite bleibt bis zur Zustimmung "
+"gesperrt."
+msgstr ""
+"Para que este sitio funcione, debes aceptar el uso de las cookies "
+"necesarias. La página permanecerá bloqueada hasta que lo hagas."
+
+#: core/templates/cookie_consent.html:10
+msgid "Weitere Informationen findest du in der"
+msgstr "Encontrarás más información en la"
+
+#: core/templates/cookie_consent.html:14
+msgid "Zustimmen und fortfahren"
+msgstr "Aceptar y continuar"
+
+#: core/templates/home.html:7
+msgid "Verkäufernummern verwalten, Verkäufe erfassen und Basare abrechnen."
+msgstr "Gestiona números de vendedor, registra ventas y liquida mercadillos."
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+msgid "Basar bearbeiten"
+msgstr "Editar mercadillo"
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+#: core/templates/management/bazaars.html:6
+msgid "Neuen Basar anlegen"
+msgstr "Crear un mercadillo"
+
+#: core/templates/management/bazaar_form.html:17
+msgid "Basar speichern"
+msgstr "Guardar mercadillo"
+
+#: core/templates/management/bazaar_form.html:18
+msgid "Zurück zur Liste"
+msgstr "Volver a la lista"
+
+#: core/templates/management/bazaar_form.html:22
+#: core/templates/management/bazaar_form.html:23
+msgid "Prompt für die Plakatgenerierung"
+msgstr "Prompt para generar el cartel"
+
+#: core/templates/management/bazaar_form.html:27
+msgid "Abrechnung öffnen"
+msgstr "Abrir liquidación"
+
+#: core/templates/management/bazaar_receipt_detail.html:3
+#, python-format
+msgid "Rechnung %(number)s · %(name)s"
+msgstr "Factura %(number)s · %(name)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:5
+#, python-format
+msgid "Rechnung %(number)s"
+msgstr "Factura %(number)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:7
+msgid "Basar:"
+msgstr "Mercadillo:"
+
+#: core/templates/management/bazaar_receipt_detail.html:8
+msgid "Zeit:"
+msgstr "Hora:"
+
+#: core/templates/management/bazaar_receipt_detail.html:9
+msgid "Status:"
+msgstr "Estado:"
+
+#: core/templates/management/bazaar_receipt_detail.html:10
+msgid "Positionen"
+msgstr "Artículos"
+
+#: core/templates/management/bazaar_receipt_detail.html:12
+msgid "Erfasst"
+msgstr "Registrado"
+
+#: core/templates/management/bazaar_receipt_detail.html:18
+msgid "Gültig"
+msgstr "Válido"
+
+#: core/templates/management/bazaar_receipt_detail.html:22
+msgid "Der Beleg enthält noch keine Artikelpositionen."
+msgstr "El ticket todavía no contiene ninguna línea de artículos."
+
+#: core/templates/management/bazaar_receipt_detail.html:26
+msgid "Gesamtbetrag"
+msgstr "Importe total"
+
+#: core/templates/management/bazaar_receipt_detail.html:30
+msgid ""
+"Der Beleg ist noch offen; der angezeigte Gesamtbetrag ist ein Zwischenstand."
+msgstr "El ticket aún está abierto; el importe total mostrado es provisional."
+
+#: core/templates/management/bazaar_receipt_detail.html:33
+msgid "Zurück zu den Basarstatistiken"
+msgstr "Volver a las estadísticas del mercadillo"
+
+#: core/templates/management/bazaar_statistics.html:3
+#: core/templates/management/bazaar_statistics.html:16
+#, python-format
+msgid "Statistiken: %(name)s"
+msgstr "Estadísticas: %(name)s"
+
+#: core/templates/management/bazaar_statistics.html:5
+msgid "Verkaufte Artikel je 5 Minuten"
+msgstr "Artículos vendidos cada 5 minutos"
+
+#: core/templates/management/bazaar_statistics.html:6
+msgid "Artikelanzahl"
+msgstr "Cantidad de artículos"
+
+#: core/templates/management/bazaar_statistics.html:7
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+msgid "Artikel"
+msgstr "Artículos"
+
+#: core/templates/management/bazaar_statistics.html:8
+msgid "Bruttoumsatz je 5 Minuten"
+msgstr "Ventas brutas cada 5 minutos"
+
+#: core/templates/management/bazaar_statistics.html:9
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+#: core/templates/seller/bazaar_details.html:44 core/views.py:1823
+msgid "Bruttoumsatz"
+msgstr "Ventas brutas"
+
+#: core/templates/management/bazaar_statistics.html:10
+msgid "Neue Verkäufernummern je Tag"
+msgstr "Nuevos números de vendedor por día"
+
+#: core/templates/management/bazaar_statistics.html:11
+msgid "Neue Nummern pro Tag"
+msgstr "Nuevos números por día"
+
+#: core/templates/management/bazaar_statistics.html:12
+msgid "Neue Nummern"
+msgstr "Nuevos números"
+
+#: core/templates/management/bazaar_statistics.html:13
+msgid "Kumulierte Vergabe der Verkäufernummern"
+msgstr "Asignación acumulada de números de vendedor"
+
+#: core/templates/management/bazaar_statistics.html:14
+msgid "Nummern gesamt"
+msgstr "Números en total"
+
+#: core/templates/management/bazaar_statistics.html:15
+msgid "Gesamtzahl"
+msgstr "Cantidad total"
+
+#: core/templates/management/bazaar_statistics.html:17
+msgid ""
+"Verwendet werden abgeschlossene Belege und nicht stornierte "
+"Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr ""
+"Se incluyen los tickets cerrados y las líneas de artículos no anuladas. Los "
+"ingresos corresponden a las ventas brutas."
+
+#: core/templates/management/bazaar_statistics.html:60
+msgid "Verkäufe und Einnahmen je 5 Minuten"
+msgstr "Ventas e ingresos cada 5 minutos"
+
+#: core/templates/management/bazaar_statistics.html:61
+msgid ""
+"Der Zeitstempel eines abgeschlossenen Belegs bestimmt das 5-Minuten-"
+"Intervall. Eine tatsächliche Öffnungs- oder Endzeit wird derzeit nicht "
+"erfasst."
+msgstr ""
+"La fecha y hora de cierre de un ticket determina el intervalo de 5 minutos. "
+"Actualmente no se registra la hora real de apertura o cierre."
+
+#: core/templates/management/bazaar_statistics.html:63
+#: core/templates/seller/bazaar_details.html:25
+msgid "Verkaufte Artikel"
+msgstr "Artículos vendidos"
+
+#: core/templates/management/bazaar_statistics.html:65
+msgid "Einnahmen"
+msgstr "Ingresos"
+
+#: core/templates/management/bazaar_statistics.html:70
+#: core/templates/management/bazaar_statistics.html:124
+msgid "Für diesen Basar liegen noch keine abgeschlossenen Verkäufe vor."
+msgstr "Todavía no hay ventas completadas para este mercadillo."
+
+#: core/templates/management/bazaar_statistics.html:75
+msgid "Verlauf der Verkäufernummernvergabe"
+msgstr "Historial de asignación de números de vendedor"
+
+#: core/templates/management/bazaar_statistics.html:77
+msgid "Je Tag: neu vergebene Nummern und kumulierte Gesamtzahl."
+msgstr "Por día: números nuevos asignados y cantidad acumulada."
+
+#: core/templates/management/bazaar_statistics.html:78
+msgid "Neu vergebene Nummern"
+msgstr "Números asignados recientemente"
+
+#: core/templates/management/bazaar_statistics.html:80
+msgid "Kumulierte Nummern"
+msgstr "Números acumulados"
+
+#: core/templates/management/bazaar_statistics.html:83
+msgid ""
+"Für die vorhandenen Verkäufernummern liegen keine Vergabezeitpunkte vor."
+msgstr ""
+"No hay fechas de asignación registradas para los números de vendedor "
+"existentes."
+
+#: core/templates/management/bazaar_statistics.html:86
+#, python-format
+msgid ""
+"%(count)s ältere Nummern haben keinen gespeicherten Vergabezeitpunkt und "
+"können im Verlauf nicht berücksichtigt werden."
+msgstr ""
+"%(count)s números antiguos no tienen una fecha de asignación guardada y no "
+"se pueden incluir en el historial."
+
+#: core/templates/management/bazaar_statistics.html:91
+msgid "Top-Rechnungen nach Betrag"
+msgstr "Facturas con los importes más altos"
+
+#: core/templates/management/bazaar_statistics.html:92
+msgid "Die Rangliste umfasst die zehn höchsten abgeschlossenen Belege."
+msgstr ""
+"La clasificación incluye los diez tickets cerrados con los importes más "
+"altos."
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Zeit"
+msgstr "Hora"
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Betrag"
+msgstr "Importe"
+
+#: core/templates/management/bazaar_statistics.html:101
+msgid "Rechnung ansehen"
+msgstr "Ver factura"
+
+#: core/templates/management/bazaar_statistics.html:104
+#: core/templates/management/bazaar_statistics.html:169
+#: core/templates/management/bazaar_statistics.html:189
+msgid "Es gibt noch keine abgeschlossenen Rechnungen."
+msgstr "Todavía no hay facturas cerradas."
+
+#: core/templates/management/bazaar_statistics.html:111
+msgid "Top-Verkäufer"
+msgstr "Vendedores con más ventas"
+
+#: core/templates/management/bazaar_statistics.html:112
+msgid "Sortiert nach Bruttoumsatz; bei Gleichstand nach Artikelanzahl."
+msgstr ""
+"Ordenados por ventas brutas; en caso de empate, por cantidad de artículos."
+
+#: core/templates/management/bazaar_statistics.html:114
+msgid "Platz"
+msgstr "Posición"
+
+#: core/templates/management/bazaar_statistics.html:131
+msgid "Durchschnitt, Median und Stornoquote"
+msgstr "Promedio, mediana y porcentaje de anulaciones"
+
+#: core/templates/management/bazaar_statistics.html:135
+msgid "Durchschnitt pro abgeschlossener Rechnung"
+msgstr "Promedio por factura cerrada"
+
+#: core/templates/management/bazaar_statistics.html:139
+msgid "Median pro abgeschlossener Rechnung"
+msgstr "Mediana por factura cerrada"
+
+#: core/templates/management/bazaar_statistics.html:144
+msgid ""
+"Für Durchschnitt und Median gibt es noch keine abgeschlossenen Rechnungen."
+msgstr ""
+"Todavía no hay facturas cerradas para calcular el promedio y la mediana."
+
+#: core/templates/management/bazaar_statistics.html:146
+msgid "Stornoquote"
+msgstr "Porcentaje de anulaciones"
+
+#: core/templates/management/bazaar_statistics.html:148
+#, python-format
+msgid "%(cancelled)s von %(total)s Positionen storniert (%(rate)s %%)."
+msgstr "%(cancelled)s de %(total)s líneas anuladas (%(rate)s %%)."
+
+#: core/templates/management/bazaar_statistics.html:149
+msgid "Enthalten sind Positionen aus offenen und abgeschlossenen Belegen."
+msgstr "Se incluyen las líneas de los tickets abiertos y cerrados."
+
+#: core/templates/management/bazaar_statistics.html:151
+msgid "Für diesen Basar wurden noch keine Artikelpositionen erfasst."
+msgstr "Todavía no se han registrado artículos para este mercadillo."
+
+#: core/templates/management/bazaar_statistics.html:156
+msgid "Stoßzeiten"
+msgstr "Horas punta"
+
+#: core/templates/management/bazaar_statistics.html:157
+msgid ""
+"Die fünf 5-Minuten-Intervalle mit den meisten abgeschlossenen Rechnungen. "
+"Bei Gleichstand entscheidet der Umsatz."
+msgstr ""
+"Los cinco intervalos de 5 minutos con más facturas cerradas. En caso de "
+"empate, se tiene en cuenta el importe de las ventas."
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Intervall"
+msgstr "Intervalo"
+
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Rechnungen"
+msgstr "Facturas"
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Umsatz"
+msgstr "Ventas"
+
+#: core/templates/management/bazaar_statistics.html:176
+msgid "Umsatz je Kassierer"
+msgstr "Ventas por cajero"
+
+#: core/templates/management/bazaar_statistics.html:177
+msgid ""
+"Bruttoumsatz aus abgeschlossenen Belegen; stornierte Positionen sind "
+"ausgenommen."
+msgstr ""
+"Ventas brutas de los tickets cerrados; se excluyen las líneas anuladas."
+
+#: core/templates/management/bazaar_statistics.html:196
+msgid "Alle Rechnungen"
+msgstr "Todas las facturas"
+
+#: core/templates/management/bazaar_statistics.html:197
+msgid ""
+"Offene Belege werden mit dem aktuellen Zwischenbetrag angezeigt und "
+"aktualisieren sich beim erneuten Aufruf."
+msgstr ""
+"Los tickets abiertos muestran el importe provisional actual y se actualizan "
+"al volver a cargar la página."
+
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Nummer"
+msgstr "Número"
+
+#: core/templates/management/bazaar_statistics.html:207
+#: core/templates/management/statistics.html:87
+#: core/templates/seller/dashboard.html:24
+msgid "Details"
+msgstr "Detalles"
+
+#: core/templates/management/bazaar_statistics.html:210
+msgid "Für diesen Basar gibt es noch keine Rechnungen."
+msgstr "Todavía no hay facturas para este mercadillo."
+
+#: core/templates/management/bazaar_statistics.html:217
+msgid "Neuere"
+msgstr "Más recientes"
+
+#: core/templates/management/bazaar_statistics.html:219
+#, python-format
+msgid "Seite %(current)s von %(total)s"
+msgstr "Página %(current)s de %(total)s"
+
+#: core/templates/management/bazaar_statistics.html:221
+msgid "Ältere"
+msgstr "Más antiguas"
+
+#: core/templates/management/bazaar_statistics.html:227
+msgid "Zur Statistikübersicht"
+msgstr "Volver al resumen de estadísticas"
+
+#: core/templates/management/bazaars.html:3
+#: core/templates/management/bazaars.html:5
+#: core/templates/management/home.html:10
+msgid "Basare verwalten"
+msgstr "Gestionar mercadillos"
+
+#: core/templates/management/bazaars.html:9
+msgid "Nummernvergabe bis"
+msgstr "Fecha límite para asignar números"
+
+#: core/templates/management/bazaars.html:21
+msgid "Abrechnung"
+msgstr "Liquidación"
+
+#: core/templates/management/bazaars.html:26
+#: core/templates/management/statistics.html:90
+msgid "Es wurden noch keine Basare angelegt."
+msgstr "Todavía no se ha creado ningún mercadillo."
+
+#: core/templates/management/bazaars.html:31
+#: core/templates/management/settings.html:19
+msgid "Zur Verwaltung"
+msgstr "Volver a la administración"
+
+#: core/templates/management/home.html:9
+msgid "Basare anlegen und verwalten."
+msgstr "Crea y gestiona mercadillos."
+
+#: core/templates/management/home.html:14
+msgid "Benutzer verwalten und Rechte vergeben."
+msgstr "Administrar usuarios y asignar permisos."
+
+#: core/templates/management/home.html:15
+#| msgid "Basare verwalten"
+msgid "Benutzer verwalten"
+msgstr "Gestionar usuarios"
+
+#: core/templates/management/home.html:18
+#: core/templates/management/settings.html:3
+#: core/templates/management/settings.html:5
+msgid "Systemeinstellungen"
+msgstr "Configuración del sistema"
+
+#: core/templates/management/home.html:19
+msgid "Globale Preise, Gebühren, Einwilligung und Plakatvorgaben."
+msgstr ""
+"Precios globales, cuotas, consentimiento e instrucciones para carteles."
+
+#: core/templates/management/home.html:20
+msgid "Einstellungen bearbeiten"
+msgstr "Editar configuración"
+
+#: core/templates/management/home.html:24
+msgid "Verkaufsentwicklung, Einnahmen und Preisverteilung der Basare."
+msgstr ""
+"Evolución de ventas, ingresos y distribución de precios de los mercadillos."
+
+#: core/templates/management/home.html:25
+msgid "Statistiken ansehen"
+msgstr "Ver estadísticas"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Vorlage bearbeiten"
+msgstr "Editar plantilla"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Neue Vorlage"
+msgstr "Nueva plantilla"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage bearbeiten"
+msgstr "Editar plantilla de factura del vendedor"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage anlegen"
+msgstr "Crear plantilla de factura del vendedor"
+
+#: core/templates/management/invoice_template_form.html:17
+msgid "Vorlage speichern"
+msgstr "Guardar plantilla"
+
+#: core/templates/management/invoice_templates.html:6
+msgid ""
+"Die Standardvorlage ist schreibgeschützt. Über „Kopie“ kannst du eine "
+"bearbeitbare Vorlage daraus erstellen. Das globale Logo wird automatisch "
+"eingefügt."
+msgstr ""
+"La plantilla predeterminada es de solo lectura. Usa «Copia» para crear una "
+"plantilla editable. El logotipo global se añadirá automáticamente."
+
+#: core/templates/management/invoice_templates.html:7
+msgid "Neue Vorlage anlegen"
+msgstr "Crear una plantilla"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Standard für neue Basare"
+msgstr "Predeterminada para nuevos mercadillos"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Verwendet von Basaren"
+msgstr "Usada por los mercadillos"
+
+#: core/templates/management/invoice_templates.html:17
+#, python-format
+msgid "Als Standardvorlage verwenden: %(name)s"
+msgstr "Usar como plantilla predeterminada: %(name)s"
+
+#: core/templates/management/invoice_templates.html:20
+msgid "schreibgeschützt"
+msgstr "de solo lectura"
+
+#: core/templates/management/invoice_templates.html:25
+msgid "Löschen"
+msgstr "Eliminar"
+
+#: core/templates/management/invoice_templates.html:27 core/views.py:796
+#: core/views.py:800
+msgid "Kopie"
+msgstr "Copia"
+
+#: core/templates/management/invoice_templates.html:31
+msgid "Es gibt noch keine Vorlagen."
+msgstr "Todavía no hay plantillas."
+
+#: core/templates/management/invoice_templates.html:36
+msgid "Standardvorlage speichern"
+msgstr "Guardar plantilla predeterminada"
+
+#: core/templates/management/invoice_templates.html:38
+msgid "Zurück zu den Systemeinstellungen"
+msgstr "Volver a la configuración del sistema"
+
+#: core/templates/management/settings.html:17
+msgid "Einstellungen speichern"
+msgstr "Guardar configuración"
+
+#: core/templates/management/settings.html:18
+msgid "Verkäuferrechnungsvorlagen verwalten"
+msgstr "Gestionar plantillas de factura del vendedor"
+
+#: core/templates/management/settings.html:23
+msgid "Aktuelles Verkäuferabrechnungslogo"
+msgstr "Logotipo actual para las liquidaciones de vendedores"
+
+#: core/templates/management/settings.html:24
+msgid "Aktuelles globales Logo"
+msgstr "Logotipo global actual"
+
+#: core/templates/management/statistics.html:6
+msgid ""
+"Berücksichtigt werden ausschließlich abgeschlossene Belege und nicht "
+"stornierte Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr ""
+"Solo se incluyen los tickets cerrados y las líneas de artículos no anuladas. "
+"Los ingresos corresponden a las ventas brutas."
+
+#: core/templates/management/statistics.html:20
+msgid "Verkaufsentwicklung je Basar"
+msgstr "Evolución de ventas por mercadillo"
+
+#: core/templates/management/statistics.html:26
+#, python-format
+msgid "%(label)s: %(value)s Artikel"
+msgstr "%(label)s: %(value)s artículos"
+
+#: core/templates/management/statistics.html:29
+#: core/templates/management/statistics.html:67
+#, python-format
+msgid "%(value)s Artikel"
+msgstr "%(value)s artículos"
+
+#: core/templates/management/statistics.html:34
+#: core/templates/management/statistics.html:53
+msgid "Es gibt noch keine Basare."
+msgstr "Todavía no hay mercadillos."
+
+#: core/templates/management/statistics.html:39
+msgid "Einnahmeentwicklung je Basar"
+msgstr "Evolución de los ingresos por mercadillo"
+
+#: core/templates/management/statistics.html:45
+#, python-format
+msgid "%(label)s: %(value)s %(currency)s"
+msgstr "%(label)s: %(value)s %(currency)s"
+
+#: core/templates/management/statistics.html:58
+msgid "Artikelverteilung nach Preis"
+msgstr "Distribución de artículos por precio"
+
+#: core/templates/management/statistics.html:64
+#, python-format
+msgid "%(value)s Artikel zu %(label)s"
+msgstr "%(value)s artículos a %(label)s"
+
+#: core/templates/management/statistics.html:72
+msgid "Es wurden noch keine Artikel verkauft."
+msgstr "Todavía no se ha vendido ningún artículo."
+
+#: core/templates/management/statistics.html:77
+msgid "Basarübersicht"
+msgstr "Resumen de mercadillos"
+
+#: core/templates/partials/cookie_details.html:2
+msgid ""
+"Wir verwenden keine Cookies von Drittanbietern und binden keine Analyse- "
+"oder Werbedienste ein. Folgende technisch notwendige Cookies werden für den "
+"Betrieb genutzt:"
+msgstr ""
+"No usamos cookies de terceros ni integramos servicios de análisis o "
+"publicidad. Para el funcionamiento del sitio se utilizan las siguientes "
+"cookies técnicas necesarias:"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Cookie"
+msgstr "Cookie"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Inhalt und Zweck"
+msgstr "Contenido y finalidad"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Speicherdauer"
+msgstr "Duración del almacenamiento"
+
+#: core/templates/partials/cookie_details.html:9
+msgid "Signierter Zustimmungsstatus. Enthält keine persönlichen Angaben."
+msgstr "Estado de consentimiento firmado. No contiene datos personales."
+
+#: core/templates/partials/cookie_details.html:10
+msgid "1 Jahr"
+msgstr "1 año"
+
+#: core/templates/partials/cookie_details.html:14
+msgid ""
+"Zufällige Sitzungskennung. Anmeldestatus, ausgewählte Rolle und "
+"Kassenkontext werden serverseitig gespeichert, nicht im Cookie."
+msgstr ""
+"Identificador de sesión aleatorio. El estado de inicio de sesión, el rol "
+"seleccionado y el contexto de caja se guardan en el servidor, no en la "
+"cookie."
+
+#: core/templates/partials/cookie_details.html:15
+msgid "Bis zu 2 Wochen; die Sitzung kann vorher beendet werden"
+msgstr "Hasta 2 semanas; la sesión puede finalizar antes"
+
+#: core/templates/partials/cookie_details.html:19
+msgid ""
+"Zufälliger Sicherheitstoken zum Schutz vor gefälschten "
+"Formularübermittlungen. Keine Profil- oder Verkaufsdaten."
+msgstr ""
+"Token de seguridad aleatorio para proteger frente a envíos de formularios "
+"falsificados. No contiene datos de perfil ni de ventas."
+
+#: core/templates/partials/cookie_details.html:20
+msgid "Bis zu 1 Jahr"
+msgstr "Hasta 1 año"
+
+#: core/templates/partials/cookie_details.html:24
+msgid ""
+"Signierte, kurzfristige Statusmeldungen der Anwendung, zum Beispiel Hinweise "
+"nach dem Speichern. Bei größeren Meldungen werden sie serverseitig in der "
+"Sitzung abgelegt."
+msgstr ""
+"Mensajes de estado firmados y de corta duración de la aplicación, por "
+"ejemplo, avisos después de guardar. Los mensajes más largos se guardan en la "
+"sesión del servidor."
+
+#: core/templates/partials/cookie_details.html:25
+msgid "Kurzzeitig, in der Regel bis zum nächsten Seitenaufruf"
+msgstr "Temporalmente, normalmente hasta la siguiente carga de página"
+
+#: core/templates/partials/cookie_details.html:29
+msgid "Ausgewählte Sprache der Benutzeroberfläche."
+msgstr "Idioma seleccionado para la interfaz."
+
+#: core/templates/partials/cookie_details.html:30
+msgid "Bis zum Schließen des Browsers (Sitzungscookie)"
+msgstr "Hasta que se cierre el navegador (cookie de sesión)"
+
+#: core/templates/partials/cookie_details.html:35
+msgid ""
+"Ohne Zustimmung können die Anmelde-, Verkäufer- und Kassenfunktionen nicht "
+"verwendet werden. Du kannst die Zustimmung jederzeit durch Löschen der "
+"Cookies im Browser zurücknehmen; beim nächsten Besuch fragen wir erneut."
+msgstr ""
+"Sin consentimiento no se pueden usar las funciones de inicio de sesión, "
+"vendedores y caja. Puedes retirar tu consentimiento en cualquier momento "
+"borrando las cookies del navegador; te lo volveremos a preguntar en tu "
+"próxima visita."
+
+#: core/templates/partials/line_chart.html:2
+#, python-format
+msgid "%(title)s. Y-Achse: %(axis)s"
+msgstr "%(title)s. Eje Y: %(axis)s"
+
+#: core/templates/partials/line_chart.html:31
+#: core/templates/partials/line_chart.html:32
+#, python-format
+msgid "%(label)s: %(value)s"
+msgstr "%(label)s: %(value)s"
+
+#: core/templates/partials/line_chart.html:41
+msgid "Messwerte als Tabelle anzeigen"
+msgstr "Mostrar los valores en una tabla"
+
+#: core/templates/partials/line_chart.html:44
+msgid "Zeitpunkt"
+msgstr "Fecha y hora"
+
+#: core/templates/partials/line_chart.html:49
+msgid "Keine Messwerte vorhanden."
+msgstr "No hay valores disponibles."
+
+#: core/templates/privacy_policy.html:12
+msgid "Die Datenschutzerklärung ist derzeit noch nicht hinterlegt."
+msgstr "La política de privacidad todavía no está disponible."
+
+#: core/templates/privacy_policy.html:15
+msgid "Cookies und ähnliche Technologien"
+msgstr "Cookies y tecnologías similares"
+
+#: core/templates/registration/accept_consent.html:4
+msgid "Datenschutzhinweise bestätigen"
+msgstr "Confirmar la información sobre privacidad"
+
+#: core/templates/registration/accept_consent.html:7
+msgid "Aktualisierte Datenschutzhinweise"
+msgstr "Información de privacidad actualizada"
+
+#: core/templates/registration/accept_consent.html:9
+#, python-format
+msgid "Version %(version)s"
+msgstr "Versión %(version)s"
+
+#: core/templates/registration/accept_consent.html:14
+msgid "Zustimmung speichern"
+msgstr "Guardar consentimiento"
+
+#: core/templates/registration/account_deleted.html:3
+#: core/templates/registration/account_deleted.html:6
+msgid "Konto gelöscht"
+msgstr "Cuenta eliminada"
+
+#: core/templates/registration/account_deleted.html:7
+msgid ""
+"Dein Konto und deine persönlichen Daten wurden gelöscht. Verkäufernummern, "
+"Belege und Basarabrechnungen bleiben anonymisiert erhalten."
+msgstr ""
+"Tu cuenta y tus datos personales se han eliminado. Los números de vendedor, "
+"los tickets y las liquidaciones del mercadillo se conservan de forma "
+"anonimizada."
+
+#: core/templates/registration/account_deleted.html:8
+#: core/templates/scanner/error.html:12
+msgid "Zur Startseite"
+msgstr "Ir a la página de inicio"
+
+#: core/templates/registration/login.html:15
+msgid "Passwort vergessen?"
+msgstr "¿Has olvidado la contraseña?"
+
+#: core/templates/registration/password_reset_complete.html:3
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Passwort geändert"
+msgstr "Contraseña cambiada"
+
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Jetzt anmelden"
+msgstr "Iniciar sesión ahora"
+
+#: core/templates/registration/password_reset_confirm.html:3
+msgid "Neues Passwort"
+msgstr "Nueva contraseña"
+
+#: core/templates/registration/password_reset_confirm.html:6
+msgid "Neues Passwort festlegen"
+msgstr "Establecer una nueva contraseña"
+
+#: core/templates/registration/password_reset_confirm.html:14
+msgid "Passwort speichern"
+msgstr "Guardar contraseña"
+
+#: core/templates/registration/password_reset_confirm.html:16
+msgid "Der Link ist ungültig oder abgelaufen."
+msgstr "El enlace no es válido o ha caducado."
+
+#: core/templates/registration/password_reset_done.html:3
+msgid "E-Mail versendet"
+msgstr "Correo electrónico enviado"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid "Prüfe dein Postfach"
+msgstr "Revisa tu bandeja de entrada"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid ""
+"Falls ein aktives Konto zu der Adresse existiert, wurde ein Link versendet."
+msgstr ""
+"Si existe una cuenta activa con esta dirección, se ha enviado un enlace."
+
+#: core/templates/registration/password_reset_email.html:2
+msgid ""
+"Du erhältst diese E-Mail, weil ein Passwort-Reset für dein Basar-Konto "
+"angefordert wurde."
+msgstr ""
+"Has recibido este correo porque se ha solicitado restablecer la contraseña "
+"de tu cuenta de Basar."
+
+#: core/templates/registration/password_reset_email.html:4
+msgid "Öffne diesen Link, um ein neues Passwort festzulegen:"
+msgstr "Abre este enlace para establecer una nueva contraseña:"
+
+#: core/templates/registration/password_reset_email.html:7
+msgid ""
+"Wenn du den Reset nicht angefordert hast, kannst du diese Nachricht "
+"ignorieren."
+msgstr ""
+"Si no has solicitado restablecer la contraseña, puedes ignorar este mensaje."
+
+#: core/templates/registration/password_reset_form.html:3
+#: core/templates/registration/password_reset_form.html:6
+msgid "Passwort zurücksetzen"
+msgstr "Restablecer contraseña"
+
+#: core/templates/registration/password_reset_form.html:7
+msgid "Wir senden einen Link an die E-Mail-Adresse deines Kontos."
+msgstr ""
+"Enviaremos un enlace a la dirección de correo electrónico de tu cuenta."
+
+#: core/templates/registration/password_reset_form.html:14
+msgid "Link senden"
+msgstr "Enviar enlace"
+
+#: core/templates/registration/profile_edit.html:3
+#: core/templates/registration/profile_edit.html:6
+msgid "Benutzerdaten bearbeiten"
+msgstr "Editar datos de usuario"
+
+#: core/templates/registration/profile_edit.html:7
+msgid "E-Mail-Adresse für die Anmeldung:"
+msgstr "Dirección de correo electrónico para iniciar sesión:"
+
+#: core/templates/registration/profile_edit.html:17
+msgid "Daten speichern"
+msgstr "Guardar datos"
+
+#: core/templates/registration/profile_edit.html:21
+#: core/templates/registration/profile_edit.html:29
+msgid "Konto löschen"
+msgstr "Eliminar cuenta"
+
+#: core/templates/registration/profile_edit.html:22
+msgid ""
+"Deine persönlichen Daten und Einwilligungen werden gelöscht. "
+"Verkäufernummern, Belege und Abrechnungen bleiben anonymisiert erhalten, "
+"damit die Basarsummen korrekt bleiben."
+msgstr ""
+"Se eliminarán tus datos personales y consentimientos. Los números de "
+"vendedor, los tickets y las liquidaciones se conservarán de forma "
+"anonimizada para que los totales del mercadillo sigan siendo correctos."
+
+#: core/templates/registration/profile_edit.html:27
+msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgstr "Quiero eliminar mi cuenta de forma permanente."
+
+#: core/templates/registration/register.html:8
+msgid ""
+"Vorname, Nachname, E-Mail-Adresse und Passwort sind erforderlich. "
+"Telefonnummer und Adresse sind freiwillig."
+msgstr ""
+"El nombre, los apellidos, el correo electrónico y la contraseña son "
+"obligatorios. El teléfono y la dirección son opcionales."
+
+#: core/templates/registration/register.html:18
+msgid "Konto erstellen und Bestätigungslink anfordern"
+msgstr "Crear cuenta y solicitar enlace de confirmación"
+
+#: core/templates/registration/registration_sent.html:3
+#: core/templates/registration/registration_sent.html:6
+msgid "E-Mail bestätigen"
+msgstr "Confirmar correo electrónico"
+
+#: core/templates/registration/registration_sent.html:8
+msgid "Der Bestätigungslink ist abgelaufen. Fordere einen neuen Link an."
+msgstr "El enlace de confirmación ha caducado. Solicita un enlace nuevo."
+
+#: core/templates/registration/registration_sent.html:10
+msgid ""
+"Falls ein unbestätigtes Konto zu der Adresse existiert, wurde ein neuer Link "
+"versendet."
+msgstr ""
+"Si existe una cuenta sin confirmar con esta dirección, se ha enviado un "
+"enlace nuevo."
+
+#: core/templates/registration/registration_sent.html:12
+#, python-format
+msgid "Ein Bestätigungslink wurde an %(email)s gesendet."
+msgstr "Se ha enviado un enlace de confirmación a %(email)s."
+
+#: core/templates/registration/registration_sent.html:16
+msgid "Bestätigungslink erneut senden"
+msgstr "Volver a enviar el enlace de confirmación"
+
+#: core/templates/registration/registration_sent.html:18
+msgid "Link erneut senden"
+msgstr "Volver a enviar el enlace"
+
+#: core/templates/role.html:3
+msgid "Ansicht auswählen"
+msgstr "Seleccionar vista"
+
+#: core/templates/role.html:5
+msgid "Wie möchtest du fortfahren?"
+msgstr "¿Cómo quieres continuar?"
+
+#: core/templates/role.html:10
+msgid "Verkäufernummern, aktuelle Basare und Historie ansehen."
+msgstr ""
+"Consulta los números de vendedor, los mercadillos actuales y el historial."
+
+#: core/templates/role.html:11
+msgid "Verkäuferansicht öffnen"
+msgstr "Abrir vista de vendedor"
+
+#: core/templates/role.html:17
+msgid "Verkäufe an einer Kasse erfassen."
+msgstr "Registra ventas en una caja."
+
+#: core/templates/role.html:18
+msgid "Kassenansicht öffnen"
+msgstr "Abrir vista de caja"
+
+#: core/templates/scanner/error.html:4
+msgid "Scanner Fehler"
+msgstr "Error del escáner"
+
+#: core/templates/scanner/error.html:9
+msgid "Scanner-Fehler"
+msgstr "Error del escáner"
+
+#: core/templates/scanner/error.html:11
+msgid "Bitte öffnen Sie in der Kasse eine neue Scanner-Session."
+msgstr "Abra una nueva sesión del escáner en la caja."
+
+#: core/templates/scanner/join.html:4
+msgid "QR-Code Scanner"
+msgstr "Escáner de códigos QR"
+
+#: core/templates/scanner/join.html:7
+msgid "Basar-QR-Code Scanner"
+msgstr "Escáner de códigos QR de Basar"
+
+#: core/templates/scanner/join.html:8
+#, python-format
+msgid "Verbunden mit: <strong>%(bazaar)s</strong>"
+msgstr "Conectado con: <strong>%(bazaar)s</strong>"
+
+#: core/templates/scanner/join.html:11
+msgid "Scanbereit"
+msgstr "Listo para escanear"
+
+#: core/templates/scanner/join.html:13
+msgid "Initialisiere Kamera..."
+msgstr "Inicializando cámara..."
+
+#: core/templates/scanner/join.html:24
+#| msgid "Anderen Preis eingeben"
+msgid "Oder manuell eingeben:"
+msgstr "O introducir manualmente:"
+
+#: core/templates/scanner/join.html:29
+#| msgid "Verkäufernummer wählen"
+msgid "Verkäufernummer auswählen"
+msgstr "Seleccionar número de vendedor"
+
+#: core/templates/scanner/join.html:41
+msgid "z. B. 2,50"
+msgstr "p. ej., 2,50"
+
+#: core/templates/scanner/join.html:52 core/templates/scanner/join.html:262
+#| msgid "Artikel für %(number)s"
+msgid "Artikel übernommen"
+msgstr "Artículo añadido"
+
+#: core/templates/scanner/join.html:133 core/templates/scanner/join.html:210
+msgid "Scanbereit – halte QR-Code zur Kamera"
+msgstr "Listo para escanear: acerque el código QR a la cámara"
+
+#: core/templates/scanner/join.html:144
+msgid "Kamera-Zugriff wurde verweigert"
+msgstr "Se denegó el acceso a la cámara"
+
+#: core/templates/scanner/join.html:146
+msgid "Keine Kamera gefunden"
+msgstr "No se encontró ninguna cámara"
+
+#: core/templates/scanner/join.html:202
+msgid "QR-Code erkannt – nächster Scan in 3 Sekunden"
+msgstr "Código QR detectado: próximo escaneo en 3 segundos"
+
+#: core/templates/scanner/join.html:258
+msgid "Fehler beim Übertragen"
+msgstr "Error al transmitir"
+
+#: core/templates/scanner/join.html:298
+#| msgid "Bitte wähle einen gültigen Basar."
+msgid "Bitte wähle eine Verkäufernummer aus."
+msgstr "Selecciona un número de vendedor."
+
+#: core/templates/scanner/join.html:302 core/views.py:1314
+msgid "Bitte gib einen gültigen Preis ein."
+msgstr "Introduce un precio válido."
+
+#: core/templates/seller/bazaar_details.html:3
+#, python-format
+msgid "Verkaufsdetails – %(name)s"
+msgstr "Detalles de ventas – %(name)s"
+
+#: core/templates/seller/bazaar_details.html:6
+#: core/templates/seller/dashboard.html:13
+msgid "Verkäufernummer:"
+msgstr "Número de vendedor:"
+
+#: core/templates/seller/bazaar_details.html:7
+#: core/templates/seller/dashboard.html:38
+msgid "Basartag:"
+msgstr "Día del mercadillo:"
+
+#: core/templates/seller/bazaar_details.html:12
+#: core/templates/seller/price_labels.html:3
+#: core/templates/seller/price_labels.html:5
+msgid "Preisschilder generieren"
+msgstr "Generar etiquetas de precio"
+
+#: core/templates/seller/bazaar_details.html:18
+msgid "Endgültige Abrechnung"
+msgstr "Liquidación final"
+
+#: core/templates/seller/bazaar_details.html:20
+msgid "Derzeitige Auszahlung"
+msgstr "Pago actual"
+
+#: core/templates/seller/bazaar_details.html:21
+msgid "Vorläufiger Stand. Berücksichtigt sind abgeschlossene Kassenbelege."
+msgstr "Importe provisional. Incluye los tickets de caja cerrados."
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/seller/price_labels.html:40
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Anzahl"
+msgstr "Cantidad"
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32
+msgid "Summe"
+msgstr "Total"
+
+#: core/templates/seller/bazaar_details.html:36
+msgid "Bisher wurden keine Artikel verkauft."
+msgstr "Todavía no se ha vendido ningún artículo."
+
+#: core/templates/seller/bazaar_details.html:47 core/views.py:1831
+#, python-format
+msgid "Betreiberanteil (%(percent)s %%)"
+msgstr "Comisión del organizador (%(percent)s %%)"
+
+#: core/templates/seller/bazaar_details.html:50 core/views.py:1835
+msgid "Auszahlung"
+msgstr "Pago"
+
+#: core/templates/seller/bazaar_details.html:54
+msgid "Zurück zum Verkäuferbereich"
+msgstr "Volver al área de vendedores"
+
+#: core/templates/seller/dashboard.html:8
+msgid "Aktuelle Verkäufernummern"
+msgstr "Números de vendedor actuales"
+
+#: core/templates/seller/dashboard.html:16
+#: core/templates/seller/dashboard.html:64
+msgid "Erfasster Umsatz:"
+msgstr "Ventas registradas:"
+
+#: core/templates/seller/dashboard.html:21
+msgid "Preisschilder"
+msgstr "Etiquetas de precio"
+
+#: core/templates/seller/dashboard.html:33
+msgid "Für einen Basar anmelden"
+msgstr "Inscribirse en un mercadillo"
+
+#: core/templates/seller/dashboard.html:42
+msgid "Frühere Verkäufernummer wiederverwenden (optional)"
+msgstr "Volver a utilizar un número de vendedor anterior (opcional)"
+
+#: core/templates/seller/dashboard.html:44
+msgid "Neue Nummer vergeben"
+msgstr "Asignar un número nuevo"
+
+#: core/templates/seller/dashboard.html:50
+msgid "Verkäufernummer anfordern"
+msgstr "Solicitar número de vendedor"
+
+#: core/templates/seller/dashboard.html:58
+msgid "Basarhistorie"
+msgstr "Historial de mercadillos"
+
+#: core/templates/seller/dashboard.html:65
+msgid "Abrechnung ansehen"
+msgstr "Ver liquidación"
+
+#: core/templates/seller/dashboard.html:71
+msgid "Noch keine aktuellen oder vergangenen Basare vorhanden."
+msgstr "Todavía no hay mercadillos actuales ni anteriores."
+
+#: core/templates/seller/price_labels.html:6
+#, python-format
+msgid ""
+"Basar: <strong>%(name)s</strong> · Verkäufernummer: <strong>%(number)s</"
+"strong>"
+msgstr "Basar: <strong>%(name)s</strong> · Número de vendedor: <strong>%(number)s</strong>"
+
+#: core/templates/seller/price_labels.html:9
+msgid "Wählen Sie die gewünschten Preise und Mengen"
+msgstr "Seleccione los precios y las cantidades deseados"
+
+#: core/templates/seller/price_labels.html:19
+#: core/templates/seller/price_labels.html:64
+#: core/templates/settlement_confirm.html:10
+#: core/templates/settlement_confirm.html:74
+#: core/templates/settlement_confirm.html:76
+msgid "PDF herunterladen"
+msgstr "Descargar PDF"
+
+#: core/templates/seller/price_labels.html:24
+msgid "Verfügbare Preise:"
+msgstr "Precios disponibles:"
+
+#: core/templates/seller/price_labels.html:43
+msgid "Schilder"
+msgstr "Etiquetas"
+
+#: core/templates/seller/price_labels.html:49
+msgid "Keine Preise in den Systemeinstellungen konfiguriert."
+msgstr "No hay precios configurados en los ajustes del sistema."
+
+#: core/templates/seller/price_labels.html:55
+#, python-format
+msgid ""
+"Jedes A4-Blatt enthält %(cols)s×%(rows)s = %(total)s kleine Preisschilder. "
+"Mit 3mm Rand um jeden QR-Code und raumfüllendem Preis. Perfekt zum "
+"Ausschneiden und Aufkleben!"
+msgstr "Cada hoja A4 contiene %(cols)s×%(rows)s = %(total)s etiquetas de precio pequeñas. Con un margen de 3 mm alrededor de cada código QR y un precio que llena el espacio. ¡Perfectas para recortar y pegar!"
+
+#: core/templates/settlement_confirm.html:6
+#, python-format
+msgid "Abrechnung: %(name)s"
+msgstr "Liquidación: %(name)s"
+
+#: core/templates/settlement_confirm.html:7
+msgid ""
+"Der Basar ist abgeschlossen. Die Abrechnung gruppiert Verkäufe nach Preis "
+"und Anzahl; jede Verkäufernummer beginnt auf einer neuen Seite."
+msgstr ""
+"El mercadillo ha finalizado. La liquidación agrupa las ventas por precio y "
+"cantidad; cada número de vendedor empieza en una página nueva."
+
+#: core/templates/settlement_confirm.html:9
+#, python-format
+msgid "Die Abrechnung wurde am %(created_at)s erstellt."
+msgstr "La liquidación se creó el %(created_at)s."
+
+#: core/templates/settlement_confirm.html:14
+msgid ""
+"Beim Stornieren bleibt diese Abrechnung als Historie erhalten. Danach kann "
+"der Basar wieder aktiviert und später neu abgerechnet werden."
+msgstr ""
+"Si anulas esta liquidación, se conservará en el historial. Después podrás "
+"volver a activar el mercadillo y liquidarlo de nuevo más adelante."
+
+#: core/templates/settlement_confirm.html:15
+msgid "Abrechnung stornieren"
+msgstr "Anular liquidación"
+
+#: core/templates/settlement_confirm.html:19
+msgid ""
+"Beim Erstellen werden der konfigurierte Festbetrag pro Verkäufer und der "
+"prozentuale Betreiberanteil am Bruttoumsatz verwendet."
+msgstr ""
+"Al crear la liquidación, se aplican el importe fijo configurado por vendedor "
+"y la comisión porcentual del organizador sobre las ventas brutas."
+
+#: core/templates/settlement_confirm.html:22
+msgid "Abrechnung erstellen und PDF herunterladen"
+msgstr "Crear liquidación y descargar PDF"
+
+#: core/templates/settlement_confirm.html:25
+msgid ""
+"Eine neue Abrechnung kann erst nach Abschluss des Basars erstellt werden."
+msgstr ""
+"Solo se puede crear una liquidación nueva cuando el mercadillo haya "
+"finalizado."
+
+#: core/templates/settlement_confirm.html:29
+msgid "Gesamtabrechnung"
+msgstr "Liquidación general"
+
+#: core/templates/settlement_confirm.html:30
+msgid ""
+"Alle abgeschlossenen Verkäufe zusammengefasst nach Artikelpreis. Die Tabelle "
+"hilft beim Abgleichen und Zählen der Verkaufseinnahmen."
+msgstr ""
+"Resumen de todas las ventas cerradas agrupadas por precio del artículo. La "
+"tabla ayuda a cotejar y contar los ingresos de las ventas."
+
+#: core/templates/settlement_confirm.html:41 core/views.py:1688
+msgid "Keine abgeschlossenen Verkäufe."
+msgstr "No hay ventas cerradas."
+
+#: core/templates/settlement_confirm.html:47 core/views.py:1709
+msgid "Gesamtumsatz"
+msgstr "Ventas totales"
+
+#: core/templates/settlement_confirm.html:48 core/views.py:1711
+msgid "Verkäufergebühren"
+msgstr "Cuotas de vendedores"
+
+#: core/templates/settlement_confirm.html:49 core/views.py:1715
+msgid "Betreiberanteile"
+msgstr "Comisiones del organizador"
+
+#: core/templates/settlement_confirm.html:50 core/views.py:1718
+msgid "Gesamtauszahlung"
+msgstr "Pago total"
+
+#: core/templates/settlement_confirm.html:54
+#, python-format
+msgid ""
+"Nicht abgeschlossene Kassenbelege (%(count)s) sind in diesen Summen nicht "
+"enthalten und werden im PDF separat ausgewiesen."
+msgstr ""
+"Los tickets de caja abiertos y no cerrados (%(count)s) no se incluyen en "
+"estos totales y se mostrarán por separado en el PDF."
+
+#: core/templates/settlement_confirm.html:59
+msgid "Abrechnungshistorie"
+msgstr "Historial de liquidaciones"
+
+#: core/templates/settlement_confirm.html:62
+msgid "Erstellt"
+msgstr "Creada"
+
+#: core/templates/settlement_confirm.html:68
+msgid "Aktuell"
+msgstr "Actual"
+
+#: core/views.py:116 core/views.py:228
+msgid "Die Datenschutzhinweise sind noch nicht eingerichtet."
+msgstr "Todavía no se ha configurado la información sobre privacidad."
+
+#: core/views.py:131
+msgid "Dein Konto wurde erstellt."
+msgstr "Se ha creado tu cuenta."
+
+#: core/views.py:154
+msgid ""
+"Zu viele Verifizierungsanfragen. Bitte versuche es in einer Stunde erneut."
+msgstr "Demasiadas solicitudes de verificación. Inténtalo de nuevo dentro de una hora."
+
+#: core/views.py:192
+msgid "Dein Konto wurde bestätigt."
+msgstr "Se ha confirmado tu cuenta."
+
+#: core/views.py:220
+msgid "Für diese Ansicht hast du keine Berechtigung."
+msgstr "No tienes permiso para acceder a esta vista."
+
+#: core/views.py:237
+msgid "Deine Zustimmung wurde gespeichert."
+msgstr "Se ha guardado tu consentimiento."
+
+#: core/views.py:247
+msgid "Deine Benutzerdaten wurden gespeichert."
+msgstr "Se han guardado tus datos de usuario."
+
+#: core/views.py:256
+msgid "Bitte bestätige zuerst die Löschung deines Kontos."
+msgstr "Confirma primero que quieres eliminar tu cuenta."
+
+#: core/views.py:281
+msgid ""
+"Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst einen "
+"weiteren Superadmin ein."
+msgstr ""
+"No se puede eliminar al último superadministrador activo. Configura primero "
+"otro superadministrador."
+
+#: core/views.py:782
+msgid "Systemeinstellungen wurden gespeichert."
+msgstr "Se ha guardado la configuración del sistema."
+
+#: core/views.py:808
+msgid "Kopie wurde angelegt und kann bearbeitet werden."
+msgstr "Se ha creado una copia editable."
+
+#: core/views.py:834
+msgid "Standardvorlage für neue Basare wurde gespeichert."
+msgstr "Se ha guardado la plantilla predeterminada para nuevos mercadillos."
+
+#: core/views.py:864
+msgid "Verkäuferrechnungsvorlage wurde gespeichert."
+msgstr "Se ha guardado la plantilla de factura del vendedor."
+
+#: core/views.py:887
+msgid "Die schreibgeschützte Standardvorlage kann nicht gelöscht werden."
+msgstr "No se puede eliminar la plantilla predeterminada de solo lectura."
+
+#: core/views.py:891
+msgid "Bitte wähle zuerst eine andere Standardvorlage für neue Basare."
+msgstr ""
+"Selecciona primero otra plantilla predeterminada para los nuevos mercadillos."
+
+#: core/views.py:894
+msgid "Mindestens eine Verkäuferrechnungsvorlage muss vorhanden sein."
+msgstr "Debe haber al menos una plantilla de factura del vendedor."
+
+#: core/views.py:898
+msgid "Verkäuferrechnungsvorlage wurde gelöscht."
+msgstr "Se ha eliminado la plantilla de factura del vendedor."
+
+#: core/views.py:902
+msgid "Diese Vorlage wird noch von mindestens einem Basar verwendet."
+msgstr "Al menos un mercadillo sigue usando esta plantilla."
+
+#: core/views.py:921
+msgid "Erstelle ein Plakat für folgende Veranstaltung."
+msgstr "Crea un cartel para el siguiente evento."
+
+#: core/views.py:923
+msgid "Standardvorgaben:"
+msgstr "Instrucciones predeterminadas:"
+
+#: core/views.py:926
+msgid "Veranstaltungsdaten:"
+msgstr "Datos del evento:"
+
+#: core/views.py:927
+#, python-format
+msgid "Basar: %(name)s"
+msgstr "Mercadillo: %(name)s"
+
+#: core/views.py:928
+#, python-format
+msgid "Beginn: %(starts_at)s"
+msgstr "Inicio: %(starts_at)s"
+
+#: core/views.py:935
+#, python-format
+msgid "Nummernvergabe möglich bis: %(deadline)s"
+msgstr "Fecha límite para asignar números: %(deadline)s"
+
+#: core/views.py:954
+msgid "Basar wurde gespeichert."
+msgstr "Se ha guardado el mercadillo."
+
+#: core/views.py:1131
+msgid "Bitte stimme zuerst den Datenschutzhinweisen zu."
+msgstr "Acepta primero la información sobre privacidad."
+
+#: core/views.py:1143
+msgid "Die Nummernvergabe für diesen Basar ist geschlossen."
+msgstr "La asignación de números para este mercadillo está cerrada."
+
+#: core/views.py:1147
+msgid "Du bist für diesen Basar bereits registriert."
+msgstr "Ya te has inscrito en este mercadillo."
+
+#: core/views.py:1153
+msgid "Für diesen Basar sind bereits alle Verkäufernummern vergeben."
+msgstr ""
+"Ya se han asignado todos los números de vendedor disponibles para este "
+"mercadillo."
+
+#: core/views.py:1175
+msgid "Diese Verkäufernummer ist für den Basar bereits vergeben."
+msgstr "Este número de vendedor ya está asignado en este mercadillo."
+
+#: core/views.py:1193
+msgid ""
+"Die Verkäufernummer konnte nicht vergeben werden. Bitte erneut versuchen."
+msgstr "No se ha podido asignar el número de vendedor. Inténtalo de nuevo."
+
+#: core/views.py:1198
+#, python-format
+msgid "Deine Verkäufernummer lautet %(number)s."
+msgstr "Tu número de vendedor es %(number)s."
+
+#: core/views.py:1216
+msgid "Bitte wähle einen gültigen Basar."
+msgstr "Selecciona un mercadillo válido."
+
+#: core/views.py:1331 core/views.py:1425
+msgid "Dieser Basar ist nicht mehr aktiv."
+msgstr "Este mercadillo ya no está activo."
+
+#: core/views.py:1357
+msgid "Scanner-Eingabe stimmt nicht mit dem Artikel überein."
+msgstr "La entrada del escáner no coincide con el artículo."
+
+#: core/views.py:1428
+msgid "Ein leerer Beleg kann nicht abgeschlossen werden."
+msgstr "No se puede cerrar un ticket vacío."
+
+#: core/views.py:1475
+msgid "Bitte wähle zuerst einen Basar aus."
+msgstr "Selecciona primero un mercadillo."
+
+#: core/views.py:1488
+msgid "Der ausgewählte Basar ist nicht mehr aktiv."
+msgstr "El mercadillo seleccionado ya no está activo."
+
+#: core/views.py:1644
+#, python-format
+msgid "Abrechnung - %(name)s"
+msgstr "Liquidación - %(name)s"
+
+#: core/views.py:1664
+#, python-format
+msgid "Gesamtabrechnung: %(name)s"
+msgstr "Liquidación general: %(name)s"
+
+#: core/views.py:1671
+msgid ""
+"Zusammenfassung aller abgeschlossenen Verkäufe; offene Belege sind separat "
+"aufgeführt."
+msgstr ""
+"Resumen de todas las ventas cerradas; los tickets abiertos se muestran por "
+"separado."
+
+#: core/views.py:1676 core/views.py:1794
+#, python-format
+msgid "Summe (%(currency)s)"
+msgstr "Total (%(currency)s)"
+
+#: core/views.py:1806
+msgid "Keine verkauften Artikel."
+msgstr "No hay artículos vendidos."
+
+#: core/views.py:1863
+msgid "Nicht abgerechnete, offene Kassenbelege"
+msgstr "Tickets de caja abiertos y sin liquidar"
+
+#: core/views.py:1869
+msgid "Diese Belege sind nicht in den Verkäuferabrechnungen enthalten."
+msgstr "Estos tickets no se incluyen en las liquidaciones de vendedores."
+
+#: core/views.py:1875
+msgid "Erste Erfassung"
+msgstr "Primer registro"
+
+#: core/views.py:1878
+msgid "Erfasster Betrag"
+msgstr "Importe registrado"
+
+#: core/views.py:1977 core/views.py:2008
+msgid "Die Abrechnung ist erst nach Abschluss des Basars verfügbar."
+msgstr "La liquidación estará disponible cuando finalice el mercadillo."
+
+#: core/views.py:2023 core/views.py:2071
+#, python-format
+msgid "basar-%(id)s-abrechnung.pdf"
+msgstr "basar-%(id)s-abrechnung.pdf"
+
+#: core/views.py:2042
+msgid "Für diesen Basar gibt es keine aktive Abrechnung zum Stornieren."
+msgstr ""
+"No hay ninguna liquidación activa que se pueda anular para este mercadillo."
+
+#: core/views.py:2052
+msgid ""
+"Die Abrechnung wurde storniert. Der Basar kann jetzt wieder aktiviert werden."
+msgstr ""
+"Se ha anulado la liquidación. Ahora se puede volver a activar el mercadillo."
+
+#: core/views.py:2087
+#, python-format
+msgid "basar-%(bazaar_id)s-abrechnung-%(settlement_id)s.pdf"
+msgstr "basar-%(bazaar_id)s-abrechnung-%(settlement_id)s.pdf"
+
+#: core/views.py:2154
+#, python-format
+msgid "Benutzer '%(name)s' wurde aktualisiert."
+msgstr "El usuario '%(name)s' se ha actualizado."
+
+#: core/views.py:2181
+#| msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgid "Du kannst dein eigenes Konto nicht löschen."
+msgstr "No puedes eliminar tu propia cuenta."
+
+#: core/views.py:2193
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Der letzte aktive Administrator kann nicht gelöscht werden. Richte zuerst "
+"einen weiteren Administrator ein."
+msgstr ""
+"No se puede eliminar al último administrador activo. Configura primero a "
+"otro administrador."
+
+#: core/views.py:2221
+msgid "Benutzer wurde anonymisiert und gelöscht."
+msgstr "El usuario se ha anonimizado y eliminado."
+
+#: core/views.py:2238
+msgid "Kein Basar ausgewählt"
+msgstr "No se ha seleccionado ningún Basar"
+
+#: core/views.py:2243
+#| msgid "Dieser Basar ist nicht mehr aktiv."
+msgid "Basar nicht gefunden oder nicht mehr aktiv"
+msgstr "Mercadillo no encontrado o ya no está activo."
+
+#: core/views.py:2265
+msgid "QR-Code-Bibliothek nicht installiert"
+msgstr "Biblioteca de códigos QR no instalada"
+
+#: core/views.py:2302
+msgid "Ungültiger Code"
+msgstr "Código no válido"
+
+#: core/views.py:2307
+msgid "Code nicht gefunden"
+msgstr "Código no encontrado"
+
+#: core/views.py:2314
+msgid "Session abgelaufen. Neue Session in der Kasse starten."
+msgstr "La sesión ha caducado. Inicie una nueva sesión en la caja."
+
+#: core/views.py:2321
+msgid "Scanner-Session wurde geschlossen."
+msgstr "La sesión del escáner se ha cerrado."
+
+#: core/views.py:2359
+msgid "Fehlende Parameter"
+msgstr "Faltan parámetros"
+
+#: core/views.py:2364
+msgid "Code ungültig"
+msgstr "Código no válido"
+
+#: core/views.py:2369
+msgid "Session abgelaufen"
+msgstr "Sesión caducada"
+
+#: core/views.py:2375
+msgid "Scanner-Session geschlossen"
+msgstr "Sesión del escáner cerrada"
+
+#: core/views.py:2385
+msgid "QR-Code-Format ungültig"
+msgstr "Formato de código QR no válido"
+
+#: core/views.py:2394
+msgid "Ungültige Werte im QR-Code"
+msgstr "Valores no válidos en el código QR"
+
+#: core/views.py:2406
+msgid "Rate-Limit erreicht. Bitte warten."
+msgstr "Se ha alcanzado el límite de solicitudes. Espere."
+
+#: core/views.py:2442 core/views.py:2492
+#| msgid "Berechtigungen"
+msgid "Keine Berechtigung"
+msgstr "Sin permiso"
+
+#: core/views.py:2446 core/views.py:2496
+#| msgid "Kein Ausdruck erforderlich."
+msgid "Code erforderlich"
+msgstr "Se requiere un código"
+
+#: core/views.py:2451 core/views.py:2501
+#| msgid "Kassenansicht öffnen"
+msgid "Session nicht gefunden"
+msgstr "Sesión no encontrada"
+
+#: core/views.py:2623
+#| msgid "Bitte wähle zuerst einen Basar aus."
+msgid "Bitte wählen Sie mindestens einen Preis."
+msgstr "Seleccione al menos un precio."
+
+#: core/views.py:2636
+#, python-brace-format
+msgid "Fehler beim Generieren des PDFs: {}"
+msgstr "Error al generar el PDF: {}"

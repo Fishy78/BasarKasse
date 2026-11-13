@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Benutzerdaten bearbeiten" %}{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>{% translate "Benutzerdaten bearbeiten" %}</h1>
+  <p>{% translate "E-Mail-Adresse für die Anmeldung:" %} <strong>{{ user.email }}</strong></p>
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {{ field }}
+      {% if field.help_text %}<p><small>{{ field.help_text }}</small></p>{% endif %}
+      {% for error in field.errors %}<p role="alert">{{ error }}</p>{% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}<p role="alert">{{ error }}</p>{% endfor %}
+    <button type="submit">{% translate "Daten speichern" %}</button>
+  </form>
+</section>
+<section class="card">
+  <h2>{% translate "Konto löschen" %}</h2>
+  <p>{% translate "Deine persönlichen Daten und Einwilligungen werden gelöscht. Verkäufernummern, Belege und Abrechnungen bleiben anonymisiert erhalten, damit die Basarsummen korrekt bleiben." %}</p>
+  <form method="post" action="{% url 'delete_account' %}">
+    {% csrf_token %}
+    <label>
+      <input type="checkbox" name="confirm_delete" required>
+      {% translate "Ich möchte mein Konto unwiderruflich löschen." %}
+    </label>
+    <button class="danger" type="submit">{% translate "Konto löschen" %}</button>
+  </form>
+</section>
+{% endblock %}

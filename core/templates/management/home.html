@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Verwaltung" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Verwaltung" %}</h1>
+<div class="grid">
+  <section class="card">
+    <h2>{% translate "Basare" %}</h2>
+    <p>{% translate "Basare anlegen und verwalten." %}</p>
+    <a class="button" href="{% url 'manage_bazaars' %}">{% translate "Basare verwalten" %}</a>
+  </section>
+  <section class="card">
+    <h2>{% translate "Benutzerverwaltung" %}</h2>
+    <p>{% translate "Benutzer verwalten und Rechte vergeben." %}</p>
+    <a class="button" href="{% url 'user_management_list' %}">{% translate "Benutzer verwalten" %}</a>
+  </section>
+  <section class="card">
+    <h2>{% translate "Systemeinstellungen" %}</h2>
+    <p>{% translate "Globale Preise, Gebühren, Einwilligung und Plakatvorgaben." %}</p>
+    <a class="button" href="{% url 'manage_settings' %}">{% translate "Einstellungen bearbeiten" %}</a>
+  </section>
+  <section class="card">
+    <h2>{% translate "Statistiken" %}</h2>
+    <p>{% translate "Verkaufsentwicklung, Einnahmen und Preisverteilung der Basare." %}</p>
+    <a class="button" href="{% url 'management_statistics' %}">{% translate "Statistiken ansehen" %}</a>
+  </section>
+</div>
+{% endblock %}

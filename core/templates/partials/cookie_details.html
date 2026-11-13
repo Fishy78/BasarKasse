@@ -1,0 +1,35 @@
+{% load i18n %}
+<p>{% translate "Wir verwenden keine Cookies von Drittanbietern und binden keine Analyse- oder Werbedienste ein. Folgende technisch notwendige Cookies werden für den Betrieb genutzt:" %}</p>
+<div class="table-scroll">
+  <table class="cookie-table">
+    <thead><tr><th>{% translate "Cookie" %}</th><th>{% translate "Inhalt und Zweck" %}</th><th>{% translate "Speicherdauer" %}</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><code>basar_cookie_consent</code></td>
+        <td>{% translate "Signierter Zustimmungsstatus. Enthält keine persönlichen Angaben." %}</td>
+        <td>{% translate "1 Jahr" %}</td>
+      </tr>
+      <tr>
+        <td><code>sessionid</code></td>
+        <td>{% translate "Zufällige Sitzungskennung. Anmeldestatus, ausgewählte Rolle und Kassenkontext werden serverseitig gespeichert, nicht im Cookie." %}</td>
+        <td>{% translate "Bis zu 2 Wochen; die Sitzung kann vorher beendet werden" %}</td>
+      </tr>
+      <tr>
+        <td><code>csrftoken</code></td>
+        <td>{% translate "Zufälliger Sicherheitstoken zum Schutz vor gefälschten Formularübermittlungen. Keine Profil- oder Verkaufsdaten." %}</td>
+        <td>{% translate "Bis zu 1 Jahr" %}</td>
+      </tr>
+      <tr>
+        <td><code>_messages</code></td>
+        <td>{% translate "Signierte, kurzfristige Statusmeldungen der Anwendung, zum Beispiel Hinweise nach dem Speichern. Bei größeren Meldungen werden sie serverseitig in der Sitzung abgelegt." %}</td>
+        <td>{% translate "Kurzzeitig, in der Regel bis zum nächsten Seitenaufruf" %}</td>
+      </tr>
+      <tr>
+        <td><code>django_language</code></td>
+        <td>{% translate "Ausgewählte Sprache der Benutzeroberfläche." %}</td>
+        <td>{% translate "Bis zum Schließen des Browsers (Sitzungscookie)" %}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>{% translate "Ohne Zustimmung können die Anmelde-, Verkäufer- und Kassenfunktionen nicht verwendet werden. Du kannst die Zustimmung jederzeit durch Löschen der Cookies im Browser zurücknehmen; beim nächsten Besuch fragen wir erneut." %}</p>

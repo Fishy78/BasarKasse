@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Anmelden" %}{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>{% translate "Anmelden" %}</h1>
+  <form method="post">{% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for field in form %}
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {{ field }}{{ field.errors }}
+    {% endfor %}
+    <p><button type="submit">{% translate "Anmelden" %}</button></p>
+  </form>
+  <a href="{% url 'password_reset' %}">{% translate "Passwort vergessen?" %}</a>
+</section>
+{% endblock %}

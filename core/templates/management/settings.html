@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Systemeinstellungen" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Systemeinstellungen" %}</h1>
+<form class="card" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% for field in form %}
+    <div>
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {{ field }}
+      {% if field.help_text %}<p><small>{{ field.help_text }}</small></p>{% endif %}
+      {% for error in field.errors %}<p role="alert">{{ error }}</p>{% endfor %}
+    </div>
+  {% endfor %}
+  {% for error in form.non_field_errors %}<p role="alert">{{ error }}</p>{% endfor %}
+  <button type="submit">{% translate "Einstellungen speichern" %}</button>
+  <a class="button secondary" href="{% url 'manage_seller_invoice_templates' %}">{% translate "Verkäuferrechnungsvorlagen verwalten" %}</a>
+  <a class="button secondary" href="{% url 'management_home' %}">{% translate "Zur Verwaltung" %}</a>
+</form>
+{% if form.instance.logo %}
+  <section class="card">
+    <h2>{% translate "Aktuelles Verkäuferabrechnungslogo" %}</h2>
+    <img src="{{ form.instance.logo.url }}" alt="{% translate 'Aktuelles globales Logo' %}" style="max-width: 240px; max-height: 120px">
+  </section>
+{% endif %}
+{% endblock %}

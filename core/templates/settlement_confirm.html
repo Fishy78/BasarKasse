@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Basarabrechnung" %}{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>{% blocktranslate with name=bazaar.name %}Abrechnung: {{ name }}{% endblocktranslate %}</h1>
+  <p>{% translate "Der Basar ist abgeschlossen. Die Abrechnung gruppiert Verkäufe nach Preis und Anzahl; jede Verkäufernummer beginnt auf einer neuen Seite." %}</p>
+  {% if settlement %}
+    <p>{% blocktranslate with created_at=settlement.created_at|date:"SHORT_DATETIME_FORMAT" %}Die Abrechnung wurde am {{ created_at }} erstellt.{% endblocktranslate %}</p>
+    <a class="button" href="{% url 'settlement_download' bazaar.pk %}">{% translate "PDF herunterladen" %}</a>
+    {% if can_cancel_settlement %}
+      <form method="post" action="{% url 'settlement_cancel' bazaar.pk %}">
+        {% csrf_token %}
+        <p>{% translate "Beim Stornieren bleibt diese Abrechnung als Historie erhalten. Danach kann der Basar wieder aktiviert und später neu abgerechnet werden." %}</p>
+        <button class="danger" type="submit">{% translate "Abrechnung stornieren" %}</button>
+      </form>
+    {% endif %}
+  {% elif can_create_settlement %}
+    <p>{% translate "Beim Erstellen werden der konfigurierte Festbetrag pro Verkäufer und der prozentuale Betreiberanteil am Bruttoumsatz verwendet." %}</p>
+    <form method="post" action="{% url 'settlement_pdf' bazaar.pk %}">
+      {% csrf_token %}
+      <button type="submit">{% translate "Abrechnung erstellen und PDF herunterladen" %}</button>
+    </form>
+  {% else %}
+    <p>{% translate "Eine neue Abrechnung kann erst nach Abschluss des Basars erstellt werden." %}</p>
+  {% endif %}
+</section>
+<section class="card">
+  <h2>{% translate "Gesamtabrechnung" %}</h2>
+  <p>{% translate "Alle abgeschlossenen Verkäufe zusammengefasst nach Artikelpreis. Die Tabelle hilft beim Abgleichen und Zählen der Verkaufseinnahmen." %}</p>
+  <table>
+    <thead><tr><th>{% translate "Preis" %}</th><th>{% translate "Anzahl" %}</th><th class="right">{% translate "Summe" %}</th></tr></thead>
+    <tbody>
+      {% for line in overall.lines %}
+        <tr>
+          <td>{{ line.price|floatformat:2 }} {{ currency }}</td>
+          <td>{{ line.count }}</td>
+          <td class="right">{{ line.total|floatformat:2 }} {{ currency }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="3">{% translate "Keine abgeschlossenen Verkäufe." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <table>
+    <tbody>
+      <tr><th>{% translate "Gesamtumsatz" %}</th><td class="right">{{ overall.gross|floatformat:2 }} {{ currency }}</td></tr>
+      <tr><th>{% translate "Verkäufergebühren" %}</th><td class="right">-{{ overall.seller_fees|floatformat:2 }} {{ currency }}</td></tr>
+      <tr><th>{% translate "Betreiberanteile" %}</th><td class="right">-{{ overall.operator_fees|floatformat:2 }} {{ currency }}</td></tr>
+      <tr><th>{% translate "Gesamtauszahlung" %}</th><td class="right"><strong>{{ overall.payouts|floatformat:2 }} {{ currency }}</strong></td></tr>
+    </tbody>
+  </table>
+  {% if open_receipts %}
+    <p>{% blocktranslate with count=open_receipts|length %}Nicht abgeschlossene Kassenbelege ({{ count }}) sind in diesen Summen nicht enthalten und werden im PDF separat ausgewiesen.{% endblocktranslate %}</p>
+  {% endif %}
+</section>
+{% if settlement_history %}
+  <section class="card">
+    <h2>{% translate "Abrechnungshistorie" %}</h2>
+    <table>
+      <thead>
+        <tr><th>{% translate "Erstellt" %}</th><th>{% translate "Status" %}</th><th>{% translate "Storniert am" %}</th><th>{% translate "Storniert von" %}</th><th></th></tr>
+      </thead>
+      <tbody>
+        {% for previous in settlement_history %}
+          <tr>
+            <td>{{ previous.created_at|date:"SHORT_DATETIME_FORMAT" }}</td>
+            <td>{% if previous.cancelled_at %}{% translate "Storniert" %}{% else %}{% translate "Aktuell" %}{% endif %}</td>
+            <td>{{ previous.cancelled_at|date:"SHORT_DATETIME_FORMAT"|default:"–" }}</td>
+            <td>{{ previous.cancelled_by|default:"–" }}</td>
+            <td>
+              {% if previous.pdf %}
+                {% if previous.cancelled_at %}
+                  <a href="{% url 'settlement_history_download' previous.pk %}">{% translate "PDF herunterladen" %}</a>
+                {% else %}
+                  <a href="{% url 'settlement_download' bazaar.pk %}">{% translate "PDF herunterladen" %}</a>
+                {% endif %}
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% endif %}
+{% endblock %}

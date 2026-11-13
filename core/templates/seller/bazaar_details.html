@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% blocktranslate with name=registration.bazaar.name %}Verkaufsdetails – {{ name }}{% endblocktranslate %}{% endblock %}
+{% block content %}
+<h1>{{ registration.bazaar.name }}</h1>
+<p>{% translate "Verkäufernummer:" %} <strong>{{ registration.seller_number }}</strong></p>
+<p>{% translate "Basartag:" %} {{ registration.bazaar.starts_at|date:"SHORT_DATE_FORMAT" }}</p>
+
+{% if registration.bazaar.status == "open" or registration.bazaar.status == "planned" %}
+  <div style="margin-bottom: 2rem;">
+    <a class="button" href="{% url 'seller_price_labels_form' registration.bazaar_id %}">
+      🏷️ {% translate "Preisschilder generieren" %}
+    </a>
+  </div>
+{% endif %}
+
+{% if finished %}
+  <h2>{% translate "Endgültige Abrechnung" %}</h2>
+{% else %}
+  <h2>{% translate "Derzeitige Auszahlung" %}</h2>
+  <p>{% translate "Vorläufiger Stand. Berücksichtigt sind abgeschlossene Kassenbelege." %}</p>
+{% endif %}
+
+<div class="card">
+  <h3>{% translate "Verkaufte Artikel" %}</h3>
+  <table>
+    <thead><tr><th>{% translate "Preis" %}</th><th>{% translate "Anzahl" %}</th><th class="right">{% translate "Summe" %}</th></tr></thead>
+    <tbody>
+      {% for line in lines %}
+        <tr>
+          <td>{{ line.price|floatformat:2 }} {{ currency }}</td>
+          <td>{{ line.count }}</td>
+          <td class="right">{{ line.total|floatformat:2 }} {{ currency }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="3">{% translate "Bisher wurden keine Artikel verkauft." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="card">
+  <table>
+    <tbody>
+      <tr><th>{% translate "Bruttoumsatz" %}</th><td class="right">{{ gross|floatformat:2 }} {{ currency }}</td></tr>
+      <tr><th>{% translate "Verkäufergebühr" %}</th><td class="right">−{{ seller_fee|floatformat:2 }} {{ currency }}</td></tr>
+      <tr>
+        <th>{% blocktranslate with percent=operator_percent|floatformat:2 %}Betreiberanteil ({{ percent }} %){% endblocktranslate %}</th>
+        <td class="right">−{{ operator_fee|floatformat:2 }} {{ currency }}</td>
+      </tr>
+      <tr><th>{% translate "Auszahlung" %}</th><td class="right"><strong>{{ payout|floatformat:2 }} {{ currency }}</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+<a class="button secondary" href="{% url 'seller_dashboard' %}">{% translate "Zurück zum Verkäuferbereich" %}</a>
+{% endblock %}

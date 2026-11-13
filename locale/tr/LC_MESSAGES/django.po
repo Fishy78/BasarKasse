@@ -1,0 +1,2887 @@
+# Deutscher Ausgangskatalog der Basar-Anwendung.
+msgid ""
+msgstr ""
+"Project-Id-Version: Basar-Kassensystem\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 15:51+0100\n"
+"PO-Revision-Date: 2026-11-12 23:34+0100\n"
+"Last-Translator: Copilot\n"
+"Language-Team: Türkçe\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: core/admin.py:17 core/admin.py:18
+msgid "Basarverwaltung"
+msgstr "Pazar yönetimi"
+
+#: core/admin.py:19 core/templates/base.html:268
+#: core/templates/management/home.html:3 core/templates/management/home.html:5
+#: core/tests.py:215
+msgid "Verwaltung"
+msgstr "Yönetim"
+
+#: core/admin.py:33
+msgid "Kontaktdaten"
+msgstr "İletişim bilgileri"
+
+#: core/admin.py:34
+msgid "Berechtigungen"
+msgstr "İzinler"
+
+#: core/admin.py:35
+msgid "Zeitstempel"
+msgstr "Zaman damgaları"
+
+#: core/emailing.py:17
+msgid "Basar-Konto bestätigen"
+msgstr "Pazar hesabını doğrula"
+
+#: core/emailing.py:18
+#, python-format
+msgid "Bitte bestätige deine E-Mail-Adresse über diesen Link: %(verify_url)s"
+msgstr "Lütfen e-posta adresini şu bağlantıdan doğrula: %(verify_url)s"
+
+#: core/forms.py:23
+msgid "Passwort"
+msgstr "Parola"
+
+#: core/forms.py:24
+msgid "Passwort wiederholen"
+msgstr "Parolayı tekrar gir"
+
+#: core/forms.py:26 core/forms.py:45
+msgid "Ich stimme der aktuellen Datenschutzerklärung zu."
+msgstr "Güncel gizlilik politikasını kabul ediyorum."
+
+#: core/forms.py:52
+msgid "Die Passwörter stimmen nicht überein."
+msgstr "Parolalar eşleşmiyor."
+
+#: core/forms.py:88 core/templates/registration/accept_consent.html:12
+msgid "Ich stimme den Datenschutzhinweisen zu."
+msgstr "Gizlilik bildirimini kabul ediyorum."
+
+#: core/forms.py:107
+msgid "Der Benutzer stimmt den Datenschutzhinweisen zu."
+msgstr "Kullanıcı gizlilik bildirimini kabul ediyor."
+
+#: core/forms.py:113
+msgid ""
+"Bitte hinterlege zuerst die Datenschutzhinweise in den Systemeinstellungen."
+msgstr "Lütfen önce sistem ayarlarına gizlilik bildirimini ekle."
+
+#: core/forms.py:150
+#, python-format
+msgid ""
+"HTML-Formatierung ist erlaubt, zum Beispiel <p>, <br>, <strong>, <em>, <ul>, "
+"<ol>, <li>, <h2> und sichere <a href=\"%(example_url)s\">Links</a>. "
+"Unsichere Elemente und Attribute werden entfernt."
+msgstr ""
+"HTML biçimlendirmesine izin verilir; örneğin <p>, <br>, <strong>, <em>, "
+"<ul>, <ol>, <li>, <h2> ve güvenli <a href=\"%(example_url)s\">bağlantılar</"
+"a>. Güvenli olmayan öğeler ve nitelikler kaldırılır."
+
+#: core/forms.py:161
+msgid "Übliche Preise müssen als JSON-Liste angegeben werden."
+msgstr "Yaygın fiyatlar JSON listesi olarak girilmelidir."
+
+#: core/forms.py:167
+msgid "Jeder Schnellpreis muss eine gültige Zahl sein."
+msgstr "Her hızlı fiyat geçerli bir sayı olmalıdır."
+
+#: core/forms.py:170
+msgid "Schnellpreise müssen größer als 0 und höchstens 999999,99 sein."
+msgstr "Hızlı fiyatlar 0'dan büyük ve en fazla 999999,99 olmalıdır."
+
+#: core/forms.py:174
+msgid "Schnellpreise dürfen höchstens zwei Nachkommastellen haben."
+msgstr "Hızlı fiyatlar en fazla iki ondalık basamak içerebilir."
+
+#: core/forms.py:183
+msgid "Bitte hinterlege die Standardvorgaben für Plakat-Prompts."
+msgstr "Lütfen afiş istemleri için varsayılan talimatları gir."
+
+#: core/forms.py:203
+msgid ""
+"Verwende einfache Formatierung mit <b>, <i>, <u> und <br>. Verfügbare "
+"Variablen:\n"
+msgstr ""
+"<b>, <i>, <u> ve <br> etiketleriyle basit biçimlendirme kullan. "
+"Kullanılabilir değişkenler:\n"
+
+#: core/forms.py:217
+#, python-format
+msgid "Unbekannte Vorlagenvariablen: %(names)s."
+msgstr "Bilinmeyen şablon değişkenleri: %(names)s."
+
+#: core/forms.py:219
+msgid "Vorlagenvariablen müssen das Format {{ variablenname }} haben."
+msgstr "Şablon değişkenleri {{ değişken_adı }} biçiminde olmalıdır."
+
+#: core/forms.py:227
+msgid "Standardvorlage für neue Basare"
+msgstr "Yeni pazarlar için varsayılan şablon"
+
+#: core/forms.py:274
+msgid "Der Basar ist abgerechnet und kann nicht wieder geöffnet werden."
+msgstr "Pazarın hesabı kapatıldı ve yeniden açılamaz."
+
+#: core/forms.py:316
+msgid "Superadministrator"
+msgstr "Süper yönetici"
+
+#: core/forms.py:318
+msgid "Voller Zugriff auf alle Funktionen und die Verwaltung."
+msgstr "Tüm işlevlere ve yönetime tam erişim."
+
+#: core/forms.py:321 core/models.py:83
+msgid "Kassenrecht"
+msgstr "Kasa yetkisi"
+
+#: core/forms.py:323
+msgid "Darf die Kasse bedienen."
+msgstr "Kasayı kullanabilir."
+
+#: core/forms.py:326
+#| msgid "Konto anonymisiert"
+msgid "Konto aktiviert"
+msgstr "Hesap etkinleştirildi"
+
+#: core/forms.py:328
+msgid "Inaktive Konten können sich nicht anmelden."
+msgstr "Devre dışı hesaplar oturum açamaz."
+
+#: core/forms.py:364
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Du kannst deine eigenen Superadmin-Rechte nicht entfernen. Richte zuerst "
+"einen anderen Administrator ein."
+msgstr "Kendi süper yönetici yetkilerinizi kaldıramazsınız. Önce başka bir yönetici oluşturun."
+
+#: core/forms.py:369
+msgid "Du kannst dein eigenes Konto nicht deaktivieren."
+msgstr "Kendi hesabını devre dışı bırakamazsın."
+
+#: core/forms.py:386
+#| msgid "Benutzer"
+msgid "Alle Benutzer"
+msgstr "Tüm kullanıcılar"
+
+#: core/forms.py:387 core/templates/admin/user_management_list.html:58
+#| msgid "Aktiv"
+msgid "Aktiviert"
+msgstr "Etkinleştirildi"
+
+#: core/forms.py:388 core/templates/admin/user_management_list.html:60
+msgid "Deaktiviert"
+msgstr "Devre dışı"
+
+#: core/forms.py:389
+#| msgid "Kassenrecht"
+msgid "Mit Kassenrecht"
+msgstr "Kasa yetkisine sahip"
+
+#: core/forms.py:390
+msgid "Administratoren"
+msgstr "Yöneticiler"
+
+#: core/forms.py:394
+msgid "Nach Name oder E-Mail suchen"
+msgstr "Ada veya e-posta adresine göre ara"
+
+#: core/forms.py:396
+#| msgid "E-Mail-Adresse"
+msgid "Name, E-Mail-Adresse..."
+msgstr "Ad, e-posta adresi..."
+
+#: core/forms.py:399
+msgid "Filtern nach"
+msgstr "Şuna göre filtrele"
+
+#: core/invoice_templates.py:8
+msgid "Name des Basars"
+msgstr "Pazar adı"
+
+#: core/invoice_templates.py:9
+msgid "Datum des Basars"
+msgstr "Pazar tarihi"
+
+#: core/invoice_templates.py:10 core/models.py:499 core/models.py:589
+#: core/templates/cashier/cashier.html:66
+#: core/templates/cashier/receipt_complete.html:10
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/scanner/join.html:26 core/templates/seller/dashboard.html:63
+#: core/views.py:1877
+msgid "Verkäufernummer"
+msgstr "Satıcı numarası"
+
+#: core/invoice_templates.py:11
+msgid "Nachname des Verkäufers"
+msgstr "Satıcının soyadı"
+
+#: core/invoice_templates.py:12
+msgid "Vorname des Verkäufers"
+msgstr "Satıcının adı"
+
+#: core/invoice_templates.py:13
+msgid "Artikeltabelle mit Preis, Anzahl und rechtsbündiger Summe"
+msgstr "Fiyat, miktar ve sağa hizalı toplam sütunları olan ürün tablosu"
+
+#: core/invoice_templates.py:14
+msgid "Tabelle mit Bruttoumsatz, Abzügen und Auszahlungsbetrag"
+msgstr "Brüt satış, kesintiler ve ödeme tutarı tablosu"
+
+#: core/invoice_templates.py:15
+msgid "Umsatz vor Abzügen"
+msgstr "Kesintiler öncesi satış tutarı"
+
+#: core/invoice_templates.py:16
+msgid "Feste Verkäufergebühr"
+msgstr "Sabit satıcı ücreti"
+
+#: core/invoice_templates.py:17
+msgid "Prozentualer Betreiberanteil"
+msgstr "İşletmeci payı yüzdesi"
+
+#: core/invoice_templates.py:18
+msgid "Betrag des Betreiberanteils"
+msgstr "İşletmeci payı tutarı"
+
+#: core/invoice_templates.py:19
+msgid "Auszahlungsbetrag nach Abzügen"
+msgstr "Kesintiler sonrası ödeme tutarı"
+
+#: core/invoice_templates.py:20 core/models.py:150
+msgid "Währung"
+msgstr "Para birimi"
+
+#: core/invoice_templates.py:23
+msgid ""
+"<b>Verkäuferabrechnung</b><br>\n"
+"Basar: {{ basar_name }}<br>\n"
+"Datum: {{ basar_datum }}<br>\n"
+"Verkäufernummer: {{ verkaeufernummer }}<br><br>\n"
+"Verkäufer: {{ vorname }} {{ name }}<br><br>\n"
+"<b>Abrechnung</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+msgstr ""
+"<b>Satıcı hesap özeti</b><br>\n"
+"Pazar: {{ basar_name }}<br>\n"
+"Tarih: {{ basar_datum }}<br>\n"
+"Satıcı numarası: {{ verkaeufernummer }}<br><br>\n"
+"Satıcı: {{ vorname }} {{ name }}<br><br>\n"
+"<b>Hesap özeti</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+
+#: core/middleware.py:142
+msgid ""
+"Schließe zuerst den offenen Kassenbeleg ab oder korrigiere seine Artikel."
+msgstr "Lütfen önce açık kasa fişini tamamla veya ürünlerini düzelt."
+
+#: core/models.py:41
+msgid "Eine E-Mail-Adresse ist erforderlich."
+msgstr "E-posta adresi gereklidir."
+
+#: core/models.py:53
+msgid "Ein Administrator muss is_staff und is_superuser aktiviert haben."
+msgstr "Bir yöneticide is_staff ve is_superuser etkin olmalıdır."
+
+#: core/models.py:60
+msgid "E-Mail-Adresse"
+msgstr "E-posta adresi"
+
+#: core/models.py:61
+msgid "Vorname"
+msgstr "Ad"
+
+#: core/models.py:62
+msgid "Nachname"
+msgstr "Soyadı"
+
+#: core/models.py:63
+msgid "Telefonnummer"
+msgstr "Telefon numarası"
+
+#: core/models.py:64
+msgid "Straße und Hausnummer"
+msgstr "Sokak ve kapı numarası"
+
+#: core/models.py:66
+msgid "Postleitzahl"
+msgstr "Posta kodu"
+
+#: core/models.py:72
+msgid "Bitte eine fünfstellige deutsche Postleitzahl eingeben."
+msgstr "Lütfen beş haneli bir Alman posta kodu gir."
+
+#: core/models.py:76
+msgid "Ort"
+msgstr "Şehir"
+
+#: core/models.py:78 core/models.py:334 core/models.py:705
+msgid "Aktiv"
+msgstr "Etkin"
+
+#: core/models.py:80
+msgid "Wird nach Bestätigung der E-Mail-Adresse aktiviert."
+msgstr "E-posta adresi doğrulandıktan sonra etkinleştirilir."
+
+#: core/models.py:85
+msgid "Kassenrecht wird durch einen Administrator vergeben."
+msgstr "Kasa yetkisi bir yönetici tarafından verilir."
+
+#: core/models.py:88
+msgid "Konto anonymisiert"
+msgstr "Anonimleştirilmiş hesap"
+
+#: core/models.py:98 core/models.py:99
+msgid "Benutzer"
+msgstr "Kullanıcı"
+
+#: core/models.py:102
+msgid "Gelöschter Benutzer"
+msgstr "Silinmiş kullanıcı"
+
+#: core/models.py:107
+msgid "Klassisches einfaches Design"
+msgstr "Klasik sade tasarım"
+
+#: core/models.py:108
+msgid "Dunkelmodus"
+msgstr "Koyu mod"
+
+#: core/models.py:109
+msgid "Modernes Design"
+msgstr "Modern tasarım"
+
+#: core/models.py:110
+msgid "Buntes Kindergartendesign"
+msgstr "Renkli anaokulu tasarımı"
+
+#: core/models.py:113
+msgid "Oben"
+msgstr "Üst"
+
+#: core/models.py:114
+msgid "Links"
+msgstr "Sol"
+
+#: core/models.py:115
+msgid "Rechts"
+msgstr "Sağ"
+
+#: core/models.py:118
+msgid "Euro (€)"
+msgstr "Euro (€)"
+
+#: core/models.py:119
+msgid "Schweizer Franken (CHF)"
+msgstr "İsviçre frangı (CHF)"
+
+#: core/models.py:120
+msgid "US-Dollar (USD)"
+msgstr "ABD doları (USD)"
+
+#: core/models.py:121
+msgid "Britisches Pfund (GBP)"
+msgstr "İngiliz sterlini (GBP)"
+
+#: core/models.py:123
+msgid "Übliche Preise"
+msgstr "Yaygın fiyatlar"
+
+#: core/models.py:125
+msgid "Seitentitel"
+msgstr "Site başlığı"
+
+#: core/models.py:128
+msgid "Wird in der Kopfzeile und im Seitentitel angezeigt."
+msgstr "Üst bilgide ve sayfa başlığında gösterilir."
+
+#: core/models.py:131
+msgid "Logo für Verkäuferabrechnungen"
+msgstr "Satıcı hesap dökümleri için logo"
+
+#: core/models.py:139
+msgid "Standard-Verkäuferrechnungsvorlage"
+msgstr "Varsayılan satıcı hesap dökümü şablonu"
+
+#: core/models.py:145
+msgid "Standard-Anzahl Verkäufernummern"
+msgstr "Varsayılan satıcı numarası sayısı"
+
+#: core/models.py:156
+msgid "Oberflächendesign"
+msgstr "Arayüz tasarımı"
+
+#: core/models.py:162
+msgid "Menüposition"
+msgstr "Menü konumu"
+
+#: core/models.py:167
+msgid "Menü beim Scrollen fixieren"
+msgstr "Kaydırırken menüyü sabitle"
+
+#: core/models.py:169
+msgid "Standardsprache"
+msgstr "Varsayılan dil"
+
+#: core/models.py:173
+msgid "Wird für Benutzer ohne eigene Sprachauswahl verwendet."
+msgstr "Kullanıcı bir dil seçmediğinde kullanılır."
+
+#: core/models.py:175
+msgid "Einwilligungsversion"
+msgstr "Onay sürümü"
+
+#: core/models.py:176 core/models.py:316
+msgid "Einwilligungstext"
+msgstr "Onay metni"
+
+#: core/models.py:178
+msgid "Standard-Verkäufergebühr für neue Basare"
+msgstr "Yeni pazarlar için varsayılan satıcı ücreti"
+
+#: core/models.py:185
+msgid "Standard-Betreiberanteil für neue Basare"
+msgstr "Yeni pazarlar için varsayılan işletmeci payı"
+
+#: core/models.py:192
+msgid "Standardvorgaben für Plakat-Prompts"
+msgstr "Afiş istemleri için varsayılan talimatlar"
+
+#: core/models.py:194
+msgid ""
+"Erstelle ein übersichtliches, gut lesbares Basarplakat. Verwende "
+"ausschließlich die unten angegebenen Veranstaltungsdaten und erfinde keine "
+"zusätzlichen Angaben."
+msgstr ""
+"Okunaklı ve düzenli bir pazar afişi oluştur. Yalnızca aşağıda verilen "
+"etkinlik bilgilerini kullan ve ek bilgi uydurma."
+
+#: core/models.py:200
+msgid "E-Mail-Bestätigung erforderlich"
+msgstr "E-posta doğrulaması gerekli"
+
+#: core/models.py:202
+msgid ""
+"Gilt für neue Konten. Bei Aktivierung muss der Benutzer die Adresse "
+"bestätigen."
+msgstr ""
+"Yeni hesaplar için geçerlidir. Etkinleştirildiğinde kullanıcı adresini "
+"doğrulamalıdır."
+
+#: core/models.py:205
+msgid "Mindestlänge des Passworts"
+msgstr "Parola minimum uzunluğu"
+
+#: core/models.py:208
+msgid "Zulässiger Bereich: 8 bis 128 Zeichen."
+msgstr "İzin verilen aralık: 8–128 karakter."
+
+#: core/models.py:211
+msgid "Großbuchstaben verlangen"
+msgstr "Büyük harf zorunlu"
+
+#: core/models.py:215
+msgid "Kleinbuchstaben verlangen"
+msgstr "Küçük harf zorunlu"
+
+#: core/models.py:219
+msgid "Ziffer verlangen"
+msgstr "Rakam zorunlu"
+
+#: core/models.py:223
+msgid "Sonderzeichen verlangen"
+msgstr "Özel karakter zorunlu"
+
+#: core/models.py:227
+msgid "Häufige Passwörter ablehnen"
+msgstr "Yaygın parolaları reddet"
+
+#: core/models.py:231
+msgid "Reine Zahlenpasswörter ablehnen"
+msgstr "Yalnızca rakamlardan oluşan parolaları reddet"
+
+#: core/models.py:235
+msgid "Ähnlichkeit zu Benutzerdaten prüfen"
+msgstr "Parolayı kullanıcı bilgileriyle karşılaştır"
+
+#: core/models.py:239
+msgid "Preisschilder: Spalten pro A4"
+msgstr "Fiyat etiketleri: A4 başına sütun"
+
+#: core/models.py:242
+msgid "Anzahl der Spalten bei der Preisschild-Generierung (2-10)."
+msgstr "Fiyat etiketi oluşturulurken sütun sayısı (2-10)."
+
+#: core/models.py:245
+msgid "Preisschilder: Reihen pro A4"
+msgstr "Fiyat etiketleri: A4 başına satır"
+
+#: core/models.py:248
+msgid "Anzahl der Reihen bei der Preisschild-Generierung (4-30)."
+msgstr "Fiyat etiketi oluşturulurken satır sayısı (4-30)."
+
+#: core/models.py:252
+msgid "Globale Einstellung"
+msgstr "Genel ayar"
+
+#: core/models.py:253 core/models.py:256 core/models.py:292
+msgid "Globale Einstellungen"
+msgstr "Genel ayarlar"
+
+#: core/models.py:276
+msgid ""
+"Bei einer Änderung des Einwilligungstextes muss auch die Version erhöht "
+"werden."
+msgstr "Onay metni değiştirildiğinde sürüm de artırılmalıdır."
+
+#: core/models.py:294
+msgid "Vorlagenname"
+msgstr "Şablon adı"
+
+#: core/models.py:295
+msgid "Vorlageninhalt"
+msgstr "Şablon içeriği"
+
+#: core/models.py:296
+msgid "Schreibgeschützt"
+msgstr "Salt okunur"
+
+#: core/models.py:306 core/models.py:396
+msgid "Verkäuferrechnungsvorlage"
+msgstr "Satıcı hesap dökümü şablonu"
+
+#: core/models.py:307 core/templates/management/invoice_templates.html:3
+#: core/templates/management/invoice_templates.html:5
+msgid "Verkäuferrechnungsvorlagen"
+msgstr "Satıcı hesap dökümü şablonları"
+
+#: core/models.py:315
+msgid "Version"
+msgstr "Sürüm"
+
+#: core/models.py:317
+msgid "Zugestimmt am"
+msgstr "Onay zamanı"
+
+#: core/models.py:321
+msgid "Benutzereinwilligung"
+msgstr "Kullanıcı onayı"
+
+#: core/models.py:322
+msgid "Benutzereinwilligungen"
+msgstr "Kullanıcı onayları"
+
+#: core/models.py:325
+#, python-format
+msgid "%(email)s: %(version)s"
+msgstr "%(email)s: %(version)s"
+
+#: core/models.py:333
+msgid "Geplant"
+msgstr "Planlandı"
+
+#: core/models.py:335 core/models.py:527
+msgid "Abgeschlossen"
+msgstr "Tamamlandı"
+
+#: core/models.py:337 core/templates/admin/user_management_list.html:40
+#: core/templates/management/invoice_templates.html:11
+msgid "Name"
+msgstr "Ad"
+
+#: core/models.py:338 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Beginn"
+msgstr "Başlangıç"
+
+#: core/models.py:340
+msgid "Nummernvergabe möglich bis"
+msgstr "Numara tahsisinin son tarihi"
+
+#: core/models.py:341
+msgid "Muss am oder vor dem Beginn des Basars liegen."
+msgstr "Pazarın başlangıç tarihinde veya öncesinde olmalıdır."
+
+#: core/models.py:344 core/models.py:543
+#: core/templates/admin/user_management_list.html:42
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:199
+#: core/templates/management/bazaars.html:9
+#: core/templates/settlement_confirm.html:62
+msgid "Status"
+msgstr "Durum"
+
+#: core/models.py:350
+msgid "Verkäuferanmeldung geöffnet"
+msgstr "Satıcı kaydı açık"
+
+#: core/models.py:352
+msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgstr "Pazar etkinleştirildiğinde otomatik olarak kapatılır."
+
+#: core/models.py:355
+msgid "Stellenzahl"
+msgstr "Basamak sayısı"
+
+#: core/models.py:359
+msgid "Erste Nummer"
+msgstr "İlk numara"
+
+#: core/models.py:361
+msgid "Maximale Anzahl Verkäufernummern"
+msgstr "Maksimum satıcı numarası sayısı"
+
+#: core/models.py:366
+msgid "Nächste Belegnummer"
+msgstr "Sonraki fiş numarası"
+
+#: core/models.py:371 core/templates/seller/bazaar_details.html:45
+#: core/views.py:1827
+msgid "Verkäufergebühr"
+msgstr "Satıcı ücreti"
+
+#: core/models.py:378
+msgid "Betreiberanteil in Prozent"
+msgstr "Yüzde olarak işletmeci payı"
+
+#: core/models.py:385
+msgid "Verkäufer sehen aktuellen Stand"
+msgstr "Satıcılar güncel bakiyeyi görebilir"
+
+#: core/models.py:389
+msgid "Verkäufer sehen Historie"
+msgstr "Satıcılar geçmişi görebilir"
+
+#: core/models.py:400
+msgid "Plakat-Prompt"
+msgstr "Afiş istemi"
+
+#: core/models.py:402
+msgid "Abrechnung erstellt am"
+msgstr "Hesap kapatma tarihi"
+
+#: core/models.py:416 core/models.py:491 core/models.py:533 core/models.py:642
+#: core/models.py:691 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Basar"
+msgstr "Pazar"
+
+#: core/models.py:417 core/templates/management/home.html:8
+msgid "Basare"
+msgstr "Pazarlar"
+
+#: core/models.py:446
+msgid "Ein bereits abgerechneter Basar kann nicht wieder geöffnet werden."
+msgstr "Hesabı kapatılmış bir pazar yeniden açılamaz."
+
+#: core/models.py:458
+msgid "Die Nummernvergabe darf nicht nach dem Beginn des Basars enden."
+msgstr "Numara tahsisinin bitiş tarihi pazarın başlangıcından sonra olamaz."
+
+#: core/models.py:467
+msgid ""
+"Die Nummernbegrenzung darf nicht unter der bereits vergebenen Anzahl liegen."
+msgstr "Numara sınırı, zaten tahsis edilmiş numara sayısından az olamaz."
+
+#: core/models.py:497 core/templates/role.html:9
+msgid "Verkäufer"
+msgstr "Satıcı"
+
+#: core/models.py:501
+msgid "Verkäufernummer vergeben am"
+msgstr "Satıcı numarasının tahsis tarihi"
+
+#: core/models.py:517
+msgid "Verkäuferanmeldung"
+msgstr "Satıcı kaydı"
+
+#: core/models.py:518
+msgid "Verkäuferanmeldungen"
+msgstr "Satıcı kayıtları"
+
+#: core/models.py:526
+msgid "Offen"
+msgstr "Açık"
+
+#: core/models.py:539 core/models.py:697
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Kassierer"
+msgstr "Kasiyer"
+
+#: core/models.py:541 core/templates/management/bazaar_statistics.html:94
+msgid "Belegnummer"
+msgstr "Fiş numarası"
+
+#: core/models.py:548 core/models.py:644 core/models.py:699
+msgid "Erstellt am"
+msgstr "Oluşturulma tarihi"
+
+#: core/models.py:550
+msgid "Erster Artikel erfasst am"
+msgstr "İlk ürünün kaydedilme zamanı"
+
+#: core/models.py:554
+msgid "Abgeschlossen am"
+msgstr "Tamamlanma zamanı"
+
+#: core/models.py:561 core/models.py:583
+msgid "Kassenbeleg"
+msgstr "Kasa fişi"
+
+#: core/models.py:562
+msgid "Kassenbelege"
+msgstr "Kasa fişleri"
+
+#: core/models.py:565
+#, python-format
+msgid "%(bazaar)s, Beleg Nr. %(number)s"
+msgstr "%(bazaar)s, fiş no. %(number)s"
+
+#: core/models.py:592 core/models.py:761 core/templates/cashier/cashier.html:66
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/scanner/join.html:35
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Preis"
+msgstr "Fiyat"
+
+#: core/models.py:597
+msgid "Erfasst am"
+msgstr "Kaydedilme zamanı"
+
+#: core/models.py:598 core/models.py:648
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert am"
+msgstr "İptal tarihi"
+
+#: core/models.py:605 core/models.py:657
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert von"
+msgstr "İptal eden"
+
+#: core/models.py:613
+msgid "Belegposition"
+msgstr "Fiş kalemi"
+
+#: core/models.py:614
+msgid "Belegpositionen"
+msgstr "Fiş kalemleri"
+
+#: core/models.py:624
+msgid "Die Verkäufernummer muss zum Basar des Kassenbelegs gehören."
+msgstr "Satıcı numarası, kasa fişinin ait olduğu pazara bağlı olmalıdır."
+
+#: core/models.py:630
+#, python-format
+msgid "%(seller_number)s: %(price)s %(currency)s"
+msgstr "%(seller_number)s: %(price)s %(currency)s"
+
+#: core/models.py:645
+msgid "Abrechnungsdaten"
+msgstr "Hesap kapatma verileri"
+
+#: core/models.py:646
+msgid "PDF"
+msgstr "PDF"
+
+#: core/models.py:671 core/templates/settlement_confirm.html:3
+msgid "Basarabrechnung"
+msgstr "Pazar hesap kapatması"
+
+#: core/models.py:672
+msgid "Basarabrechnungen"
+msgstr "Pazar hesap kapatmaları"
+
+#: core/models.py:675
+#, python-format
+msgid "Abrechnung: %(bazaar)s"
+msgstr "Hesap kapatma: %(bazaar)s"
+
+#: core/models.py:682
+#| msgid "Anmelden"
+msgid "Anmeldecode"
+msgstr "Kayıt kodu"
+
+#: core/models.py:701
+msgid "Ablaufzeit"
+msgstr "Sona erme süresi"
+
+#: core/models.py:702
+msgid "Session verfällt nach 30 Minuten"
+msgstr "Oturum 30 dakika sonra sona erer"
+
+#: core/models.py:707
+#| msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgid "Wird deaktiviert, wenn Session abläuft oder manuell geschlossen wird"
+msgstr "Oturum sona erdiğinde veya manuel olarak kapatıldığında devre dışı bırakılır."
+
+#: core/models.py:710
+msgid "Gerätenname (optional)"
+msgstr "Cihaz adı (isteğe bağlı)"
+
+#: core/models.py:713
+msgid "Z.B. 'iPhone 14 Pro'"
+msgstr "Örn. \"iPhone 14 Pro\""
+
+#: core/models.py:718 core/models.py:746
+msgid "Scanner-Session"
+msgstr "Tarayıcı oturumu"
+
+#: core/models.py:719
+msgid "Scanner-Sessions"
+msgstr "Tarayıcı oturumları"
+
+#: core/models.py:722
+#, python-format
+msgid "Scanner: %(code)s (%(bazaar)s)"
+msgstr "Tarayıcı: %(code)s (%(bazaar)s)"
+
+#: core/models.py:754 core/views.py:1876
+msgid "Beleg"
+msgstr "Fiş"
+
+#: core/models.py:757
+#| msgid "Verkäufernummer"
+msgid "Verkäufernummer-ID"
+msgstr "Satıcı numarası kimliği"
+
+#: core/models.py:758
+msgid "Referenz auf SellerRegistration.id"
+msgstr "SellerRegistration.id başvurusu"
+
+#: core/models.py:766
+msgid "Eingescannt um"
+msgstr "Tarandığı zaman"
+
+#: core/models.py:770
+#| msgid "Bearbeiten"
+msgid "Verarbeitet"
+msgstr "İşlendi"
+
+#: core/models.py:772
+msgid "True, wenn Artikel bereits zur Kasse hinzugefügt wurde"
+msgstr "Ürün zaten kasaya eklendiyse doğru"
+
+#: core/models.py:775
+#| msgid "Bearbeiten"
+msgid "Verarbeitet um"
+msgstr "İşlenme saati"
+
+#: core/models.py:782
+msgid "Scanner-Eingabe"
+msgstr "Tarayıcı girişi"
+
+#: core/models.py:783
+msgid "Scanner-Eingaben"
+msgstr "Tarayıcı girişleri"
+
+#: core/models.py:786
+#, python-format
+msgid "Scan: VKNr %(reg)s, %(price)s€"
+msgstr "Tarama: Satıcı no. %(reg)s, %(price)s€"
+
+#: core/password_validation.py:18
+#, python-format
+msgid "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgid_plural "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgstr[0] "Parola en az %(count)d karakter uzunluğunda olmalıdır."
+msgstr[1] "Parola en az %(count)d karakter uzunluğunda olmalıdır."
+
+#: core/password_validation.py:25
+msgid "Das Passwort muss mindestens einen Großbuchstaben enthalten."
+msgstr "Parola en az bir büyük harf içermelidir."
+
+#: core/password_validation.py:27
+msgid "Das Passwort muss mindestens einen Kleinbuchstaben enthalten."
+msgstr "Parola en az bir küçük harf içermelidir."
+
+#: core/password_validation.py:29
+msgid "Das Passwort muss mindestens eine Ziffer enthalten."
+msgstr "Parola en az bir rakam içermelidir."
+
+#: core/password_validation.py:33
+msgid "Das Passwort muss mindestens ein Sonderzeichen enthalten."
+msgstr "Parola en az bir özel karakter içermelidir."
+
+#: core/password_validation.py:38
+msgid "Dieses Passwort ist zu häufig und darf nicht verwendet werden."
+msgstr "Bu parola çok yaygın ve kullanılamaz."
+
+#: core/password_validation.py:40
+msgid "Das Passwort darf nicht ausschließlich aus Zahlen bestehen."
+msgstr "Parola yalnızca rakamlardan oluşamaz."
+
+#: core/password_validation.py:45
+msgid "Das Passwort ähnelt zu stark deinen Benutzerdaten."
+msgstr "Parola, kullanıcı bilgilerine fazla benziyor."
+
+#: core/password_validation.py:55
+#, python-format
+msgid "Mindestens %(count)d Zeichen"
+msgid_plural "Mindestens %(count)d Zeichen"
+msgstr[0] "En az %(count)d karakter"
+msgstr[1] "En az %(count)d karakter"
+
+#: core/password_validation.py:62
+msgid "ein Großbuchstabe"
+msgstr "bir büyük harf"
+
+#: core/password_validation.py:64
+msgid "ein Kleinbuchstabe"
+msgstr "bir küçük harf"
+
+#: core/password_validation.py:66
+msgid "eine Ziffer"
+msgstr "bir rakam"
+
+#: core/password_validation.py:68
+msgid "ein Sonderzeichen"
+msgstr "bir özel karakter"
+
+#: core/password_validation.py:70
+msgid "kein häufig verwendetes Passwort"
+msgstr "yaygın kullanılmayan bir parola"
+
+#: core/password_validation.py:72
+msgid "nicht ausschließlich Zahlen"
+msgstr "yalnızca rakamlardan oluşmayan"
+
+#: core/password_validation.py:74
+msgid "nicht zu ähnlich zu deinen Benutzerdaten"
+msgstr "kullanıcı bilgilerine çok benzemeyen"
+
+#: core/password_validation.py:75
+#, python-format
+msgid "Passwortregeln: %(rules)s."
+msgstr "Parola kuralları: %(rules)s."
+
+#: core/permissions.py:21
+#| msgid "Abrechnung erstellen und PDF herunterladen"
+msgid "Kann Abrechnungen anzeigen und herunterladen"
+msgstr "Hesap dökümlerini görüntüleyebilir ve indirebilir"
+
+#: core/templates/admin/core/user/add_form.html:7
+msgid "Datenschutzvereinbarung"
+msgstr "Gizlilik onayı"
+
+#: core/templates/admin/user_management_edit.html:4
+#: core/templates/admin/user_management_edit.html:10
+#| msgid "Benutzerdaten bearbeiten"
+msgid "Benutzer bearbeiten"
+msgstr "Kullanıcıyı düzenle"
+
+#: core/templates/admin/user_management_edit.html:26
+#| msgid "Kontaktdaten"
+msgid "Kontaktinformationen"
+msgstr "İletişim bilgileri"
+
+#: core/templates/admin/user_management_edit.html:58
+msgid "E-Mail-Adressen können nicht über diese Verwaltung geändert werden."
+msgstr "E-posta adresleri bu yönetim üzerinden değiştirilemez."
+
+#: core/templates/admin/user_management_edit.html:116
+msgid "Rechte und Status"
+msgstr "Yetkiler ve durum"
+
+#: core/templates/admin/user_management_edit.html:176
+#| msgid "Speicherdauer"
+msgid "Speichern"
+msgstr "Kaydet"
+
+#: core/templates/admin/user_management_edit.html:179
+#: core/templates/management/invoice_template_form.html:18
+#: core/templates/seller/price_labels.html:16
+#: core/templates/seller/price_labels.html:61
+msgid "Abbrechen"
+msgstr "İptal"
+
+#: core/templates/admin/user_management_edit.html:183
+msgid "Benutzer wirklich löschen?"
+msgstr "Kullanıcı gerçekten silinsin mi?"
+
+#: core/templates/admin/user_management_edit.html:186
+#| msgid "Konto löschen"
+msgid "Benutzer löschen"
+msgstr "Kullanıcıyı sil"
+
+#: core/templates/admin/user_management_edit.html:195
+#, python-format
+msgid ""
+"\n"
+"                    Benutzer erstellt: "
+"%(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n"
+"                    "
+msgstr "\n                    Kullanıcı oluşturuldu: %(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n                    "
+
+#: core/templates/admin/user_management_edit.html:200
+#, python-format
+msgid ""
+"\n"
+"                        Letzte Anmeldung: "
+"%(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n"
+"                        "
+msgstr "\n                        Son oturum açma: %(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n                        "
+
+#: core/templates/admin/user_management_edit.html:205
+msgid "Hat sich noch nicht angemeldet."
+msgstr "Henüz oturum açmadı."
+
+#: core/templates/admin/user_management_list.html:4
+#: core/templates/admin/user_management_list.html:8
+#: core/templates/management/home.html:13
+#| msgid "Benutzereinwilligung"
+msgid "Benutzerverwaltung"
+msgstr "Kullanıcı yönetimi"
+
+#: core/templates/admin/user_management_list.html:9
+msgid "Verwalte Benutzer und vergebe Rechte ohne Django Admin zu nutzen."
+msgstr "Django Yönetici'yi kullanmadan kullanıcıları yönet ve yetki ver."
+
+#: core/templates/admin/user_management_list.html:21
+msgid "Filtern"
+msgstr "Filtrele"
+
+#: core/templates/admin/user_management_list.html:41
+#| msgid "E-Mail-Adresse"
+msgid "E-Mail"
+msgstr "E-posta"
+
+#: core/templates/admin/user_management_list.html:43
+#| msgid "Rechts"
+msgid "Rechte"
+msgstr "Yetkiler"
+
+#: core/templates/admin/user_management_list.html:44
+#: core/templates/management/invoice_templates.html:11
+msgid "Aktionen"
+msgstr "İşlemler"
+
+#: core/templates/admin/user_management_list.html:65
+msgid "Administrator"
+msgstr "Yönetici"
+
+#: core/templates/admin/user_management_list.html:68
+#: core/templates/base.html:266 core/templates/cashier/cashier.html:3
+#: core/templates/cashier/cashier.html:7 core/templates/role.html:16
+msgid "Kasse"
+msgstr "Kasa"
+
+#: core/templates/admin/user_management_list.html:71
+#| msgid "Standardsprache"
+msgid "Standard"
+msgstr "Varsayılan"
+
+#: core/templates/admin/user_management_list.html:76
+#: core/templates/management/bazaars.html:18
+#: core/templates/management/invoice_templates.html:24
+msgid "Bearbeiten"
+msgstr "Düzenle"
+
+#: core/templates/admin/user_management_list.html:83
+#| msgid "Link erneut senden"
+msgid "Keine Benutzer gefunden."
+msgstr "Kullanıcı bulunamadı."
+
+#: core/templates/admin/user_management_list.html:93
+#| msgid "Zur Verwaltung"
+msgid "Zurück zur Verwaltung"
+msgstr "Yönetime geri dön"
+
+#: core/templates/base.html:4
+msgid "Menü öffnen"
+msgstr "Menüyü aç"
+
+#: core/templates/base.html:5
+msgid "Menü schließen"
+msgstr "Menüyü kapat"
+
+#: core/templates/base.html:259
+msgid "Menü"
+msgstr "Menü"
+
+#: core/templates/base.html:265 core/templates/seller/dashboard.html:3
+#: core/templates/seller/dashboard.html:5
+msgid "Verkäuferbereich"
+msgstr "Satıcı alanı"
+
+#: core/templates/base.html:269 core/templates/management/bazaars.html:19
+#: core/templates/management/home.html:23
+#: core/templates/management/statistics.html:3
+#: core/templates/management/statistics.html:5
+msgid "Statistiken"
+msgstr "İstatistikler"
+
+#: core/templates/base.html:271
+msgid "Django-Admin"
+msgstr "Django yönetimi"
+
+#: core/templates/base.html:275 core/templates/base.html:278
+msgid "Abmelden"
+msgstr "Oturumu kapat"
+
+#: core/templates/base.html:282 core/templates/home.html:9
+#: core/templates/registration/login.html:3
+#: core/templates/registration/login.html:6
+#: core/templates/registration/login.html:13
+msgid "Anmelden"
+msgstr "Oturum aç"
+
+#: core/templates/base.html:283 core/templates/home.html:8
+#: core/templates/registration/register.html:4
+#: core/templates/registration/register.html:7
+#: core/templates/registration/register.html:20
+msgid "Konto erstellen"
+msgstr "Hesap oluştur"
+
+#: core/templates/base.html:285 core/templates/cookie_consent.html:10
+#: core/templates/privacy_policy.html:4 core/templates/privacy_policy.html:6
+msgid "Datenschutzerklärung"
+msgstr "Gizlilik politikası"
+
+#: core/templates/base.html:289
+msgid "Sprache"
+msgstr "Dil"
+
+#: core/templates/cashier/cashier.html:5
+msgid "Diesen Artikel wirklich stornieren?"
+msgstr "Bu ürünü gerçekten iptal etmek istiyor musun?"
+
+#: core/templates/cashier/cashier.html:6
+msgid ""
+"Beleg wirklich abschließen? Danach können keine Artikel mehr korrigiert "
+"werden."
+msgstr "Fiş gerçekten tamamlansın mı? Bundan sonra ürünler düzeltilemez."
+
+#: core/templates/cashier/cashier.html:14
+#, python-format
+msgid "Beleg %(number)s"
+msgstr "Fiş %(number)s"
+
+#: core/templates/cashier/cashier.html:16
+msgid "Verkäufernummer wählen"
+msgstr "Satıcı numarası seç"
+
+#: core/templates/cashier/cashier.html:28
+msgid "Für diesen Basar sind noch keine Verkäufernummern vergeben."
+msgstr "Bu pazar için henüz satıcı numarası verilmedi."
+
+#: core/templates/cashier/cashier.html:33
+#, python-format
+msgid "Artikel für %(number)s"
+msgstr "%(number)s numarası için ürünler"
+
+#: core/templates/cashier/cashier.html:43
+msgid "Es sind keine Schnellpreise eingerichtet."
+msgstr "Hızlı fiyat ayarlanmamış."
+
+#: core/templates/cashier/cashier.html:49
+msgid "Anderen Preis eingeben"
+msgstr "Farklı bir fiyat gir"
+
+#: core/templates/cashier/cashier.html:51 core/templates/scanner/join.html:46
+msgid "Artikel hinzufügen"
+msgstr "Ürün ekle"
+
+#: core/templates/cashier/cashier.html:54
+msgid "Wähle die Verkäufernummer, danach kannst du die Artikelpreise erfassen."
+msgstr "Önce satıcı numarasını seç, ardından ürün fiyatlarını girebilirsin."
+
+#: core/templates/cashier/cashier.html:58
+#: core/templates/cashier/cashier.html:60
+msgid "Kassenzettel"
+msgstr "Satış fişi"
+
+#: core/templates/cashier/cashier.html:61
+#, python-format
+msgid "%(name)s · Beleg %(number)s"
+msgstr "%(name)s · Fiş %(number)s"
+
+#: core/templates/cashier/cashier.html:63
+#, python-format
+msgid "Erster Artikel erfasst: %(date)s"
+msgstr "İlk ürün kaydedildi: %(date)s"
+
+#: core/templates/cashier/cashier.html:70
+#: core/templates/management/bazaar_receipt_detail.html:18
+#: core/templates/settlement_confirm.html:68
+msgid "Storniert"
+msgstr "İptal edildi"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Artikel stornieren"
+msgstr "Ürünü iptal et"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Storno"
+msgstr "İptal"
+
+#: core/templates/cashier/cashier.html:83
+msgid "Noch keine Artikel erfasst."
+msgstr "Henüz ürün kaydedilmedi."
+
+#: core/templates/cashier/cashier.html:89
+msgid "Gesamt:"
+msgstr "Toplam:"
+
+#: core/templates/cashier/cashier.html:94
+msgid "Beleg abschließen"
+msgstr "Fişi tamamla"
+
+#: core/templates/cashier/cashier.html:103
+msgid "Basar für diese Kasse auswählen"
+msgstr "Bu kasa için pazar seç"
+
+#: core/templates/cashier/cashier.html:111
+msgid "Zurzeit ist kein Basar aktiv."
+msgstr "Şu anda etkin bir pazar yok."
+
+#: core/templates/cashier/cashier.html:163
+msgid "QR-Scanner"
+msgstr "QR tarayıcı"
+
+#: core/templates/cashier/cashier.html:165
+msgid "Laden..."
+msgstr "Yükleniyor..."
+
+#: core/templates/cashier/cashier.html:168
+msgid "Stop"
+msgstr "Durdur"
+
+#: core/templates/cashier/cashier.html:169
+#| msgid "Menü schließen"
+msgid "Schließen"
+msgstr "Kapat"
+
+#: core/templates/cashier/cashier.html:179
+msgid "Scanner"
+msgstr "Tarayıcı"
+
+#: core/templates/cashier/cashier.html:276
+msgid "Scanner aktiv"
+msgstr "Tarayıcı etkin"
+
+#: core/templates/cashier/cashier.html:278
+msgid "QR-Code zum Scannen"
+msgstr "Taranacak QR kodu"
+
+#: core/templates/cashier/cashier.html:281
+msgid "Scannen Sie einen QR-Code mit dem Handy-Scanner"
+msgstr "Telefon tarayıcısıyla bir QR kodu tarayın"
+
+#: core/templates/cashier/cashier.html:300
+msgid "Fehler:"
+msgstr "Hata:"
+
+#: core/templates/cashier/cashier.html:436
+msgid "Fehler beim Hinzufügen des Artikels"
+msgstr "Ürün eklenirken hata oluştu"
+
+#: core/templates/cashier/cashier.html:445
+msgid "VKNr"
+msgstr "Satıcı no."
+
+#: core/templates/cashier/cashier.html:448
+msgid "Fehler beim Scannen"
+msgstr "Tarama hatası"
+
+#: core/templates/cashier/receipt_complete.html:3
+#: core/templates/cashier/receipt_complete.html:6
+msgid "Verkauf abgeschlossen"
+msgstr "Satış tamamlandı"
+
+#: core/templates/cashier/receipt_complete.html:7
+#, python-format
+msgid "Beleg %(number)s · %(name)s"
+msgstr "Fiş %(number)s · %(name)s"
+
+#: core/templates/cashier/receipt_complete.html:8
+msgid "Umsatz je Verkäufernummer"
+msgstr "Satıcı numarasına göre satış"
+
+#: core/templates/cashier/receipt_complete.html:10
+msgid "Zwischensumme"
+msgstr "Ara toplam"
+
+#: core/templates/cashier/receipt_complete.html:17
+msgid "Gesamtbetrag:"
+msgstr "Genel toplam:"
+
+#: core/templates/cashier/receipt_complete.html:18
+msgid "Kein Ausdruck erforderlich."
+msgstr "Çıktı gerekmez."
+
+#: core/templates/cashier/receipt_complete.html:21
+msgid "Nächsten Verkauf erfassen"
+msgstr "Sonraki satışı kaydet"
+
+#: core/templates/cookie_consent.html:3
+msgid "Cookie-Einstellungen"
+msgstr "Çerez ayarları"
+
+#: core/templates/cookie_consent.html:7
+msgid "Notwendige Cookies"
+msgstr "Gerekli çerezler"
+
+#: core/templates/cookie_consent.html:8
+msgid ""
+"Damit diese Seite funktioniert, ist deine Zustimmung zur Verwendung der "
+"erforderlichen Cookies notwendig. Die Seite bleibt bis zur Zustimmung "
+"gesperrt."
+msgstr ""
+"Bu sitenin çalışması için gerekli çerezlerin kullanımına onay vermen "
+"gerekir. Onay verene kadar site kullanıma kapalı kalır."
+
+#: core/templates/cookie_consent.html:10
+msgid "Weitere Informationen findest du in der"
+msgstr "Daha fazla bilgiyi şu sayfada bulabilirsin:"
+
+#: core/templates/cookie_consent.html:14
+msgid "Zustimmen und fortfahren"
+msgstr "Onayla ve devam et"
+
+#: core/templates/home.html:7
+msgid "Verkäufernummern verwalten, Verkäufe erfassen und Basare abrechnen."
+msgstr ""
+"Satıcı numaralarını yönet, satışları kaydet ve pazarların hesabını kapat."
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+msgid "Basar bearbeiten"
+msgstr "Pazarı düzenle"
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+#: core/templates/management/bazaars.html:6
+msgid "Neuen Basar anlegen"
+msgstr "Yeni pazar oluştur"
+
+#: core/templates/management/bazaar_form.html:17
+msgid "Basar speichern"
+msgstr "Pazarı kaydet"
+
+#: core/templates/management/bazaar_form.html:18
+msgid "Zurück zur Liste"
+msgstr "Listeye dön"
+
+#: core/templates/management/bazaar_form.html:22
+#: core/templates/management/bazaar_form.html:23
+msgid "Prompt für die Plakatgenerierung"
+msgstr "Afiş oluşturma istemi"
+
+#: core/templates/management/bazaar_form.html:27
+msgid "Abrechnung öffnen"
+msgstr "Hesap kapatmayı aç"
+
+#: core/templates/management/bazaar_receipt_detail.html:3
+#, python-format
+msgid "Rechnung %(number)s · %(name)s"
+msgstr "Fatura %(number)s · %(name)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:5
+#, python-format
+msgid "Rechnung %(number)s"
+msgstr "Fatura %(number)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:7
+msgid "Basar:"
+msgstr "Pazar:"
+
+#: core/templates/management/bazaar_receipt_detail.html:8
+msgid "Zeit:"
+msgstr "Saat:"
+
+#: core/templates/management/bazaar_receipt_detail.html:9
+msgid "Status:"
+msgstr "Durum:"
+
+#: core/templates/management/bazaar_receipt_detail.html:10
+msgid "Positionen"
+msgstr "Kalemler"
+
+#: core/templates/management/bazaar_receipt_detail.html:12
+msgid "Erfasst"
+msgstr "Kaydedildi"
+
+#: core/templates/management/bazaar_receipt_detail.html:18
+msgid "Gültig"
+msgstr "Geçerli"
+
+#: core/templates/management/bazaar_receipt_detail.html:22
+msgid "Der Beleg enthält noch keine Artikelpositionen."
+msgstr "Fişte henüz ürün kalemi yok."
+
+#: core/templates/management/bazaar_receipt_detail.html:26
+msgid "Gesamtbetrag"
+msgstr "Genel toplam"
+
+#: core/templates/management/bazaar_receipt_detail.html:30
+msgid ""
+"Der Beleg ist noch offen; der angezeigte Gesamtbetrag ist ein Zwischenstand."
+msgstr "Fiş henüz açık; gösterilen genel toplam geçici bir tutardır."
+
+#: core/templates/management/bazaar_receipt_detail.html:33
+msgid "Zurück zu den Basarstatistiken"
+msgstr "Pazar istatistiklerine dön"
+
+#: core/templates/management/bazaar_statistics.html:3
+#: core/templates/management/bazaar_statistics.html:16
+#, python-format
+msgid "Statistiken: %(name)s"
+msgstr "İstatistikler: %(name)s"
+
+#: core/templates/management/bazaar_statistics.html:5
+msgid "Verkaufte Artikel je 5 Minuten"
+msgstr "Her 5 dakikada satılan ürünler"
+
+#: core/templates/management/bazaar_statistics.html:6
+msgid "Artikelanzahl"
+msgstr "Ürün sayısı"
+
+#: core/templates/management/bazaar_statistics.html:7
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+msgid "Artikel"
+msgstr "Ürün"
+
+#: core/templates/management/bazaar_statistics.html:8
+msgid "Bruttoumsatz je 5 Minuten"
+msgstr "Her 5 dakikada brüt satış"
+
+#: core/templates/management/bazaar_statistics.html:9
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+#: core/templates/seller/bazaar_details.html:44 core/views.py:1823
+msgid "Bruttoumsatz"
+msgstr "Brüt satış"
+
+#: core/templates/management/bazaar_statistics.html:10
+msgid "Neue Verkäufernummern je Tag"
+msgstr "Günlük yeni satıcı numaraları"
+
+#: core/templates/management/bazaar_statistics.html:11
+msgid "Neue Nummern pro Tag"
+msgstr "Günde yeni numaralar"
+
+#: core/templates/management/bazaar_statistics.html:12
+msgid "Neue Nummern"
+msgstr "Yeni numaralar"
+
+#: core/templates/management/bazaar_statistics.html:13
+msgid "Kumulierte Vergabe der Verkäufernummern"
+msgstr "Kümülatif satıcı numarası tahsisi"
+
+#: core/templates/management/bazaar_statistics.html:14
+msgid "Nummern gesamt"
+msgstr "Toplam numara"
+
+#: core/templates/management/bazaar_statistics.html:15
+msgid "Gesamtzahl"
+msgstr "Toplam sayı"
+
+#: core/templates/management/bazaar_statistics.html:17
+msgid ""
+"Verwendet werden abgeschlossene Belege und nicht stornierte "
+"Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr ""
+"Tamamlanmış fişler ve iptal edilmemiş fiş kalemleri kullanılır. Gelirler "
+"brüt satış tutarlarıdır."
+
+#: core/templates/management/bazaar_statistics.html:60
+msgid "Verkäufe und Einnahmen je 5 Minuten"
+msgstr "Her 5 dakikada satışlar ve gelirler"
+
+#: core/templates/management/bazaar_statistics.html:61
+msgid ""
+"Der Zeitstempel eines abgeschlossenen Belegs bestimmt das 5-Minuten-"
+"Intervall. Eine tatsächliche Öffnungs- oder Endzeit wird derzeit nicht "
+"erfasst."
+msgstr ""
+"Tamamlanan fişin zaman damgası 5 dakikalık aralığı belirler. Gerçek açılış "
+"veya kapanış saati şu anda kaydedilmiyor."
+
+#: core/templates/management/bazaar_statistics.html:63
+#: core/templates/seller/bazaar_details.html:25
+msgid "Verkaufte Artikel"
+msgstr "Satılan ürünler"
+
+#: core/templates/management/bazaar_statistics.html:65
+msgid "Einnahmen"
+msgstr "Gelirler"
+
+#: core/templates/management/bazaar_statistics.html:70
+#: core/templates/management/bazaar_statistics.html:124
+msgid "Für diesen Basar liegen noch keine abgeschlossenen Verkäufe vor."
+msgstr "Bu pazar için henüz tamamlanmış satış yok."
+
+#: core/templates/management/bazaar_statistics.html:75
+msgid "Verlauf der Verkäufernummernvergabe"
+msgstr "Satıcı numarası tahsisinin zaman çizelgesi"
+
+#: core/templates/management/bazaar_statistics.html:77
+msgid "Je Tag: neu vergebene Nummern und kumulierte Gesamtzahl."
+msgstr "Günlük olarak: yeni tahsis edilen numaralar ve kümülatif toplam."
+
+#: core/templates/management/bazaar_statistics.html:78
+msgid "Neu vergebene Nummern"
+msgstr "Yeni tahsis edilen numaralar"
+
+#: core/templates/management/bazaar_statistics.html:80
+msgid "Kumulierte Nummern"
+msgstr "Kümülatif numaralar"
+
+#: core/templates/management/bazaar_statistics.html:83
+msgid ""
+"Für die vorhandenen Verkäufernummern liegen keine Vergabezeitpunkte vor."
+msgstr "Mevcut satıcı numaralarının tahsis tarihleri bulunmuyor."
+
+#: core/templates/management/bazaar_statistics.html:86
+#, python-format
+msgid ""
+"%(count)s ältere Nummern haben keinen gespeicherten Vergabezeitpunkt und "
+"können im Verlauf nicht berücksichtigt werden."
+msgstr ""
+"%(count)s eski numaranın tahsis tarihi kaydedilmediğinden zaman çizelgesine "
+"eklenemiyor."
+
+#: core/templates/management/bazaar_statistics.html:91
+msgid "Top-Rechnungen nach Betrag"
+msgstr "Tutarına göre en yüksek faturalar"
+
+#: core/templates/management/bazaar_statistics.html:92
+msgid "Die Rangliste umfasst die zehn höchsten abgeschlossenen Belege."
+msgstr "Sıralama, tutarı en yüksek on tamamlanmış fişi içerir."
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Zeit"
+msgstr "Saat"
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Betrag"
+msgstr "Tutar"
+
+#: core/templates/management/bazaar_statistics.html:101
+msgid "Rechnung ansehen"
+msgstr "Faturayı görüntüle"
+
+#: core/templates/management/bazaar_statistics.html:104
+#: core/templates/management/bazaar_statistics.html:169
+#: core/templates/management/bazaar_statistics.html:189
+msgid "Es gibt noch keine abgeschlossenen Rechnungen."
+msgstr "Henüz tamamlanmış fatura yok."
+
+#: core/templates/management/bazaar_statistics.html:111
+msgid "Top-Verkäufer"
+msgstr "En çok satış yapan satıcılar"
+
+#: core/templates/management/bazaar_statistics.html:112
+msgid "Sortiert nach Bruttoumsatz; bei Gleichstand nach Artikelanzahl."
+msgstr ""
+"Brüt satış tutarına göre sıralanır; eşitlikte ürün sayısı dikkate alınır."
+
+#: core/templates/management/bazaar_statistics.html:114
+msgid "Platz"
+msgstr "Sıra"
+
+#: core/templates/management/bazaar_statistics.html:131
+msgid "Durchschnitt, Median und Stornoquote"
+msgstr "Ortalama, medyan ve iptal oranı"
+
+#: core/templates/management/bazaar_statistics.html:135
+msgid "Durchschnitt pro abgeschlossener Rechnung"
+msgstr "Tamamlanan fatura başına ortalama"
+
+#: core/templates/management/bazaar_statistics.html:139
+msgid "Median pro abgeschlossener Rechnung"
+msgstr "Tamamlanan fatura başına medyan"
+
+#: core/templates/management/bazaar_statistics.html:144
+msgid ""
+"Für Durchschnitt und Median gibt es noch keine abgeschlossenen Rechnungen."
+msgstr "Ortalama ve medyan için henüz tamamlanmış fatura yok."
+
+#: core/templates/management/bazaar_statistics.html:146
+msgid "Stornoquote"
+msgstr "İptal oranı"
+
+#: core/templates/management/bazaar_statistics.html:148
+#, python-format
+msgid "%(cancelled)s von %(total)s Positionen storniert (%(rate)s %%)."
+msgstr "%(total)s kalemden %(cancelled)s tanesi iptal edildi (%(rate)s %%)."
+
+#: core/templates/management/bazaar_statistics.html:149
+msgid "Enthalten sind Positionen aus offenen und abgeschlossenen Belegen."
+msgstr "Açık ve tamamlanmış fişlerdeki kalemler dahildir."
+
+#: core/templates/management/bazaar_statistics.html:151
+msgid "Für diesen Basar wurden noch keine Artikelpositionen erfasst."
+msgstr "Bu pazarda henüz ürün kalemi kaydedilmedi."
+
+#: core/templates/management/bazaar_statistics.html:156
+msgid "Stoßzeiten"
+msgstr "Yoğun saatler"
+
+#: core/templates/management/bazaar_statistics.html:157
+msgid ""
+"Die fünf 5-Minuten-Intervalle mit den meisten abgeschlossenen Rechnungen. "
+"Bei Gleichstand entscheidet der Umsatz."
+msgstr ""
+"Tamamlanan fatura sayısının en yüksek olduğu beş adet 5 dakikalık aralık. "
+"Eşitlikte satış tutarı belirleyicidir."
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Intervall"
+msgstr "Aralık"
+
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Rechnungen"
+msgstr "Faturalar"
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Umsatz"
+msgstr "Satış"
+
+#: core/templates/management/bazaar_statistics.html:176
+msgid "Umsatz je Kassierer"
+msgstr "Kasiyere göre satış"
+
+#: core/templates/management/bazaar_statistics.html:177
+msgid ""
+"Bruttoumsatz aus abgeschlossenen Belegen; stornierte Positionen sind "
+"ausgenommen."
+msgstr ""
+"Tamamlanmış fişlerden elde edilen brüt satış; iptal edilen kalemler hariçtir."
+
+#: core/templates/management/bazaar_statistics.html:196
+msgid "Alle Rechnungen"
+msgstr "Tüm faturalar"
+
+#: core/templates/management/bazaar_statistics.html:197
+msgid ""
+"Offene Belege werden mit dem aktuellen Zwischenbetrag angezeigt und "
+"aktualisieren sich beim erneuten Aufruf."
+msgstr ""
+"Açık fişler güncel geçici tutarla gösterilir ve sayfa tekrar açıldığında "
+"güncellenir."
+
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Nummer"
+msgstr "Numara"
+
+#: core/templates/management/bazaar_statistics.html:207
+#: core/templates/management/statistics.html:87
+#: core/templates/seller/dashboard.html:24
+msgid "Details"
+msgstr "Ayrıntılar"
+
+#: core/templates/management/bazaar_statistics.html:210
+msgid "Für diesen Basar gibt es noch keine Rechnungen."
+msgstr "Bu pazar için henüz fatura yok."
+
+#: core/templates/management/bazaar_statistics.html:217
+msgid "Neuere"
+msgstr "Daha yeni"
+
+#: core/templates/management/bazaar_statistics.html:219
+#, python-format
+msgid "Seite %(current)s von %(total)s"
+msgstr "%(current)s / %(total)s sayfa"
+
+#: core/templates/management/bazaar_statistics.html:221
+msgid "Ältere"
+msgstr "Daha eski"
+
+#: core/templates/management/bazaar_statistics.html:227
+msgid "Zur Statistikübersicht"
+msgstr "İstatistiklere dön"
+
+#: core/templates/management/bazaars.html:3
+#: core/templates/management/bazaars.html:5
+#: core/templates/management/home.html:10
+msgid "Basare verwalten"
+msgstr "Pazarları yönet"
+
+#: core/templates/management/bazaars.html:9
+msgid "Nummernvergabe bis"
+msgstr "Numara tahsis son tarihi"
+
+#: core/templates/management/bazaars.html:21
+msgid "Abrechnung"
+msgstr "Hesap kapatma"
+
+#: core/templates/management/bazaars.html:26
+#: core/templates/management/statistics.html:90
+msgid "Es wurden noch keine Basare angelegt."
+msgstr "Henüz pazar oluşturulmadı."
+
+#: core/templates/management/bazaars.html:31
+#: core/templates/management/settings.html:19
+msgid "Zur Verwaltung"
+msgstr "Yönetime dön"
+
+#: core/templates/management/home.html:9
+msgid "Basare anlegen und verwalten."
+msgstr "Pazar oluştur ve yönet."
+
+#: core/templates/management/home.html:14
+msgid "Benutzer verwalten und Rechte vergeben."
+msgstr "Kullanıcıları yönet ve yetki ver."
+
+#: core/templates/management/home.html:15
+#| msgid "Basare verwalten"
+msgid "Benutzer verwalten"
+msgstr "Kullanıcıları yönet"
+
+#: core/templates/management/home.html:18
+#: core/templates/management/settings.html:3
+#: core/templates/management/settings.html:5
+msgid "Systemeinstellungen"
+msgstr "Sistem ayarları"
+
+#: core/templates/management/home.html:19
+msgid "Globale Preise, Gebühren, Einwilligung und Plakatvorgaben."
+msgstr "Genel fiyatlar, ücretler, onaylar ve afiş talimatları."
+
+#: core/templates/management/home.html:20
+msgid "Einstellungen bearbeiten"
+msgstr "Ayarları düzenle"
+
+#: core/templates/management/home.html:24
+msgid "Verkaufsentwicklung, Einnahmen und Preisverteilung der Basare."
+msgstr "Pazarların satış, gelir ve fiyat dağılımı."
+
+#: core/templates/management/home.html:25
+msgid "Statistiken ansehen"
+msgstr "İstatistikleri görüntüle"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Vorlage bearbeiten"
+msgstr "Şablonu düzenle"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Neue Vorlage"
+msgstr "Yeni şablon"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage bearbeiten"
+msgstr "Satıcı hesap dökümü şablonunu düzenle"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage anlegen"
+msgstr "Satıcı hesap dökümü şablonu oluştur"
+
+#: core/templates/management/invoice_template_form.html:17
+msgid "Vorlage speichern"
+msgstr "Şablonu kaydet"
+
+#: core/templates/management/invoice_templates.html:6
+msgid ""
+"Die Standardvorlage ist schreibgeschützt. Über „Kopie“ kannst du eine "
+"bearbeitbare Vorlage daraus erstellen. Das globale Logo wird automatisch "
+"eingefügt."
+msgstr ""
+"Varsayılan şablon salt okunurdur. Düzenlenebilir bir kopyasını oluşturmak "
+"için “Kopyala” seçeneğini kullan. Genel logo otomatik eklenir."
+
+#: core/templates/management/invoice_templates.html:7
+msgid "Neue Vorlage anlegen"
+msgstr "Yeni şablon oluştur"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Standard für neue Basare"
+msgstr "Yeni pazarlar için varsayılan"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Verwendet von Basaren"
+msgstr "Kullanan pazarlar"
+
+#: core/templates/management/invoice_templates.html:17
+#, python-format
+msgid "Als Standardvorlage verwenden: %(name)s"
+msgstr "Varsayılan şablon olarak kullan: %(name)s"
+
+#: core/templates/management/invoice_templates.html:20
+msgid "schreibgeschützt"
+msgstr "salt okunur"
+
+#: core/templates/management/invoice_templates.html:25
+msgid "Löschen"
+msgstr "Sil"
+
+#: core/templates/management/invoice_templates.html:27 core/views.py:796
+#: core/views.py:800
+msgid "Kopie"
+msgstr "Kopyala"
+
+#: core/templates/management/invoice_templates.html:31
+msgid "Es gibt noch keine Vorlagen."
+msgstr "Henüz şablon yok."
+
+#: core/templates/management/invoice_templates.html:36
+msgid "Standardvorlage speichern"
+msgstr "Varsayılan şablonu kaydet"
+
+#: core/templates/management/invoice_templates.html:38
+msgid "Zurück zu den Systemeinstellungen"
+msgstr "Sistem ayarlarına dön"
+
+#: core/templates/management/settings.html:17
+msgid "Einstellungen speichern"
+msgstr "Ayarları kaydet"
+
+#: core/templates/management/settings.html:18
+msgid "Verkäuferrechnungsvorlagen verwalten"
+msgstr "Satıcı hesap dökümü şablonlarını yönet"
+
+#: core/templates/management/settings.html:23
+msgid "Aktuelles Verkäuferabrechnungslogo"
+msgstr "Güncel satıcı hesap dökümü logosu"
+
+#: core/templates/management/settings.html:24
+msgid "Aktuelles globales Logo"
+msgstr "Güncel genel logo"
+
+#: core/templates/management/statistics.html:6
+msgid ""
+"Berücksichtigt werden ausschließlich abgeschlossene Belege und nicht "
+"stornierte Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr ""
+"Yalnızca tamamlanmış fişler ve iptal edilmemiş kalemler hesaba katılır. "
+"Gelirler brüt satış tutarlarıdır."
+
+#: core/templates/management/statistics.html:20
+msgid "Verkaufsentwicklung je Basar"
+msgstr "Pazara göre satış eğilimi"
+
+#: core/templates/management/statistics.html:26
+#, python-format
+msgid "%(label)s: %(value)s Artikel"
+msgstr "%(label)s: %(value)s ürün"
+
+#: core/templates/management/statistics.html:29
+#: core/templates/management/statistics.html:67
+#, python-format
+msgid "%(value)s Artikel"
+msgstr "%(value)s ürün"
+
+#: core/templates/management/statistics.html:34
+#: core/templates/management/statistics.html:53
+msgid "Es gibt noch keine Basare."
+msgstr "Henüz pazar yok."
+
+#: core/templates/management/statistics.html:39
+msgid "Einnahmeentwicklung je Basar"
+msgstr "Pazara göre gelir eğilimi"
+
+#: core/templates/management/statistics.html:45
+#, python-format
+msgid "%(label)s: %(value)s %(currency)s"
+msgstr "%(label)s: %(value)s %(currency)s"
+
+#: core/templates/management/statistics.html:58
+msgid "Artikelverteilung nach Preis"
+msgstr "Fiyata göre ürün dağılımı"
+
+#: core/templates/management/statistics.html:64
+#, python-format
+msgid "%(value)s Artikel zu %(label)s"
+msgstr "%(label)s fiyatından %(value)s ürün"
+
+#: core/templates/management/statistics.html:72
+msgid "Es wurden noch keine Artikel verkauft."
+msgstr "Henüz ürün satılmadı."
+
+#: core/templates/management/statistics.html:77
+msgid "Basarübersicht"
+msgstr "Pazar özeti"
+
+#: core/templates/partials/cookie_details.html:2
+msgid ""
+"Wir verwenden keine Cookies von Drittanbietern und binden keine Analyse- "
+"oder Werbedienste ein. Folgende technisch notwendige Cookies werden für den "
+"Betrieb genutzt:"
+msgstr ""
+"Üçüncü taraf çerezleri kullanmıyor ve analiz ya da reklam hizmetleri "
+"eklemiyoruz. İşletim için aşağıdaki teknik çerezler gereklidir:"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Cookie"
+msgstr "Çerez"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Inhalt und Zweck"
+msgstr "İçerik ve amaç"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Speicherdauer"
+msgstr "Saklama süresi"
+
+#: core/templates/partials/cookie_details.html:9
+msgid "Signierter Zustimmungsstatus. Enthält keine persönlichen Angaben."
+msgstr "İmzalı onay durumu. Kişisel bilgi içermez."
+
+#: core/templates/partials/cookie_details.html:10
+msgid "1 Jahr"
+msgstr "1 yıl"
+
+#: core/templates/partials/cookie_details.html:14
+msgid ""
+"Zufällige Sitzungskennung. Anmeldestatus, ausgewählte Rolle und "
+"Kassenkontext werden serverseitig gespeichert, nicht im Cookie."
+msgstr ""
+"Rastgele oturum kimliği. Oturum açma durumu, seçili rol ve kasa bağlamı "
+"sunucuda tutulur, çerezde değil."
+
+#: core/templates/partials/cookie_details.html:15
+msgid "Bis zu 2 Wochen; die Sitzung kann vorher beendet werden"
+msgstr "En fazla 2 hafta; oturum daha erken sona erebilir"
+
+#: core/templates/partials/cookie_details.html:19
+msgid ""
+"Zufälliger Sicherheitstoken zum Schutz vor gefälschten "
+"Formularübermittlungen. Keine Profil- oder Verkaufsdaten."
+msgstr ""
+"Sahte form gönderimlerine karşı rastgele güvenlik belirteci. Profil veya "
+"satış verisi içermez."
+
+#: core/templates/partials/cookie_details.html:20
+msgid "Bis zu 1 Jahr"
+msgstr "En fazla 1 yıl"
+
+#: core/templates/partials/cookie_details.html:24
+msgid ""
+"Signierte, kurzfristige Statusmeldungen der Anwendung, zum Beispiel Hinweise "
+"nach dem Speichern. Bei größeren Meldungen werden sie serverseitig in der "
+"Sitzung abgelegt."
+msgstr ""
+"Uygulamanın imzalı, kısa süreli durum bildirimleri; örneğin kaydetme sonrası "
+"mesajlar. Daha büyük bildirimler sunucudaki oturumda saklanır."
+
+#: core/templates/partials/cookie_details.html:25
+msgid "Kurzzeitig, in der Regel bis zum nächsten Seitenaufruf"
+msgstr "Kısa süreli, genellikle sonraki sayfa açılana kadar"
+
+#: core/templates/partials/cookie_details.html:29
+msgid "Ausgewählte Sprache der Benutzeroberfläche."
+msgstr "Seçilen arayüz dili."
+
+#: core/templates/partials/cookie_details.html:30
+msgid "Bis zum Schließen des Browsers (Sitzungscookie)"
+msgstr "Tarayıcı kapanana kadar (oturum çerezi)"
+
+#: core/templates/partials/cookie_details.html:35
+msgid ""
+"Ohne Zustimmung können die Anmelde-, Verkäufer- und Kassenfunktionen nicht "
+"verwendet werden. Du kannst die Zustimmung jederzeit durch Löschen der "
+"Cookies im Browser zurücknehmen; beim nächsten Besuch fragen wir erneut."
+msgstr ""
+"Onay olmadan oturum açma, satıcı ve kasa özellikleri kullanılamaz. Çerezleri "
+"tarayıcıdan silerek onayını istediğin zaman geri çekebilirsin; sonraki "
+"ziyaretinde yeniden sorarız."
+
+#: core/templates/partials/line_chart.html:2
+#, python-format
+msgid "%(title)s. Y-Achse: %(axis)s"
+msgstr "%(title)s. Y ekseni: %(axis)s"
+
+#: core/templates/partials/line_chart.html:31
+#: core/templates/partials/line_chart.html:32
+#, python-format
+msgid "%(label)s: %(value)s"
+msgstr "%(label)s: %(value)s"
+
+#: core/templates/partials/line_chart.html:41
+msgid "Messwerte als Tabelle anzeigen"
+msgstr "Ölçümleri tablo olarak göster"
+
+#: core/templates/partials/line_chart.html:44
+msgid "Zeitpunkt"
+msgstr "Zaman"
+
+#: core/templates/partials/line_chart.html:49
+msgid "Keine Messwerte vorhanden."
+msgstr "Ölçüm verisi yok."
+
+#: core/templates/privacy_policy.html:12
+msgid "Die Datenschutzerklärung ist derzeit noch nicht hinterlegt."
+msgstr "Gizlilik politikası henüz eklenmedi."
+
+#: core/templates/privacy_policy.html:15
+msgid "Cookies und ähnliche Technologien"
+msgstr "Çerezler ve benzer teknolojiler"
+
+#: core/templates/registration/accept_consent.html:4
+msgid "Datenschutzhinweise bestätigen"
+msgstr "Gizlilik bildirimini onayla"
+
+#: core/templates/registration/accept_consent.html:7
+msgid "Aktualisierte Datenschutzhinweise"
+msgstr "Güncellenmiş gizlilik bildirimi"
+
+#: core/templates/registration/accept_consent.html:9
+#, python-format
+msgid "Version %(version)s"
+msgstr "Sürüm %(version)s"
+
+#: core/templates/registration/accept_consent.html:14
+msgid "Zustimmung speichern"
+msgstr "Onayı kaydet"
+
+#: core/templates/registration/account_deleted.html:3
+#: core/templates/registration/account_deleted.html:6
+msgid "Konto gelöscht"
+msgstr "Hesap silindi"
+
+#: core/templates/registration/account_deleted.html:7
+msgid ""
+"Dein Konto und deine persönlichen Daten wurden gelöscht. Verkäufernummern, "
+"Belege und Basarabrechnungen bleiben anonymisiert erhalten."
+msgstr ""
+"Hesabın ve kişisel verilerin silindi. Satıcı numaraları, fişler ve pazar "
+"hesap kapatma kayıtları anonimleştirilmiş olarak saklanır."
+
+#: core/templates/registration/account_deleted.html:8
+#: core/templates/scanner/error.html:12
+msgid "Zur Startseite"
+msgstr "Ana sayfaya dön"
+
+#: core/templates/registration/login.html:15
+msgid "Passwort vergessen?"
+msgstr "Parolanı mı unuttun?"
+
+#: core/templates/registration/password_reset_complete.html:3
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Passwort geändert"
+msgstr "Parola değiştirildi"
+
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Jetzt anmelden"
+msgstr "Şimdi giriş yap"
+
+#: core/templates/registration/password_reset_confirm.html:3
+msgid "Neues Passwort"
+msgstr "Yeni parola"
+
+#: core/templates/registration/password_reset_confirm.html:6
+msgid "Neues Passwort festlegen"
+msgstr "Yeni parola belirle"
+
+#: core/templates/registration/password_reset_confirm.html:14
+msgid "Passwort speichern"
+msgstr "Parolayı kaydet"
+
+#: core/templates/registration/password_reset_confirm.html:16
+msgid "Der Link ist ungültig oder abgelaufen."
+msgstr "Bağlantı geçersiz veya süresi dolmuş."
+
+#: core/templates/registration/password_reset_done.html:3
+msgid "E-Mail versendet"
+msgstr "E-posta gönderildi"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid "Prüfe dein Postfach"
+msgstr "Gelen kutunu kontrol et"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid ""
+"Falls ein aktives Konto zu der Adresse existiert, wurde ein Link versendet."
+msgstr "Bu adrese bağlı etkin bir hesap varsa bir bağlantı gönderildi."
+
+#: core/templates/registration/password_reset_email.html:2
+msgid ""
+"Du erhältst diese E-Mail, weil ein Passwort-Reset für dein Basar-Konto "
+"angefordert wurde."
+msgstr ""
+"Bu e-postayı, Pazar hesabın için parola sıfırlama isteği gönderildiği için "
+"aldın."
+
+#: core/templates/registration/password_reset_email.html:4
+msgid "Öffne diesen Link, um ein neues Passwort festzulegen:"
+msgstr "Yeni parola belirlemek için bu bağlantıyı aç:"
+
+#: core/templates/registration/password_reset_email.html:7
+msgid ""
+"Wenn du den Reset nicht angefordert hast, kannst du diese Nachricht "
+"ignorieren."
+msgstr ""
+"Parola sıfırlama isteğini sen göndermediysen bu mesajı yok sayabilirsin."
+
+#: core/templates/registration/password_reset_form.html:3
+#: core/templates/registration/password_reset_form.html:6
+msgid "Passwort zurücksetzen"
+msgstr "Parolayı sıfırla"
+
+#: core/templates/registration/password_reset_form.html:7
+msgid "Wir senden einen Link an die E-Mail-Adresse deines Kontos."
+msgstr "Hesabının e-posta adresine bir bağlantı göndereceğiz."
+
+#: core/templates/registration/password_reset_form.html:14
+msgid "Link senden"
+msgstr "Bağlantı gönder"
+
+#: core/templates/registration/profile_edit.html:3
+#: core/templates/registration/profile_edit.html:6
+msgid "Benutzerdaten bearbeiten"
+msgstr "Kullanıcı bilgilerini düzenle"
+
+#: core/templates/registration/profile_edit.html:7
+msgid "E-Mail-Adresse für die Anmeldung:"
+msgstr "Oturum açma e-posta adresi:"
+
+#: core/templates/registration/profile_edit.html:17
+msgid "Daten speichern"
+msgstr "Bilgileri kaydet"
+
+#: core/templates/registration/profile_edit.html:21
+#: core/templates/registration/profile_edit.html:29
+msgid "Konto löschen"
+msgstr "Hesabı sil"
+
+#: core/templates/registration/profile_edit.html:22
+msgid ""
+"Deine persönlichen Daten und Einwilligungen werden gelöscht. "
+"Verkäufernummern, Belege und Abrechnungen bleiben anonymisiert erhalten, "
+"damit die Basarsummen korrekt bleiben."
+msgstr ""
+"Kişisel verilerin ve onayların silinir. Pazar toplamlarının doğru kalması "
+"için satıcı numaraları, fişler ve hesap dökümleri anonimleştirilmiş olarak "
+"saklanır."
+
+#: core/templates/registration/profile_edit.html:27
+msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgstr "Hesabımı geri alınamaz şekilde silmek istiyorum."
+
+#: core/templates/registration/register.html:8
+msgid ""
+"Vorname, Nachname, E-Mail-Adresse und Passwort sind erforderlich. "
+"Telefonnummer und Adresse sind freiwillig."
+msgstr ""
+"Ad, soyadı, e-posta adresi ve parola gereklidir. Telefon numarası ve adres "
+"isteğe bağlıdır."
+
+#: core/templates/registration/register.html:18
+msgid "Konto erstellen und Bestätigungslink anfordern"
+msgstr "Hesap oluştur ve doğrulama bağlantısı iste"
+
+#: core/templates/registration/registration_sent.html:3
+#: core/templates/registration/registration_sent.html:6
+msgid "E-Mail bestätigen"
+msgstr "E-postayı doğrula"
+
+#: core/templates/registration/registration_sent.html:8
+msgid "Der Bestätigungslink ist abgelaufen. Fordere einen neuen Link an."
+msgstr "Doğrulama bağlantısının süresi dolmuş. Yeni bir bağlantı iste."
+
+#: core/templates/registration/registration_sent.html:10
+msgid ""
+"Falls ein unbestätigtes Konto zu der Adresse existiert, wurde ein neuer Link "
+"versendet."
+msgstr ""
+"Bu adrese bağlı doğrulanmamış bir hesap varsa yeni bir bağlantı gönderildi."
+
+#: core/templates/registration/registration_sent.html:12
+#, python-format
+msgid "Ein Bestätigungslink wurde an %(email)s gesendet."
+msgstr "%(email)s adresine bir doğrulama bağlantısı gönderildi."
+
+#: core/templates/registration/registration_sent.html:16
+msgid "Bestätigungslink erneut senden"
+msgstr "Doğrulama bağlantısını yeniden gönder"
+
+#: core/templates/registration/registration_sent.html:18
+msgid "Link erneut senden"
+msgstr "Bağlantıyı yeniden gönder"
+
+#: core/templates/role.html:3
+msgid "Ansicht auswählen"
+msgstr "Görünüm seç"
+
+#: core/templates/role.html:5
+msgid "Wie möchtest du fortfahren?"
+msgstr "Nasıl devam etmek istersin?"
+
+#: core/templates/role.html:10
+msgid "Verkäufernummern, aktuelle Basare und Historie ansehen."
+msgstr "Satıcı numaralarını, güncel pazarları ve geçmişi görüntüle."
+
+#: core/templates/role.html:11
+msgid "Verkäuferansicht öffnen"
+msgstr "Satıcı görünümünü aç"
+
+#: core/templates/role.html:17
+msgid "Verkäufe an einer Kasse erfassen."
+msgstr "Satışları kasada kaydet."
+
+#: core/templates/role.html:18
+msgid "Kassenansicht öffnen"
+msgstr "Kasa görünümünü aç"
+
+#: core/templates/scanner/error.html:4
+msgid "Scanner Fehler"
+msgstr "Tarayıcı hatası"
+
+#: core/templates/scanner/error.html:9
+msgid "Scanner-Fehler"
+msgstr "Tarayıcı hatası"
+
+#: core/templates/scanner/error.html:11
+msgid "Bitte öffnen Sie in der Kasse eine neue Scanner-Session."
+msgstr "Lütfen kasada yeni bir tarayıcı oturumu açın."
+
+#: core/templates/scanner/join.html:4
+msgid "QR-Code Scanner"
+msgstr "QR kod tarayıcı"
+
+#: core/templates/scanner/join.html:7
+msgid "Basar-QR-Code Scanner"
+msgstr "Pazar QR kod tarayıcısı"
+
+#: core/templates/scanner/join.html:8
+#, python-format
+msgid "Verbunden mit: <strong>%(bazaar)s</strong>"
+msgstr "Bağlı: <strong>%(bazaar)s</strong>"
+
+#: core/templates/scanner/join.html:11
+msgid "Scanbereit"
+msgstr "Taramaya hazır"
+
+#: core/templates/scanner/join.html:13
+msgid "Initialisiere Kamera..."
+msgstr "Kamera başlatılıyor..."
+
+#: core/templates/scanner/join.html:24
+#| msgid "Anderen Preis eingeben"
+msgid "Oder manuell eingeben:"
+msgstr "Veya manuel olarak girin:"
+
+#: core/templates/scanner/join.html:29
+#| msgid "Verkäufernummer wählen"
+msgid "Verkäufernummer auswählen"
+msgstr "Satıcı numarası seçin"
+
+#: core/templates/scanner/join.html:41
+msgid "z. B. 2,50"
+msgstr "örn. 2,50"
+
+#: core/templates/scanner/join.html:52 core/templates/scanner/join.html:262
+#| msgid "Artikel für %(number)s"
+msgid "Artikel übernommen"
+msgstr "Ürünler devralındı"
+
+#: core/templates/scanner/join.html:133 core/templates/scanner/join.html:210
+msgid "Scanbereit – halte QR-Code zur Kamera"
+msgstr "Taramaya hazır – QR kodu kameraya tutun"
+
+#: core/templates/scanner/join.html:144
+msgid "Kamera-Zugriff wurde verweigert"
+msgstr "Kamera erişimi reddedildi"
+
+#: core/templates/scanner/join.html:146
+msgid "Keine Kamera gefunden"
+msgstr "Kamera bulunamadı"
+
+#: core/templates/scanner/join.html:202
+msgid "QR-Code erkannt – nächster Scan in 3 Sekunden"
+msgstr "QR kod algılandı – sonraki tarama 3 saniye içinde"
+
+#: core/templates/scanner/join.html:258
+msgid "Fehler beim Übertragen"
+msgstr "Aktarım sırasında hata oluştu"
+
+#: core/templates/scanner/join.html:298
+#| msgid "Bitte wähle einen gültigen Basar."
+msgid "Bitte wähle eine Verkäufernummer aus."
+msgstr "Lütfen bir satıcı numarası seçin."
+
+#: core/templates/scanner/join.html:302 core/views.py:1314
+msgid "Bitte gib einen gültigen Preis ein."
+msgstr "Lütfen geçerli bir fiyat gir."
+
+#: core/templates/seller/bazaar_details.html:3
+#, python-format
+msgid "Verkaufsdetails – %(name)s"
+msgstr "Satış ayrıntıları – %(name)s"
+
+#: core/templates/seller/bazaar_details.html:6
+#: core/templates/seller/dashboard.html:13
+msgid "Verkäufernummer:"
+msgstr "Satıcı numarası:"
+
+#: core/templates/seller/bazaar_details.html:7
+#: core/templates/seller/dashboard.html:38
+msgid "Basartag:"
+msgstr "Pazar günü:"
+
+#: core/templates/seller/bazaar_details.html:12
+#: core/templates/seller/price_labels.html:3
+#: core/templates/seller/price_labels.html:5
+msgid "Preisschilder generieren"
+msgstr "Fiyat etiketleri oluştur"
+
+#: core/templates/seller/bazaar_details.html:18
+msgid "Endgültige Abrechnung"
+msgstr "Kesin hesap kapatma"
+
+#: core/templates/seller/bazaar_details.html:20
+msgid "Derzeitige Auszahlung"
+msgstr "Güncel ödeme"
+
+#: core/templates/seller/bazaar_details.html:21
+msgid "Vorläufiger Stand. Berücksichtigt sind abgeschlossene Kassenbelege."
+msgstr "Geçici bakiye. Tamamlanmış kasa fişleri hesaba katılır."
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/seller/price_labels.html:40
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Anzahl"
+msgstr "Adet"
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32
+msgid "Summe"
+msgstr "Toplam"
+
+#: core/templates/seller/bazaar_details.html:36
+msgid "Bisher wurden keine Artikel verkauft."
+msgstr "Henüz ürün satılmadı."
+
+#: core/templates/seller/bazaar_details.html:47 core/views.py:1831
+#, python-format
+msgid "Betreiberanteil (%(percent)s %%)"
+msgstr "İşletmeci payı (%(percent)s %%)"
+
+#: core/templates/seller/bazaar_details.html:50 core/views.py:1835
+msgid "Auszahlung"
+msgstr "Ödeme"
+
+#: core/templates/seller/bazaar_details.html:54
+msgid "Zurück zum Verkäuferbereich"
+msgstr "Satıcı alanına dön"
+
+#: core/templates/seller/dashboard.html:8
+msgid "Aktuelle Verkäufernummern"
+msgstr "Güncel satıcı numaraları"
+
+#: core/templates/seller/dashboard.html:16
+#: core/templates/seller/dashboard.html:64
+msgid "Erfasster Umsatz:"
+msgstr "Kaydedilen satış:"
+
+#: core/templates/seller/dashboard.html:21
+msgid "Preisschilder"
+msgstr "Fiyat etiketleri"
+
+#: core/templates/seller/dashboard.html:33
+msgid "Für einen Basar anmelden"
+msgstr "Bir pazara kaydol"
+
+#: core/templates/seller/dashboard.html:42
+msgid "Frühere Verkäufernummer wiederverwenden (optional)"
+msgstr "Önceki satıcı numarasını yeniden kullan (isteğe bağlı)"
+
+#: core/templates/seller/dashboard.html:44
+msgid "Neue Nummer vergeben"
+msgstr "Yeni numara ver"
+
+#: core/templates/seller/dashboard.html:50
+msgid "Verkäufernummer anfordern"
+msgstr "Satıcı numarası iste"
+
+#: core/templates/seller/dashboard.html:58
+msgid "Basarhistorie"
+msgstr "Pazar geçmişi"
+
+#: core/templates/seller/dashboard.html:65
+msgid "Abrechnung ansehen"
+msgstr "Hesap dökümünü görüntüle"
+
+#: core/templates/seller/dashboard.html:71
+msgid "Noch keine aktuellen oder vergangenen Basare vorhanden."
+msgstr "Henüz güncel veya geçmiş pazar yok."
+
+#: core/templates/seller/price_labels.html:6
+#, python-format
+msgid ""
+"Basar: <strong>%(name)s</strong> · Verkäufernummer: <strong>%(number)s</"
+"strong>"
+msgstr "Pazar: <strong>%(name)s</strong> · Satıcı numarası: <strong>%(number)s</strong>"
+
+#: core/templates/seller/price_labels.html:9
+msgid "Wählen Sie die gewünschten Preise und Mengen"
+msgstr "İstediğiniz fiyatları ve miktarları seçin"
+
+#: core/templates/seller/price_labels.html:19
+#: core/templates/seller/price_labels.html:64
+#: core/templates/settlement_confirm.html:10
+#: core/templates/settlement_confirm.html:74
+#: core/templates/settlement_confirm.html:76
+msgid "PDF herunterladen"
+msgstr "PDF'yi indir"
+
+#: core/templates/seller/price_labels.html:24
+msgid "Verfügbare Preise:"
+msgstr "Kullanılabilir fiyatlar:"
+
+#: core/templates/seller/price_labels.html:43
+msgid "Schilder"
+msgstr "Etiketler"
+
+#: core/templates/seller/price_labels.html:49
+msgid "Keine Preise in den Systemeinstellungen konfiguriert."
+msgstr "Sistem ayarlarında hiçbir fiyat yapılandırılmamış."
+
+#: core/templates/seller/price_labels.html:55
+#, python-format
+msgid ""
+"Jedes A4-Blatt enthält %(cols)s×%(rows)s = %(total)s kleine Preisschilder. "
+"Mit 3mm Rand um jeden QR-Code und raumfüllendem Preis. Perfekt zum "
+"Ausschneiden und Aufkleben!"
+msgstr "Her A4 sayfası %(cols)s×%(rows)s = %(total)s küçük fiyat etiketi içerir. Her QR kodun çevresinde 3 mm kenarlık ve alanı dolduran fiyat bulunur. Kesip yapıştırmak için mükemmel!"
+
+#: core/templates/settlement_confirm.html:6
+#, python-format
+msgid "Abrechnung: %(name)s"
+msgstr "Hesap kapatma: %(name)s"
+
+#: core/templates/settlement_confirm.html:7
+msgid ""
+"Der Basar ist abgeschlossen. Die Abrechnung gruppiert Verkäufe nach Preis "
+"und Anzahl; jede Verkäufernummer beginnt auf einer neuen Seite."
+msgstr ""
+"Pazar tamamlandı. Hesap dökümü satışları fiyat ve miktara göre gruplar; her "
+"satıcı numarası yeni bir sayfada başlar."
+
+#: core/templates/settlement_confirm.html:9
+#, python-format
+msgid "Die Abrechnung wurde am %(created_at)s erstellt."
+msgstr "Hesap dökümü %(created_at)s tarihinde oluşturuldu."
+
+#: core/templates/settlement_confirm.html:14
+msgid ""
+"Beim Stornieren bleibt diese Abrechnung als Historie erhalten. Danach kann "
+"der Basar wieder aktiviert und später neu abgerechnet werden."
+msgstr ""
+"İptal edildiğinde bu hesap dökümü geçmiş kaydı olarak saklanır. Ardından "
+"pazar yeniden etkinleştirilip tekrar hesaplanabilir."
+
+#: core/templates/settlement_confirm.html:15
+msgid "Abrechnung stornieren"
+msgstr "Hesap dökümünü iptal et"
+
+#: core/templates/settlement_confirm.html:19
+msgid ""
+"Beim Erstellen werden der konfigurierte Festbetrag pro Verkäufer und der "
+"prozentuale Betreiberanteil am Bruttoumsatz verwendet."
+msgstr ""
+"Hesaplama sırasında satıcı başına yapılandırılmış sabit ücret ve brüt satış "
+"üzerinden hesaplanan işletmeci payı kullanılır."
+
+#: core/templates/settlement_confirm.html:22
+msgid "Abrechnung erstellen und PDF herunterladen"
+msgstr "Hesap dökümü oluştur ve PDF'yi indir"
+
+#: core/templates/settlement_confirm.html:25
+msgid ""
+"Eine neue Abrechnung kann erst nach Abschluss des Basars erstellt werden."
+msgstr "Yeni hesap dökümü ancak pazar tamamlandıktan sonra oluşturulabilir."
+
+#: core/templates/settlement_confirm.html:29
+msgid "Gesamtabrechnung"
+msgstr "Genel hesap dökümü"
+
+#: core/templates/settlement_confirm.html:30
+msgid ""
+"Alle abgeschlossenen Verkäufe zusammengefasst nach Artikelpreis. Die Tabelle "
+"hilft beim Abgleichen und Zählen der Verkaufseinnahmen."
+msgstr ""
+"Tamamlanan tüm satışlar ürün fiyatına göre gruplandırılmıştır. Tablo, satış "
+"gelirlerini kontrol edip saymaya yardımcı olur."
+
+#: core/templates/settlement_confirm.html:41 core/views.py:1688
+msgid "Keine abgeschlossenen Verkäufe."
+msgstr "Tamamlanmış satış yok."
+
+#: core/templates/settlement_confirm.html:47 core/views.py:1709
+msgid "Gesamtumsatz"
+msgstr "Toplam satış"
+
+#: core/templates/settlement_confirm.html:48 core/views.py:1711
+msgid "Verkäufergebühren"
+msgstr "Satıcı ücretleri"
+
+#: core/templates/settlement_confirm.html:49 core/views.py:1715
+msgid "Betreiberanteile"
+msgstr "İşletmeci payları"
+
+#: core/templates/settlement_confirm.html:50 core/views.py:1718
+msgid "Gesamtauszahlung"
+msgstr "Toplam ödeme"
+
+#: core/templates/settlement_confirm.html:54
+#, python-format
+msgid ""
+"Nicht abgeschlossene Kassenbelege (%(count)s) sind in diesen Summen nicht "
+"enthalten und werden im PDF separat ausgewiesen."
+msgstr ""
+"Tamamlanmamış %(count)s kasa fişi bu toplamlara dahil değildir ve PDF'de "
+"ayrıca gösterilir."
+
+#: core/templates/settlement_confirm.html:59
+msgid "Abrechnungshistorie"
+msgstr "Hesap dökümü geçmişi"
+
+#: core/templates/settlement_confirm.html:62
+msgid "Erstellt"
+msgstr "Oluşturuldu"
+
+#: core/templates/settlement_confirm.html:68
+msgid "Aktuell"
+msgstr "Güncel"
+
+#: core/views.py:116 core/views.py:228
+msgid "Die Datenschutzhinweise sind noch nicht eingerichtet."
+msgstr "Gizlilik bildirimi henüz ayarlanmadı."
+
+#: core/views.py:131
+msgid "Dein Konto wurde erstellt."
+msgstr "Hesabın oluşturuldu."
+
+#: core/views.py:154
+msgid ""
+"Zu viele Verifizierungsanfragen. Bitte versuche es in einer Stunde erneut."
+msgstr "Çok fazla doğrulama isteği. Lütfen bir saat sonra tekrar dene."
+
+#: core/views.py:192
+msgid "Dein Konto wurde bestätigt."
+msgstr "Hesabın doğrulandı."
+
+#: core/views.py:220
+msgid "Für diese Ansicht hast du keine Berechtigung."
+msgstr "Bu görünüm için yetkin yok."
+
+#: core/views.py:237
+msgid "Deine Zustimmung wurde gespeichert."
+msgstr "Onayın kaydedildi."
+
+#: core/views.py:247
+msgid "Deine Benutzerdaten wurden gespeichert."
+msgstr "Kullanıcı bilgilerin kaydedildi."
+
+#: core/views.py:256
+msgid "Bitte bestätige zuerst die Löschung deines Kontos."
+msgstr "Lütfen önce hesabının silinmesini onayla."
+
+#: core/views.py:281
+msgid ""
+"Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst einen "
+"weiteren Superadmin ein."
+msgstr ""
+"Son etkin süper yönetici silinemez. Önce başka bir süper yönetici oluştur."
+
+#: core/views.py:782
+msgid "Systemeinstellungen wurden gespeichert."
+msgstr "Sistem ayarları kaydedildi."
+
+#: core/views.py:808
+msgid "Kopie wurde angelegt und kann bearbeitet werden."
+msgstr "Kopya oluşturuldu ve düzenlenebilir."
+
+#: core/views.py:834
+msgid "Standardvorlage für neue Basare wurde gespeichert."
+msgstr "Yeni pazarlar için varsayılan şablon kaydedildi."
+
+#: core/views.py:864
+msgid "Verkäuferrechnungsvorlage wurde gespeichert."
+msgstr "Satıcı hesap dökümü şablonu kaydedildi."
+
+#: core/views.py:887
+msgid "Die schreibgeschützte Standardvorlage kann nicht gelöscht werden."
+msgstr "Salt okunur varsayılan şablon silinemez."
+
+#: core/views.py:891
+msgid "Bitte wähle zuerst eine andere Standardvorlage für neue Basare."
+msgstr "Lütfen önce yeni pazarlar için başka bir varsayılan şablon seç."
+
+#: core/views.py:894
+msgid "Mindestens eine Verkäuferrechnungsvorlage muss vorhanden sein."
+msgstr "En az bir satıcı hesap dökümü şablonu bulunmalıdır."
+
+#: core/views.py:898
+msgid "Verkäuferrechnungsvorlage wurde gelöscht."
+msgstr "Satıcı hesap dökümü şablonu silindi."
+
+#: core/views.py:902
+msgid "Diese Vorlage wird noch von mindestens einem Basar verwendet."
+msgstr "Bu şablon en az bir pazar tarafından kullanılıyor."
+
+#: core/views.py:921
+msgid "Erstelle ein Plakat für folgende Veranstaltung."
+msgstr "Aşağıdaki etkinlik için bir afiş oluştur."
+
+#: core/views.py:923
+msgid "Standardvorgaben:"
+msgstr "Varsayılan talimatlar:"
+
+#: core/views.py:926
+msgid "Veranstaltungsdaten:"
+msgstr "Etkinlik bilgileri:"
+
+#: core/views.py:927
+#, python-format
+msgid "Basar: %(name)s"
+msgstr "Pazar: %(name)s"
+
+#: core/views.py:928
+#, python-format
+msgid "Beginn: %(starts_at)s"
+msgstr "Başlangıç: %(starts_at)s"
+
+#: core/views.py:935
+#, python-format
+msgid "Nummernvergabe möglich bis: %(deadline)s"
+msgstr "Numara tahsisinin son tarihi: %(deadline)s"
+
+#: core/views.py:954
+msgid "Basar wurde gespeichert."
+msgstr "Pazar kaydedildi."
+
+#: core/views.py:1131
+msgid "Bitte stimme zuerst den Datenschutzhinweisen zu."
+msgstr "Lütfen önce gizlilik bildirimini kabul et."
+
+#: core/views.py:1143
+msgid "Die Nummernvergabe für diesen Basar ist geschlossen."
+msgstr "Bu pazar için numara tahsisi kapalı."
+
+#: core/views.py:1147
+msgid "Du bist für diesen Basar bereits registriert."
+msgstr "Bu pazar için zaten kaydın var."
+
+#: core/views.py:1153
+msgid "Für diesen Basar sind bereits alle Verkäufernummern vergeben."
+msgstr "Bu pazardaki tüm satıcı numaraları tahsis edildi."
+
+#: core/views.py:1175
+msgid "Diese Verkäufernummer ist für den Basar bereits vergeben."
+msgstr "Bu satıcı numarası bu pazarda zaten tahsis edilmiş."
+
+#: core/views.py:1193
+msgid ""
+"Die Verkäufernummer konnte nicht vergeben werden. Bitte erneut versuchen."
+msgstr "Satıcı numarası tahsis edilemedi. Lütfen yeniden dene."
+
+#: core/views.py:1198
+#, python-format
+msgid "Deine Verkäufernummer lautet %(number)s."
+msgstr "Satıcı numaran: %(number)s."
+
+#: core/views.py:1216
+msgid "Bitte wähle einen gültigen Basar."
+msgstr "Lütfen geçerli bir pazar seç."
+
+#: core/views.py:1331 core/views.py:1425
+msgid "Dieser Basar ist nicht mehr aktiv."
+msgstr "Bu pazar artık etkin değil."
+
+#: core/views.py:1357
+msgid "Scanner-Eingabe stimmt nicht mit dem Artikel überein."
+msgstr "Tarayıcı girişi ürünle eşleşmiyor."
+
+#: core/views.py:1428
+msgid "Ein leerer Beleg kann nicht abgeschlossen werden."
+msgstr "Boş bir fiş tamamlanamaz."
+
+#: core/views.py:1475
+msgid "Bitte wähle zuerst einen Basar aus."
+msgstr "Lütfen önce bir pazar seç."
+
+#: core/views.py:1488
+msgid "Der ausgewählte Basar ist nicht mehr aktiv."
+msgstr "Seçilen pazar artık etkin değil."
+
+#: core/views.py:1644
+#, python-format
+msgid "Abrechnung - %(name)s"
+msgstr "Hesap kapatma - %(name)s"
+
+#: core/views.py:1664
+#, python-format
+msgid "Gesamtabrechnung: %(name)s"
+msgstr "Genel hesap dökümü: %(name)s"
+
+#: core/views.py:1671
+msgid ""
+"Zusammenfassung aller abgeschlossenen Verkäufe; offene Belege sind separat "
+"aufgeführt."
+msgstr "Tamamlanan tüm satışların özeti; açık fişler ayrıca listelenir."
+
+#: core/views.py:1676 core/views.py:1794
+#, python-format
+msgid "Summe (%(currency)s)"
+msgstr "Toplam (%(currency)s)"
+
+#: core/views.py:1806
+msgid "Keine verkauften Artikel."
+msgstr "Satılmış ürün yok."
+
+#: core/views.py:1863
+msgid "Nicht abgerechnete, offene Kassenbelege"
+msgstr "Hesaba dahil edilmeyen açık kasa fişleri"
+
+#: core/views.py:1869
+msgid "Diese Belege sind nicht in den Verkäuferabrechnungen enthalten."
+msgstr "Bu fişler satıcı hesap dökümlerine dahil değildir."
+
+#: core/views.py:1875
+msgid "Erste Erfassung"
+msgstr "İlk kayıt"
+
+#: core/views.py:1878
+msgid "Erfasster Betrag"
+msgstr "Kaydedilen tutar"
+
+#: core/views.py:1977 core/views.py:2008
+msgid "Die Abrechnung ist erst nach Abschluss des Basars verfügbar."
+msgstr "Hesap dökümü ancak pazar tamamlandıktan sonra kullanılabilir."
+
+#: core/views.py:2023 core/views.py:2071
+#, python-format
+msgid "basar-%(id)s-abrechnung.pdf"
+msgstr "pazar-%(id)s-hesap-dokumu.pdf"
+
+#: core/views.py:2042
+msgid "Für diesen Basar gibt es keine aktive Abrechnung zum Stornieren."
+msgstr "Bu pazar için iptal edilecek etkin bir hesap dökümü yok."
+
+#: core/views.py:2052
+msgid ""
+"Die Abrechnung wurde storniert. Der Basar kann jetzt wieder aktiviert werden."
+msgstr "Hesap dökümü iptal edildi. Pazar artık yeniden etkinleştirilebilir."
+
+#: core/views.py:2087
+#, python-format
+msgid "basar-%(bazaar_id)s-abrechnung-%(settlement_id)s.pdf"
+msgstr "pazar-%(bazaar_id)s-hesap-dokumu-%(settlement_id)s.pdf"
+
+#: core/views.py:2154
+#, python-format
+msgid "Benutzer '%(name)s' wurde aktualisiert."
+msgstr "'%(name)s' kullanıcısı güncellendi."
+
+#: core/views.py:2181
+#| msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgid "Du kannst dein eigenes Konto nicht löschen."
+msgstr "Kendi hesabınızı silemezsiniz."
+
+#: core/views.py:2193
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Der letzte aktive Administrator kann nicht gelöscht werden. Richte zuerst "
+"einen weiteren Administrator ein."
+msgstr "Son etkin yönetici silinemez. Önce başka bir yönetici oluşturun."
+
+#: core/views.py:2221
+msgid "Benutzer wurde anonymisiert und gelöscht."
+msgstr "Kullanıcı anonimleştirildi ve silindi."
+
+#: core/views.py:2238
+msgid "Kein Basar ausgewählt"
+msgstr "Pazar seçilmedi"
+
+#: core/views.py:2243
+#| msgid "Dieser Basar ist nicht mehr aktiv."
+msgid "Basar nicht gefunden oder nicht mehr aktiv"
+msgstr "Pazar bulunamadı veya artık etkin değil"
+
+#: core/views.py:2265
+msgid "QR-Code-Bibliothek nicht installiert"
+msgstr "QR kod kütüphanesi yüklü değil"
+
+#: core/views.py:2302
+msgid "Ungültiger Code"
+msgstr "Geçersiz kod"
+
+#: core/views.py:2307
+msgid "Code nicht gefunden"
+msgstr "Kod bulunamadı"
+
+#: core/views.py:2314
+msgid "Session abgelaufen. Neue Session in der Kasse starten."
+msgstr "Oturum sona erdi. Kasada yeni bir oturum başlatın."
+
+#: core/views.py:2321
+msgid "Scanner-Session wurde geschlossen."
+msgstr "Tarayıcı oturumu kapatıldı."
+
+#: core/views.py:2359
+msgid "Fehlende Parameter"
+msgstr "Eksik parametreler"
+
+#: core/views.py:2364
+msgid "Code ungültig"
+msgstr "Kod geçersiz"
+
+#: core/views.py:2369
+msgid "Session abgelaufen"
+msgstr "Oturum sona erdi"
+
+#: core/views.py:2375
+msgid "Scanner-Session geschlossen"
+msgstr "Tarayıcı oturumu kapatıldı"
+
+#: core/views.py:2385
+msgid "QR-Code-Format ungültig"
+msgstr "QR kod biçimi geçersiz"
+
+#: core/views.py:2394
+msgid "Ungültige Werte im QR-Code"
+msgstr "QR kodda geçersiz değerler"
+
+#: core/views.py:2406
+msgid "Rate-Limit erreicht. Bitte warten."
+msgstr "Hız sınırına ulaşıldı. Lütfen bekleyin."
+
+#: core/views.py:2442 core/views.py:2492
+#| msgid "Berechtigungen"
+msgid "Keine Berechtigung"
+msgstr "Yetki yok"
+
+#: core/views.py:2446 core/views.py:2496
+#| msgid "Kein Ausdruck erforderlich."
+msgid "Code erforderlich"
+msgstr "Kod gerekli"
+
+#: core/views.py:2451 core/views.py:2501
+#| msgid "Kassenansicht öffnen"
+msgid "Session nicht gefunden"
+msgstr "Oturum bulunamadı"
+
+#: core/views.py:2623
+#| msgid "Bitte wähle zuerst einen Basar aus."
+msgid "Bitte wählen Sie mindestens einen Preis."
+msgstr "Lütfen en az bir fiyat seçin."
+
+#: core/views.py:2636
+#, python-brace-format
+msgid "Fehler beim Generieren des PDFs: {}"
+msgstr "PDF oluşturulurken hata oluştu: {}"

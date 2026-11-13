@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Verkauf abgeschlossen" %}{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>{% translate "Verkauf abgeschlossen" %}</h1>
+  <p>{% blocktranslate with number=receipt.receipt_number name=receipt.bazaar.name %}Beleg {{ number }} · {{ name }}{% endblocktranslate %}</p>
+  <h2>{% translate "Umsatz je Verkäufernummer" %}</h2>
+  <table>
+    <thead><tr><th>{% translate "Verkäufernummer" %}</th><th class="right">{% translate "Zwischensumme" %}</th></tr></thead>
+    <tbody>
+      {% for seller_total in seller_totals %}
+        <tr><td>{{ seller_total.registration__seller_number }}</td><td class="right">{{ seller_total.total|floatformat:2 }} {{ global_currency }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p style="font-size:1.5rem"><strong>{% translate "Gesamtbetrag:" %} {{ total|floatformat:2 }} {{ global_currency }}</strong></p>
+  <p>{% translate "Kein Ausdruck erforderlich." %}</p>
+  <form method="post" action="{% url 'next_sale' %}">
+    {% csrf_token %}
+    <button type="submit">{% translate "Nächsten Verkauf erfassen" %}</button>
+  </form>
+</section>
+{% endblock %}

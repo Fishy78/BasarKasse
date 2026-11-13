@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% blocktranslate with number=receipt.receipt_number name=bazaar.name %}Rechnung {{ number }} · {{ name }}{% endblocktranslate %}{% endblock %}
+{% block content %}
+<h1>{% blocktranslate with number=receipt.receipt_number %}Rechnung {{ number }}{% endblocktranslate %}</h1>
+<section class="card">
+  <p><strong>{% translate "Basar:" %}</strong> {{ bazaar.name }}</p>
+  <p><strong>{% translate "Zeit:" %}</strong> {{ receipt_time|date:"SHORT_DATETIME_FORMAT" }}</p>
+  <p><strong>{% translate "Status:" %}</strong> {{ receipt.get_status_display }}</p>
+  <h2>{% translate "Positionen" %}</h2>
+  <table>
+    <thead><tr><th>{% translate "Verkäufernummer" %}</th><th>{% translate "Erfasst" %}</th><th>{% translate "Status" %}</th><th class="right">{% translate "Preis" %}</th></tr></thead>
+    <tbody>
+      {% for item in items %}
+        <tr{% if item.cancelled_at %} class="cancelled-item"{% endif %}>
+          <td>{{ item.registration.seller_number }}</td>
+          <td>{{ item.created_at|date:"SHORT_DATETIME_FORMAT" }}</td>
+          <td>{% if item.cancelled_at %}{% translate "Storniert" %}{% else %}{% translate "Gültig" %}{% endif %}</td>
+          <td class="right">{{ item.price|floatformat:2 }} {{ currency }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="4">{% translate "Der Beleg enthält noch keine Artikelpositionen." %}</td></tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr><th colspan="3" class="right">{% translate "Gesamtbetrag" %}</th><th class="right">{{ receipt.amount|floatformat:2 }} {{ currency }}</th></tr>
+    </tfoot>
+  </table>
+  {% if receipt.status == "open" %}
+    <p>{% translate "Der Beleg ist noch offen; der angezeigte Gesamtbetrag ist ein Zwischenstand." %}</p>
+  {% endif %}
+</section>
+<p><a class="button secondary" href="{% url 'bazaar_statistics' bazaar.pk %}">{% translate "Zurück zu den Basarstatistiken" %}</a></p>
+{% endblock %}

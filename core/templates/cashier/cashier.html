@@ -1,0 +1,551 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Kasse" %}{% endblock %}
+{% block content %}
+{% translate "Diesen Artikel wirklich stornieren?" as cancel_item_confirm %}
+{% translate "Beleg wirklich abschließen? Danach können keine Artikel mehr korrigiert werden." as finish_receipt_confirm %}
+<h1>{% translate "Kasse" %}</h1>
+
+{% if receipt %}
+<div id="cashier-page" data-has-recorded-items="{{ has_recorded_items|yesno:'true,false' }}" data-receipt-id="{{ receipt.pk }}">
+  <div class="cashier-layout">
+    <section class="card cashier-controls">
+      <h2>{{ selected_bazaar.name }}</h2>
+      <p>{% blocktranslate with number=receipt.receipt_number %}Beleg {{ number }}{% endblocktranslate %}</p>
+      
+      <h3>{% translate "Verkäufernummer wählen" %}</h3>
+      <div class="seller-buttons">
+        {% for registration in registrations %}
+          <form method="get" action="{% url 'cashier' %}" data-keep-receipt>
+            <input type="hidden" name="registration" value="{{ registration.pk }}">
+            <button type="submit"
+              class="seller-button {% if selected_registration.pk == registration.pk %}selected{% endif %}"
+              {% if selected_registration.pk == registration.pk %}aria-pressed="true"{% else %}aria-pressed="false"{% endif %}>
+              {{ registration.seller_number }}
+            </button>
+          </form>
+        {% empty %}
+          <p>{% translate "Für diesen Basar sind noch keine Verkäufernummern vergeben." %}</p>
+        {% endfor %}
+      </div>
+
+      {% if selected_registration %}
+        <h3>{% blocktranslate with number=selected_registration.seller_number %}Artikel für {{ number }}{% endblocktranslate %}</h3>
+        <div class="price-buttons">
+          {% for price in common_prices %}
+            <form method="post" action="{% url 'add_item' receipt.pk %}" data-keep-receipt>
+              {% csrf_token %}
+              <input type="hidden" name="registration_id" value="{{ selected_registration.pk }}">
+              <input type="hidden" name="price" value="{{ price }}">
+              <button type="submit">{{ price }} {{ global_currency }}</button>
+            </form>
+          {% empty %}
+            <p>{% translate "Es sind keine Schnellpreise eingerichtet." %}</p>
+          {% endfor %}
+        </div>
+        <form class="manual-price" method="post" action="{% url 'add_item' receipt.pk %}" data-keep-receipt>
+          {% csrf_token %}
+          <input type="hidden" name="registration_id" value="{{ selected_registration.pk }}">
+          <label for="{{ form.price.id_for_label }}">{% translate "Anderen Preis eingeben" %}</label>
+          {{ form.price }}
+          <button type="submit">{% translate "Artikel hinzufügen" %}</button>
+        </form>
+      {% else %}
+        <p>{% translate "Wähle die Verkäufernummer, danach kannst du die Artikelpreise erfassen." %}</p>
+      {% endif %}
+    </section>
+
+    <aside class="card receipt-panel" aria-label="{% translate 'Kassenzettel' %}">
+      <div class="receipt-scroll">
+        <h2>{% translate "Kassenzettel" %}</h2>
+        <p>{% blocktranslate with name=selected_bazaar.name number=receipt.receipt_number %}{{ name }} · Beleg {{ number }}{% endblocktranslate %}</p>
+        {% if receipt.first_item_at %}
+          <p><small>{% blocktranslate with date=receipt.first_item_at|date:"SHORT_DATETIME_FORMAT" %}Erster Artikel erfasst: {{ date }}{% endblocktranslate %}</small></p>
+        {% endif %}
+        <table>
+          <thead><tr><th>{% translate "Verkäufernummer" %}</th><th>{% translate "Preis" %}</th><th></th></tr></thead>
+          <tbody>
+            {% for item in receipt.items.all %}
+              <tr class="{% if item.cancelled_at %}cancelled-item{% endif %}">
+                <td>{{ item.registration.seller_number }}{% if item.cancelled_at %}<br><small>{% translate "Storniert" %}</small>{% endif %}</td>
+                <td>{{ item.price|floatformat:2 }} {{ global_currency }}</td>
+                <td>
+                  {% if not item.cancelled_at %}
+                    <form method="post" action="{% url 'cancel_item' receipt.pk item.pk %}" data-keep-receipt
+                      onsubmit="return confirm('{{ cancel_item_confirm|escapejs }}')">
+                      {% csrf_token %}
+                      <button class="danger cancel-button" type="submit" aria-label="{% translate 'Artikel stornieren' %}">{% translate "Storno" %}</button>
+                    </form>
+                  {% endif %}
+                </td>
+              </tr>
+            {% empty %}
+              <tr><td colspan="3">{% translate "Noch keine Artikel erfasst." %}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="receipt-footer">
+        <p class="right"><strong>{% translate "Gesamt:" %} {{ receipt.total|floatformat:2 }} {{ global_currency }}</strong></p>
+        <form method="post" action="{% url 'finish_receipt' receipt.pk %}" data-keep-receipt
+              onsubmit="return confirm('{{ finish_receipt_confirm|escapejs }}');">
+          {% csrf_token %}
+          <button class="finish-button" type="submit" {% if not has_recorded_items %}disabled{% endif %}>
+            {% translate "Beleg abschließen" %}
+          </button>
+        </form>
+      </div>
+    </aside>
+  </div>
+</div>
+{% else %}
+  <section class="card">
+    <h2>{% translate "Basar für diese Kasse auswählen" %}</h2>
+    {% for bazaar in bazaars %}
+      <form method="post" class="bazaar-button-form">
+        {% csrf_token %}
+        <input type="hidden" name="bazaar_id" value="{{ bazaar.pk }}">
+        <button type="submit">{{ bazaar.name }}</button>
+      </form>
+    {% empty %}
+      <p>{% translate "Zurzeit ist kein Basar aktiv." %}</p>
+    {% endfor %}
+  </section>
+{% endif %}
+
+<script>
+// QR-Code Scanner Integration (global, an der Kasse verknüpft)
+let scannerCode = null;
+let scannerActive = false;
+let scannerPollInterval = null;
+let scannerSubmissionQueue = []; // Queue für gescannte Artikel
+let scannerQueuedSubmissionIds = new Set();
+let scannerIsProcessing = false; // Flag um concurrent submissions zu vermeiden
+
+// Funktion um die aktuelle Beleg-ID zu ermitteln
+function getCurrentReceiptId() {
+  // Versuche aus dem cashier-page div zu lesen
+  const cashierPage = document.getElementById("cashier-page");
+  if (cashierPage) {
+    const receiptId = cashierPage.getAttribute("data-receipt-id");
+    if (receiptId) return parseInt(receiptId);
+  }
+  // Fallback zu sessionStorage
+  return sessionStorage.getItem("currentReceiptId");
+}
+
+// Stelle Scanner-State aus sessionStorage wieder her
+const savedScannerCode = sessionStorage.getItem("scannerCode");
+const savedScannerActive = sessionStorage.getItem("scannerActive") === "true";
+if (savedScannerCode && savedScannerActive) {
+  console.log("Scanner-State wiederhergestellt:", savedScannerCode);
+  scannerCode = savedScannerCode;
+  scannerActive = true;
+}
+
+// Scanner-Modal und Button erstellen
+const scannerModalOverlay = document.createElement("div");
+scannerModalOverlay.id = "scanner-modal-overlay";
+scannerModalOverlay.style.cssText = `
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+`;
+scannerModalOverlay.innerHTML = `
+  <div style="background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 500px; width: 90%;">
+    <h2 style="margin-top: 0;">🔧 {% translate "QR-Scanner" %}</h2>
+    <div id="scanner-modal-content" style="text-align: center;">
+      <p>{% translate "Laden..." %}</p>
+    </div>
+    <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: flex-end;">
+      <button id="scanner-modal-stop" type="button" class="button danger">{% translate "Stop" %}</button>
+      <button id="scanner-modal-close" type="button" class="button secondary">{% translate "Schließen" %}</button>
+    </div>
+  </div>
+`;
+document.body.appendChild(scannerModalOverlay);
+
+const scannerGlobalToggle = document.createElement("button");
+scannerGlobalToggle.id = "scanner-global-toggle";
+scannerGlobalToggle.type = "button";
+scannerGlobalToggle.className = "button secondary";
+scannerGlobalToggle.textContent = "📱 {% translate 'Scanner' %}";
+scannerGlobalToggle.style.cssText = `
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: auto;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 998;
+  font-size: 1.2rem;
+  display: none;
+`;
+document.body.appendChild(scannerGlobalToggle);
+
+const scannerModal = scannerModalOverlay;
+const scannerModalContent = document.getElementById("scanner-modal-content");
+const scannerModalClose = document.getElementById("scanner-modal-close");
+const scannerModalStop = document.getElementById("scanner-modal-stop");
+
+// Scanner-Button nur anzeigen, wenn eine Kasse aktiv ist
+{% if receipt %}
+scannerGlobalToggle.style.display = "block";
+
+// Scanner automatisch starten, wenn er vor dem Reload aktiv war
+const wasActiveBefore = sessionStorage.getItem("scannerActive") === "true";
+if (wasActiveBefore && scannerCode) {
+  console.log("Scanner läuft weiter im Hintergrund");
+  // Polling bereits wiederhergestellt durch sessionStorage
+  scannerGlobalToggle.style.background = "#4caf50";
+  scannerGlobalToggle.style.color = "white";
+  startScannerPolling();
+}
+
+scannerGlobalToggle.addEventListener("click", async () => {
+  if (scannerActive) {
+    // Modal wieder öffnen
+    scannerModal.style.display = "flex";
+    return;
+  }
+  
+  // Setze den Flag NACH dem erfolgreichen Fetch, nicht davor
+  scannerModal.style.display = "flex";
+  
+  try {
+    // CSRF-Token aus einem existierenden Input-Feld oder Cookie
+    const existingCsrfInput = document.querySelector('input[name="csrfmiddlewaretoken"]');
+    const csrfToken = existingCsrfInput ? existingCsrfInput.value : getCookie("csrftoken");
+    
+    const response = await fetch("{% url 'scanner_generate' %}", {
+      headers: {
+        "X-CSRFToken": csrfToken,
+      },
+    });
+    
+    if (!response.ok) {
+      const text = await response.text();
+      console.error("Response status:", response.status);
+      console.error("Response body:", text.substring(0, 500));
+      throw new Error(`Fehler (${response.status}): ${text.substring(0, 100)}`);
+    }
+    
+    let data;
+    let responseText = "";
+    try {
+      responseText = await response.text();
+      console.log("Scanner response (first 500 chars):", responseText.substring(0, 500));
+      data = JSON.parse(responseText);
+    } catch (parseError) {
+      console.error("JSON parse error:", parseError);
+      console.error("Response first 500 chars:", responseText.substring(0, 500));
+      
+      showScannerToast(`⚠️ Scanner läuft (Parse-Fehler ignoriert)`);
+      
+      // Wenn Parse-Fehler aber wir haben bereits einen Code, Modal schließen
+      if (scannerCode) {
+        console.log("Scanner läuft bereits im Hintergrund");
+        scannerModal.style.display = "none";
+        return;
+      }
+      
+      // Sonst: neuer Versuch
+      throw parseError;
+    }
+    
+    if (!data.code) {
+      throw new Error("Keine Scanner-Code in Response");
+    }
+    
+    scannerCode = data.code;
+    sessionStorage.setItem("scannerCode", scannerCode);
+    sessionStorage.setItem("scannerActive", "true");
+    
+    // QR-Code anzeigen
+    scannerModalContent.innerHTML = `
+      <p style="margin-bottom: 1rem;">
+        <span style="display: inline-block; width: 10px; height: 10px; background: #4caf50; border-radius: 50%; margin-right: 0.5rem;"></span>
+        <strong>{% translate "Scanner aktiv" %}</strong>
+      </p>
+      <img src="${data.qr_base64}" alt="{% translate 'QR-Code zum Scannen' %}" style="max-width: 300px; margin: 1rem 0; border-radius: 0.4rem;">
+      <p style="margin-top: 1rem;">
+        <small style="color: #666;">
+          {% translate "Scannen Sie einen QR-Code mit dem Handy-Scanner" %}
+        </small>
+      </p>
+    `;
+    
+    scannerActive = true;
+    scannerGlobalToggle.style.background = "#4caf50";
+    scannerGlobalToggle.style.color = "white";
+    startScannerPolling();
+  } catch (error) {
+    console.error("Scanner error:", error);
+    
+    // Wenn Auto-Reaktivierung fehlschlägt, zeige nur einen kurzen Hinweis
+    if (wasActiveBefore) {
+      console.warn("Auto-Start fehlgeschlagen, aber das ist ok");
+      showScannerToast("⚠️ Scanner konnte nicht automatisch reaktiviert werden");
+      // Nicht als großer Fehler anzeigen
+    } else {
+      // Normaler Fehler beim manuellen Start
+      scannerModalContent.innerHTML = `<p style="color: #d32f2f;">{% translate "Fehler:" %} ${error.message}</p>`;
+    }
+    sessionStorage.removeItem("scannerActive");
+  }
+});
+
+scannerModalClose.addEventListener("click", () => {
+  // Nur das Modal schließen, Scanner läuft im Hintergrund weiter
+  scannerModal.style.display = "none";
+  // NICHT sessionStorage cleanen - Scanner soll weiterlaufen!
+});
+
+scannerModalStop.addEventListener("click", () => {
+  // Scanner komplett stoppen und zurücksetzen
+  resetScanner();
+  scannerGlobalToggle.style.background = "";
+  scannerGlobalToggle.style.color = "";
+});
+
+function closeScannerUI() {
+  scannerActive = false;
+  scannerCode = null;
+  
+  if (scannerPollInterval) {
+    clearInterval(scannerPollInterval);
+    scannerPollInterval = null;
+  }
+}
+
+function resetScanner() {
+  // Stoppe den Scanner und cleane sessionStorage
+  closeScannerUI();
+  sessionStorage.removeItem("scannerCode");
+  sessionStorage.removeItem("scannerActive");
+  scannerModal.style.display = "none";
+  scannerGlobalToggle.style.background = "";
+  scannerGlobalToggle.style.color = "";
+  console.log("Scanner wurde zurückgesetzt");
+  return true; // Erlaubt dem Form zu submitten
+}
+
+function startScannerPolling() {
+  // Jede Sekunde auf neue Artikel prüfen
+  scannerPollInterval = setInterval(async () => {
+    if (!scannerCode || !scannerActive) {
+      if (scannerPollInterval) {
+        clearInterval(scannerPollInterval);
+      }
+      return;
+    }
+    
+    try {
+      const response = await fetch("{% url 'scanner_pending' %}?code=" + encodeURIComponent(scannerCode));
+      if (!response.ok) return;
+      
+      const data = await response.json();
+      
+      // Für jeden eingescannten Artikel: In Queue legen
+      for (const submission of data.submissions) {
+        if (scannerQueuedSubmissionIds.has(submission.id)) {
+          continue;
+        }
+        scannerQueuedSubmissionIds.add(submission.id);
+        scannerSubmissionQueue.push(submission);
+        console.log("Item in queue:", submission, "Queue-Größe:", scannerSubmissionQueue.length);
+      }
+      
+      // Wenn nicht gerade verarbeitet, nächstes Item verarbeiten
+      if (!scannerIsProcessing && scannerSubmissionQueue.length > 0) {
+        processScannerSubmissionQueue();
+      }
+    } catch (error) {
+      console.error("Polling-Fehler:", error);
+    }
+  }, 1000);
+}
+
+async function processScannerSubmissionQueue() {
+  if (scannerIsProcessing) {
+    return;
+  }
+
+  scannerIsProcessing = true;
+  try {
+    while (scannerSubmissionQueue.length > 0) {
+      const submission = scannerSubmissionQueue.shift();
+      const wasAdded = await addScannedItem(submission);
+      if (!wasAdded) {
+        scannerQueuedSubmissionIds.delete(submission.id);
+      }
+    }
+
+    await refreshScannerReceiptPanel();
+  } finally {
+    scannerIsProcessing = false;
+  }
+
+  if (scannerSubmissionQueue.length > 0) {
+    processScannerSubmissionQueue();
+  }
+}
+
+async function addScannedItem(submission) {
+  // Automatisch einen Artikel zur Kasse hinzufügen via AJAX
+  const receiptId = getCurrentReceiptId();
+  
+  if (!receiptId) {
+    console.error("Keine Receipt-ID vorhanden");
+    return false;
+  }
+  
+  console.log("Adding scanned item:", submission);
+  
+  // CSRF-Token aus einem existierenden Input-Feld kopieren
+  const existingCsrfInput = document.querySelector('input[name="csrfmiddlewaretoken"]');
+  const csrfToken = existingCsrfInput ? existingCsrfInput.value : getCookie("csrftoken");
+  
+  try {
+    const response = await fetch(`/cashier/receipt/${receiptId}/add/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-CSRFToken": csrfToken,
+        "X-Requested-With": "XMLHttpRequest",
+      },
+      body: new URLSearchParams({
+        scanner_submission_id: submission.id,
+        registration_id: submission.registration_id,
+        price: submission.price,
+      }),
+    });
+
+    console.log("Response status:", response.status, "OK:", response.ok);
+    
+    if (!response.ok) {
+      const errorText = await response.text();
+      showScannerToast(`✗ {% translate "Fehler beim Hinzufügen des Artikels" %}: ${response.status}`);
+      console.error("Add item error:", response.status, errorText);
+      return false;
+    }
+
+    // Response erfolgreich - JSON parsen
+    const data = await response.json();
+    console.log("Item added successfully:", data);
+    
+    showScannerToast(`✓ {% translate "VKNr" %} ${submission.registration_id}, ${submission.price}€`);
+    return true;
+  } catch (error) {
+    showScannerToast(`✗ {% translate "Fehler beim Scannen" %}`);
+    console.error("Scanner error:", error);
+    return false;
+  }
+}
+
+async function refreshScannerReceiptPanel() {
+  console.log("Alle Items verarbeitet, aktualisiere Kassenzettel...");
+
+  try {
+    const response = await fetch(window.location.href);
+    const html = await response.text();
+    const parser = new DOMParser();
+    const newDoc = parser.parseFromString(html, "text/html");
+    const oldReceiptPanel = document.querySelector(".receipt-panel");
+    const newReceiptPanel = newDoc.querySelector(".receipt-panel");
+
+    if (oldReceiptPanel && newReceiptPanel) {
+      oldReceiptPanel.innerHTML = newReceiptPanel.innerHTML;
+      console.log("Kassenzettel aktualisiert");
+      return;
+    }
+
+    console.warn("Konnte Kassenzettel-Panel nicht aktualisieren, normaler Reload...");
+  } catch (error) {
+    console.error("Fehler beim Aktualisieren des Kassenzettels:", error);
+  }
+
+  sessionStorage.setItem("scannerCode", scannerCode);
+  sessionStorage.setItem("scannerActive", scannerActive ? "true" : "false");
+  location.reload();
+}
+
+function showScannerToast(message) {
+  const toast = document.createElement("div");
+  toast.style.cssText = `
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #4caf50;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-weight: 600;
+    max-width: 300px;
+    animation: slideIn 0.3s ease-out;
+  `;
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.style.animation = "slideOut 0.3s ease-out";
+    setTimeout(() => toast.remove(), 300);
+  }, 2000);
+}
+
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== "") {
+    const cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === name + "=") {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
+// CSS für Toast-Animation
+const style = document.createElement("style");
+style.textContent = `
+  @keyframes slideIn {
+    from { transform: translateX(400px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(400px); opacity: 0; }
+  }
+`;
+document.head.appendChild(style);
+
+// Cleanup beim Unload
+window.addEventListener("beforeunload", () => {
+  if (scannerPollInterval) {
+    clearInterval(scannerPollInterval);
+  }
+});
+
+// Scanner zurücksetzen, wenn Verkäufer gewechselt wird
+document.querySelectorAll('form[action*="cashier"] input[name="registration"]').forEach(input => {
+  input.closest("form").addEventListener("submit", () => {
+    resetScanner();
+  });
+});
+
+{% endif %}
+</script>
+{% endblock %}

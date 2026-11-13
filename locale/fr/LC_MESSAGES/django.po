@@ -1,0 +1,2932 @@
+# French translation catalog for the Basar application.
+msgid ""
+msgstr ""
+"Project-Id-Version: Basar-Kassensystem\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 15:51+0100\n"
+"PO-Revision-Date: 2026-11-12 23:07+0100\n"
+"Last-Translator: Copilot\n"
+"Language-Team: Français\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: core/admin.py:17 core/admin.py:18
+msgid "Basarverwaltung"
+msgstr "Gestion de Basar"
+
+#: core/admin.py:19 core/templates/base.html:268
+#: core/templates/management/home.html:3 core/templates/management/home.html:5
+#: core/tests.py:215
+msgid "Verwaltung"
+msgstr "Administration"
+
+#: core/admin.py:33
+msgid "Kontaktdaten"
+msgstr "Coordonnées"
+
+#: core/admin.py:34
+msgid "Berechtigungen"
+msgstr "Autorisations"
+
+#: core/admin.py:35
+msgid "Zeitstempel"
+msgstr "Horodatages"
+
+#: core/emailing.py:17
+msgid "Basar-Konto bestätigen"
+msgstr "Confirmer le compte Basar"
+
+#: core/emailing.py:18
+#, python-format
+msgid "Bitte bestätige deine E-Mail-Adresse über diesen Link: %(verify_url)s"
+msgstr ""
+"Veuillez confirmer votre adresse e-mail en suivant ce lien : %(verify_url)s"
+
+#: core/forms.py:23
+msgid "Passwort"
+msgstr "Mot de passe"
+
+#: core/forms.py:24
+msgid "Passwort wiederholen"
+msgstr "Confirmer le mot de passe"
+
+#: core/forms.py:26 core/forms.py:45
+msgid "Ich stimme der aktuellen Datenschutzerklärung zu."
+msgstr "J’accepte la politique de confidentialité en vigueur."
+
+#: core/forms.py:52
+msgid "Die Passwörter stimmen nicht überein."
+msgstr "Les mots de passe ne correspondent pas."
+
+#: core/forms.py:88 core/templates/registration/accept_consent.html:12
+msgid "Ich stimme den Datenschutzhinweisen zu."
+msgstr "J’accepte les informations relatives à la confidentialité."
+
+#: core/forms.py:107
+msgid "Der Benutzer stimmt den Datenschutzhinweisen zu."
+msgstr "L’utilisateur accepte les informations relatives à la confidentialité."
+
+#: core/forms.py:113
+msgid ""
+"Bitte hinterlege zuerst die Datenschutzhinweise in den Systemeinstellungen."
+msgstr ""
+"Veuillez d’abord renseigner les informations relatives à la confidentialité "
+"dans les paramètres système."
+
+#: core/forms.py:150
+#, python-format
+msgid ""
+"HTML-Formatierung ist erlaubt, zum Beispiel <p>, <br>, <strong>, <em>, <ul>, "
+"<ol>, <li>, <h2> und sichere <a href=\"%(example_url)s\">Links</a>. "
+"Unsichere Elemente und Attribute werden entfernt."
+msgstr ""
+"Le formatage HTML est autorisé, par exemple avec <p>, <br>, <strong>, <em>, "
+"<ul>, <ol>, <li>, <h2> et des <a href=\"%(example_url)s\">liens</a> sûrs. "
+"Les éléments et attributs non sécurisés seront supprimés."
+
+#: core/forms.py:161
+msgid "Übliche Preise müssen als JSON-Liste angegeben werden."
+msgstr "Les prix courants doivent être indiqués sous forme de liste JSON."
+
+#: core/forms.py:167
+msgid "Jeder Schnellpreis muss eine gültige Zahl sein."
+msgstr "Chaque prix rapide doit être un nombre valide."
+
+#: core/forms.py:170
+msgid "Schnellpreise müssen größer als 0 und höchstens 999999,99 sein."
+msgstr ""
+"Les prix rapides doivent être supérieurs à 0 et ne pas dépasser 999999,99."
+
+#: core/forms.py:174
+msgid "Schnellpreise dürfen höchstens zwei Nachkommastellen haben."
+msgstr "Les prix rapides ne peuvent comporter que deux décimales au maximum."
+
+#: core/forms.py:183
+msgid "Bitte hinterlege die Standardvorgaben für Plakat-Prompts."
+msgstr ""
+"Veuillez renseigner les instructions par défaut pour la génération "
+"d’affiches."
+
+#: core/forms.py:203
+msgid ""
+"Verwende einfache Formatierung mit <b>, <i>, <u> und <br>. Verfügbare "
+"Variablen:\n"
+msgstr ""
+"Utilisez une mise en forme simple avec <b>, <i>, <u> et <br>. Variables "
+"disponibles :\n"
+
+#: core/forms.py:217
+#, python-format
+msgid "Unbekannte Vorlagenvariablen: %(names)s."
+msgstr "Variables de modèle inconnues : %(names)s."
+
+#: core/forms.py:219
+msgid "Vorlagenvariablen müssen das Format {{ variablenname }} haben."
+msgstr ""
+"Les variables de modèle doivent respecter le format {{ variablenname }}."
+
+#: core/forms.py:227
+msgid "Standardvorlage für neue Basare"
+msgstr "Modèle par défaut pour les nouveaux vide-greniers"
+
+#: core/forms.py:274
+msgid "Der Basar ist abgerechnet und kann nicht wieder geöffnet werden."
+msgstr "Le vide-grenier a été clôturé et ne peut pas être rouvert."
+
+#: core/forms.py:316
+msgid "Superadministrator"
+msgstr "Superadministrateur"
+
+#: core/forms.py:318
+msgid "Voller Zugriff auf alle Funktionen und die Verwaltung."
+msgstr "Accès complet à toutes les fonctionnalités et à l’administration."
+
+#: core/forms.py:321 core/models.py:83
+msgid "Kassenrecht"
+msgstr "Accès à la caisse"
+
+#: core/forms.py:323
+msgid "Darf die Kasse bedienen."
+msgstr "Peut utiliser la caisse."
+
+#: core/forms.py:326
+#| msgid "Konto anonymisiert"
+msgid "Konto aktiviert"
+msgstr "Compte activé"
+
+#: core/forms.py:328
+msgid "Inaktive Konten können sich nicht anmelden."
+msgstr "Les comptes inactifs ne peuvent pas se connecter."
+
+#: core/forms.py:364
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Du kannst deine eigenen Superadmin-Rechte nicht entfernen. Richte zuerst "
+"einen anderen Administrator ein."
+msgstr "Vous ne pouvez pas retirer vos propres droits de superadministrateur. Créez d’abord un autre administrateur."
+
+#: core/forms.py:369
+msgid "Du kannst dein eigenes Konto nicht deaktivieren."
+msgstr "Vous ne pouvez pas désactiver votre propre compte."
+
+#: core/forms.py:386
+#| msgid "Benutzer"
+msgid "Alle Benutzer"
+msgstr "Tous les utilisateurs"
+
+#: core/forms.py:387 core/templates/admin/user_management_list.html:58
+#| msgid "Aktiv"
+msgid "Aktiviert"
+msgstr "Activé"
+
+#: core/forms.py:388 core/templates/admin/user_management_list.html:60
+msgid "Deaktiviert"
+msgstr "Désactivé"
+
+#: core/forms.py:389
+#| msgid "Kassenrecht"
+msgid "Mit Kassenrecht"
+msgstr "Avec accès à la caisse"
+
+#: core/forms.py:390
+msgid "Administratoren"
+msgstr "Administrateurs"
+
+#: core/forms.py:394
+msgid "Nach Name oder E-Mail suchen"
+msgstr "Rechercher par nom ou e-mail"
+
+#: core/forms.py:396
+#| msgid "E-Mail-Adresse"
+msgid "Name, E-Mail-Adresse..."
+msgstr "Nom, adresse e-mail…"
+
+#: core/forms.py:399
+msgid "Filtern nach"
+msgstr "Filtrer par"
+
+#: core/invoice_templates.py:8
+msgid "Name des Basars"
+msgstr "Nom du vide-grenier"
+
+#: core/invoice_templates.py:9
+msgid "Datum des Basars"
+msgstr "Date du vide-grenier"
+
+#: core/invoice_templates.py:10 core/models.py:499 core/models.py:589
+#: core/templates/cashier/cashier.html:66
+#: core/templates/cashier/receipt_complete.html:10
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/scanner/join.html:26 core/templates/seller/dashboard.html:63
+#: core/views.py:1877
+msgid "Verkäufernummer"
+msgstr "Numéro de vendeur"
+
+#: core/invoice_templates.py:11
+msgid "Nachname des Verkäufers"
+msgstr "Nom du vendeur"
+
+#: core/invoice_templates.py:12
+msgid "Vorname des Verkäufers"
+msgstr "Prénom du vendeur"
+
+#: core/invoice_templates.py:13
+msgid "Artikeltabelle mit Preis, Anzahl und rechtsbündiger Summe"
+msgstr "Tableau des articles avec prix, quantité et total aligné à droite"
+
+#: core/invoice_templates.py:14
+msgid "Tabelle mit Bruttoumsatz, Abzügen und Auszahlungsbetrag"
+msgstr ""
+"Tableau du chiffre d’affaires brut, des déductions et du montant à verser"
+
+#: core/invoice_templates.py:15
+msgid "Umsatz vor Abzügen"
+msgstr "Chiffre d’affaires avant déductions"
+
+#: core/invoice_templates.py:16
+msgid "Feste Verkäufergebühr"
+msgstr "Frais fixes du vendeur"
+
+#: core/invoice_templates.py:17
+msgid "Prozentualer Betreiberanteil"
+msgstr "Part de l’organisateur en pourcentage"
+
+#: core/invoice_templates.py:18
+msgid "Betrag des Betreiberanteils"
+msgstr "Montant de la part de l’organisateur"
+
+#: core/invoice_templates.py:19
+msgid "Auszahlungsbetrag nach Abzügen"
+msgstr "Montant à verser après déductions"
+
+#: core/invoice_templates.py:20 core/models.py:150
+msgid "Währung"
+msgstr "Devise"
+
+#: core/invoice_templates.py:23
+msgid ""
+"<b>Verkäuferabrechnung</b><br>\n"
+"Basar: {{ basar_name }}<br>\n"
+"Datum: {{ basar_datum }}<br>\n"
+"Verkäufernummer: {{ verkaeufernummer }}<br><br>\n"
+"Verkäufer: {{ vorname }} {{ name }}<br><br>\n"
+"<b>Abrechnung</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+msgstr ""
+"<b>Relevé du vendeur</b><br>\n"
+"Vide-grenier : {{ basar_name }}<br>\n"
+"Date : {{ basar_datum }}<br>\n"
+"Numéro de vendeur : {{ verkaeufernummer }}<br><br>\n"
+"Vendeur : {{ vorname }} {{ name }}<br><br>\n"
+"<b>Récapitulatif</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+
+#: core/middleware.py:142
+msgid ""
+"Schließe zuerst den offenen Kassenbeleg ab oder korrigiere seine Artikel."
+msgstr ""
+"Veuillez d’abord clôturer le ticket de caisse ouvert ou corriger ses "
+"articles."
+
+#: core/models.py:41
+msgid "Eine E-Mail-Adresse ist erforderlich."
+msgstr "Une adresse e-mail est obligatoire."
+
+#: core/models.py:53
+msgid "Ein Administrator muss is_staff und is_superuser aktiviert haben."
+msgstr ""
+"Un administrateur doit avoir les options is_staff et is_superuser activées."
+
+#: core/models.py:60
+msgid "E-Mail-Adresse"
+msgstr "Adresse e-mail"
+
+#: core/models.py:61
+msgid "Vorname"
+msgstr "Prénom"
+
+#: core/models.py:62
+msgid "Nachname"
+msgstr "Nom"
+
+#: core/models.py:63
+msgid "Telefonnummer"
+msgstr "Téléphone"
+
+#: core/models.py:64
+msgid "Straße und Hausnummer"
+msgstr "Rue et numéro"
+
+#: core/models.py:66
+msgid "Postleitzahl"
+msgstr "Code postal"
+
+#: core/models.py:72
+msgid "Bitte eine fünfstellige deutsche Postleitzahl eingeben."
+msgstr "Veuillez saisir un code postal allemand à cinq chiffres."
+
+#: core/models.py:76
+msgid "Ort"
+msgstr "Ville"
+
+#: core/models.py:78 core/models.py:334 core/models.py:705
+msgid "Aktiv"
+msgstr "Actif"
+
+#: core/models.py:80
+msgid "Wird nach Bestätigung der E-Mail-Adresse aktiviert."
+msgstr "Activé après confirmation de l’adresse e-mail."
+
+#: core/models.py:85
+msgid "Kassenrecht wird durch einen Administrator vergeben."
+msgstr "L’accès à la caisse est accordé par un administrateur."
+
+#: core/models.py:88
+msgid "Konto anonymisiert"
+msgstr "Compte anonymisé"
+
+#: core/models.py:98 core/models.py:99
+msgid "Benutzer"
+msgstr "Utilisateur"
+
+#: core/models.py:102
+msgid "Gelöschter Benutzer"
+msgstr "Utilisateur supprimé"
+
+#: core/models.py:107
+msgid "Klassisches einfaches Design"
+msgstr "Thème classique"
+
+#: core/models.py:108
+msgid "Dunkelmodus"
+msgstr "Mode sombre"
+
+#: core/models.py:109
+msgid "Modernes Design"
+msgstr "Thème moderne"
+
+#: core/models.py:110
+msgid "Buntes Kindergartendesign"
+msgstr "Thème coloré pour enfants"
+
+#: core/models.py:113
+msgid "Oben"
+msgstr "En haut"
+
+#: core/models.py:114
+msgid "Links"
+msgstr "À gauche"
+
+#: core/models.py:115
+msgid "Rechts"
+msgstr "À droite"
+
+#: core/models.py:118
+msgid "Euro (€)"
+msgstr "Euro (€)"
+
+#: core/models.py:119
+msgid "Schweizer Franken (CHF)"
+msgstr "Franc suisse (CHF)"
+
+#: core/models.py:120
+msgid "US-Dollar (USD)"
+msgstr "Dollar américain (USD)"
+
+#: core/models.py:121
+msgid "Britisches Pfund (GBP)"
+msgstr "Livre sterling (GBP)"
+
+#: core/models.py:123
+msgid "Übliche Preise"
+msgstr "Prix courants"
+
+#: core/models.py:125
+msgid "Seitentitel"
+msgstr "Titre du site"
+
+#: core/models.py:128
+msgid "Wird in der Kopfzeile und im Seitentitel angezeigt."
+msgstr "Affiché dans l’en-tête et le titre de la page."
+
+#: core/models.py:131
+msgid "Logo für Verkäuferabrechnungen"
+msgstr "Logo des relevés vendeurs"
+
+#: core/models.py:139
+msgid "Standard-Verkäuferrechnungsvorlage"
+msgstr "Modèle de relevé vendeur par défaut"
+
+#: core/models.py:145
+msgid "Standard-Anzahl Verkäufernummern"
+msgstr "Nombre de numéros de vendeur par défaut"
+
+#: core/models.py:156
+msgid "Oberflächendesign"
+msgstr "Thème de l’interface"
+
+#: core/models.py:162
+msgid "Menüposition"
+msgstr "Position du menu"
+
+#: core/models.py:167
+msgid "Menü beim Scrollen fixieren"
+msgstr "Fixer le menu lors du défilement"
+
+#: core/models.py:169
+msgid "Standardsprache"
+msgstr "Langue par défaut"
+
+#: core/models.py:173
+msgid "Wird für Benutzer ohne eigene Sprachauswahl verwendet."
+msgstr "Utilisée lorsqu’un utilisateur n’a pas choisi de langue."
+
+#: core/models.py:175
+msgid "Einwilligungsversion"
+msgstr "Version du consentement"
+
+#: core/models.py:176 core/models.py:316
+msgid "Einwilligungstext"
+msgstr "Texte de consentement"
+
+#: core/models.py:178
+msgid "Standard-Verkäufergebühr für neue Basare"
+msgstr "Frais vendeur par défaut pour les nouveaux vide-greniers"
+
+#: core/models.py:185
+msgid "Standard-Betreiberanteil für neue Basare"
+msgstr "Part de l’organisateur par défaut pour les nouveaux vide-greniers"
+
+#: core/models.py:192
+msgid "Standardvorgaben für Plakat-Prompts"
+msgstr "Instructions par défaut pour la génération d’affiches"
+
+#: core/models.py:194
+msgid ""
+"Erstelle ein übersichtliches, gut lesbares Basarplakat. Verwende "
+"ausschließlich die unten angegebenen Veranstaltungsdaten und erfinde keine "
+"zusätzlichen Angaben."
+msgstr ""
+"Créez une affiche claire et facile à lire pour le vide-grenier. Utilisez "
+"uniquement les informations sur l’événement indiquées ci-dessous et n’en "
+"inventez aucune."
+
+#: core/models.py:200
+msgid "E-Mail-Bestätigung erforderlich"
+msgstr "Confirmation de l’adresse e-mail obligatoire"
+
+#: core/models.py:202
+msgid ""
+"Gilt für neue Konten. Bei Aktivierung muss der Benutzer die Adresse "
+"bestätigen."
+msgstr ""
+"S’applique aux nouveaux comptes. Si cette option est activée, l’utilisateur "
+"doit confirmer son adresse."
+
+#: core/models.py:205
+msgid "Mindestlänge des Passworts"
+msgstr "Longueur minimale du mot de passe"
+
+#: core/models.py:208
+msgid "Zulässiger Bereich: 8 bis 128 Zeichen."
+msgstr "Valeur autorisée : de 8 à 128 caractères."
+
+#: core/models.py:211
+msgid "Großbuchstaben verlangen"
+msgstr "Exiger une majuscule"
+
+#: core/models.py:215
+msgid "Kleinbuchstaben verlangen"
+msgstr "Exiger une minuscule"
+
+#: core/models.py:219
+msgid "Ziffer verlangen"
+msgstr "Exiger un chiffre"
+
+#: core/models.py:223
+msgid "Sonderzeichen verlangen"
+msgstr "Exiger un caractère spécial"
+
+#: core/models.py:227
+msgid "Häufige Passwörter ablehnen"
+msgstr "Refuser les mots de passe courants"
+
+#: core/models.py:231
+msgid "Reine Zahlenpasswörter ablehnen"
+msgstr "Refuser les mots de passe composés uniquement de chiffres"
+
+#: core/models.py:235
+msgid "Ähnlichkeit zu Benutzerdaten prüfen"
+msgstr "Vérifier la similarité avec les données utilisateur"
+
+#: core/models.py:239
+msgid "Preisschilder: Spalten pro A4"
+msgstr "Étiquettes de prix : colonnes par A4"
+
+#: core/models.py:242
+msgid "Anzahl der Spalten bei der Preisschild-Generierung (2-10)."
+msgstr "Nombre de colonnes lors de la génération d’étiquettes de prix (2 à 10)."
+
+#: core/models.py:245
+msgid "Preisschilder: Reihen pro A4"
+msgstr "Étiquettes de prix : rangées par A4"
+
+#: core/models.py:248
+msgid "Anzahl der Reihen bei der Preisschild-Generierung (4-30)."
+msgstr "Nombre de rangées lors de la génération d’étiquettes de prix (4 à 30)."
+
+#: core/models.py:252
+msgid "Globale Einstellung"
+msgstr "Paramètre global"
+
+#: core/models.py:253 core/models.py:256 core/models.py:292
+msgid "Globale Einstellungen"
+msgstr "Paramètres globaux"
+
+#: core/models.py:276
+msgid ""
+"Bei einer Änderung des Einwilligungstextes muss auch die Version erhöht "
+"werden."
+msgstr ""
+"En cas de modification du texte de consentement, la version doit également "
+"être incrémentée."
+
+#: core/models.py:294
+msgid "Vorlagenname"
+msgstr "Nom du modèle"
+
+#: core/models.py:295
+msgid "Vorlageninhalt"
+msgstr "Contenu du modèle"
+
+#: core/models.py:296
+msgid "Schreibgeschützt"
+msgstr "En lecture seule"
+
+#: core/models.py:306 core/models.py:396
+msgid "Verkäuferrechnungsvorlage"
+msgstr "Modèle de relevé vendeur"
+
+#: core/models.py:307 core/templates/management/invoice_templates.html:3
+#: core/templates/management/invoice_templates.html:5
+msgid "Verkäuferrechnungsvorlagen"
+msgstr "Modèles de relevé vendeur"
+
+#: core/models.py:315
+msgid "Version"
+msgstr "Version"
+
+#: core/models.py:317
+msgid "Zugestimmt am"
+msgstr "Date du consentement"
+
+#: core/models.py:321
+msgid "Benutzereinwilligung"
+msgstr "Consentement de l’utilisateur"
+
+#: core/models.py:322
+msgid "Benutzereinwilligungen"
+msgstr "Consentements des utilisateurs"
+
+#: core/models.py:325
+#, python-format
+msgid "%(email)s: %(version)s"
+msgstr "%(email)s : %(version)s"
+
+#: core/models.py:333
+msgid "Geplant"
+msgstr "Planifié"
+
+#: core/models.py:335 core/models.py:527
+msgid "Abgeschlossen"
+msgstr "Clôturé"
+
+#: core/models.py:337 core/templates/admin/user_management_list.html:40
+#: core/templates/management/invoice_templates.html:11
+msgid "Name"
+msgstr "Nom"
+
+#: core/models.py:338 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Beginn"
+msgstr "Début"
+
+#: core/models.py:340
+msgid "Nummernvergabe möglich bis"
+msgstr "Attribution des numéros jusqu’au"
+
+#: core/models.py:341
+msgid "Muss am oder vor dem Beginn des Basars liegen."
+msgstr "Doit être antérieure ou égale à la date de début du vide-grenier."
+
+#: core/models.py:344 core/models.py:543
+#: core/templates/admin/user_management_list.html:42
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:199
+#: core/templates/management/bazaars.html:9
+#: core/templates/settlement_confirm.html:62
+msgid "Status"
+msgstr "Statut"
+
+#: core/models.py:350
+msgid "Verkäuferanmeldung geöffnet"
+msgstr "Inscriptions des vendeurs ouvertes"
+
+#: core/models.py:352
+msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgstr "Se ferme automatiquement à l’activation du vide-grenier."
+
+#: core/models.py:355
+msgid "Stellenzahl"
+msgstr "Nombre d’emplacements"
+
+#: core/models.py:359
+msgid "Erste Nummer"
+msgstr "Premier numéro"
+
+#: core/models.py:361
+msgid "Maximale Anzahl Verkäufernummern"
+msgstr "Nombre maximal de numéros de vendeur"
+
+#: core/models.py:366
+msgid "Nächste Belegnummer"
+msgstr "Prochain numéro de ticket"
+
+#: core/models.py:371 core/templates/seller/bazaar_details.html:45
+#: core/views.py:1827
+msgid "Verkäufergebühr"
+msgstr "Frais vendeur"
+
+#: core/models.py:378
+msgid "Betreiberanteil in Prozent"
+msgstr "Part de l’organisateur en pourcentage"
+
+#: core/models.py:385
+msgid "Verkäufer sehen aktuellen Stand"
+msgstr "Les vendeurs voient le montant actuel"
+
+#: core/models.py:389
+msgid "Verkäufer sehen Historie"
+msgstr "Les vendeurs voient l’historique"
+
+#: core/models.py:400
+msgid "Plakat-Prompt"
+msgstr "Instructions pour l’affiche"
+
+#: core/models.py:402
+msgid "Abrechnung erstellt am"
+msgstr "Relevé créé le"
+
+#: core/models.py:416 core/models.py:491 core/models.py:533 core/models.py:642
+#: core/models.py:691 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Basar"
+msgstr "Vide-grenier"
+
+#: core/models.py:417 core/templates/management/home.html:8
+msgid "Basare"
+msgstr "Vide-greniers"
+
+#: core/models.py:446
+msgid "Ein bereits abgerechneter Basar kann nicht wieder geöffnet werden."
+msgstr "Un vide-grenier déjà clôturé ne peut pas être rouvert."
+
+#: core/models.py:458
+msgid "Die Nummernvergabe darf nicht nach dem Beginn des Basars enden."
+msgstr ""
+"L’attribution des numéros ne peut pas se terminer après le début du vide-"
+"grenier."
+
+#: core/models.py:467
+msgid ""
+"Die Nummernbegrenzung darf nicht unter der bereits vergebenen Anzahl liegen."
+msgstr ""
+"La limite de numéros ne peut pas être inférieure au nombre déjà attribué."
+
+#: core/models.py:497 core/templates/role.html:9
+msgid "Verkäufer"
+msgstr "Vendeur"
+
+#: core/models.py:501
+msgid "Verkäufernummer vergeben am"
+msgstr "Numéro de vendeur attribué le"
+
+#: core/models.py:517
+msgid "Verkäuferanmeldung"
+msgstr "Inscription du vendeur"
+
+#: core/models.py:518
+msgid "Verkäuferanmeldungen"
+msgstr "Inscriptions des vendeurs"
+
+#: core/models.py:526
+msgid "Offen"
+msgstr "Ouvert"
+
+#: core/models.py:539 core/models.py:697
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Kassierer"
+msgstr "Caissier"
+
+#: core/models.py:541 core/templates/management/bazaar_statistics.html:94
+msgid "Belegnummer"
+msgstr "Numéro de ticket"
+
+#: core/models.py:548 core/models.py:644 core/models.py:699
+msgid "Erstellt am"
+msgstr "Créé le"
+
+#: core/models.py:550
+msgid "Erster Artikel erfasst am"
+msgstr "Premier article enregistré le"
+
+#: core/models.py:554
+msgid "Abgeschlossen am"
+msgstr "Clôturé le"
+
+#: core/models.py:561 core/models.py:583
+msgid "Kassenbeleg"
+msgstr "Ticket de caisse"
+
+#: core/models.py:562
+msgid "Kassenbelege"
+msgstr "Tickets de caisse"
+
+#: core/models.py:565
+#, python-format
+msgid "%(bazaar)s, Beleg Nr. %(number)s"
+msgstr "%(bazaar)s, ticket n° %(number)s"
+
+#: core/models.py:592 core/models.py:761 core/templates/cashier/cashier.html:66
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/scanner/join.html:35
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Preis"
+msgstr "Prix"
+
+#: core/models.py:597
+msgid "Erfasst am"
+msgstr "Enregistré le"
+
+#: core/models.py:598 core/models.py:648
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert am"
+msgstr "Annulé le"
+
+#: core/models.py:605 core/models.py:657
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert von"
+msgstr "Annulé par"
+
+#: core/models.py:613
+msgid "Belegposition"
+msgstr "Ligne du ticket"
+
+#: core/models.py:614
+msgid "Belegpositionen"
+msgstr "Lignes du ticket"
+
+#: core/models.py:624
+msgid "Die Verkäufernummer muss zum Basar des Kassenbelegs gehören."
+msgstr ""
+"Le numéro de vendeur doit correspondre au vide-grenier du ticket de caisse."
+
+#: core/models.py:630
+#, python-format
+msgid "%(seller_number)s: %(price)s %(currency)s"
+msgstr "%(seller_number)s : %(price)s %(currency)s"
+
+#: core/models.py:645
+msgid "Abrechnungsdaten"
+msgstr "Données du relevé"
+
+#: core/models.py:646
+msgid "PDF"
+msgstr "PDF"
+
+#: core/models.py:671 core/templates/settlement_confirm.html:3
+msgid "Basarabrechnung"
+msgstr "Clôture du vide-grenier"
+
+#: core/models.py:672
+msgid "Basarabrechnungen"
+msgstr "Clôtures des vide-greniers"
+
+#: core/models.py:675
+#, python-format
+msgid "Abrechnung: %(bazaar)s"
+msgstr "Clôture : %(bazaar)s"
+
+#: core/models.py:682
+#| msgid "Anmelden"
+msgid "Anmeldecode"
+msgstr "Code de connexion"
+
+#: core/models.py:701
+msgid "Ablaufzeit"
+msgstr "Durée d’expiration"
+
+#: core/models.py:702
+msgid "Session verfällt nach 30 Minuten"
+msgstr "La session expire après 30 minutes"
+
+#: core/models.py:707
+#| msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgid "Wird deaktiviert, wenn Session abläuft oder manuell geschlossen wird"
+msgstr "Est désactivée lorsque la session expire ou est fermée manuellement"
+
+#: core/models.py:710
+msgid "Gerätenname (optional)"
+msgstr "Nom de l’appareil (facultatif)"
+
+#: core/models.py:713
+msgid "Z.B. 'iPhone 14 Pro'"
+msgstr "Par ex. « iPhone 14 Pro »"
+
+#: core/models.py:718 core/models.py:746
+msgid "Scanner-Session"
+msgstr "Session du scanner"
+
+#: core/models.py:719
+msgid "Scanner-Sessions"
+msgstr "Sessions du scanner"
+
+#: core/models.py:722
+#, python-format
+msgid "Scanner: %(code)s (%(bazaar)s)"
+msgstr "Scanner : %(code)s (%(bazaar)s)"
+
+#: core/models.py:754 core/views.py:1876
+msgid "Beleg"
+msgstr "Ticket"
+
+#: core/models.py:757
+#| msgid "Verkäufernummer"
+msgid "Verkäufernummer-ID"
+msgstr "ID du numéro de vendeur"
+
+#: core/models.py:758
+msgid "Referenz auf SellerRegistration.id"
+msgstr "Référence à SellerRegistration.id"
+
+#: core/models.py:766
+msgid "Eingescannt um"
+msgstr "Scanné le"
+
+#: core/models.py:770
+#| msgid "Bearbeiten"
+msgid "Verarbeitet"
+msgstr "Traité"
+
+#: core/models.py:772
+msgid "True, wenn Artikel bereits zur Kasse hinzugefügt wurde"
+msgstr "Vrai si l’article a déjà été ajouté à la caisse"
+
+#: core/models.py:775
+#| msgid "Bearbeiten"
+msgid "Verarbeitet um"
+msgstr "Traité à"
+
+#: core/models.py:782
+msgid "Scanner-Eingabe"
+msgstr "Saisie du scanner"
+
+#: core/models.py:783
+msgid "Scanner-Eingaben"
+msgstr "Saisies du scanner"
+
+#: core/models.py:786
+#, python-format
+msgid "Scan: VKNr %(reg)s, %(price)s€"
+msgstr "Scan : n° vendeur %(reg)s, %(price)s €"
+
+#: core/password_validation.py:18
+#, python-format
+msgid "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgid_plural "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgstr[0] "Le mot de passe doit comporter au moins %(count)d caractère."
+msgstr[1] "Le mot de passe doit comporter au moins %(count)d caractères."
+
+#: core/password_validation.py:25
+msgid "Das Passwort muss mindestens einen Großbuchstaben enthalten."
+msgstr "Le mot de passe doit contenir au moins une majuscule."
+
+#: core/password_validation.py:27
+msgid "Das Passwort muss mindestens einen Kleinbuchstaben enthalten."
+msgstr "Le mot de passe doit contenir au moins une minuscule."
+
+#: core/password_validation.py:29
+msgid "Das Passwort muss mindestens eine Ziffer enthalten."
+msgstr "Le mot de passe doit contenir au moins un chiffre."
+
+#: core/password_validation.py:33
+msgid "Das Passwort muss mindestens ein Sonderzeichen enthalten."
+msgstr "Le mot de passe doit contenir au moins un caractère spécial."
+
+#: core/password_validation.py:38
+msgid "Dieses Passwort ist zu häufig und darf nicht verwendet werden."
+msgstr "Ce mot de passe est trop courant et ne peut pas être utilisé."
+
+#: core/password_validation.py:40
+msgid "Das Passwort darf nicht ausschließlich aus Zahlen bestehen."
+msgstr "Le mot de passe ne peut pas être composé uniquement de chiffres."
+
+#: core/password_validation.py:45
+msgid "Das Passwort ähnelt zu stark deinen Benutzerdaten."
+msgstr "Le mot de passe ressemble trop à vos données utilisateur."
+
+#: core/password_validation.py:55
+#, python-format
+msgid "Mindestens %(count)d Zeichen"
+msgid_plural "Mindestens %(count)d Zeichen"
+msgstr[0] "Au moins %(count)d caractère"
+msgstr[1] "Au moins %(count)d caractères"
+
+#: core/password_validation.py:62
+msgid "ein Großbuchstabe"
+msgstr "une majuscule"
+
+#: core/password_validation.py:64
+msgid "ein Kleinbuchstabe"
+msgstr "une minuscule"
+
+#: core/password_validation.py:66
+msgid "eine Ziffer"
+msgstr "un chiffre"
+
+#: core/password_validation.py:68
+msgid "ein Sonderzeichen"
+msgstr "un caractère spécial"
+
+#: core/password_validation.py:70
+msgid "kein häufig verwendetes Passwort"
+msgstr "un mot de passe non courant"
+
+#: core/password_validation.py:72
+msgid "nicht ausschließlich Zahlen"
+msgstr "ne contenant pas uniquement des chiffres"
+
+#: core/password_validation.py:74
+msgid "nicht zu ähnlich zu deinen Benutzerdaten"
+msgstr "ne ressemblant pas trop à vos données utilisateur"
+
+#: core/password_validation.py:75
+#, python-format
+msgid "Passwortregeln: %(rules)s."
+msgstr "Règles du mot de passe : %(rules)s."
+
+#: core/permissions.py:21
+#| msgid "Abrechnung erstellen und PDF herunterladen"
+msgid "Kann Abrechnungen anzeigen und herunterladen"
+msgstr "Peut afficher et télécharger les décomptes"
+
+#: core/templates/admin/core/user/add_form.html:7
+msgid "Datenschutzvereinbarung"
+msgstr "Accord de confidentialité"
+
+#: core/templates/admin/user_management_edit.html:4
+#: core/templates/admin/user_management_edit.html:10
+#| msgid "Benutzerdaten bearbeiten"
+msgid "Benutzer bearbeiten"
+msgstr "Modifier l’utilisateur"
+
+#: core/templates/admin/user_management_edit.html:26
+#| msgid "Kontaktdaten"
+msgid "Kontaktinformationen"
+msgstr "Informations de contact"
+
+#: core/templates/admin/user_management_edit.html:58
+msgid "E-Mail-Adressen können nicht über diese Verwaltung geändert werden."
+msgstr "Les adresses e-mail ne peuvent pas être modifiées depuis cette gestion."
+
+#: core/templates/admin/user_management_edit.html:116
+msgid "Rechte und Status"
+msgstr "Droits et statut"
+
+#: core/templates/admin/user_management_edit.html:176
+#| msgid "Speicherdauer"
+msgid "Speichern"
+msgstr "Enregistrer"
+
+#: core/templates/admin/user_management_edit.html:179
+#: core/templates/management/invoice_template_form.html:18
+#: core/templates/seller/price_labels.html:16
+#: core/templates/seller/price_labels.html:61
+msgid "Abbrechen"
+msgstr "Annuler"
+
+#: core/templates/admin/user_management_edit.html:183
+msgid "Benutzer wirklich löschen?"
+msgstr "Supprimer réellement l’utilisateur ?"
+
+#: core/templates/admin/user_management_edit.html:186
+#| msgid "Konto löschen"
+msgid "Benutzer löschen"
+msgstr "Supprimer l’utilisateur"
+
+#: core/templates/admin/user_management_edit.html:195
+#, python-format
+msgid ""
+"\n"
+"                    Benutzer erstellt: "
+"%(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n"
+"                    "
+msgstr "\n                    Utilisateur créé : %(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n                    "
+
+#: core/templates/admin/user_management_edit.html:200
+#, python-format
+msgid ""
+"\n"
+"                        Letzte Anmeldung: "
+"%(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n"
+"                        "
+msgstr "\n                        Dernière connexion : %(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n                        "
+
+#: core/templates/admin/user_management_edit.html:205
+msgid "Hat sich noch nicht angemeldet."
+msgstr "Ne s’est pas encore connecté."
+
+#: core/templates/admin/user_management_list.html:4
+#: core/templates/admin/user_management_list.html:8
+#: core/templates/management/home.html:13
+#| msgid "Benutzereinwilligung"
+msgid "Benutzerverwaltung"
+msgstr "Gestion des utilisateurs"
+
+#: core/templates/admin/user_management_list.html:9
+msgid "Verwalte Benutzer und vergebe Rechte ohne Django Admin zu nutzen."
+msgstr "Gérez les utilisateurs et attribuez des droits sans utiliser l’administration Django."
+
+#: core/templates/admin/user_management_list.html:21
+msgid "Filtern"
+msgstr "Filtrer"
+
+#: core/templates/admin/user_management_list.html:41
+#| msgid "E-Mail-Adresse"
+msgid "E-Mail"
+msgstr "E-mail"
+
+#: core/templates/admin/user_management_list.html:43
+#| msgid "Rechts"
+msgid "Rechte"
+msgstr "Droits"
+
+#: core/templates/admin/user_management_list.html:44
+#: core/templates/management/invoice_templates.html:11
+msgid "Aktionen"
+msgstr "Actions"
+
+#: core/templates/admin/user_management_list.html:65
+msgid "Administrator"
+msgstr "Administrateur"
+
+#: core/templates/admin/user_management_list.html:68
+#: core/templates/base.html:266 core/templates/cashier/cashier.html:3
+#: core/templates/cashier/cashier.html:7 core/templates/role.html:16
+msgid "Kasse"
+msgstr "Caisse"
+
+#: core/templates/admin/user_management_list.html:71
+#| msgid "Standardsprache"
+msgid "Standard"
+msgstr "Par défaut"
+
+#: core/templates/admin/user_management_list.html:76
+#: core/templates/management/bazaars.html:18
+#: core/templates/management/invoice_templates.html:24
+msgid "Bearbeiten"
+msgstr "Modifier"
+
+#: core/templates/admin/user_management_list.html:83
+#| msgid "Link erneut senden"
+msgid "Keine Benutzer gefunden."
+msgstr "Aucun utilisateur trouvé."
+
+#: core/templates/admin/user_management_list.html:93
+#| msgid "Zur Verwaltung"
+msgid "Zurück zur Verwaltung"
+msgstr "Retour à la gestion"
+
+#: core/templates/base.html:4
+msgid "Menü öffnen"
+msgstr "Ouvrir le menu"
+
+#: core/templates/base.html:5
+msgid "Menü schließen"
+msgstr "Fermer le menu"
+
+#: core/templates/base.html:259
+msgid "Menü"
+msgstr "Menu"
+
+#: core/templates/base.html:265 core/templates/seller/dashboard.html:3
+#: core/templates/seller/dashboard.html:5
+msgid "Verkäuferbereich"
+msgstr "Espace vendeur"
+
+#: core/templates/base.html:269 core/templates/management/bazaars.html:19
+#: core/templates/management/home.html:23
+#: core/templates/management/statistics.html:3
+#: core/templates/management/statistics.html:5
+msgid "Statistiken"
+msgstr "Statistiques"
+
+#: core/templates/base.html:271
+msgid "Django-Admin"
+msgstr "Administration Django"
+
+#: core/templates/base.html:275 core/templates/base.html:278
+msgid "Abmelden"
+msgstr "Se déconnecter"
+
+#: core/templates/base.html:282 core/templates/home.html:9
+#: core/templates/registration/login.html:3
+#: core/templates/registration/login.html:6
+#: core/templates/registration/login.html:13
+msgid "Anmelden"
+msgstr "Se connecter"
+
+#: core/templates/base.html:283 core/templates/home.html:8
+#: core/templates/registration/register.html:4
+#: core/templates/registration/register.html:7
+#: core/templates/registration/register.html:20
+msgid "Konto erstellen"
+msgstr "Créer un compte"
+
+#: core/templates/base.html:285 core/templates/cookie_consent.html:10
+#: core/templates/privacy_policy.html:4 core/templates/privacy_policy.html:6
+msgid "Datenschutzerklärung"
+msgstr "Politique de confidentialité"
+
+#: core/templates/base.html:289
+msgid "Sprache"
+msgstr "Langue"
+
+#: core/templates/cashier/cashier.html:5
+msgid "Diesen Artikel wirklich stornieren?"
+msgstr "Voulez-vous vraiment annuler cet article ?"
+
+#: core/templates/cashier/cashier.html:6
+msgid ""
+"Beleg wirklich abschließen? Danach können keine Artikel mehr korrigiert "
+"werden."
+msgstr ""
+"Voulez-vous vraiment clôturer le ticket ? Les articles ne pourront plus être "
+"modifiés ensuite."
+
+#: core/templates/cashier/cashier.html:14
+#, python-format
+msgid "Beleg %(number)s"
+msgstr "Ticket %(number)s"
+
+#: core/templates/cashier/cashier.html:16
+msgid "Verkäufernummer wählen"
+msgstr "Choisir un numéro de vendeur"
+
+#: core/templates/cashier/cashier.html:28
+msgid "Für diesen Basar sind noch keine Verkäufernummern vergeben."
+msgstr "Aucun numéro de vendeur n’a encore été attribué pour ce vide-grenier."
+
+#: core/templates/cashier/cashier.html:33
+#, python-format
+msgid "Artikel für %(number)s"
+msgstr "Articles pour %(number)s"
+
+#: core/templates/cashier/cashier.html:43
+msgid "Es sind keine Schnellpreise eingerichtet."
+msgstr "Aucun prix rapide n’est configuré."
+
+#: core/templates/cashier/cashier.html:49
+msgid "Anderen Preis eingeben"
+msgstr "Saisir un autre prix"
+
+#: core/templates/cashier/cashier.html:51 core/templates/scanner/join.html:46
+msgid "Artikel hinzufügen"
+msgstr "Ajouter un article"
+
+#: core/templates/cashier/cashier.html:54
+msgid "Wähle die Verkäufernummer, danach kannst du die Artikelpreise erfassen."
+msgstr "Choisissez le numéro de vendeur, puis saisissez les prix des articles."
+
+#: core/templates/cashier/cashier.html:58
+#: core/templates/cashier/cashier.html:60
+msgid "Kassenzettel"
+msgstr "Ticket de caisse"
+
+#: core/templates/cashier/cashier.html:61
+#, python-format
+msgid "%(name)s · Beleg %(number)s"
+msgstr "%(name)s · ticket %(number)s"
+
+#: core/templates/cashier/cashier.html:63
+#, python-format
+msgid "Erster Artikel erfasst: %(date)s"
+msgstr "Premier article enregistré : %(date)s"
+
+#: core/templates/cashier/cashier.html:70
+#: core/templates/management/bazaar_receipt_detail.html:18
+#: core/templates/settlement_confirm.html:68
+msgid "Storniert"
+msgstr "Annulé"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Artikel stornieren"
+msgstr "Annuler l’article"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Storno"
+msgstr "Annuler"
+
+#: core/templates/cashier/cashier.html:83
+msgid "Noch keine Artikel erfasst."
+msgstr "Aucun article enregistré pour le moment."
+
+#: core/templates/cashier/cashier.html:89
+msgid "Gesamt:"
+msgstr "Total :"
+
+#: core/templates/cashier/cashier.html:94
+msgid "Beleg abschließen"
+msgstr "Clôturer le ticket"
+
+#: core/templates/cashier/cashier.html:103
+msgid "Basar für diese Kasse auswählen"
+msgstr "Choisir un vide-grenier pour cette caisse"
+
+#: core/templates/cashier/cashier.html:111
+msgid "Zurzeit ist kein Basar aktiv."
+msgstr "Aucun vide-grenier n’est actif pour le moment."
+
+#: core/templates/cashier/cashier.html:163
+msgid "QR-Scanner"
+msgstr "Scanner QR"
+
+#: core/templates/cashier/cashier.html:165
+msgid "Laden..."
+msgstr "Chargement..."
+
+#: core/templates/cashier/cashier.html:168
+msgid "Stop"
+msgstr "Arrêter"
+
+#: core/templates/cashier/cashier.html:169
+#| msgid "Menü schließen"
+msgid "Schließen"
+msgstr "Fermer"
+
+#: core/templates/cashier/cashier.html:179
+msgid "Scanner"
+msgstr "Scanner"
+
+#: core/templates/cashier/cashier.html:276
+msgid "Scanner aktiv"
+msgstr "Scanner actif"
+
+#: core/templates/cashier/cashier.html:278
+msgid "QR-Code zum Scannen"
+msgstr "Code QR à scanner"
+
+#: core/templates/cashier/cashier.html:281
+msgid "Scannen Sie einen QR-Code mit dem Handy-Scanner"
+msgstr "Scannez un code QR avec le scanner de votre téléphone"
+
+#: core/templates/cashier/cashier.html:300
+msgid "Fehler:"
+msgstr "Erreur :"
+
+#: core/templates/cashier/cashier.html:436
+msgid "Fehler beim Hinzufügen des Artikels"
+msgstr "Erreur lors de l’ajout de l’article"
+
+#: core/templates/cashier/cashier.html:445
+msgid "VKNr"
+msgstr "N° vendeur"
+
+#: core/templates/cashier/cashier.html:448
+msgid "Fehler beim Scannen"
+msgstr "Erreur lors du scan"
+
+#: core/templates/cashier/receipt_complete.html:3
+#: core/templates/cashier/receipt_complete.html:6
+msgid "Verkauf abgeschlossen"
+msgstr "Vente terminée"
+
+#: core/templates/cashier/receipt_complete.html:7
+#, python-format
+msgid "Beleg %(number)s · %(name)s"
+msgstr "Ticket %(number)s · %(name)s"
+
+#: core/templates/cashier/receipt_complete.html:8
+msgid "Umsatz je Verkäufernummer"
+msgstr "Chiffre d’affaires par numéro de vendeur"
+
+#: core/templates/cashier/receipt_complete.html:10
+msgid "Zwischensumme"
+msgstr "Sous-total"
+
+#: core/templates/cashier/receipt_complete.html:17
+msgid "Gesamtbetrag:"
+msgstr "Montant total :"
+
+#: core/templates/cashier/receipt_complete.html:18
+msgid "Kein Ausdruck erforderlich."
+msgstr "Aucune impression nécessaire."
+
+#: core/templates/cashier/receipt_complete.html:21
+msgid "Nächsten Verkauf erfassen"
+msgstr "Enregistrer la vente suivante"
+
+#: core/templates/cookie_consent.html:3
+msgid "Cookie-Einstellungen"
+msgstr "Paramètres des cookies"
+
+#: core/templates/cookie_consent.html:7
+msgid "Notwendige Cookies"
+msgstr "Cookies nécessaires"
+
+#: core/templates/cookie_consent.html:8
+msgid ""
+"Damit diese Seite funktioniert, ist deine Zustimmung zur Verwendung der "
+"erforderlichen Cookies notwendig. Die Seite bleibt bis zur Zustimmung "
+"gesperrt."
+msgstr ""
+"Votre consentement à l’utilisation des cookies nécessaires est indispensable "
+"au fonctionnement de ce site. L’accès restera bloqué jusqu’à votre accord."
+
+#: core/templates/cookie_consent.html:10
+msgid "Weitere Informationen findest du in der"
+msgstr "Vous trouverez plus d’informations dans la"
+
+#: core/templates/cookie_consent.html:14
+msgid "Zustimmen und fortfahren"
+msgstr "Accepter et continuer"
+
+#: core/templates/home.html:7
+msgid "Verkäufernummern verwalten, Verkäufe erfassen und Basare abrechnen."
+msgstr ""
+"Gérez les numéros de vendeur, enregistrez les ventes et clôturez les vide-"
+"greniers."
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+msgid "Basar bearbeiten"
+msgstr "Modifier le vide-grenier"
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+#: core/templates/management/bazaars.html:6
+msgid "Neuen Basar anlegen"
+msgstr "Créer un vide-grenier"
+
+#: core/templates/management/bazaar_form.html:17
+msgid "Basar speichern"
+msgstr "Enregistrer le vide-grenier"
+
+#: core/templates/management/bazaar_form.html:18
+msgid "Zurück zur Liste"
+msgstr "Retour à la liste"
+
+#: core/templates/management/bazaar_form.html:22
+#: core/templates/management/bazaar_form.html:23
+msgid "Prompt für die Plakatgenerierung"
+msgstr "Instructions pour la génération de l’affiche"
+
+#: core/templates/management/bazaar_form.html:27
+msgid "Abrechnung öffnen"
+msgstr "Ouvrir la clôture"
+
+#: core/templates/management/bazaar_receipt_detail.html:3
+#, python-format
+msgid "Rechnung %(number)s · %(name)s"
+msgstr "Ticket %(number)s · %(name)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:5
+#, python-format
+msgid "Rechnung %(number)s"
+msgstr "Ticket %(number)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:7
+msgid "Basar:"
+msgstr "Vide-grenier :"
+
+#: core/templates/management/bazaar_receipt_detail.html:8
+msgid "Zeit:"
+msgstr "Heure :"
+
+#: core/templates/management/bazaar_receipt_detail.html:9
+msgid "Status:"
+msgstr "Statut :"
+
+#: core/templates/management/bazaar_receipt_detail.html:10
+msgid "Positionen"
+msgstr "Articles"
+
+#: core/templates/management/bazaar_receipt_detail.html:12
+msgid "Erfasst"
+msgstr "Enregistré"
+
+#: core/templates/management/bazaar_receipt_detail.html:18
+msgid "Gültig"
+msgstr "Valide"
+
+#: core/templates/management/bazaar_receipt_detail.html:22
+msgid "Der Beleg enthält noch keine Artikelpositionen."
+msgstr "Ce ticket ne contient encore aucun article."
+
+#: core/templates/management/bazaar_receipt_detail.html:26
+msgid "Gesamtbetrag"
+msgstr "Montant total"
+
+#: core/templates/management/bazaar_receipt_detail.html:30
+msgid ""
+"Der Beleg ist noch offen; der angezeigte Gesamtbetrag ist ein Zwischenstand."
+msgstr "Le ticket est encore ouvert ; le montant total affiché est provisoire."
+
+#: core/templates/management/bazaar_receipt_detail.html:33
+msgid "Zurück zu den Basarstatistiken"
+msgstr "Retour aux statistiques du vide-grenier"
+
+#: core/templates/management/bazaar_statistics.html:3
+#: core/templates/management/bazaar_statistics.html:16
+#, python-format
+msgid "Statistiken: %(name)s"
+msgstr "Statistiques : %(name)s"
+
+#: core/templates/management/bazaar_statistics.html:5
+msgid "Verkaufte Artikel je 5 Minuten"
+msgstr "Articles vendus par tranche de 5 minutes"
+
+#: core/templates/management/bazaar_statistics.html:6
+msgid "Artikelanzahl"
+msgstr "Nombre d’articles"
+
+#: core/templates/management/bazaar_statistics.html:7
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+msgid "Artikel"
+msgstr "Articles"
+
+#: core/templates/management/bazaar_statistics.html:8
+msgid "Bruttoumsatz je 5 Minuten"
+msgstr "Chiffre d’affaires brut par tranche de 5 minutes"
+
+#: core/templates/management/bazaar_statistics.html:9
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+#: core/templates/seller/bazaar_details.html:44 core/views.py:1823
+msgid "Bruttoumsatz"
+msgstr "Chiffre d’affaires brut"
+
+#: core/templates/management/bazaar_statistics.html:10
+msgid "Neue Verkäufernummern je Tag"
+msgstr "Nouveaux numéros de vendeur par jour"
+
+#: core/templates/management/bazaar_statistics.html:11
+msgid "Neue Nummern pro Tag"
+msgstr "Nouveaux numéros par jour"
+
+#: core/templates/management/bazaar_statistics.html:12
+msgid "Neue Nummern"
+msgstr "Nouveaux numéros"
+
+#: core/templates/management/bazaar_statistics.html:13
+msgid "Kumulierte Vergabe der Verkäufernummern"
+msgstr "Attribution cumulée des numéros de vendeur"
+
+#: core/templates/management/bazaar_statistics.html:14
+msgid "Nummern gesamt"
+msgstr "Nombre total de numéros"
+
+#: core/templates/management/bazaar_statistics.html:15
+msgid "Gesamtzahl"
+msgstr "Total"
+
+#: core/templates/management/bazaar_statistics.html:17
+msgid ""
+"Verwendet werden abgeschlossene Belege und nicht stornierte "
+"Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr ""
+"Les statistiques portent sur les tickets clôturés et les articles non "
+"annulés. Les recettes correspondent au chiffre d’affaires brut."
+
+#: core/templates/management/bazaar_statistics.html:60
+msgid "Verkäufe und Einnahmen je 5 Minuten"
+msgstr "Ventes et recettes par tranche de 5 minutes"
+
+#: core/templates/management/bazaar_statistics.html:61
+msgid ""
+"Der Zeitstempel eines abgeschlossenen Belegs bestimmt das 5-Minuten-"
+"Intervall. Eine tatsächliche Öffnungs- oder Endzeit wird derzeit nicht "
+"erfasst."
+msgstr ""
+"L’horodatage d’un ticket clôturé détermine la tranche de 5 minutes. Les "
+"heures réelles d’ouverture et de fermeture ne sont pas enregistrées "
+"actuellement."
+
+#: core/templates/management/bazaar_statistics.html:63
+#: core/templates/seller/bazaar_details.html:25
+msgid "Verkaufte Artikel"
+msgstr "Articles vendus"
+
+#: core/templates/management/bazaar_statistics.html:65
+msgid "Einnahmen"
+msgstr "Recettes"
+
+#: core/templates/management/bazaar_statistics.html:70
+#: core/templates/management/bazaar_statistics.html:124
+msgid "Für diesen Basar liegen noch keine abgeschlossenen Verkäufe vor."
+msgstr "Aucune vente clôturée n’est encore disponible pour ce vide-grenier."
+
+#: core/templates/management/bazaar_statistics.html:75
+msgid "Verlauf der Verkäufernummernvergabe"
+msgstr "Historique de l’attribution des numéros de vendeur"
+
+#: core/templates/management/bazaar_statistics.html:77
+msgid "Je Tag: neu vergebene Nummern und kumulierte Gesamtzahl."
+msgstr "Par jour : nouveaux numéros attribués et total cumulé."
+
+#: core/templates/management/bazaar_statistics.html:78
+msgid "Neu vergebene Nummern"
+msgstr "Nouveaux numéros attribués"
+
+#: core/templates/management/bazaar_statistics.html:80
+msgid "Kumulierte Nummern"
+msgstr "Numéros cumulés"
+
+#: core/templates/management/bazaar_statistics.html:83
+msgid ""
+"Für die vorhandenen Verkäufernummern liegen keine Vergabezeitpunkte vor."
+msgstr ""
+"Aucune date d’attribution n’est disponible pour les numéros de vendeur "
+"existants."
+
+#: core/templates/management/bazaar_statistics.html:86
+#, python-format
+msgid ""
+"%(count)s ältere Nummern haben keinen gespeicherten Vergabezeitpunkt und "
+"können im Verlauf nicht berücksichtigt werden."
+msgstr ""
+"%(count)s anciens numéros n’ont pas de date d’attribution enregistrée et ne "
+"peuvent pas figurer dans l’historique."
+
+#: core/templates/management/bazaar_statistics.html:91
+msgid "Top-Rechnungen nach Betrag"
+msgstr "Tickets les plus élevés"
+
+#: core/templates/management/bazaar_statistics.html:92
+msgid "Die Rangliste umfasst die zehn höchsten abgeschlossenen Belege."
+msgstr "Le classement présente les dix tickets clôturés les plus élevés."
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Zeit"
+msgstr "Heure"
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Betrag"
+msgstr "Montant"
+
+#: core/templates/management/bazaar_statistics.html:101
+msgid "Rechnung ansehen"
+msgstr "Voir le ticket"
+
+#: core/templates/management/bazaar_statistics.html:104
+#: core/templates/management/bazaar_statistics.html:169
+#: core/templates/management/bazaar_statistics.html:189
+msgid "Es gibt noch keine abgeschlossenen Rechnungen."
+msgstr "Aucun ticket n’a encore été clôturé."
+
+#: core/templates/management/bazaar_statistics.html:111
+msgid "Top-Verkäufer"
+msgstr "Meilleurs vendeurs"
+
+#: core/templates/management/bazaar_statistics.html:112
+msgid "Sortiert nach Bruttoumsatz; bei Gleichstand nach Artikelanzahl."
+msgstr ""
+"Triés par chiffre d’affaires brut, puis par nombre d’articles en cas "
+"d’égalité."
+
+#: core/templates/management/bazaar_statistics.html:114
+msgid "Platz"
+msgstr "Rang"
+
+#: core/templates/management/bazaar_statistics.html:131
+msgid "Durchschnitt, Median und Stornoquote"
+msgstr "Moyenne, médiane et taux d’annulation"
+
+#: core/templates/management/bazaar_statistics.html:135
+msgid "Durchschnitt pro abgeschlossener Rechnung"
+msgstr "Moyenne par ticket clôturé"
+
+#: core/templates/management/bazaar_statistics.html:139
+msgid "Median pro abgeschlossener Rechnung"
+msgstr "Médiane par ticket clôturé"
+
+#: core/templates/management/bazaar_statistics.html:144
+msgid ""
+"Für Durchschnitt und Median gibt es noch keine abgeschlossenen Rechnungen."
+msgstr ""
+"Aucun ticket clôturé ne permet encore de calculer la moyenne et la médiane."
+
+#: core/templates/management/bazaar_statistics.html:146
+msgid "Stornoquote"
+msgstr "Taux d’annulation"
+
+#: core/templates/management/bazaar_statistics.html:148
+#, python-format
+msgid "%(cancelled)s von %(total)s Positionen storniert (%(rate)s %%)."
+msgstr "%(cancelled)s article(s) annulé(s) sur %(total)s (%(rate)s %%)."
+
+#: core/templates/management/bazaar_statistics.html:149
+msgid "Enthalten sind Positionen aus offenen und abgeschlossenen Belegen."
+msgstr "Les articles des tickets ouverts et clôturés sont inclus."
+
+#: core/templates/management/bazaar_statistics.html:151
+msgid "Für diesen Basar wurden noch keine Artikelpositionen erfasst."
+msgstr "Aucun article n’a encore été enregistré pour ce vide-grenier."
+
+#: core/templates/management/bazaar_statistics.html:156
+msgid "Stoßzeiten"
+msgstr "Heures de pointe"
+
+#: core/templates/management/bazaar_statistics.html:157
+msgid ""
+"Die fünf 5-Minuten-Intervalle mit den meisten abgeschlossenen Rechnungen. "
+"Bei Gleichstand entscheidet der Umsatz."
+msgstr ""
+"Les cinq tranches de 5 minutes comptant le plus de tickets clôturés. En cas "
+"d’égalité, le chiffre d’affaires départage."
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Intervall"
+msgstr "Intervalle"
+
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Rechnungen"
+msgstr "Tickets"
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Umsatz"
+msgstr "Chiffre d’affaires"
+
+#: core/templates/management/bazaar_statistics.html:176
+msgid "Umsatz je Kassierer"
+msgstr "Chiffre d’affaires par caissier"
+
+#: core/templates/management/bazaar_statistics.html:177
+msgid ""
+"Bruttoumsatz aus abgeschlossenen Belegen; stornierte Positionen sind "
+"ausgenommen."
+msgstr "Chiffre d’affaires brut des tickets clôturés, hors articles annulés."
+
+#: core/templates/management/bazaar_statistics.html:196
+msgid "Alle Rechnungen"
+msgstr "Tous les tickets"
+
+#: core/templates/management/bazaar_statistics.html:197
+msgid ""
+"Offene Belege werden mit dem aktuellen Zwischenbetrag angezeigt und "
+"aktualisieren sich beim erneuten Aufruf."
+msgstr ""
+"Les tickets ouverts affichent leur montant provisoire, actualisé à chaque "
+"nouvelle consultation."
+
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Nummer"
+msgstr "Numéro"
+
+#: core/templates/management/bazaar_statistics.html:207
+#: core/templates/management/statistics.html:87
+#: core/templates/seller/dashboard.html:24
+msgid "Details"
+msgstr "Détails"
+
+#: core/templates/management/bazaar_statistics.html:210
+msgid "Für diesen Basar gibt es noch keine Rechnungen."
+msgstr "Aucun ticket n’est encore disponible pour ce vide-grenier."
+
+#: core/templates/management/bazaar_statistics.html:217
+msgid "Neuere"
+msgstr "Plus récents"
+
+#: core/templates/management/bazaar_statistics.html:219
+#, python-format
+msgid "Seite %(current)s von %(total)s"
+msgstr "Page %(current)s sur %(total)s"
+
+#: core/templates/management/bazaar_statistics.html:221
+msgid "Ältere"
+msgstr "Plus anciens"
+
+#: core/templates/management/bazaar_statistics.html:227
+msgid "Zur Statistikübersicht"
+msgstr "Retour aux statistiques"
+
+#: core/templates/management/bazaars.html:3
+#: core/templates/management/bazaars.html:5
+#: core/templates/management/home.html:10
+msgid "Basare verwalten"
+msgstr "Gérer les vide-greniers"
+
+#: core/templates/management/bazaars.html:9
+msgid "Nummernvergabe bis"
+msgstr "Attribution des numéros jusqu’au"
+
+#: core/templates/management/bazaars.html:21
+msgid "Abrechnung"
+msgstr "Clôture"
+
+#: core/templates/management/bazaars.html:26
+#: core/templates/management/statistics.html:90
+msgid "Es wurden noch keine Basare angelegt."
+msgstr "Aucun vide-grenier n’a encore été créé."
+
+#: core/templates/management/bazaars.html:31
+#: core/templates/management/settings.html:19
+msgid "Zur Verwaltung"
+msgstr "Retour à l’administration"
+
+#: core/templates/management/home.html:9
+msgid "Basare anlegen und verwalten."
+msgstr "Créer et gérer les vide-greniers."
+
+#: core/templates/management/home.html:14
+msgid "Benutzer verwalten und Rechte vergeben."
+msgstr "Gérer les utilisateurs et attribuer des droits."
+
+#: core/templates/management/home.html:15
+#| msgid "Basare verwalten"
+msgid "Benutzer verwalten"
+msgstr "Gérer les utilisateurs"
+
+#: core/templates/management/home.html:18
+#: core/templates/management/settings.html:3
+#: core/templates/management/settings.html:5
+msgid "Systemeinstellungen"
+msgstr "Paramètres système"
+
+#: core/templates/management/home.html:19
+msgid "Globale Preise, Gebühren, Einwilligung und Plakatvorgaben."
+msgstr ""
+"Prix et frais généraux, consentement et instructions pour les affiches."
+
+#: core/templates/management/home.html:20
+msgid "Einstellungen bearbeiten"
+msgstr "Modifier les paramètres"
+
+#: core/templates/management/home.html:24
+msgid "Verkaufsentwicklung, Einnahmen und Preisverteilung der Basare."
+msgstr ""
+"Évolution des ventes, recettes et répartition des prix des vide-greniers."
+
+#: core/templates/management/home.html:25
+msgid "Statistiken ansehen"
+msgstr "Voir les statistiques"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Vorlage bearbeiten"
+msgstr "Modifier le modèle"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Neue Vorlage"
+msgstr "Nouveau modèle"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage bearbeiten"
+msgstr "Modifier le modèle de relevé vendeur"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage anlegen"
+msgstr "Créer un modèle de relevé vendeur"
+
+#: core/templates/management/invoice_template_form.html:17
+msgid "Vorlage speichern"
+msgstr "Enregistrer le modèle"
+
+#: core/templates/management/invoice_templates.html:6
+msgid ""
+"Die Standardvorlage ist schreibgeschützt. Über „Kopie“ kannst du eine "
+"bearbeitbare Vorlage daraus erstellen. Das globale Logo wird automatisch "
+"eingefügt."
+msgstr ""
+"Le modèle par défaut est en lecture seule. Utilisez « Copier » pour en créer "
+"une version modifiable. Le logo global sera ajouté automatiquement."
+
+#: core/templates/management/invoice_templates.html:7
+msgid "Neue Vorlage anlegen"
+msgstr "Créer un modèle"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Standard für neue Basare"
+msgstr "Par défaut pour les nouveaux vide-greniers"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Verwendet von Basaren"
+msgstr "Utilisé par les vide-greniers"
+
+#: core/templates/management/invoice_templates.html:17
+#, python-format
+msgid "Als Standardvorlage verwenden: %(name)s"
+msgstr "Utiliser comme modèle par défaut : %(name)s"
+
+#: core/templates/management/invoice_templates.html:20
+msgid "schreibgeschützt"
+msgstr "en lecture seule"
+
+#: core/templates/management/invoice_templates.html:25
+msgid "Löschen"
+msgstr "Supprimer"
+
+#: core/templates/management/invoice_templates.html:27 core/views.py:796
+#: core/views.py:800
+msgid "Kopie"
+msgstr "Copier"
+
+#: core/templates/management/invoice_templates.html:31
+msgid "Es gibt noch keine Vorlagen."
+msgstr "Aucun modèle n’est disponible."
+
+#: core/templates/management/invoice_templates.html:36
+msgid "Standardvorlage speichern"
+msgstr "Enregistrer le modèle par défaut"
+
+#: core/templates/management/invoice_templates.html:38
+msgid "Zurück zu den Systemeinstellungen"
+msgstr "Retour aux paramètres système"
+
+#: core/templates/management/settings.html:17
+msgid "Einstellungen speichern"
+msgstr "Enregistrer les paramètres"
+
+#: core/templates/management/settings.html:18
+msgid "Verkäuferrechnungsvorlagen verwalten"
+msgstr "Gérer les modèles de relevé vendeur"
+
+#: core/templates/management/settings.html:23
+msgid "Aktuelles Verkäuferabrechnungslogo"
+msgstr "Logo actuel des relevés vendeurs"
+
+#: core/templates/management/settings.html:24
+msgid "Aktuelles globales Logo"
+msgstr "Logo global actuel"
+
+#: core/templates/management/statistics.html:6
+msgid ""
+"Berücksichtigt werden ausschließlich abgeschlossene Belege und nicht "
+"stornierte Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr ""
+"Seuls les tickets clôturés et les articles non annulés sont pris en compte. "
+"Les recettes correspondent au chiffre d’affaires brut."
+
+#: core/templates/management/statistics.html:20
+msgid "Verkaufsentwicklung je Basar"
+msgstr "Évolution des ventes par vide-grenier"
+
+#: core/templates/management/statistics.html:26
+#, python-format
+msgid "%(label)s: %(value)s Artikel"
+msgstr "%(label)s : %(value)s articles"
+
+#: core/templates/management/statistics.html:29
+#: core/templates/management/statistics.html:67
+#, python-format
+msgid "%(value)s Artikel"
+msgstr "%(value)s articles"
+
+#: core/templates/management/statistics.html:34
+#: core/templates/management/statistics.html:53
+msgid "Es gibt noch keine Basare."
+msgstr "Aucun vide-grenier n’est disponible."
+
+#: core/templates/management/statistics.html:39
+msgid "Einnahmeentwicklung je Basar"
+msgstr "Évolution des recettes par vide-grenier"
+
+#: core/templates/management/statistics.html:45
+#, python-format
+msgid "%(label)s: %(value)s %(currency)s"
+msgstr "%(label)s : %(value)s %(currency)s"
+
+#: core/templates/management/statistics.html:58
+msgid "Artikelverteilung nach Preis"
+msgstr "Répartition des articles par prix"
+
+#: core/templates/management/statistics.html:64
+#, python-format
+msgid "%(value)s Artikel zu %(label)s"
+msgstr "%(value)s articles à %(label)s"
+
+#: core/templates/management/statistics.html:72
+msgid "Es wurden noch keine Artikel verkauft."
+msgstr "Aucun article n’a encore été vendu."
+
+#: core/templates/management/statistics.html:77
+msgid "Basarübersicht"
+msgstr "Vue d’ensemble des vide-greniers"
+
+#: core/templates/partials/cookie_details.html:2
+msgid ""
+"Wir verwenden keine Cookies von Drittanbietern und binden keine Analyse- "
+"oder Werbedienste ein. Folgende technisch notwendige Cookies werden für den "
+"Betrieb genutzt:"
+msgstr ""
+"Nous n’utilisons aucun cookie tiers ni service d’analyse ou de publicité. "
+"Les cookies suivants, indispensables au fonctionnement du site, sont "
+"utilisés :"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Cookie"
+msgstr "Cookie"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Inhalt und Zweck"
+msgstr "Contenu et finalité"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Speicherdauer"
+msgstr "Durée de conservation"
+
+#: core/templates/partials/cookie_details.html:9
+msgid "Signierter Zustimmungsstatus. Enthält keine persönlichen Angaben."
+msgstr "État de consentement signé. Ne contient aucune donnée personnelle."
+
+#: core/templates/partials/cookie_details.html:10
+msgid "1 Jahr"
+msgstr "1 an"
+
+#: core/templates/partials/cookie_details.html:14
+msgid ""
+"Zufällige Sitzungskennung. Anmeldestatus, ausgewählte Rolle und "
+"Kassenkontext werden serverseitig gespeichert, nicht im Cookie."
+msgstr ""
+"Identifiant de session aléatoire. L’état de connexion, le rôle choisi et le "
+"contexte de caisse sont stockés côté serveur, pas dans le cookie."
+
+#: core/templates/partials/cookie_details.html:15
+msgid "Bis zu 2 Wochen; die Sitzung kann vorher beendet werden"
+msgstr "Jusqu’à 2 semaines ; la session peut se terminer plus tôt"
+
+#: core/templates/partials/cookie_details.html:19
+msgid ""
+"Zufälliger Sicherheitstoken zum Schutz vor gefälschten "
+"Formularübermittlungen. Keine Profil- oder Verkaufsdaten."
+msgstr ""
+"Jeton de sécurité aléatoire protégeant contre les envois de formulaires "
+"falsifiés. Aucune donnée de profil ou de vente."
+
+#: core/templates/partials/cookie_details.html:20
+msgid "Bis zu 1 Jahr"
+msgstr "Jusqu’à 1 an"
+
+#: core/templates/partials/cookie_details.html:24
+msgid ""
+"Signierte, kurzfristige Statusmeldungen der Anwendung, zum Beispiel Hinweise "
+"nach dem Speichern. Bei größeren Meldungen werden sie serverseitig in der "
+"Sitzung abgelegt."
+msgstr ""
+"Messages d’état signés et temporaires de l’application, par exemple après un "
+"enregistrement. Les messages plus longs sont stockés côté serveur dans la "
+"session."
+
+#: core/templates/partials/cookie_details.html:25
+msgid "Kurzzeitig, in der Regel bis zum nächsten Seitenaufruf"
+msgstr "Temporairement, généralement jusqu’à la prochaine visite"
+
+#: core/templates/partials/cookie_details.html:29
+msgid "Ausgewählte Sprache der Benutzeroberfläche."
+msgstr "Langue sélectionnée de l'interface utilisateur."
+
+#: core/templates/partials/cookie_details.html:30
+msgid "Bis zum Schließen des Browsers (Sitzungscookie)"
+msgstr "Jusqu'à la fermeture du navigateur (cookie de session)"
+
+#: core/templates/partials/cookie_details.html:35
+msgid ""
+"Ohne Zustimmung können die Anmelde-, Verkäufer- und Kassenfunktionen nicht "
+"verwendet werden. Du kannst die Zustimmung jederzeit durch Löschen der "
+"Cookies im Browser zurücknehmen; beim nächsten Besuch fragen wir erneut."
+msgstr ""
+"Sans consentement, les fonctions de connexion, de vente et de caisse ne sont "
+"pas accessibles. Vous pouvez retirer votre consentement à tout moment en "
+"supprimant les cookies de votre navigateur ; nous vous le demanderons à "
+"nouveau lors de votre prochaine visite."
+
+#: core/templates/partials/line_chart.html:2
+#, python-format
+msgid "%(title)s. Y-Achse: %(axis)s"
+msgstr "%(title)s. Axe Y : %(axis)s"
+
+#: core/templates/partials/line_chart.html:31
+#: core/templates/partials/line_chart.html:32
+#, python-format
+msgid "%(label)s: %(value)s"
+msgstr "%(label)s : %(value)s"
+
+#: core/templates/partials/line_chart.html:41
+msgid "Messwerte als Tabelle anzeigen"
+msgstr "Afficher les mesures sous forme de tableau"
+
+#: core/templates/partials/line_chart.html:44
+msgid "Zeitpunkt"
+msgstr "Date et heure"
+
+#: core/templates/partials/line_chart.html:49
+msgid "Keine Messwerte vorhanden."
+msgstr "Aucune mesure disponible."
+
+#: core/templates/privacy_policy.html:12
+msgid "Die Datenschutzerklärung ist derzeit noch nicht hinterlegt."
+msgstr "La politique de confidentialité n’a pas encore été renseignée."
+
+#: core/templates/privacy_policy.html:15
+msgid "Cookies und ähnliche Technologien"
+msgstr "Cookies et technologies similaires"
+
+#: core/templates/registration/accept_consent.html:4
+msgid "Datenschutzhinweise bestätigen"
+msgstr "Confirmer les informations relatives à la confidentialité"
+
+#: core/templates/registration/accept_consent.html:7
+msgid "Aktualisierte Datenschutzhinweise"
+msgstr "Informations relatives à la confidentialité mises à jour"
+
+#: core/templates/registration/accept_consent.html:9
+#, python-format
+msgid "Version %(version)s"
+msgstr "Version %(version)s"
+
+#: core/templates/registration/accept_consent.html:14
+msgid "Zustimmung speichern"
+msgstr "Enregistrer le consentement"
+
+#: core/templates/registration/account_deleted.html:3
+#: core/templates/registration/account_deleted.html:6
+msgid "Konto gelöscht"
+msgstr "Compte supprimé"
+
+#: core/templates/registration/account_deleted.html:7
+msgid ""
+"Dein Konto und deine persönlichen Daten wurden gelöscht. Verkäufernummern, "
+"Belege und Basarabrechnungen bleiben anonymisiert erhalten."
+msgstr ""
+"Votre compte et vos données personnelles ont été supprimés. Les numéros de "
+"vendeur, tickets et clôtures de vide-grenier sont conservés sous forme "
+"anonymisée."
+
+#: core/templates/registration/account_deleted.html:8
+#: core/templates/scanner/error.html:12
+msgid "Zur Startseite"
+msgstr "Retour à l’accueil"
+
+#: core/templates/registration/login.html:15
+msgid "Passwort vergessen?"
+msgstr "Mot de passe oublié ?"
+
+#: core/templates/registration/password_reset_complete.html:3
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Passwort geändert"
+msgstr "Mot de passe modifié"
+
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Jetzt anmelden"
+msgstr "Se connecter"
+
+#: core/templates/registration/password_reset_confirm.html:3
+msgid "Neues Passwort"
+msgstr "Nouveau mot de passe"
+
+#: core/templates/registration/password_reset_confirm.html:6
+msgid "Neues Passwort festlegen"
+msgstr "Définir un nouveau mot de passe"
+
+#: core/templates/registration/password_reset_confirm.html:14
+msgid "Passwort speichern"
+msgstr "Enregistrer le mot de passe"
+
+#: core/templates/registration/password_reset_confirm.html:16
+msgid "Der Link ist ungültig oder abgelaufen."
+msgstr "Ce lien est invalide ou a expiré."
+
+#: core/templates/registration/password_reset_done.html:3
+msgid "E-Mail versendet"
+msgstr "E-mail envoyée"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid "Prüfe dein Postfach"
+msgstr "Consultez votre boîte de réception"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid ""
+"Falls ein aktives Konto zu der Adresse existiert, wurde ein Link versendet."
+msgstr "Si un compte actif est associé à cette adresse, un lien a été envoyé."
+
+#: core/templates/registration/password_reset_email.html:2
+msgid ""
+"Du erhältst diese E-Mail, weil ein Passwort-Reset für dein Basar-Konto "
+"angefordert wurde."
+msgstr ""
+"Vous recevez cet e-mail car une réinitialisation du mot de passe de votre "
+"compte Basar a été demandée."
+
+#: core/templates/registration/password_reset_email.html:4
+msgid "Öffne diesen Link, um ein neues Passwort festzulegen:"
+msgstr "Ouvrez ce lien pour définir un nouveau mot de passe :"
+
+#: core/templates/registration/password_reset_email.html:7
+msgid ""
+"Wenn du den Reset nicht angefordert hast, kannst du diese Nachricht "
+"ignorieren."
+msgstr ""
+"Si vous n’avez pas demandé cette réinitialisation, vous pouvez ignorer ce "
+"message."
+
+#: core/templates/registration/password_reset_form.html:3
+#: core/templates/registration/password_reset_form.html:6
+msgid "Passwort zurücksetzen"
+msgstr "Réinitialiser le mot de passe"
+
+#: core/templates/registration/password_reset_form.html:7
+msgid "Wir senden einen Link an die E-Mail-Adresse deines Kontos."
+msgstr "Nous enverrons un lien à l’adresse e-mail de votre compte."
+
+#: core/templates/registration/password_reset_form.html:14
+msgid "Link senden"
+msgstr "Envoyer le lien"
+
+#: core/templates/registration/profile_edit.html:3
+#: core/templates/registration/profile_edit.html:6
+msgid "Benutzerdaten bearbeiten"
+msgstr "Modifier les données utilisateur"
+
+#: core/templates/registration/profile_edit.html:7
+msgid "E-Mail-Adresse für die Anmeldung:"
+msgstr "Adresse e-mail de connexion :"
+
+#: core/templates/registration/profile_edit.html:17
+msgid "Daten speichern"
+msgstr "Enregistrer les données"
+
+#: core/templates/registration/profile_edit.html:21
+#: core/templates/registration/profile_edit.html:29
+msgid "Konto löschen"
+msgstr "Supprimer le compte"
+
+#: core/templates/registration/profile_edit.html:22
+msgid ""
+"Deine persönlichen Daten und Einwilligungen werden gelöscht. "
+"Verkäufernummern, Belege und Abrechnungen bleiben anonymisiert erhalten, "
+"damit die Basarsummen korrekt bleiben."
+msgstr ""
+"Vos données personnelles et consentements seront supprimés. Les numéros de "
+"vendeur, tickets et relevés seront conservés sous forme anonymisée afin de "
+"préserver l’exactitude des totaux."
+
+#: core/templates/registration/profile_edit.html:27
+msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgstr "Je souhaite supprimer définitivement mon compte."
+
+#: core/templates/registration/register.html:8
+msgid ""
+"Vorname, Nachname, E-Mail-Adresse und Passwort sind erforderlich. "
+"Telefonnummer und Adresse sind freiwillig."
+msgstr ""
+"Le prénom, le nom, l’adresse e-mail et le mot de passe sont obligatoires. Le "
+"téléphone et l’adresse sont facultatifs."
+
+#: core/templates/registration/register.html:18
+msgid "Konto erstellen und Bestätigungslink anfordern"
+msgstr "Créer un compte et demander un lien de confirmation"
+
+#: core/templates/registration/registration_sent.html:3
+#: core/templates/registration/registration_sent.html:6
+msgid "E-Mail bestätigen"
+msgstr "Confirmer l’adresse e-mail"
+
+#: core/templates/registration/registration_sent.html:8
+msgid "Der Bestätigungslink ist abgelaufen. Fordere einen neuen Link an."
+msgstr "Le lien de confirmation a expiré. Demandez-en un nouveau."
+
+#: core/templates/registration/registration_sent.html:10
+msgid ""
+"Falls ein unbestätigtes Konto zu der Adresse existiert, wurde ein neuer Link "
+"versendet."
+msgstr ""
+"Si un compte non confirmé est associé à cette adresse, un nouveau lien a été "
+"envoyé."
+
+#: core/templates/registration/registration_sent.html:12
+#, python-format
+msgid "Ein Bestätigungslink wurde an %(email)s gesendet."
+msgstr "Un lien de confirmation a été envoyé à %(email)s."
+
+#: core/templates/registration/registration_sent.html:16
+msgid "Bestätigungslink erneut senden"
+msgstr "Renvoyer le lien de confirmation"
+
+#: core/templates/registration/registration_sent.html:18
+msgid "Link erneut senden"
+msgstr "Renvoyer le lien"
+
+#: core/templates/role.html:3
+msgid "Ansicht auswählen"
+msgstr "Choisir une vue"
+
+#: core/templates/role.html:5
+msgid "Wie möchtest du fortfahren?"
+msgstr "Comment souhaitez-vous continuer ?"
+
+#: core/templates/role.html:10
+msgid "Verkäufernummern, aktuelle Basare und Historie ansehen."
+msgstr ""
+"Consultez vos numéros de vendeur, les vide-greniers en cours et l’historique."
+
+#: core/templates/role.html:11
+msgid "Verkäuferansicht öffnen"
+msgstr "Ouvrir l’espace vendeur"
+
+#: core/templates/role.html:17
+msgid "Verkäufe an einer Kasse erfassen."
+msgstr "Enregistrer les ventes à la caisse."
+
+#: core/templates/role.html:18
+msgid "Kassenansicht öffnen"
+msgstr "Ouvrir la caisse"
+
+#: core/templates/scanner/error.html:4
+msgid "Scanner Fehler"
+msgstr "Erreur du scanner"
+
+#: core/templates/scanner/error.html:9
+msgid "Scanner-Fehler"
+msgstr "Erreur du scanner"
+
+#: core/templates/scanner/error.html:11
+msgid "Bitte öffnen Sie in der Kasse eine neue Scanner-Session."
+msgstr "Veuillez ouvrir une nouvelle session de scanner dans la caisse."
+
+#: core/templates/scanner/join.html:4
+msgid "QR-Code Scanner"
+msgstr "Scanner de code QR"
+
+#: core/templates/scanner/join.html:7
+msgid "Basar-QR-Code Scanner"
+msgstr "Scanner de code QR du bazar"
+
+#: core/templates/scanner/join.html:8
+#, python-format
+msgid "Verbunden mit: <strong>%(bazaar)s</strong>"
+msgstr "Connecté à : <strong>%(bazaar)s</strong>"
+
+#: core/templates/scanner/join.html:11
+msgid "Scanbereit"
+msgstr "Prêt à scanner"
+
+#: core/templates/scanner/join.html:13
+msgid "Initialisiere Kamera..."
+msgstr "Initialisation de la caméra..."
+
+#: core/templates/scanner/join.html:24
+#| msgid "Anderen Preis eingeben"
+msgid "Oder manuell eingeben:"
+msgstr "Ou saisir manuellement :"
+
+#: core/templates/scanner/join.html:29
+#| msgid "Verkäufernummer wählen"
+msgid "Verkäufernummer auswählen"
+msgstr "Sélectionner un numéro de vendeur"
+
+#: core/templates/scanner/join.html:41
+msgid "z. B. 2,50"
+msgstr "p. ex. 2,50"
+
+#: core/templates/scanner/join.html:52 core/templates/scanner/join.html:262
+#| msgid "Artikel für %(number)s"
+msgid "Artikel übernommen"
+msgstr "Article ajouté"
+
+#: core/templates/scanner/join.html:133 core/templates/scanner/join.html:210
+msgid "Scanbereit – halte QR-Code zur Kamera"
+msgstr "Prêt à scanner – placez le code QR devant la caméra"
+
+#: core/templates/scanner/join.html:144
+msgid "Kamera-Zugriff wurde verweigert"
+msgstr "L’accès à la caméra a été refusé"
+
+#: core/templates/scanner/join.html:146
+msgid "Keine Kamera gefunden"
+msgstr "Aucune caméra trouvée"
+
+#: core/templates/scanner/join.html:202
+msgid "QR-Code erkannt – nächster Scan in 3 Sekunden"
+msgstr "Code QR détecté – prochain scan dans 3 secondes"
+
+#: core/templates/scanner/join.html:258
+msgid "Fehler beim Übertragen"
+msgstr "Erreur lors de la transmission"
+
+#: core/templates/scanner/join.html:298
+#| msgid "Bitte wähle einen gültigen Basar."
+msgid "Bitte wähle eine Verkäufernummer aus."
+msgstr "Veuillez sélectionner un numéro de vendeur."
+
+#: core/templates/scanner/join.html:302 core/views.py:1314
+msgid "Bitte gib einen gültigen Preis ein."
+msgstr "Veuillez saisir un prix valide."
+
+#: core/templates/seller/bazaar_details.html:3
+#, python-format
+msgid "Verkaufsdetails – %(name)s"
+msgstr "Détail des ventes – %(name)s"
+
+#: core/templates/seller/bazaar_details.html:6
+#: core/templates/seller/dashboard.html:13
+msgid "Verkäufernummer:"
+msgstr "Numéro de vendeur :"
+
+#: core/templates/seller/bazaar_details.html:7
+#: core/templates/seller/dashboard.html:38
+msgid "Basartag:"
+msgstr "Jour du vide-grenier :"
+
+#: core/templates/seller/bazaar_details.html:12
+#: core/templates/seller/price_labels.html:3
+#: core/templates/seller/price_labels.html:5
+msgid "Preisschilder generieren"
+msgstr "Générer des étiquettes de prix"
+
+#: core/templates/seller/bazaar_details.html:18
+msgid "Endgültige Abrechnung"
+msgstr "Clôture définitive"
+
+#: core/templates/seller/bazaar_details.html:20
+msgid "Derzeitige Auszahlung"
+msgstr "Montant actuel à verser"
+
+#: core/templates/seller/bazaar_details.html:21
+msgid "Vorläufiger Stand. Berücksichtigt sind abgeschlossene Kassenbelege."
+msgstr ""
+"Montant provisoire. Seuls les tickets de caisse clôturés sont pris en compte."
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/seller/price_labels.html:40
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Anzahl"
+msgstr "Quantité"
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32
+msgid "Summe"
+msgstr "Total"
+
+#: core/templates/seller/bazaar_details.html:36
+msgid "Bisher wurden keine Artikel verkauft."
+msgstr "Aucun article n’a encore été vendu."
+
+#: core/templates/seller/bazaar_details.html:47 core/views.py:1831
+#, python-format
+msgid "Betreiberanteil (%(percent)s %%)"
+msgstr "Part de l’organisateur (%(percent)s %%)"
+
+#: core/templates/seller/bazaar_details.html:50 core/views.py:1835
+msgid "Auszahlung"
+msgstr "Montant à verser"
+
+#: core/templates/seller/bazaar_details.html:54
+msgid "Zurück zum Verkäuferbereich"
+msgstr "Retour à l’espace vendeur"
+
+#: core/templates/seller/dashboard.html:8
+msgid "Aktuelle Verkäufernummern"
+msgstr "Numéros de vendeur actuels"
+
+#: core/templates/seller/dashboard.html:16
+#: core/templates/seller/dashboard.html:64
+msgid "Erfasster Umsatz:"
+msgstr "Chiffre d’affaires enregistré :"
+
+#: core/templates/seller/dashboard.html:21
+msgid "Preisschilder"
+msgstr "Étiquettes de prix"
+
+#: core/templates/seller/dashboard.html:33
+msgid "Für einen Basar anmelden"
+msgstr "S’inscrire à un vide-grenier"
+
+#: core/templates/seller/dashboard.html:42
+msgid "Frühere Verkäufernummer wiederverwenden (optional)"
+msgstr "Réutiliser un ancien numéro de vendeur (facultatif)"
+
+#: core/templates/seller/dashboard.html:44
+msgid "Neue Nummer vergeben"
+msgstr "Attribuer un nouveau numéro"
+
+#: core/templates/seller/dashboard.html:50
+msgid "Verkäufernummer anfordern"
+msgstr "Demander un numéro de vendeur"
+
+#: core/templates/seller/dashboard.html:58
+msgid "Basarhistorie"
+msgstr "Historique des vide-greniers"
+
+#: core/templates/seller/dashboard.html:65
+msgid "Abrechnung ansehen"
+msgstr "Voir le relevé"
+
+#: core/templates/seller/dashboard.html:71
+msgid "Noch keine aktuellen oder vergangenen Basare vorhanden."
+msgstr "Aucun vide-grenier en cours ou passé."
+
+#: core/templates/seller/price_labels.html:6
+#, python-format
+msgid ""
+"Basar: <strong>%(name)s</strong> · Verkäufernummer: <strong>%(number)s</"
+"strong>"
+msgstr "Bazar : <strong>%(name)s</strong> · Numéro de vendeur : <strong>%(number)s</strong>"
+
+#: core/templates/seller/price_labels.html:9
+msgid "Wählen Sie die gewünschten Preise und Mengen"
+msgstr "Sélectionnez les prix et les quantités souhaités"
+
+#: core/templates/seller/price_labels.html:19
+#: core/templates/seller/price_labels.html:64
+#: core/templates/settlement_confirm.html:10
+#: core/templates/settlement_confirm.html:74
+#: core/templates/settlement_confirm.html:76
+msgid "PDF herunterladen"
+msgstr "Télécharger le PDF"
+
+#: core/templates/seller/price_labels.html:24
+msgid "Verfügbare Preise:"
+msgstr "Prix disponibles :"
+
+#: core/templates/seller/price_labels.html:43
+msgid "Schilder"
+msgstr "Étiquettes"
+
+#: core/templates/seller/price_labels.html:49
+msgid "Keine Preise in den Systemeinstellungen konfiguriert."
+msgstr "Aucun prix n’est configuré dans les paramètres système."
+
+#: core/templates/seller/price_labels.html:55
+#, python-format
+msgid ""
+"Jedes A4-Blatt enthält %(cols)s×%(rows)s = %(total)s kleine Preisschilder. "
+"Mit 3mm Rand um jeden QR-Code und raumfüllendem Preis. Perfekt zum "
+"Ausschneiden und Aufkleben!"
+msgstr "Chaque feuille A4 contient %(cols)s×%(rows)s = %(total)s petites étiquettes de prix. Avec une marge de 3 mm autour de chaque code QR et un prix occupant tout l’espace. Parfaites à découper et à coller !"
+
+#: core/templates/settlement_confirm.html:6
+#, python-format
+msgid "Abrechnung: %(name)s"
+msgstr "Clôture : %(name)s"
+
+#: core/templates/settlement_confirm.html:7
+msgid ""
+"Der Basar ist abgeschlossen. Die Abrechnung gruppiert Verkäufe nach Preis "
+"und Anzahl; jede Verkäufernummer beginnt auf einer neuen Seite."
+msgstr ""
+"Le vide-grenier est clôturé. Le relevé regroupe les ventes par prix et "
+"quantité ; chaque numéro de vendeur commence sur une nouvelle page."
+
+#: core/templates/settlement_confirm.html:9
+#, python-format
+msgid "Die Abrechnung wurde am %(created_at)s erstellt."
+msgstr "Le relevé a été créé le %(created_at)s."
+
+#: core/templates/settlement_confirm.html:14
+msgid ""
+"Beim Stornieren bleibt diese Abrechnung als Historie erhalten. Danach kann "
+"der Basar wieder aktiviert und später neu abgerechnet werden."
+msgstr ""
+"L’annulation conserve ce relevé dans l’historique. Le vide-grenier pourra "
+"ensuite être réactivé et clôturé à nouveau."
+
+#: core/templates/settlement_confirm.html:15
+msgid "Abrechnung stornieren"
+msgstr "Annuler la clôture"
+
+#: core/templates/settlement_confirm.html:19
+msgid ""
+"Beim Erstellen werden der konfigurierte Festbetrag pro Verkäufer und der "
+"prozentuale Betreiberanteil am Bruttoumsatz verwendet."
+msgstr ""
+"La clôture applique les frais fixes configurés par vendeur ainsi que la part "
+"de l’organisateur calculée en pourcentage du chiffre d’affaires brut."
+
+#: core/templates/settlement_confirm.html:22
+msgid "Abrechnung erstellen und PDF herunterladen"
+msgstr "Créer la clôture et télécharger le PDF"
+
+#: core/templates/settlement_confirm.html:25
+msgid ""
+"Eine neue Abrechnung kann erst nach Abschluss des Basars erstellt werden."
+msgstr ""
+"Une nouvelle clôture ne peut être créée qu’après la fin du vide-grenier."
+
+#: core/templates/settlement_confirm.html:29
+msgid "Gesamtabrechnung"
+msgstr "Récapitulatif général"
+
+#: core/templates/settlement_confirm.html:30
+msgid ""
+"Alle abgeschlossenen Verkäufe zusammengefasst nach Artikelpreis. Die Tabelle "
+"hilft beim Abgleichen und Zählen der Verkaufseinnahmen."
+msgstr ""
+"Toutes les ventes clôturées, regroupées par prix d’article. Ce tableau "
+"facilite le rapprochement et le comptage des recettes."
+
+#: core/templates/settlement_confirm.html:41 core/views.py:1688
+msgid "Keine abgeschlossenen Verkäufe."
+msgstr "Aucune vente clôturée."
+
+#: core/templates/settlement_confirm.html:47 core/views.py:1709
+msgid "Gesamtumsatz"
+msgstr "Chiffre d’affaires total"
+
+#: core/templates/settlement_confirm.html:48 core/views.py:1711
+msgid "Verkäufergebühren"
+msgstr "Frais vendeurs"
+
+#: core/templates/settlement_confirm.html:49 core/views.py:1715
+msgid "Betreiberanteile"
+msgstr "Parts de l’organisateur"
+
+#: core/templates/settlement_confirm.html:50 core/views.py:1718
+msgid "Gesamtauszahlung"
+msgstr "Total à verser"
+
+#: core/templates/settlement_confirm.html:54
+#, python-format
+msgid ""
+"Nicht abgeschlossene Kassenbelege (%(count)s) sind in diesen Summen nicht "
+"enthalten und werden im PDF separat ausgewiesen."
+msgstr ""
+"Les tickets de caisse non clôturés (%(count)s) ne sont pas inclus dans ces "
+"totaux et figurent séparément dans le PDF."
+
+#: core/templates/settlement_confirm.html:59
+msgid "Abrechnungshistorie"
+msgstr "Historique des clôtures"
+
+#: core/templates/settlement_confirm.html:62
+msgid "Erstellt"
+msgstr "Créé"
+
+#: core/templates/settlement_confirm.html:68
+msgid "Aktuell"
+msgstr "Actuel"
+
+#: core/views.py:116 core/views.py:228
+msgid "Die Datenschutzhinweise sind noch nicht eingerichtet."
+msgstr ""
+"Les informations relatives à la confidentialité ne sont pas encore "
+"configurées."
+
+#: core/views.py:131
+msgid "Dein Konto wurde erstellt."
+msgstr "Votre compte a été créé."
+
+#: core/views.py:154
+msgid ""
+"Zu viele Verifizierungsanfragen. Bitte versuche es in einer Stunde erneut."
+msgstr "Trop de demandes de vérification. Veuillez réessayer dans une heure."
+
+#: core/views.py:192
+msgid "Dein Konto wurde bestätigt."
+msgstr "Votre compte a été confirmé."
+
+#: core/views.py:220
+msgid "Für diese Ansicht hast du keine Berechtigung."
+msgstr "Vous n’êtes pas autorisé à accéder à cette vue."
+
+#: core/views.py:237
+msgid "Deine Zustimmung wurde gespeichert."
+msgstr "Votre consentement a été enregistré."
+
+#: core/views.py:247
+msgid "Deine Benutzerdaten wurden gespeichert."
+msgstr "Vos données utilisateur ont été enregistrées."
+
+#: core/views.py:256
+msgid "Bitte bestätige zuerst die Löschung deines Kontos."
+msgstr "Veuillez d’abord confirmer la suppression de votre compte."
+
+#: core/views.py:281
+msgid ""
+"Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst einen "
+"weiteren Superadmin ein."
+msgstr ""
+"Le dernier superadministrateur actif ne peut pas être supprimé. Veuillez "
+"d’abord en créer un autre."
+
+#: core/views.py:782
+msgid "Systemeinstellungen wurden gespeichert."
+msgstr "Les paramètres système ont été enregistrés."
+
+#: core/views.py:808
+msgid "Kopie wurde angelegt und kann bearbeitet werden."
+msgstr "La copie a été créée et peut être modifiée."
+
+#: core/views.py:834
+msgid "Standardvorlage für neue Basare wurde gespeichert."
+msgstr "Le modèle par défaut des nouveaux vide-greniers a été enregistré."
+
+#: core/views.py:864
+msgid "Verkäuferrechnungsvorlage wurde gespeichert."
+msgstr "Le modèle de relevé vendeur a été enregistré."
+
+#: core/views.py:887
+msgid "Die schreibgeschützte Standardvorlage kann nicht gelöscht werden."
+msgstr "Le modèle par défaut en lecture seule ne peut pas être supprimé."
+
+#: core/views.py:891
+msgid "Bitte wähle zuerst eine andere Standardvorlage für neue Basare."
+msgstr ""
+"Veuillez d’abord choisir un autre modèle par défaut pour les nouveaux vide-"
+"greniers."
+
+#: core/views.py:894
+msgid "Mindestens eine Verkäuferrechnungsvorlage muss vorhanden sein."
+msgstr "Au moins un modèle de relevé vendeur doit être disponible."
+
+#: core/views.py:898
+msgid "Verkäuferrechnungsvorlage wurde gelöscht."
+msgstr "Le modèle de relevé vendeur a été supprimé."
+
+#: core/views.py:902
+msgid "Diese Vorlage wird noch von mindestens einem Basar verwendet."
+msgstr "Ce modèle est encore utilisé par au moins un vide-grenier."
+
+#: core/views.py:921
+msgid "Erstelle ein Plakat für folgende Veranstaltung."
+msgstr "Créez une affiche pour l’événement suivant."
+
+#: core/views.py:923
+msgid "Standardvorgaben:"
+msgstr "Instructions par défaut :"
+
+#: core/views.py:926
+msgid "Veranstaltungsdaten:"
+msgstr "Informations sur l’événement :"
+
+#: core/views.py:927
+#, python-format
+msgid "Basar: %(name)s"
+msgstr "Vide-grenier : %(name)s"
+
+#: core/views.py:928
+#, python-format
+msgid "Beginn: %(starts_at)s"
+msgstr "Début : %(starts_at)s"
+
+#: core/views.py:935
+#, python-format
+msgid "Nummernvergabe möglich bis: %(deadline)s"
+msgstr "Attribution des numéros jusqu’au : %(deadline)s"
+
+#: core/views.py:954
+msgid "Basar wurde gespeichert."
+msgstr "Le vide-grenier a été enregistré."
+
+#: core/views.py:1131
+msgid "Bitte stimme zuerst den Datenschutzhinweisen zu."
+msgstr ""
+"Veuillez d’abord accepter les informations relatives à la confidentialité."
+
+#: core/views.py:1143
+msgid "Die Nummernvergabe für diesen Basar ist geschlossen."
+msgstr "L’attribution des numéros est close pour ce vide-grenier."
+
+#: core/views.py:1147
+msgid "Du bist für diesen Basar bereits registriert."
+msgstr "Vous êtes déjà inscrit à ce vide-grenier."
+
+#: core/views.py:1153
+msgid "Für diesen Basar sind bereits alle Verkäufernummern vergeben."
+msgstr "Tous les numéros de vendeur de ce vide-grenier ont déjà été attribués."
+
+#: core/views.py:1175
+msgid "Diese Verkäufernummer ist für den Basar bereits vergeben."
+msgstr "Ce numéro de vendeur a déjà été attribué pour ce vide-grenier."
+
+#: core/views.py:1193
+msgid ""
+"Die Verkäufernummer konnte nicht vergeben werden. Bitte erneut versuchen."
+msgstr "Le numéro de vendeur n’a pas pu être attribué. Veuillez réessayer."
+
+#: core/views.py:1198
+#, python-format
+msgid "Deine Verkäufernummer lautet %(number)s."
+msgstr "Votre numéro de vendeur est %(number)s."
+
+#: core/views.py:1216
+msgid "Bitte wähle einen gültigen Basar."
+msgstr "Veuillez choisir un vide-grenier valide."
+
+#: core/views.py:1331 core/views.py:1425
+msgid "Dieser Basar ist nicht mehr aktiv."
+msgstr "Ce vide-grenier n’est plus actif."
+
+#: core/views.py:1357
+msgid "Scanner-Eingabe stimmt nicht mit dem Artikel überein."
+msgstr "La saisie du scanner ne correspond pas à l’article."
+
+#: core/views.py:1428
+msgid "Ein leerer Beleg kann nicht abgeschlossen werden."
+msgstr "Un ticket vide ne peut pas être clôturé."
+
+#: core/views.py:1475
+msgid "Bitte wähle zuerst einen Basar aus."
+msgstr "Veuillez d’abord choisir un vide-grenier."
+
+#: core/views.py:1488
+msgid "Der ausgewählte Basar ist nicht mehr aktiv."
+msgstr "Le vide-grenier sélectionné n’est plus actif."
+
+#: core/views.py:1644
+#, python-format
+msgid "Abrechnung - %(name)s"
+msgstr "Clôture - %(name)s"
+
+#: core/views.py:1664
+#, python-format
+msgid "Gesamtabrechnung: %(name)s"
+msgstr "Récapitulatif général : %(name)s"
+
+#: core/views.py:1671
+msgid ""
+"Zusammenfassung aller abgeschlossenen Verkäufe; offene Belege sind separat "
+"aufgeführt."
+msgstr ""
+"Récapitulatif de toutes les ventes clôturées ; les tickets ouverts sont "
+"indiqués séparément."
+
+#: core/views.py:1676 core/views.py:1794
+#, python-format
+msgid "Summe (%(currency)s)"
+msgstr "Total (%(currency)s)"
+
+#: core/views.py:1806
+msgid "Keine verkauften Artikel."
+msgstr "Aucun article vendu."
+
+#: core/views.py:1863
+msgid "Nicht abgerechnete, offene Kassenbelege"
+msgstr "Tickets de caisse ouverts non clôturés"
+
+#: core/views.py:1869
+msgid "Diese Belege sind nicht in den Verkäuferabrechnungen enthalten."
+msgstr "Ces tickets ne sont pas inclus dans les relevés vendeurs."
+
+#: core/views.py:1875
+msgid "Erste Erfassung"
+msgstr "Premier enregistrement"
+
+#: core/views.py:1878
+msgid "Erfasster Betrag"
+msgstr "Montant enregistré"
+
+#: core/views.py:1977 core/views.py:2008
+msgid "Die Abrechnung ist erst nach Abschluss des Basars verfügbar."
+msgstr "La clôture n’est disponible qu’après la fin du vide-grenier."
+
+#: core/views.py:2023 core/views.py:2071
+#, python-format
+msgid "basar-%(id)s-abrechnung.pdf"
+msgstr "basar-%(id)s-cloture.pdf"
+
+#: core/views.py:2042
+msgid "Für diesen Basar gibt es keine aktive Abrechnung zum Stornieren."
+msgstr "Aucune clôture active n’est à annuler pour ce vide-grenier."
+
+#: core/views.py:2052
+msgid ""
+"Die Abrechnung wurde storniert. Der Basar kann jetzt wieder aktiviert werden."
+msgstr ""
+"La clôture a été annulée. Le vide-grenier peut maintenant être réactivé."
+
+#: core/views.py:2087
+#, python-format
+msgid "basar-%(bazaar_id)s-abrechnung-%(settlement_id)s.pdf"
+msgstr "basar-%(bazaar_id)s-cloture-%(settlement_id)s.pdf"
+
+#: core/views.py:2154
+#, python-format
+msgid "Benutzer '%(name)s' wurde aktualisiert."
+msgstr "L’utilisateur « %(name)s » a été mis à jour."
+
+#: core/views.py:2181
+#| msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgid "Du kannst dein eigenes Konto nicht löschen."
+msgstr "Vous ne pouvez pas supprimer votre propre compte."
+
+#: core/views.py:2193
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Der letzte aktive Administrator kann nicht gelöscht werden. Richte zuerst "
+"einen weiteren Administrator ein."
+msgstr "Le dernier administrateur actif ne peut pas être supprimé. Créez d’abord un autre administrateur."
+
+#: core/views.py:2221
+msgid "Benutzer wurde anonymisiert und gelöscht."
+msgstr "L’utilisateur a été anonymisé et supprimé."
+
+#: core/views.py:2238
+msgid "Kein Basar ausgewählt"
+msgstr "Aucun bazar sélectionné"
+
+#: core/views.py:2243
+#| msgid "Dieser Basar ist nicht mehr aktiv."
+msgid "Basar nicht gefunden oder nicht mehr aktiv"
+msgstr "Vide-grenier introuvable ou plus actif"
+
+#: core/views.py:2265
+msgid "QR-Code-Bibliothek nicht installiert"
+msgstr "Bibliothèque de codes QR non installée"
+
+#: core/views.py:2302
+msgid "Ungültiger Code"
+msgstr "Code non valide"
+
+#: core/views.py:2307
+msgid "Code nicht gefunden"
+msgstr "Code introuvable"
+
+#: core/views.py:2314
+msgid "Session abgelaufen. Neue Session in der Kasse starten."
+msgstr "Session expirée. Démarrez une nouvelle session dans la caisse."
+
+#: core/views.py:2321
+msgid "Scanner-Session wurde geschlossen."
+msgstr "La session du scanner a été fermée."
+
+#: core/views.py:2359
+msgid "Fehlende Parameter"
+msgstr "Paramètres manquants"
+
+#: core/views.py:2364
+msgid "Code ungültig"
+msgstr "Code non valide"
+
+#: core/views.py:2369
+msgid "Session abgelaufen"
+msgstr "Session expirée"
+
+#: core/views.py:2375
+msgid "Scanner-Session geschlossen"
+msgstr "Session du scanner fermée"
+
+#: core/views.py:2385
+msgid "QR-Code-Format ungültig"
+msgstr "Format de code QR non valide"
+
+#: core/views.py:2394
+msgid "Ungültige Werte im QR-Code"
+msgstr "Valeurs non valides dans le code QR"
+
+#: core/views.py:2406
+msgid "Rate-Limit erreicht. Bitte warten."
+msgstr "Limite de débit atteinte. Veuillez patienter."
+
+#: core/views.py:2442 core/views.py:2492
+#| msgid "Berechtigungen"
+msgid "Keine Berechtigung"
+msgstr "Autorisation refusée"
+
+#: core/views.py:2446 core/views.py:2496
+#| msgid "Kein Ausdruck erforderlich."
+msgid "Code erforderlich"
+msgstr "Code requis"
+
+#: core/views.py:2451 core/views.py:2501
+#| msgid "Kassenansicht öffnen"
+msgid "Session nicht gefunden"
+msgstr "Session introuvable"
+
+#: core/views.py:2623
+#| msgid "Bitte wähle zuerst einen Basar aus."
+msgid "Bitte wählen Sie mindestens einen Preis."
+msgstr "Veuillez sélectionner au moins un prix."
+
+#: core/views.py:2636
+#, python-brace-format
+msgid "Fehler beim Generieren des PDFs: {}"
+msgstr "Erreur lors de la génération du PDF : {}"

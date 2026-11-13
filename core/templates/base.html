@@ -1,0 +1,374 @@
+<!doctype html>
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% translate "Menü öffnen" as menu_open_label %}
+{% translate "Menü schließen" as menu_close_label %}
+<html lang="{{ LANGUAGE_CODE }}" data-theme="{{ global_design }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ global_site_title }}{% endblock %}</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #17212b; background: #f5f7fa; }
+    * { box-sizing: border-box; }
+    html[data-theme="dark"] { color-scheme: dark; background: #0f172a; }
+    body { min-height: 100vh; margin: 0; }
+    header { background: #17324d; color: white; padding: .8rem 1rem; }
+    nav { max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; }
+    nav a { color: white; text-decoration: none; }
+    nav form { margin-left: auto; }
+    .menu-links { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: .8rem; min-width: 0; }
+    .menu-toggle { display: none; }
+    .language-switcher { display: flex; align-items: center; gap: .35rem; margin-left: auto; }
+    .language-switcher label { display: inline; margin: 0; color: white; font-size: .9rem; }
+    .language-switcher select { width: auto; min-width: 6rem; padding: .45rem; }
+    main { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+    body[data-menu-fixed="true"] header { position: sticky; top: 0; z-index: 20; }
+    body[data-menu-position="left"],
+    body[data-menu-position="right"] {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      align-items: start;
+    }
+    body[data-menu-position="right"] {
+      grid-template-columns: minmax(0, 1fr) 250px;
+    }
+    body[data-menu-position="left"] header,
+    body[data-menu-position="right"] header {
+      grid-row: 1;
+      min-height: 100vh;
+    }
+    body[data-menu-position="left"] header { grid-column: 1; }
+    body[data-menu-position="right"] header { grid-column: 2; }
+    body[data-menu-position="left"] nav,
+    body[data-menu-position="right"] nav {
+      width: 100%;
+      max-width: none;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    body[data-menu-position="left"] .menu-links,
+    body[data-menu-position="right"] .menu-links {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    body[data-menu-position="left"] nav form,
+    body[data-menu-position="right"] nav form { margin-left: 0; }
+    body[data-menu-position="left"] main,
+    body[data-menu-position="right"] main {
+      grid-row: 1;
+      width: 100%;
+      margin: 1.5rem auto;
+    }
+    body[data-menu-position="left"] main { grid-column: 2; }
+    body[data-menu-position="right"] main { grid-column: 1; }
+    .card { background: white; border: 1px solid #dce3ea; border-radius: .6rem; padding: 1rem; margin: 1rem 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1rem; }
+    .button, button { display: inline-block; border: 0; border-radius: .4rem; background: #1769aa; color: white; padding: .7rem 1rem; font: inherit; cursor: pointer; text-decoration: none; }
+    .button.secondary, button.secondary { background: #52677b; }
+    .button.danger, button.danger { background: #a82d36; }
+    input, select { width: 100%; padding: .7rem; border: 1px solid #aebbc8; border-radius: .35rem; font: inherit; }
+    label { display: block; margin: .6rem 0 .25rem; font-weight: 600; }
+    .messages { padding: .8rem 1rem; background: #fff3cd; border-radius: .4rem; }
+    .consent-content { white-space: pre-line; overflow-wrap: anywhere; }
+    .cookie-backdrop { position: fixed; inset: 0; z-index: 99; background: #0009; }
+    .cookie-banner {
+      position: fixed;
+      z-index: 100;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      max-width: 1000px;
+      max-height: 85vh;
+      overflow-y: auto;
+      margin: 0 auto;
+      box-shadow: 0 0 0 100vmax #0003, 0 1rem 3rem #0005;
+    }
+    .cookie-table { font-size: .9rem; }
+    .cookie-table th, .cookie-table td { vertical-align: top; }
+    .cookie-banner .cookie-actions { display: flex; justify-content: flex-end; gap: .75rem; margin-top: 1rem; }
+    input[type="checkbox"] { width: auto; }
+    .price-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: .5rem; }
+    .price-buttons button { min-height: 3.4rem; font-size: 1.15rem; }
+    .cashier-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 390px); align-items: start; gap: 1rem; }
+    .cashier-controls, .receipt-panel { min-width: 0; margin: 0; }
+    .cashier-controls h2, .receipt-panel h2 { margin-top: 0; }
+    .seller-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: .55rem; margin-bottom: 1.25rem; }
+    .seller-buttons form, .price-buttons form { margin: 0; }
+    .seller-button { width: 100%; min-height: 3.4rem; font-size: 1.2rem; }
+    .seller-button.selected { background: #12466d; outline: 3px solid #78b9e5; }
+    .manual-price { margin-top: 1.25rem; }
+    .receipt-panel { position: sticky; top: 1rem; display: flex; flex-direction: column; max-height: calc(100vh - 2rem); }
+    .receipt-scroll { min-height: 120px; overflow: auto; }
+    .receipt-footer { border-top: 1px solid #dce3ea; padding-top: .5rem; }
+    .receipt-footer button { width: 100%; min-height: 3.2rem; }
+    .cancelled-item { color: #687581; text-decoration: line-through; }
+    .cancelled-item small { text-decoration: none; }
+    .cancel-button { padding: .35rem .5rem; }
+    .bazaar-button-form { margin: .5rem 0; }
+    .bazaar-button-form button { min-width: min(100%, 260px); }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: .55rem; border-bottom: 1px solid #dce3ea; text-align: left; }
+    .right { text-align: right; }
+    body[data-theme="dark"] {
+      color-scheme: dark;
+      color: #e5e7eb;
+      background: #0f172a;
+    }
+    body[data-theme="dark"] header { background: #020617; }
+    body[data-theme="dark"] .card { background: #1e293b; border-color: #334155; }
+    body[data-theme="dark"] button,
+    body[data-theme="dark"] .button { background: #6366f1; }
+    body[data-theme="dark"] .button.secondary,
+    body[data-theme="dark"] button.secondary { background: #475569; }
+    body[data-theme="dark"] input,
+    body[data-theme="dark"] select,
+    body[data-theme="dark"] textarea {
+      color: #f8fafc;
+      background: #111827;
+      border-color: #475569;
+    }
+    body[data-theme="dark"] th,
+    body[data-theme="dark"] td { border-color: #475569; }
+    body[data-theme="dark"] .messages { color: #fef3c7; background: #713f12; }
+    body[data-theme="modern"] {
+      color: #172554;
+      background: #eef2ff;
+    }
+    body[data-theme="modern"] header { background: #312e81; }
+    body[data-theme="modern"] .card {
+      border-color: #dbeafe;
+      border-radius: 1rem;
+      box-shadow: 0 .4rem 1.2rem #312e8114;
+    }
+    body[data-theme="modern"] button,
+    body[data-theme="modern"] .button {
+      background: #4f46e5;
+      border-radius: .7rem;
+      font-weight: 600;
+    }
+    body[data-theme="modern"] .button.secondary,
+    body[data-theme="modern"] button.secondary { background: #475569; }
+    body[data-theme="modern"] input,
+    body[data-theme="modern"] select,
+    body[data-theme="modern"] textarea {
+      border-color: #c7d2fe;
+      border-radius: .7rem;
+    }
+    body[data-theme="kindergarten"] {
+      color: #283044;
+      background: #fff7cc;
+      font-family: "Comic Sans MS", "Trebuchet MS", system-ui, sans-serif;
+    }
+    body[data-theme="kindergarten"] header { background: #ea580c; }
+    body[data-theme="kindergarten"] .card {
+      background: #fff;
+      border: 3px dashed #f472b6;
+      border-radius: 1.2rem;
+      box-shadow: 0 .35rem 0 #facc15;
+    }
+    body[data-theme="kindergarten"] button,
+    body[data-theme="kindergarten"] .button {
+      background: #22a653;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    body[data-theme="kindergarten"] .button.secondary,
+    body[data-theme="kindergarten"] button.secondary { background: #8b5cf6; }
+    body[data-theme="kindergarten"] .button.danger,
+    body[data-theme="kindergarten"] button.danger { background: #ef4444; }
+    body[data-theme="kindergarten"] input,
+    body[data-theme="kindergarten"] select,
+    body[data-theme="kindergarten"] textarea {
+      border: 2px solid #fb923c;
+      border-radius: 1rem;
+    }
+    body[data-theme="kindergarten"] th,
+    body[data-theme="kindergarten"] td { border-color: #f9a8d4; }
+    @media (max-width: 1024px) {
+      body[data-menu-position="left"],
+      body[data-menu-position="right"] {
+        display: block;
+      }
+      body[data-menu-position="left"] header,
+      body[data-menu-position="right"] header {
+        min-height: 0;
+        grid-column: auto;
+        grid-row: auto;
+      }
+      body[data-menu-position="left"] nav,
+      body[data-menu-position="right"] nav {
+        flex-direction: row;
+        align-items: center;
+      }
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+      }
+      .menu-icon { display: grid; gap: 3px; }
+      .menu-icon span { display: block; width: 18px; height: 2px; background: currentColor; }
+      .menu-links {
+        display: none;
+        flex: 0 0 100%;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+      }
+      header.menu-open .menu-links { display: flex; }
+      .menu-links form { margin-left: 0; }
+      .language-switcher { flex: 0 0 100%; }
+      body[data-menu-position="left"] nav form,
+      body[data-menu-position="right"] nav form { margin-left: 0; }
+      body[data-menu-position="left"] main,
+      body[data-menu-position="right"] main {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+    @media (max-width: 760px) {
+      .cashier-layout { grid-template-columns: minmax(0, 1fr); }
+      .receipt-panel { position: static; max-height: 45vh; order: 2; }
+      .cashier-controls { order: 1; }
+    }
+    @media (max-width: 520px) { main { margin-top: 1rem; } nav form { margin-left: 0; } }
+  </style>
+  <noscript>
+    <style>
+      @media (max-width: 1024px) {
+        .menu-toggle { display: none; }
+        .menu-links { display: flex !important; }
+      }
+    </style>
+  </noscript>
+</head>
+<body
+  data-theme="{{ global_design }}"
+  data-menu-position="{{ global_menu_position }}"
+  data-menu-fixed="{{ global_menu_fixed|yesno:'true,false' }}">
+  <header id="site-header">
+    <nav>
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        type="button"
+        aria-controls="primary-menu"
+        aria-expanded="false"
+        aria-label="{{ menu_open_label }}">
+        <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        {% translate "Menü" %}
+      </button>
+      <div id="primary-menu" class="menu-links">
+      {% if user.is_authenticated %}
+        {% if user.is_cashier or user.is_superuser %}
+          <a href="{% url 'home' %}"><strong>{{ global_site_title }}</strong></a>
+          <a href="{% url 'seller_dashboard' %}">{% translate "Verkäuferbereich" %}</a>
+          <a href="{% url 'cashier' %}">{% translate "Kasse" %}</a>
+          {% if user.is_superuser %}
+            <a href="{% url 'management_home' %}">{% translate "Verwaltung" %}</a>
+            <a href="{% url 'management_statistics' %}">{% translate "Statistiken" %}</a>
+            {% if debug %}
+              <a href="{% url 'admin:index' %}">{% translate "Django-Admin" %}</a>
+            {% endif %}
+          {% endif %}
+          <a href="{% url 'profile_edit' %}">{{ user.email }}</a>
+          <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="secondary" type="submit">{% translate "Abmelden" %}</button></form>
+        {% else %}
+          <a href="{% url 'profile_edit' %}">{{ user.email }}</a>
+          <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="secondary" type="submit">{% translate "Abmelden" %}</button></form>
+        {% endif %}
+      {% else %}
+        <a href="{% url 'home' %}"><strong>{{ global_site_title }}</strong></a>
+        <a href="{% url 'login' %}">{% translate "Anmelden" %}</a>
+        <a href="{% url 'register' %}">{% translate "Konto erstellen" %}</a>
+      {% endif %}
+      <a href="{% url 'privacy_policy' %}">{% translate "Datenschutzerklärung" %}</a>
+      <form class="language-switcher" method="post" action="{% url 'set_language' %}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <label for="language-select">{% translate "Sprache" %}</label>
+        <select id="language-select" name="language" onchange="this.form.submit()">
+          {% for language_code, language_name in LANGUAGES %}
+            <option value="{{ language_code }}"{% if language_code == LANGUAGE_CODE %} selected{% endif %}>{{ language_name }}</option>
+          {% endfor %}
+        </select>
+      </form>
+      </div>
+    </nav>
+  </header>
+  <main>
+    {% if messages %}
+      <div class="messages" role="status">{% for message in messages %}<p>{{ message }}</p>{% endfor %}</div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <script>
+    const siteHeader = document.getElementById("site-header");
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenuQuery = window.matchMedia("(max-width: 1024px)");
+    function setMenuOpen(isOpen) {
+      siteHeader.classList.toggle("menu-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "{{ menu_close_label|escapejs }}" : "{{ menu_open_label|escapejs }}"
+      );
+    }
+    setMenuOpen(!mobileMenuQuery.matches);
+    mobileMenuQuery.addEventListener("change", (event) => {
+      setMenuOpen(!event.matches);
+    });
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    const chartPoints = document.querySelectorAll(".line-chart-point[data-tooltip]");
+    if (chartPoints.length) {
+      const chartTooltip = document.createElement("div");
+      chartTooltip.className = "chart-tooltip";
+      chartTooltip.setAttribute("role", "tooltip");
+      chartTooltip.hidden = true;
+      document.body.append(chartTooltip);
+
+      function positionChartTooltip(event) {
+        const margin = 8;
+        const left = Math.min(
+          event.clientX + 12,
+          window.innerWidth - chartTooltip.offsetWidth - margin
+        );
+        const top = Math.min(
+          event.clientY + 12,
+          window.innerHeight - chartTooltip.offsetHeight - margin
+        );
+        chartTooltip.style.left = `${Math.max(margin, left)}px`;
+        chartTooltip.style.top = `${Math.max(margin, top)}px`;
+      }
+
+      chartPoints.forEach((point) => {
+        point.addEventListener("pointerenter", (event) => {
+          chartTooltip.textContent = point.dataset.tooltip;
+          chartTooltip.hidden = false;
+          positionChartTooltip(event);
+        });
+        point.addEventListener("pointermove", positionChartTooltip);
+        point.addEventListener("pointerleave", () => {
+          chartTooltip.hidden = true;
+        });
+      });
+    }
+
+    const cashierPage = document.getElementById("cashier-page");
+    let keepReceiptOpen = false;
+    if (cashierPage) {
+      cashierPage.querySelectorAll("form[data-keep-receipt]").forEach((form) => {
+        form.addEventListener("submit", () => { keepReceiptOpen = true; });
+      });
+      window.addEventListener("beforeunload", (event) => {
+        if (cashierPage.dataset.hasRecordedItems !== "true" || keepReceiptOpen) return;
+        event.preventDefault();
+        event.returnValue = "";
+      });
+    }
+  </script>
+</body>
+</html>

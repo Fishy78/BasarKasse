@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load safe_html %}
+{% block title %}{% translate "Konto erstellen" %}{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>{% translate "Konto erstellen" %}</h1>
+  <p>{% translate "Vorname, Nachname, E-Mail-Adresse und Passwort sind erforderlich. Telefonnummer und Adresse sind freiwillig." %}</p>
+  <div class="consent-content">{{ form.global_settings.consent_text|safe_html }}</div>
+  <form method="post">{% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for field in form %}
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {% if field.help_text %}<p><small>{{ field.help_text }}</small></p>{% endif %}
+      {{ field }}{{ field.errors }}
+    {% endfor %}
+    {% if form.global_settings.email_confirmation_required %}
+      <button type="submit">{% translate "Konto erstellen und Bestätigungslink anfordern" %}</button>
+    {% else %}
+      <button type="submit">{% translate "Konto erstellen" %}</button>
+    {% endif %}
+  </form>
+</section>
+{% endblock %}

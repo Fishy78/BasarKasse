@@ -1,0 +1,10 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+{% load safe_html %}
+{% block after_field_sets %}
+  {{ block.super }}
+  <fieldset class="module">
+    <h2>{% translate "Datenschutzvereinbarung" %}</h2>
+    <div class="consent-content">{{ adminform.form.global_settings.consent_text|safe_html }}</div>
+  </fieldset>
+{% endblock %}

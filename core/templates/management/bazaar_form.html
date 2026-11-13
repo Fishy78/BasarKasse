@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% if bazaar.pk %}{% translate "Basar bearbeiten" %}{% else %}{% translate "Neuen Basar anlegen" %}{% endif %}{% endblock %}
+{% block content %}
+<h1>{% if bazaar.pk %}{% translate "Basar bearbeiten" %}{% else %}{% translate "Neuen Basar anlegen" %}{% endif %}</h1>
+<form class="card" method="post">
+  {% csrf_token %}
+  {% for field in form %}
+    <div>
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {{ field }}
+      {% if field.help_text %}<p><small>{{ field.help_text }}</small></p>{% endif %}
+      {% for error in field.errors %}<p role="alert">{{ error }}</p>{% endfor %}
+    </div>
+  {% endfor %}
+  {% for error in form.non_field_errors %}<p role="alert">{{ error }}</p>{% endfor %}
+  <button type="submit">{% translate "Basar speichern" %}</button>
+  <a class="button secondary" href="{% url 'manage_bazaars' %}">{% translate "Zurück zur Liste" %}</a>
+</form>
+{% if bazaar.poster_prompt %}
+  <section class="card">
+    <h2>{% translate "Prompt für die Plakatgenerierung" %}</h2>
+    <textarea readonly rows="12" aria-label="{% translate 'Prompt für die Plakatgenerierung' %}">{{ bazaar.poster_prompt }}</textarea>
+  </section>
+{% endif %}
+{% if bazaar.is_settled or bazaar.has_settlement_history or bazaar.status == "closed" or bazaar.starts_at <= now %}
+  <p><a class="button" href="{% url 'settlement_start' bazaar.pk %}">{% translate "Abrechnung öffnen" %}</a></p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "basar"
+version = "0.1.0"
+description = "Verkäufernummerbasiertes Basar- und Kassensystem"
+requires-python = ">=3.12"
+dependencies = [
+    "Django>=5.2,<7.0",
+    "psycopg[binary]>=3.2",
+    "Pillow>=10.4",
+    "reportlab>=4.2",
+    "bleach>=6.2,<7",
+    "qrcode>=8.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["basar*", "core*"]
+
+[tool.setuptools.package-data]
+core = ["templates/*.html", "templates/**/*.html"]

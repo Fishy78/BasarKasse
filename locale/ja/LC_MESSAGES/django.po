@@ -1,0 +1,2877 @@
+# Deutscher Ausgangskatalog der Basar-Anwendung.
+msgid ""
+msgstr ""
+"Project-Id-Version: Basar-Kassensystem\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 15:51+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: 日本語\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: core/admin.py:17 core/admin.py:18
+msgid "Basarverwaltung"
+msgstr "バザー管理"
+
+#: core/admin.py:19 core/templates/base.html:268
+#: core/templates/management/home.html:3 core/templates/management/home.html:5
+#: core/tests.py:215
+msgid "Verwaltung"
+msgstr "管理"
+
+#: core/admin.py:33
+msgid "Kontaktdaten"
+msgstr "連絡先情報"
+
+#: core/admin.py:34
+msgid "Berechtigungen"
+msgstr "権限"
+
+#: core/admin.py:35
+msgid "Zeitstempel"
+msgstr "タイムスタンプ"
+
+#: core/emailing.py:17
+msgid "Basar-Konto bestätigen"
+msgstr "バザーアカウントの確認"
+
+#: core/emailing.py:18
+#, python-format
+msgid "Bitte bestätige deine E-Mail-Adresse über diesen Link: %(verify_url)s"
+msgstr "次のリンクからメールアドレスを確認してください: %(verify_url)s"
+
+#: core/forms.py:23
+msgid "Passwort"
+msgstr "パスワード"
+
+#: core/forms.py:24
+msgid "Passwort wiederholen"
+msgstr "パスワード（確認）"
+
+#: core/forms.py:26 core/forms.py:45
+msgid "Ich stimme der aktuellen Datenschutzerklärung zu."
+msgstr "最新のプライバシーポリシーに同意します。"
+
+#: core/forms.py:52
+msgid "Die Passwörter stimmen nicht überein."
+msgstr "パスワードが一致しません。"
+
+#: core/forms.py:88 core/templates/registration/accept_consent.html:12
+msgid "Ich stimme den Datenschutzhinweisen zu."
+msgstr "プライバシーに関するお知らせに同意します。"
+
+#: core/forms.py:107
+msgid "Der Benutzer stimmt den Datenschutzhinweisen zu."
+msgstr "ユーザーはプライバシーに関するお知らせに同意します。"
+
+#: core/forms.py:113
+msgid ""
+"Bitte hinterlege zuerst die Datenschutzhinweise in den Systemeinstellungen."
+msgstr "システム設定にプライバシーに関するお知らせを先に登録してください。"
+
+#: core/forms.py:150
+#, python-format
+msgid ""
+"HTML-Formatierung ist erlaubt, zum Beispiel <p>, <br>, <strong>, <em>, <ul>, "
+"<ol>, <li>, <h2> und sichere <a href=\"%(example_url)s\">Links</a>. "
+"Unsichere Elemente und Attribute werden entfernt."
+msgstr ""
+"HTML書式を使用できます。例: <p>、<br>、<strong>、<em>、<ul>、<ol>、<li>、"
+"<h2>、および安全な<a href=\"%(example_url)s\">リンク</a>。安全でない要素や属"
+"性は削除されます。"
+
+#: core/forms.py:161
+msgid "Übliche Preise müssen als JSON-Liste angegeben werden."
+msgstr "通常価格はJSONリストで指定してください。"
+
+#: core/forms.py:167
+msgid "Jeder Schnellpreis muss eine gültige Zahl sein."
+msgstr "各クイック価格には有効な数値を指定してください。"
+
+#: core/forms.py:170
+msgid "Schnellpreise müssen größer als 0 und höchstens 999999,99 sein."
+msgstr "クイック価格は0より大きく、999999.99以下にしてください。"
+
+#: core/forms.py:174
+msgid "Schnellpreise dürfen höchstens zwei Nachkommastellen haben."
+msgstr "クイック価格の小数点以下は2桁までです。"
+
+#: core/forms.py:183
+msgid "Bitte hinterlege die Standardvorgaben für Plakat-Prompts."
+msgstr "ポスタープロンプトの標準指示を登録してください。"
+
+#: core/forms.py:203
+msgid ""
+"Verwende einfache Formatierung mit <b>, <i>, <u> und <br>. Verfügbare "
+"Variablen:\n"
+msgstr ""
+"<b>、<i>、<u>、<br>を使った簡単な書式を使用してください。利用可能な変数:\n"
+
+#: core/forms.py:217
+#, python-format
+msgid "Unbekannte Vorlagenvariablen: %(names)s."
+msgstr "不明なテンプレート変数: %(names)s。"
+
+#: core/forms.py:219
+msgid "Vorlagenvariablen müssen das Format {{ variablenname }} haben."
+msgstr "テンプレート変数は {{ variablenname }} の形式にしてください。"
+
+#: core/forms.py:227
+msgid "Standardvorlage für neue Basare"
+msgstr "新しいバザーの標準テンプレート"
+
+#: core/forms.py:274
+msgid "Der Basar ist abgerechnet und kann nicht wieder geöffnet werden."
+msgstr "精算済みのバザーは再開できません。"
+
+#: core/forms.py:316
+msgid "Superadministrator"
+msgstr "スーパー管理者"
+
+#: core/forms.py:318
+msgid "Voller Zugriff auf alle Funktionen und die Verwaltung."
+msgstr "すべての機能と管理へのフルアクセス。"
+
+#: core/forms.py:321 core/models.py:83
+msgid "Kassenrecht"
+msgstr "レジ権限"
+
+#: core/forms.py:323
+msgid "Darf die Kasse bedienen."
+msgstr "レジを操作できます。"
+
+#: core/forms.py:326
+#| msgid "Konto anonymisiert"
+msgid "Konto aktiviert"
+msgstr "有効化されたアカウント"
+
+#: core/forms.py:328
+msgid "Inaktive Konten können sich nicht anmelden."
+msgstr "無効なアカウントはログインできません。"
+
+#: core/forms.py:364
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Du kannst deine eigenen Superadmin-Rechte nicht entfernen. Richte zuerst "
+"einen anderen Administrator ein."
+msgstr "自分自身のスーパー管理者権限を削除することはできません。先に別の管理者を設定してください。"
+
+#: core/forms.py:369
+msgid "Du kannst dein eigenes Konto nicht deaktivieren."
+msgstr "自分のアカウントは無効化できません。"
+
+#: core/forms.py:386
+#| msgid "Benutzer"
+msgid "Alle Benutzer"
+msgstr "すべてのユーザー"
+
+#: core/forms.py:387 core/templates/admin/user_management_list.html:58
+#| msgid "Aktiv"
+msgid "Aktiviert"
+msgstr "有効化済み"
+
+#: core/forms.py:388 core/templates/admin/user_management_list.html:60
+msgid "Deaktiviert"
+msgstr "無効"
+
+#: core/forms.py:389
+#| msgid "Kassenrecht"
+msgid "Mit Kassenrecht"
+msgstr "レジ権限あり"
+
+#: core/forms.py:390
+msgid "Administratoren"
+msgstr "管理者"
+
+#: core/forms.py:394
+msgid "Nach Name oder E-Mail suchen"
+msgstr "名前またはメールアドレスで検索"
+
+#: core/forms.py:396
+#| msgid "E-Mail-Adresse"
+msgid "Name, E-Mail-Adresse..."
+msgstr "名前、メールアドレス..."
+
+#: core/forms.py:399
+msgid "Filtern nach"
+msgstr "絞り込み条件"
+
+#: core/invoice_templates.py:8
+msgid "Name des Basars"
+msgstr "バザー名"
+
+#: core/invoice_templates.py:9
+msgid "Datum des Basars"
+msgstr "バザーの日付"
+
+#: core/invoice_templates.py:10 core/models.py:499 core/models.py:589
+#: core/templates/cashier/cashier.html:66
+#: core/templates/cashier/receipt_complete.html:10
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/scanner/join.html:26 core/templates/seller/dashboard.html:63
+#: core/views.py:1877
+msgid "Verkäufernummer"
+msgstr "出品者番号"
+
+#: core/invoice_templates.py:11
+msgid "Nachname des Verkäufers"
+msgstr "出品者の姓"
+
+#: core/invoice_templates.py:12
+msgid "Vorname des Verkäufers"
+msgstr "出品者の名"
+
+#: core/invoice_templates.py:13
+msgid "Artikeltabelle mit Preis, Anzahl und rechtsbündiger Summe"
+msgstr "価格、数量、右揃えの合計を含む商品一覧表"
+
+#: core/invoice_templates.py:14
+msgid "Tabelle mit Bruttoumsatz, Abzügen und Auszahlungsbetrag"
+msgstr "売上総額、控除額、支払額の表"
+
+#: core/invoice_templates.py:15
+msgid "Umsatz vor Abzügen"
+msgstr "控除前売上"
+
+#: core/invoice_templates.py:16
+msgid "Feste Verkäufergebühr"
+msgstr "出品者固定手数料"
+
+#: core/invoice_templates.py:17
+msgid "Prozentualer Betreiberanteil"
+msgstr "運営者取り分（割合）"
+
+#: core/invoice_templates.py:18
+msgid "Betrag des Betreiberanteils"
+msgstr "運営者取り分の金額"
+
+#: core/invoice_templates.py:19
+msgid "Auszahlungsbetrag nach Abzügen"
+msgstr "控除後の支払額"
+
+#: core/invoice_templates.py:20 core/models.py:150
+msgid "Währung"
+msgstr "通貨"
+
+#: core/invoice_templates.py:23
+msgid ""
+"<b>Verkäuferabrechnung</b><br>\n"
+"Basar: {{ basar_name }}<br>\n"
+"Datum: {{ basar_datum }}<br>\n"
+"Verkäufernummer: {{ verkaeufernummer }}<br><br>\n"
+"Verkäufer: {{ vorname }} {{ name }}<br><br>\n"
+"<b>Abrechnung</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+msgstr ""
+"<b>出品者精算書</b><br>\n"
+"バザー: {{ basar_name }}<br>\n"
+"日付: {{ basar_datum }}<br>\n"
+"出品者番号: {{ verkaeufernummer }}<br><br>\n"
+"出品者: {{ vorname }} {{ name }}<br><br>\n"
+"<b>精算</b><br>\n"
+"{{ artikel_zeilen }}<br><br>\n"
+"{{ summen }}"
+
+#: core/middleware.py:142
+msgid ""
+"Schließe zuerst den offenen Kassenbeleg ab oder korrigiere seine Artikel."
+msgstr "未完了のレジレシートを先に確定するか、商品を修正してください。"
+
+#: core/models.py:41
+msgid "Eine E-Mail-Adresse ist erforderlich."
+msgstr "メールアドレスは必須です。"
+
+#: core/models.py:53
+msgid "Ein Administrator muss is_staff und is_superuser aktiviert haben."
+msgstr "管理者では is_staff と is_superuser を有効にする必要があります。"
+
+#: core/models.py:60
+msgid "E-Mail-Adresse"
+msgstr "メールアドレス"
+
+#: core/models.py:61
+msgid "Vorname"
+msgstr "名"
+
+#: core/models.py:62
+msgid "Nachname"
+msgstr "姓"
+
+#: core/models.py:63
+msgid "Telefonnummer"
+msgstr "電話番号"
+
+#: core/models.py:64
+msgid "Straße und Hausnummer"
+msgstr "番地・建物名"
+
+#: core/models.py:66
+msgid "Postleitzahl"
+msgstr "郵便番号"
+
+#: core/models.py:72
+msgid "Bitte eine fünfstellige deutsche Postleitzahl eingeben."
+msgstr "日本の郵便番号を7桁で入力してください。"
+
+#: core/models.py:76
+msgid "Ort"
+msgstr "市区町村"
+
+#: core/models.py:78 core/models.py:334 core/models.py:705
+msgid "Aktiv"
+msgstr "有効"
+
+#: core/models.py:80
+msgid "Wird nach Bestätigung der E-Mail-Adresse aktiviert."
+msgstr "メールアドレスの確認後に有効になります。"
+
+#: core/models.py:85
+msgid "Kassenrecht wird durch einen Administrator vergeben."
+msgstr "レジ権限は管理者が付与します。"
+
+#: core/models.py:88
+msgid "Konto anonymisiert"
+msgstr "匿名化済みアカウント"
+
+#: core/models.py:98 core/models.py:99
+msgid "Benutzer"
+msgstr "ユーザー"
+
+#: core/models.py:102
+msgid "Gelöschter Benutzer"
+msgstr "削除済みユーザー"
+
+#: core/models.py:107
+msgid "Klassisches einfaches Design"
+msgstr "クラシック（シンプル）デザイン"
+
+#: core/models.py:108
+msgid "Dunkelmodus"
+msgstr "ダークモード"
+
+#: core/models.py:109
+msgid "Modernes Design"
+msgstr "モダンデザイン"
+
+#: core/models.py:110
+msgid "Buntes Kindergartendesign"
+msgstr "カラフルな幼稚園向けデザイン"
+
+#: core/models.py:113
+msgid "Oben"
+msgstr "上"
+
+#: core/models.py:114
+msgid "Links"
+msgstr "左"
+
+#: core/models.py:115
+msgid "Rechts"
+msgstr "右"
+
+#: core/models.py:118
+msgid "Euro (€)"
+msgstr "ユーロ (€)"
+
+#: core/models.py:119
+msgid "Schweizer Franken (CHF)"
+msgstr "スイスフラン (CHF)"
+
+#: core/models.py:120
+msgid "US-Dollar (USD)"
+msgstr "米ドル (USD)"
+
+#: core/models.py:121
+msgid "Britisches Pfund (GBP)"
+msgstr "英ポンド (GBP)"
+
+#: core/models.py:123
+msgid "Übliche Preise"
+msgstr "通常価格"
+
+#: core/models.py:125
+msgid "Seitentitel"
+msgstr "サイトタイトル"
+
+#: core/models.py:128
+msgid "Wird in der Kopfzeile und im Seitentitel angezeigt."
+msgstr "ヘッダーとページタイトルに表示されます。"
+
+#: core/models.py:131
+msgid "Logo für Verkäuferabrechnungen"
+msgstr "出品者精算書用ロゴ"
+
+#: core/models.py:139
+msgid "Standard-Verkäuferrechnungsvorlage"
+msgstr "標準出品者請求書テンプレート"
+
+#: core/models.py:145
+msgid "Standard-Anzahl Verkäufernummern"
+msgstr "出品者番号の標準数"
+
+#: core/models.py:156
+msgid "Oberflächendesign"
+msgstr "インターフェースデザイン"
+
+#: core/models.py:162
+msgid "Menüposition"
+msgstr "メニュー位置"
+
+#: core/models.py:167
+msgid "Menü beim Scrollen fixieren"
+msgstr "スクロール時にメニューを固定"
+
+#: core/models.py:169
+msgid "Standardsprache"
+msgstr "既定の言語"
+
+#: core/models.py:173
+msgid "Wird für Benutzer ohne eigene Sprachauswahl verwendet."
+msgstr "ユーザーが言語を選択していない場合に使用されます。"
+
+#: core/models.py:175
+msgid "Einwilligungsversion"
+msgstr "同意バージョン"
+
+#: core/models.py:176 core/models.py:316
+msgid "Einwilligungstext"
+msgstr "同意文"
+
+#: core/models.py:178
+msgid "Standard-Verkäufergebühr für neue Basare"
+msgstr "新しいバザーの出品者標準手数料"
+
+#: core/models.py:185
+msgid "Standard-Betreiberanteil für neue Basare"
+msgstr "新しいバザーの運営者標準取り分"
+
+#: core/models.py:192
+msgid "Standardvorgaben für Plakat-Prompts"
+msgstr "ポスタープロンプトの標準指示"
+
+#: core/models.py:194
+msgid ""
+"Erstelle ein übersichtliches, gut lesbares Basarplakat. Verwende "
+"ausschließlich die unten angegebenen Veranstaltungsdaten und erfinde keine "
+"zusätzlichen Angaben."
+msgstr ""
+"新しいアカウントに適用されます。有効化すると、ユーザーはメールアドレスを確認"
+"する必要があります。"
+
+#: core/models.py:200
+msgid "E-Mail-Bestätigung erforderlich"
+msgstr "メールアドレスの確認が必要"
+
+#: core/models.py:202
+msgid ""
+"Gilt für neue Konten. Bei Aktivierung muss der Benutzer die Adresse "
+"bestätigen."
+msgstr "パスワードの最小文字数"
+
+#: core/models.py:205
+msgid "Mindestlänge des Passworts"
+msgstr "有効な範囲: 8～128文字。"
+
+#: core/models.py:208
+msgid "Zulässiger Bereich: 8 bis 128 Zeichen."
+msgstr "大文字を必須にする"
+
+#: core/models.py:211
+msgid "Großbuchstaben verlangen"
+msgstr "小文字を必須にする"
+
+#: core/models.py:215
+msgid "Kleinbuchstaben verlangen"
+msgstr "数字を必須にする"
+
+#: core/models.py:219
+msgid "Ziffer verlangen"
+msgstr "記号を必須にする"
+
+#: core/models.py:223
+msgid "Sonderzeichen verlangen"
+msgstr "よく使われるパスワードを拒否する"
+
+#: core/models.py:227
+msgid "Häufige Passwörter ablehnen"
+msgstr "数字のみのパスワードを拒否する"
+
+#: core/models.py:231
+msgid "Reine Zahlenpasswörter ablehnen"
+msgstr "ユーザー情報との類似性を確認する"
+
+#: core/models.py:235
+msgid "Ähnlichkeit zu Benutzerdaten prüfen"
+msgstr "グローバル設定"
+
+#: core/models.py:239
+msgid "Preisschilder: Spalten pro A4"
+msgstr "値札：A4あたりの列数"
+
+#: core/models.py:242
+msgid "Anzahl der Spalten bei der Preisschild-Generierung (2-10)."
+msgstr "値札の生成時の列数（2～10）。"
+
+#: core/models.py:245
+msgid "Preisschilder: Reihen pro A4"
+msgstr "値札：A4あたりの行数"
+
+#: core/models.py:248
+msgid "Anzahl der Reihen bei der Preisschild-Generierung (4-30)."
+msgstr "値札の生成時の行数（4～30）。"
+
+#: core/models.py:252
+msgid "Globale Einstellung"
+msgstr "グローバル設定"
+
+#: core/models.py:253 core/models.py:256 core/models.py:292
+msgid "Globale Einstellungen"
+msgstr "グローバル設定"
+
+#: core/models.py:276
+msgid ""
+"Bei einer Änderung des Einwilligungstextes muss auch die Version erhöht "
+"werden."
+msgstr "同意文を変更する場合は、バージョンも更新してください。"
+
+#: core/models.py:294
+msgid "Vorlagenname"
+msgstr "テンプレート名"
+
+#: core/models.py:295
+msgid "Vorlageninhalt"
+msgstr "テンプレート内容"
+
+#: core/models.py:296
+msgid "Schreibgeschützt"
+msgstr "読み取り専用"
+
+#: core/models.py:306 core/models.py:396
+msgid "Verkäuferrechnungsvorlage"
+msgstr "出品者請求書テンプレート"
+
+#: core/models.py:307 core/templates/management/invoice_templates.html:3
+#: core/templates/management/invoice_templates.html:5
+msgid "Verkäuferrechnungsvorlagen"
+msgstr "出品者請求書テンプレート"
+
+#: core/models.py:315
+msgid "Version"
+msgstr "バージョン"
+
+#: core/models.py:317
+msgid "Zugestimmt am"
+msgstr "同意日時"
+
+#: core/models.py:321
+msgid "Benutzereinwilligung"
+msgstr "ユーザー同意"
+
+#: core/models.py:322
+msgid "Benutzereinwilligungen"
+msgstr "ユーザー同意"
+
+#: core/models.py:325
+#, python-format
+msgid "%(email)s: %(version)s"
+msgstr "%(email)s: %(version)s"
+
+#: core/models.py:333
+msgid "Geplant"
+msgstr "予定"
+
+#: core/models.py:335 core/models.py:527
+msgid "Abgeschlossen"
+msgstr "完了"
+
+#: core/models.py:337 core/templates/admin/user_management_list.html:40
+#: core/templates/management/invoice_templates.html:11
+msgid "Name"
+msgstr "名前"
+
+#: core/models.py:338 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Beginn"
+msgstr "開始日時"
+
+#: core/models.py:340
+msgid "Nummernvergabe möglich bis"
+msgstr "番号発行期限"
+
+#: core/models.py:341
+msgid "Muss am oder vor dem Beginn des Basars liegen."
+msgstr "バザー開始日以前に設定してください。"
+
+#: core/models.py:344 core/models.py:543
+#: core/templates/admin/user_management_list.html:42
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/management/bazaar_statistics.html:199
+#: core/templates/management/bazaars.html:9
+#: core/templates/settlement_confirm.html:62
+msgid "Status"
+msgstr "ステータス"
+
+#: core/models.py:350
+msgid "Verkäuferanmeldung geöffnet"
+msgstr "出品者登録受付中"
+
+#: core/models.py:352
+msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgstr "バザーを有効化すると自動的に締め切られます。"
+
+#: core/models.py:355
+msgid "Stellenzahl"
+msgstr "桁数"
+
+#: core/models.py:359
+msgid "Erste Nummer"
+msgstr "最初の番号"
+
+#: core/models.py:361
+msgid "Maximale Anzahl Verkäufernummern"
+msgstr "出品者番号の最大数"
+
+#: core/models.py:366
+msgid "Nächste Belegnummer"
+msgstr "次のレシート番号"
+
+#: core/models.py:371 core/templates/seller/bazaar_details.html:45
+#: core/views.py:1827
+msgid "Verkäufergebühr"
+msgstr "出品者手数料"
+
+#: core/models.py:378
+msgid "Betreiberanteil in Prozent"
+msgstr "運営者取り分（パーセント）"
+
+#: core/models.py:385
+msgid "Verkäufer sehen aktuellen Stand"
+msgstr "出品者に現在の状況を表示"
+
+#: core/models.py:389
+msgid "Verkäufer sehen Historie"
+msgstr "出品者に履歴を表示"
+
+#: core/models.py:400
+msgid "Plakat-Prompt"
+msgstr "ポスタープロンプト"
+
+#: core/models.py:402
+msgid "Abrechnung erstellt am"
+msgstr "精算作成日時"
+
+#: core/models.py:416 core/models.py:491 core/models.py:533 core/models.py:642
+#: core/models.py:691 core/templates/management/bazaars.html:9
+#: core/templates/management/statistics.html:79
+msgid "Basar"
+msgstr "バザー"
+
+#: core/models.py:417 core/templates/management/home.html:8
+msgid "Basare"
+msgstr "バザー"
+
+#: core/models.py:446
+msgid "Ein bereits abgerechneter Basar kann nicht wieder geöffnet werden."
+msgstr "精算済みのバザーは再開できません。"
+
+#: core/models.py:458
+msgid "Die Nummernvergabe darf nicht nach dem Beginn des Basars enden."
+msgstr "番号発行期限をバザー開始日より後に設定することはできません。"
+
+#: core/models.py:467
+msgid ""
+"Die Nummernbegrenzung darf nicht unter der bereits vergebenen Anzahl liegen."
+msgstr "番号の上限を、すでに発行済みの数より少なくすることはできません。"
+
+#: core/models.py:497 core/templates/role.html:9
+msgid "Verkäufer"
+msgstr "出品者"
+
+#: core/models.py:501
+msgid "Verkäufernummer vergeben am"
+msgstr "出品者番号の発行日時"
+
+#: core/models.py:517
+msgid "Verkäuferanmeldung"
+msgstr "出品者登録"
+
+#: core/models.py:518
+msgid "Verkäuferanmeldungen"
+msgstr "出品者登録"
+
+#: core/models.py:526
+msgid "Offen"
+msgstr "未完了"
+
+#: core/models.py:539 core/models.py:697
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Kassierer"
+msgstr "レジ担当者"
+
+#: core/models.py:541 core/templates/management/bazaar_statistics.html:94
+msgid "Belegnummer"
+msgstr "レシート番号"
+
+#: core/models.py:548 core/models.py:644 core/models.py:699
+msgid "Erstellt am"
+msgstr "作成日時"
+
+#: core/models.py:550
+msgid "Erster Artikel erfasst am"
+msgstr "最初の商品登録日時"
+
+#: core/models.py:554
+msgid "Abgeschlossen am"
+msgstr "完了日時"
+
+#: core/models.py:561 core/models.py:583
+msgid "Kassenbeleg"
+msgstr "レジレシート"
+
+#: core/models.py:562
+msgid "Kassenbelege"
+msgstr "レジレシート"
+
+#: core/models.py:565
+#, python-format
+msgid "%(bazaar)s, Beleg Nr. %(number)s"
+msgstr "%(bazaar)s、レシート番号 %(number)s"
+
+#: core/models.py:592 core/models.py:761 core/templates/cashier/cashier.html:66
+#: core/templates/management/bazaar_receipt_detail.html:12
+#: core/templates/scanner/join.html:35
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Preis"
+msgstr "価格"
+
+#: core/models.py:597
+msgid "Erfasst am"
+msgstr "登録日時"
+
+#: core/models.py:598 core/models.py:648
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert am"
+msgstr "取消日時"
+
+#: core/models.py:605 core/models.py:657
+#: core/templates/settlement_confirm.html:62
+msgid "Storniert von"
+msgstr "取消者"
+
+#: core/models.py:613
+msgid "Belegposition"
+msgstr "レシート明細"
+
+#: core/models.py:614
+msgid "Belegpositionen"
+msgstr "レシート明細"
+
+#: core/models.py:624
+msgid "Die Verkäufernummer muss zum Basar des Kassenbelegs gehören."
+msgstr "出品者番号はレジレシートのバザーに属している必要があります。"
+
+#: core/models.py:630
+#, python-format
+msgid "%(seller_number)s: %(price)s %(currency)s"
+msgstr "%(seller_number)s: %(price)s %(currency)s"
+
+#: core/models.py:645
+msgid "Abrechnungsdaten"
+msgstr "精算データ"
+
+#: core/models.py:646
+msgid "PDF"
+msgstr "PDF"
+
+#: core/models.py:671 core/templates/settlement_confirm.html:3
+msgid "Basarabrechnung"
+msgstr "バザー精算"
+
+#: core/models.py:672
+msgid "Basarabrechnungen"
+msgstr "バザー精算"
+
+#: core/models.py:675
+#, python-format
+msgid "Abrechnung: %(bazaar)s"
+msgstr "精算: %(bazaar)s"
+
+#: core/models.py:682
+#| msgid "Anmelden"
+msgid "Anmeldecode"
+msgstr "ログインコード"
+
+#: core/models.py:701
+msgid "Ablaufzeit"
+msgstr "有効期限"
+
+#: core/models.py:702
+msgid "Session verfällt nach 30 Minuten"
+msgstr "セッションは30分後に期限切れになります"
+
+#: core/models.py:707
+#| msgid "Wird beim Aktivieren des Basars automatisch geschlossen."
+msgid "Wird deaktiviert, wenn Session abläuft oder manuell geschlossen wird"
+msgstr "セッションの有効期限が切れるか、手動で閉じられると無効になります"
+
+#: core/models.py:710
+msgid "Gerätenname (optional)"
+msgstr "デバイス名（任意）"
+
+#: core/models.py:713
+msgid "Z.B. 'iPhone 14 Pro'"
+msgstr "例：'iPhone 14 Pro'"
+
+#: core/models.py:718 core/models.py:746
+msgid "Scanner-Session"
+msgstr "スキャナーセッション"
+
+#: core/models.py:719
+msgid "Scanner-Sessions"
+msgstr "スキャナーセッション"
+
+#: core/models.py:722
+#, python-format
+msgid "Scanner: %(code)s (%(bazaar)s)"
+msgstr "スキャナー：%(code)s（%(bazaar)s）"
+
+#: core/models.py:754 core/views.py:1876
+msgid "Beleg"
+msgstr "レシート"
+
+#: core/models.py:757
+#| msgid "Verkäufernummer"
+msgid "Verkäufernummer-ID"
+msgstr "出品者番号ID"
+
+#: core/models.py:758
+msgid "Referenz auf SellerRegistration.id"
+msgstr "SellerRegistration.idへの参照"
+
+#: core/models.py:766
+msgid "Eingescannt um"
+msgstr "スキャン日時"
+
+#: core/models.py:770
+#| msgid "Bearbeiten"
+msgid "Verarbeitet"
+msgstr "処理済み"
+
+#: core/models.py:772
+msgid "True, wenn Artikel bereits zur Kasse hinzugefügt wurde"
+msgstr "商品がすでにレジに追加されている場合はTrue"
+
+#: core/models.py:775
+#| msgid "Bearbeiten"
+msgid "Verarbeitet um"
+msgstr "処理日時"
+
+#: core/models.py:782
+msgid "Scanner-Eingabe"
+msgstr "スキャナー入力"
+
+#: core/models.py:783
+msgid "Scanner-Eingaben"
+msgstr "スキャナー入力"
+
+#: core/models.py:786
+#, python-format
+msgid "Scan: VKNr %(reg)s, %(price)s€"
+msgstr "スキャン：販売者番号 %(reg)s、%(price)s€"
+
+#: core/password_validation.py:18
+#, python-format
+msgid "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgid_plural "Das Passwort muss mindestens %(count)d Zeichen lang sein."
+msgstr[0] "パスワードは%(count)d文字以上にしてください。"
+
+#: core/password_validation.py:25
+msgid "Das Passwort muss mindestens einen Großbuchstaben enthalten."
+msgstr "パスワードには大文字を1文字以上含めてください。"
+
+#: core/password_validation.py:27
+msgid "Das Passwort muss mindestens einen Kleinbuchstaben enthalten."
+msgstr "パスワードには小文字を1文字以上含めてください。"
+
+#: core/password_validation.py:29
+msgid "Das Passwort muss mindestens eine Ziffer enthalten."
+msgstr "パスワードには数字を1文字以上含めてください。"
+
+#: core/password_validation.py:33
+msgid "Das Passwort muss mindestens ein Sonderzeichen enthalten."
+msgstr "パスワードには記号を1文字以上含めてください。"
+
+#: core/password_validation.py:38
+msgid "Dieses Passwort ist zu häufig und darf nicht verwendet werden."
+msgstr "このパスワードは一般的すぎるため使用できません。"
+
+#: core/password_validation.py:40
+msgid "Das Passwort darf nicht ausschließlich aus Zahlen bestehen."
+msgstr "パスワードを数字だけにすることはできません。"
+
+#: core/password_validation.py:45
+msgid "Das Passwort ähnelt zu stark deinen Benutzerdaten."
+msgstr "パスワードがユーザー情報に似すぎています。"
+
+#: core/password_validation.py:55
+#, python-format
+msgid "Mindestens %(count)d Zeichen"
+msgid_plural "Mindestens %(count)d Zeichen"
+msgstr[0] "%(count)d文字以上"
+
+#: core/password_validation.py:62
+msgid "ein Großbuchstabe"
+msgstr "大文字を1文字"
+
+#: core/password_validation.py:64
+msgid "ein Kleinbuchstabe"
+msgstr "小文字を1文字"
+
+#: core/password_validation.py:66
+msgid "eine Ziffer"
+msgstr "数字を1文字"
+
+#: core/password_validation.py:68
+msgid "ein Sonderzeichen"
+msgstr "記号を1文字"
+
+#: core/password_validation.py:70
+msgid "kein häufig verwendetes Passwort"
+msgstr "一般的でないパスワード"
+
+#: core/password_validation.py:72
+msgid "nicht ausschließlich Zahlen"
+msgstr "数字のみではないこと"
+
+#: core/password_validation.py:74
+msgid "nicht zu ähnlich zu deinen Benutzerdaten"
+msgstr "ユーザー情報に似すぎていないこと"
+
+#: core/password_validation.py:75
+#, python-format
+msgid "Passwortregeln: %(rules)s."
+msgstr "パスワードの条件: %(rules)s。"
+
+#: core/permissions.py:21
+#| msgid "Abrechnung erstellen und PDF herunterladen"
+msgid "Kann Abrechnungen anzeigen und herunterladen"
+msgstr "精算書を表示・ダウンロードできる"
+
+#: core/templates/admin/core/user/add_form.html:7
+msgid "Datenschutzvereinbarung"
+msgstr "プライバシーへの同意"
+
+#: core/templates/admin/user_management_edit.html:4
+#: core/templates/admin/user_management_edit.html:10
+#| msgid "Benutzerdaten bearbeiten"
+msgid "Benutzer bearbeiten"
+msgstr "ユーザーを編集"
+
+#: core/templates/admin/user_management_edit.html:26
+#| msgid "Kontaktdaten"
+msgid "Kontaktinformationen"
+msgstr "連絡先情報"
+
+#: core/templates/admin/user_management_edit.html:58
+msgid "E-Mail-Adressen können nicht über diese Verwaltung geändert werden."
+msgstr "メールアドレスはこの管理画面から変更できません。"
+
+#: core/templates/admin/user_management_edit.html:116
+msgid "Rechte und Status"
+msgstr "権限とステータス"
+
+#: core/templates/admin/user_management_edit.html:176
+#| msgid "Speicherdauer"
+msgid "Speichern"
+msgstr "保存"
+
+#: core/templates/admin/user_management_edit.html:179
+#: core/templates/management/invoice_template_form.html:18
+#: core/templates/seller/price_labels.html:16
+#: core/templates/seller/price_labels.html:61
+msgid "Abbrechen"
+msgstr "キャンセル"
+
+#: core/templates/admin/user_management_edit.html:183
+msgid "Benutzer wirklich löschen?"
+msgstr "ユーザーを本当に削除しますか？"
+
+#: core/templates/admin/user_management_edit.html:186
+#| msgid "Konto löschen"
+msgid "Benutzer löschen"
+msgstr "ユーザーを削除"
+
+#: core/templates/admin/user_management_edit.html:195
+#, python-format
+msgid ""
+"\n"
+"                    Benutzer erstellt: "
+"%(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n"
+"                    "
+msgstr "\n                    ユーザー作成日：%(user_to_edit.date_joined|date:\"d.m.Y H:i\")s\n                    "
+
+#: core/templates/admin/user_management_edit.html:200
+#, python-format
+msgid ""
+"\n"
+"                        Letzte Anmeldung: "
+"%(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n"
+"                        "
+msgstr "\n                        最終ログイン：%(user_to_edit.last_login|date:\"d.m.Y H:i\")s\n                        "
+
+#: core/templates/admin/user_management_edit.html:205
+msgid "Hat sich noch nicht angemeldet."
+msgstr "まだログインしていません。"
+
+#: core/templates/admin/user_management_list.html:4
+#: core/templates/admin/user_management_list.html:8
+#: core/templates/management/home.html:13
+#| msgid "Benutzereinwilligung"
+msgid "Benutzerverwaltung"
+msgstr "ユーザー管理"
+
+#: core/templates/admin/user_management_list.html:9
+msgid "Verwalte Benutzer und vergebe Rechte ohne Django Admin zu nutzen."
+msgstr "Django管理画面を使用せずにユーザーを管理し、権限を付与します。"
+
+#: core/templates/admin/user_management_list.html:21
+msgid "Filtern"
+msgstr "絞り込む"
+
+#: core/templates/admin/user_management_list.html:41
+#| msgid "E-Mail-Adresse"
+msgid "E-Mail"
+msgstr "メール"
+
+#: core/templates/admin/user_management_list.html:43
+#| msgid "Rechts"
+msgid "Rechte"
+msgstr "権限"
+
+#: core/templates/admin/user_management_list.html:44
+#: core/templates/management/invoice_templates.html:11
+msgid "Aktionen"
+msgstr "操作"
+
+#: core/templates/admin/user_management_list.html:65
+msgid "Administrator"
+msgstr "管理者"
+
+#: core/templates/admin/user_management_list.html:68
+#: core/templates/base.html:266 core/templates/cashier/cashier.html:3
+#: core/templates/cashier/cashier.html:7 core/templates/role.html:16
+msgid "Kasse"
+msgstr "レジ"
+
+#: core/templates/admin/user_management_list.html:71
+#| msgid "Standardsprache"
+msgid "Standard"
+msgstr "標準"
+
+#: core/templates/admin/user_management_list.html:76
+#: core/templates/management/bazaars.html:18
+#: core/templates/management/invoice_templates.html:24
+msgid "Bearbeiten"
+msgstr "編集"
+
+#: core/templates/admin/user_management_list.html:83
+#| msgid "Link erneut senden"
+msgid "Keine Benutzer gefunden."
+msgstr "ユーザーが見つかりません。"
+
+#: core/templates/admin/user_management_list.html:93
+#| msgid "Zur Verwaltung"
+msgid "Zurück zur Verwaltung"
+msgstr "管理に戻る"
+
+#: core/templates/base.html:4
+msgid "Menü öffnen"
+msgstr "メニューを開く"
+
+#: core/templates/base.html:5
+msgid "Menü schließen"
+msgstr "メニューを閉じる"
+
+#: core/templates/base.html:259
+msgid "Menü"
+msgstr "メニュー"
+
+#: core/templates/base.html:265 core/templates/seller/dashboard.html:3
+#: core/templates/seller/dashboard.html:5
+msgid "Verkäuferbereich"
+msgstr "出品者エリア"
+
+#: core/templates/base.html:269 core/templates/management/bazaars.html:19
+#: core/templates/management/home.html:23
+#: core/templates/management/statistics.html:3
+#: core/templates/management/statistics.html:5
+msgid "Statistiken"
+msgstr "統計"
+
+#: core/templates/base.html:271
+msgid "Django-Admin"
+msgstr "Django管理サイト"
+
+#: core/templates/base.html:275 core/templates/base.html:278
+msgid "Abmelden"
+msgstr "ログアウト"
+
+#: core/templates/base.html:282 core/templates/home.html:9
+#: core/templates/registration/login.html:3
+#: core/templates/registration/login.html:6
+#: core/templates/registration/login.html:13
+msgid "Anmelden"
+msgstr "ログイン"
+
+#: core/templates/base.html:283 core/templates/home.html:8
+#: core/templates/registration/register.html:4
+#: core/templates/registration/register.html:7
+#: core/templates/registration/register.html:20
+msgid "Konto erstellen"
+msgstr "アカウントを作成"
+
+#: core/templates/base.html:285 core/templates/cookie_consent.html:10
+#: core/templates/privacy_policy.html:4 core/templates/privacy_policy.html:6
+msgid "Datenschutzerklärung"
+msgstr "プライバシーポリシー"
+
+#: core/templates/base.html:289
+msgid "Sprache"
+msgstr "言語"
+
+#: core/templates/cashier/cashier.html:5
+msgid "Diesen Artikel wirklich stornieren?"
+msgstr "この商品を本当に取り消しますか？"
+
+#: core/templates/cashier/cashier.html:6
+msgid ""
+"Beleg wirklich abschließen? Danach können keine Artikel mehr korrigiert "
+"werden."
+msgstr "レシートを確定しますか？確定後は商品を修正できません。"
+
+#: core/templates/cashier/cashier.html:14
+#, python-format
+msgid "Beleg %(number)s"
+msgstr "レシート %(number)s"
+
+#: core/templates/cashier/cashier.html:16
+msgid "Verkäufernummer wählen"
+msgstr "出品者番号を選択"
+
+#: core/templates/cashier/cashier.html:28
+msgid "Für diesen Basar sind noch keine Verkäufernummern vergeben."
+msgstr "このバザーにはまだ出品者番号が発行されていません。"
+
+#: core/templates/cashier/cashier.html:33
+#, python-format
+msgid "Artikel für %(number)s"
+msgstr "%(number)s の商品"
+
+#: core/templates/cashier/cashier.html:43
+msgid "Es sind keine Schnellpreise eingerichtet."
+msgstr "クイック価格が設定されていません。"
+
+#: core/templates/cashier/cashier.html:49
+msgid "Anderen Preis eingeben"
+msgstr "別の価格を入力"
+
+#: core/templates/cashier/cashier.html:51 core/templates/scanner/join.html:46
+msgid "Artikel hinzufügen"
+msgstr "商品を追加"
+
+#: core/templates/cashier/cashier.html:54
+msgid "Wähle die Verkäufernummer, danach kannst du die Artikelpreise erfassen."
+msgstr "出品者番号を選択すると、商品の価格を登録できます。"
+
+#: core/templates/cashier/cashier.html:58
+#: core/templates/cashier/cashier.html:60
+msgid "Kassenzettel"
+msgstr "レシート"
+
+#: core/templates/cashier/cashier.html:61
+#, python-format
+msgid "%(name)s · Beleg %(number)s"
+msgstr "%(name)s · レシート %(number)s"
+
+#: core/templates/cashier/cashier.html:63
+#, python-format
+msgid "Erster Artikel erfasst: %(date)s"
+msgstr "最初の商品登録: %(date)s"
+
+#: core/templates/cashier/cashier.html:70
+#: core/templates/management/bazaar_receipt_detail.html:18
+#: core/templates/settlement_confirm.html:68
+msgid "Storniert"
+msgstr "取消済み"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Artikel stornieren"
+msgstr "商品を取り消す"
+
+#: core/templates/cashier/cashier.html:77
+msgid "Storno"
+msgstr "取消"
+
+#: core/templates/cashier/cashier.html:83
+msgid "Noch keine Artikel erfasst."
+msgstr "商品はまだ登録されていません。"
+
+#: core/templates/cashier/cashier.html:89
+msgid "Gesamt:"
+msgstr "合計:"
+
+#: core/templates/cashier/cashier.html:94
+msgid "Beleg abschließen"
+msgstr "レシートを確定"
+
+#: core/templates/cashier/cashier.html:103
+msgid "Basar für diese Kasse auswählen"
+msgstr "このレジのバザーを選択"
+
+#: core/templates/cashier/cashier.html:111
+msgid "Zurzeit ist kein Basar aktiv."
+msgstr "現在有効なバザーはありません。"
+
+#: core/templates/cashier/cashier.html:163
+msgid "QR-Scanner"
+msgstr "QRスキャナー"
+
+#: core/templates/cashier/cashier.html:165
+msgid "Laden..."
+msgstr "読み込み中..."
+
+#: core/templates/cashier/cashier.html:168
+msgid "Stop"
+msgstr "停止"
+
+#: core/templates/cashier/cashier.html:169
+#| msgid "Menü schließen"
+msgid "Schließen"
+msgstr "閉じる"
+
+#: core/templates/cashier/cashier.html:179
+msgid "Scanner"
+msgstr "スキャナー"
+
+#: core/templates/cashier/cashier.html:276
+msgid "Scanner aktiv"
+msgstr "スキャナー有効"
+
+#: core/templates/cashier/cashier.html:278
+msgid "QR-Code zum Scannen"
+msgstr "スキャン用QRコード"
+
+#: core/templates/cashier/cashier.html:281
+msgid "Scannen Sie einen QR-Code mit dem Handy-Scanner"
+msgstr "スマートフォンのスキャナーでQRコードをスキャンしてください"
+
+#: core/templates/cashier/cashier.html:300
+msgid "Fehler:"
+msgstr "エラー："
+
+#: core/templates/cashier/cashier.html:436
+msgid "Fehler beim Hinzufügen des Artikels"
+msgstr "商品の追加中にエラーが発生しました"
+
+#: core/templates/cashier/cashier.html:445
+msgid "VKNr"
+msgstr "販売者番号"
+
+#: core/templates/cashier/cashier.html:448
+msgid "Fehler beim Scannen"
+msgstr "スキャン中にエラーが発生しました"
+
+#: core/templates/cashier/receipt_complete.html:3
+#: core/templates/cashier/receipt_complete.html:6
+msgid "Verkauf abgeschlossen"
+msgstr "販売完了"
+
+#: core/templates/cashier/receipt_complete.html:7
+#, python-format
+msgid "Beleg %(number)s · %(name)s"
+msgstr "レシート %(number)s · %(name)s"
+
+#: core/templates/cashier/receipt_complete.html:8
+msgid "Umsatz je Verkäufernummer"
+msgstr "出品者番号別売上"
+
+#: core/templates/cashier/receipt_complete.html:10
+msgid "Zwischensumme"
+msgstr "小計"
+
+#: core/templates/cashier/receipt_complete.html:17
+msgid "Gesamtbetrag:"
+msgstr "合計金額:"
+
+#: core/templates/cashier/receipt_complete.html:18
+msgid "Kein Ausdruck erforderlich."
+msgstr "印刷は不要です。"
+
+#: core/templates/cashier/receipt_complete.html:21
+msgid "Nächsten Verkauf erfassen"
+msgstr "次の販売を登録"
+
+#: core/templates/cookie_consent.html:3
+msgid "Cookie-Einstellungen"
+msgstr "Cookie設定"
+
+#: core/templates/cookie_consent.html:7
+msgid "Notwendige Cookies"
+msgstr "必須Cookie"
+
+#: core/templates/cookie_consent.html:8
+msgid ""
+"Damit diese Seite funktioniert, ist deine Zustimmung zur Verwendung der "
+"erforderlichen Cookies notwendig. Die Seite bleibt bis zur Zustimmung "
+"gesperrt."
+msgstr ""
+"このページを利用するには、必須Cookieの使用への同意が必要です。同意するまで"
+"ページはロックされます。"
+
+#: core/templates/cookie_consent.html:10
+msgid "Weitere Informationen findest du in der"
+msgstr "詳しくは次をご覧ください"
+
+#: core/templates/cookie_consent.html:14
+msgid "Zustimmen und fortfahren"
+msgstr "同意して続行"
+
+#: core/templates/home.html:7
+msgid "Verkäufernummern verwalten, Verkäufe erfassen und Basare abrechnen."
+msgstr "出品者番号の管理、販売の登録、バザーの精算を行います。"
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+msgid "Basar bearbeiten"
+msgstr "バザーを編集"
+
+#: core/templates/management/bazaar_form.html:3
+#: core/templates/management/bazaar_form.html:5
+#: core/templates/management/bazaars.html:6
+msgid "Neuen Basar anlegen"
+msgstr "新しいバザーを作成"
+
+#: core/templates/management/bazaar_form.html:17
+msgid "Basar speichern"
+msgstr "バザーを保存"
+
+#: core/templates/management/bazaar_form.html:18
+msgid "Zurück zur Liste"
+msgstr "一覧に戻る"
+
+#: core/templates/management/bazaar_form.html:22
+#: core/templates/management/bazaar_form.html:23
+msgid "Prompt für die Plakatgenerierung"
+msgstr "ポスター生成プロンプト"
+
+#: core/templates/management/bazaar_form.html:27
+msgid "Abrechnung öffnen"
+msgstr "精算を開く"
+
+#: core/templates/management/bazaar_receipt_detail.html:3
+#, python-format
+msgid "Rechnung %(number)s · %(name)s"
+msgstr "請求書 %(number)s · %(name)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:5
+#, python-format
+msgid "Rechnung %(number)s"
+msgstr "請求書 %(number)s"
+
+#: core/templates/management/bazaar_receipt_detail.html:7
+msgid "Basar:"
+msgstr "バザー:"
+
+#: core/templates/management/bazaar_receipt_detail.html:8
+msgid "Zeit:"
+msgstr "日時:"
+
+#: core/templates/management/bazaar_receipt_detail.html:9
+msgid "Status:"
+msgstr "ステータス:"
+
+#: core/templates/management/bazaar_receipt_detail.html:10
+msgid "Positionen"
+msgstr "明細"
+
+#: core/templates/management/bazaar_receipt_detail.html:12
+msgid "Erfasst"
+msgstr "登録済み"
+
+#: core/templates/management/bazaar_receipt_detail.html:18
+msgid "Gültig"
+msgstr "有効"
+
+#: core/templates/management/bazaar_receipt_detail.html:22
+msgid "Der Beleg enthält noch keine Artikelpositionen."
+msgstr "レシートにはまだ商品明細がありません。"
+
+#: core/templates/management/bazaar_receipt_detail.html:26
+msgid "Gesamtbetrag"
+msgstr "合計金額"
+
+#: core/templates/management/bazaar_receipt_detail.html:30
+msgid ""
+"Der Beleg ist noch offen; der angezeigte Gesamtbetrag ist ein Zwischenstand."
+msgstr "レシートはまだ未完了です。表示されている合計金額は途中経過です。"
+
+#: core/templates/management/bazaar_receipt_detail.html:33
+msgid "Zurück zu den Basarstatistiken"
+msgstr "バザー統計に戻る"
+
+#: core/templates/management/bazaar_statistics.html:3
+#: core/templates/management/bazaar_statistics.html:16
+#, python-format
+msgid "Statistiken: %(name)s"
+msgstr "統計: %(name)s"
+
+#: core/templates/management/bazaar_statistics.html:5
+msgid "Verkaufte Artikel je 5 Minuten"
+msgstr "5分ごとの販売商品数"
+
+#: core/templates/management/bazaar_statistics.html:6
+msgid "Artikelanzahl"
+msgstr "商品数"
+
+#: core/templates/management/bazaar_statistics.html:7
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+msgid "Artikel"
+msgstr "商品"
+
+#: core/templates/management/bazaar_statistics.html:8
+msgid "Bruttoumsatz je 5 Minuten"
+msgstr "5分ごとの売上総額"
+
+#: core/templates/management/bazaar_statistics.html:9
+#: core/templates/management/bazaar_statistics.html:114
+#: core/templates/management/bazaar_statistics.html:179
+#: core/templates/management/statistics.html:79
+#: core/templates/seller/bazaar_details.html:44 core/views.py:1823
+msgid "Bruttoumsatz"
+msgstr "売上総額"
+
+#: core/templates/management/bazaar_statistics.html:10
+msgid "Neue Verkäufernummern je Tag"
+msgstr "日ごとの新規出品者番号"
+
+#: core/templates/management/bazaar_statistics.html:11
+msgid "Neue Nummern pro Tag"
+msgstr "日ごとの新規番号"
+
+#: core/templates/management/bazaar_statistics.html:12
+msgid "Neue Nummern"
+msgstr "新規番号"
+
+#: core/templates/management/bazaar_statistics.html:13
+msgid "Kumulierte Vergabe der Verkäufernummern"
+msgstr "出品者番号の累計発行数"
+
+#: core/templates/management/bazaar_statistics.html:14
+msgid "Nummern gesamt"
+msgstr "番号の合計"
+
+#: core/templates/management/bazaar_statistics.html:15
+msgid "Gesamtzahl"
+msgstr "合計数"
+
+#: core/templates/management/bazaar_statistics.html:17
+msgid ""
+"Verwendet werden abgeschlossene Belege und nicht stornierte "
+"Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr ""
+"完了済みレシートと、取り消されていない商品明細のみを集計します。収入は売上総"
+"額です。"
+
+#: core/templates/management/bazaar_statistics.html:60
+msgid "Verkäufe und Einnahmen je 5 Minuten"
+msgstr "5分ごとの販売数と収入"
+
+#: core/templates/management/bazaar_statistics.html:61
+msgid ""
+"Der Zeitstempel eines abgeschlossenen Belegs bestimmt das 5-Minuten-"
+"Intervall. Eine tatsächliche Öffnungs- oder Endzeit wird derzeit nicht "
+"erfasst."
+msgstr ""
+"完了したレシートのタイムスタンプで5分間隔を決定します。実際の開始時刻や終了時"
+"刻は現在記録されません。"
+
+#: core/templates/management/bazaar_statistics.html:63
+#: core/templates/seller/bazaar_details.html:25
+msgid "Verkaufte Artikel"
+msgstr "販売商品数"
+
+#: core/templates/management/bazaar_statistics.html:65
+msgid "Einnahmen"
+msgstr "収入"
+
+#: core/templates/management/bazaar_statistics.html:70
+#: core/templates/management/bazaar_statistics.html:124
+msgid "Für diesen Basar liegen noch keine abgeschlossenen Verkäufe vor."
+msgstr "このバザーには完了した販売がまだありません。"
+
+#: core/templates/management/bazaar_statistics.html:75
+msgid "Verlauf der Verkäufernummernvergabe"
+msgstr "出品者番号発行履歴"
+
+#: core/templates/management/bazaar_statistics.html:77
+msgid "Je Tag: neu vergebene Nummern und kumulierte Gesamtzahl."
+msgstr "日ごとの新規発行数と累計数。"
+
+#: core/templates/management/bazaar_statistics.html:78
+msgid "Neu vergebene Nummern"
+msgstr "新規発行番号"
+
+#: core/templates/management/bazaar_statistics.html:80
+msgid "Kumulierte Nummern"
+msgstr "累計番号"
+
+#: core/templates/management/bazaar_statistics.html:83
+msgid ""
+"Für die vorhandenen Verkäufernummern liegen keine Vergabezeitpunkte vor."
+msgstr "既存の出品者番号には発行日時が記録されていません。"
+
+#: core/templates/management/bazaar_statistics.html:86
+#, python-format
+msgid ""
+"%(count)s ältere Nummern haben keinen gespeicherten Vergabezeitpunkt und "
+"können im Verlauf nicht berücksichtigt werden."
+msgstr ""
+"%(count)s件の古い番号には発行日時が記録されていないため、履歴には反映できませ"
+"ん。"
+
+#: core/templates/management/bazaar_statistics.html:91
+msgid "Top-Rechnungen nach Betrag"
+msgstr "金額別請求書トップ"
+
+#: core/templates/management/bazaar_statistics.html:92
+msgid "Die Rangliste umfasst die zehn höchsten abgeschlossenen Belege."
+msgstr "完了したレシートのうち金額上位10件を表示します。"
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Zeit"
+msgstr "日時"
+
+#: core/templates/management/bazaar_statistics.html:94
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Betrag"
+msgstr "金額"
+
+#: core/templates/management/bazaar_statistics.html:101
+msgid "Rechnung ansehen"
+msgstr "請求書を表示"
+
+#: core/templates/management/bazaar_statistics.html:104
+#: core/templates/management/bazaar_statistics.html:169
+#: core/templates/management/bazaar_statistics.html:189
+msgid "Es gibt noch keine abgeschlossenen Rechnungen."
+msgstr "完了した請求書はまだありません。"
+
+#: core/templates/management/bazaar_statistics.html:111
+msgid "Top-Verkäufer"
+msgstr "売上上位の出品者"
+
+#: core/templates/management/bazaar_statistics.html:112
+msgid "Sortiert nach Bruttoumsatz; bei Gleichstand nach Artikelanzahl."
+msgstr "売上総額順。同額の場合は商品数順です。"
+
+#: core/templates/management/bazaar_statistics.html:114
+msgid "Platz"
+msgstr "順位"
+
+#: core/templates/management/bazaar_statistics.html:131
+msgid "Durchschnitt, Median und Stornoquote"
+msgstr "平均・中央値・取消率"
+
+#: core/templates/management/bazaar_statistics.html:135
+msgid "Durchschnitt pro abgeschlossener Rechnung"
+msgstr "完了した請求書1件あたりの平均"
+
+#: core/templates/management/bazaar_statistics.html:139
+msgid "Median pro abgeschlossener Rechnung"
+msgstr "完了した請求書1件あたりの中央値"
+
+#: core/templates/management/bazaar_statistics.html:144
+msgid ""
+"Für Durchschnitt und Median gibt es noch keine abgeschlossenen Rechnungen."
+msgstr "平均値と中央値を算出できる完了済み請求書はまだありません。"
+
+#: core/templates/management/bazaar_statistics.html:146
+msgid "Stornoquote"
+msgstr "取消率"
+
+#: core/templates/management/bazaar_statistics.html:148
+#, python-format
+msgid "%(cancelled)s von %(total)s Positionen storniert (%(rate)s %%)."
+msgstr ""
+"%(total)s件の明細のうち%(cancelled)s件が取り消されました（%(rate)s %%）。"
+
+#: core/templates/management/bazaar_statistics.html:149
+msgid "Enthalten sind Positionen aus offenen und abgeschlossenen Belegen."
+msgstr "未完了および完了済みレシートの明細を含みます。"
+
+#: core/templates/management/bazaar_statistics.html:151
+msgid "Für diesen Basar wurden noch keine Artikelpositionen erfasst."
+msgstr "このバザーには商品明細がまだ登録されていません。"
+
+#: core/templates/management/bazaar_statistics.html:156
+msgid "Stoßzeiten"
+msgstr "繁忙時間帯"
+
+#: core/templates/management/bazaar_statistics.html:157
+msgid ""
+"Die fünf 5-Minuten-Intervalle mit den meisten abgeschlossenen Rechnungen. "
+"Bei Gleichstand entscheidet der Umsatz."
+msgstr ""
+"完了したレシート数が最も多い5分間隔を上位5件表示します。同数の場合は売上で順"
+"位を決めます。"
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Intervall"
+msgstr "時間間隔"
+
+#: core/templates/management/bazaar_statistics.html:159
+#: core/templates/management/bazaar_statistics.html:179
+msgid "Rechnungen"
+msgstr "請求書"
+
+#: core/templates/management/bazaar_statistics.html:159
+msgid "Umsatz"
+msgstr "売上"
+
+#: core/templates/management/bazaar_statistics.html:176
+msgid "Umsatz je Kassierer"
+msgstr "レジ担当者別売上"
+
+#: core/templates/management/bazaar_statistics.html:177
+msgid ""
+"Bruttoumsatz aus abgeschlossenen Belegen; stornierte Positionen sind "
+"ausgenommen."
+msgstr "取り消された明細を除く、完了済みレシートの売上総額。"
+
+#: core/templates/management/bazaar_statistics.html:196
+msgid "Alle Rechnungen"
+msgstr "すべての請求書"
+
+#: core/templates/management/bazaar_statistics.html:197
+msgid ""
+"Offene Belege werden mit dem aktuellen Zwischenbetrag angezeigt und "
+"aktualisieren sich beim erneuten Aufruf."
+msgstr "未完了レシートは現在の途中合計で表示され、再読み込み時に更新されます。"
+
+#: core/templates/management/bazaar_statistics.html:199
+msgid "Nummer"
+msgstr "番号"
+
+#: core/templates/management/bazaar_statistics.html:207
+#: core/templates/management/statistics.html:87
+#: core/templates/seller/dashboard.html:24
+msgid "Details"
+msgstr "詳細"
+
+#: core/templates/management/bazaar_statistics.html:210
+msgid "Für diesen Basar gibt es noch keine Rechnungen."
+msgstr "このバザーには請求書がまだありません。"
+
+#: core/templates/management/bazaar_statistics.html:217
+msgid "Neuere"
+msgstr "新しいページ"
+
+#: core/templates/management/bazaar_statistics.html:219
+#, python-format
+msgid "Seite %(current)s von %(total)s"
+msgstr "%(total)sページ中%(current)sページ"
+
+#: core/templates/management/bazaar_statistics.html:221
+msgid "Ältere"
+msgstr "前のページ"
+
+#: core/templates/management/bazaar_statistics.html:227
+msgid "Zur Statistikübersicht"
+msgstr "統計一覧に戻る"
+
+#: core/templates/management/bazaars.html:3
+#: core/templates/management/bazaars.html:5
+#: core/templates/management/home.html:10
+msgid "Basare verwalten"
+msgstr "バザーを管理"
+
+#: core/templates/management/bazaars.html:9
+msgid "Nummernvergabe bis"
+msgstr "番号発行期限"
+
+#: core/templates/management/bazaars.html:21
+msgid "Abrechnung"
+msgstr "精算"
+
+#: core/templates/management/bazaars.html:26
+#: core/templates/management/statistics.html:90
+msgid "Es wurden noch keine Basare angelegt."
+msgstr "バザーはまだ作成されていません。"
+
+#: core/templates/management/bazaars.html:31
+#: core/templates/management/settings.html:19
+msgid "Zur Verwaltung"
+msgstr "管理画面に戻る"
+
+#: core/templates/management/home.html:9
+msgid "Basare anlegen und verwalten."
+msgstr "バザーの作成と管理を行います。"
+
+#: core/templates/management/home.html:14
+msgid "Benutzer verwalten und Rechte vergeben."
+msgstr "ユーザーを管理し、権限を付与します。"
+
+#: core/templates/management/home.html:15
+#| msgid "Basare verwalten"
+msgid "Benutzer verwalten"
+msgstr "ユーザーを管理"
+
+#: core/templates/management/home.html:18
+#: core/templates/management/settings.html:3
+#: core/templates/management/settings.html:5
+msgid "Systemeinstellungen"
+msgstr "システム設定"
+
+#: core/templates/management/home.html:19
+msgid "Globale Preise, Gebühren, Einwilligung und Plakatvorgaben."
+msgstr "全体価格、手数料、同意文、ポスター指示を設定します。"
+
+#: core/templates/management/home.html:20
+msgid "Einstellungen bearbeiten"
+msgstr "設定を編集"
+
+#: core/templates/management/home.html:24
+msgid "Verkaufsentwicklung, Einnahmen und Preisverteilung der Basare."
+msgstr "バザーの販売推移、収入、価格別分布を表示します。"
+
+#: core/templates/management/home.html:25
+msgid "Statistiken ansehen"
+msgstr "統計を表示"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Vorlage bearbeiten"
+msgstr "テンプレートを編集"
+
+#: core/templates/management/invoice_template_form.html:3
+msgid "Neue Vorlage"
+msgstr "新しいテンプレート"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage bearbeiten"
+msgstr "出品者請求書テンプレートを編集"
+
+#: core/templates/management/invoice_template_form.html:5
+msgid "Verkäuferrechnungsvorlage anlegen"
+msgstr "出品者請求書テンプレートを作成"
+
+#: core/templates/management/invoice_template_form.html:17
+msgid "Vorlage speichern"
+msgstr "テンプレートを保存"
+
+#: core/templates/management/invoice_templates.html:6
+msgid ""
+"Die Standardvorlage ist schreibgeschützt. Über „Kopie“ kannst du eine "
+"bearbeitbare Vorlage daraus erstellen. Das globale Logo wird automatisch "
+"eingefügt."
+msgstr ""
+"標準テンプレートは読み取り専用です。「コピー」を選択すると、編集可能なテンプ"
+"レートを作成できます。グローバルロゴは自動的に挿入されます。"
+
+#: core/templates/management/invoice_templates.html:7
+msgid "Neue Vorlage anlegen"
+msgstr "新しいテンプレートを作成"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Standard für neue Basare"
+msgstr "新しいバザーの標準"
+
+#: core/templates/management/invoice_templates.html:11
+msgid "Verwendet von Basaren"
+msgstr "使用中のバザー"
+
+#: core/templates/management/invoice_templates.html:17
+#, python-format
+msgid "Als Standardvorlage verwenden: %(name)s"
+msgstr "標準テンプレートとして使用: %(name)s"
+
+#: core/templates/management/invoice_templates.html:20
+msgid "schreibgeschützt"
+msgstr "読み取り専用"
+
+#: core/templates/management/invoice_templates.html:25
+msgid "Löschen"
+msgstr "削除"
+
+#: core/templates/management/invoice_templates.html:27 core/views.py:796
+#: core/views.py:800
+msgid "Kopie"
+msgstr "コピー"
+
+#: core/templates/management/invoice_templates.html:31
+msgid "Es gibt noch keine Vorlagen."
+msgstr "テンプレートはまだありません。"
+
+#: core/templates/management/invoice_templates.html:36
+msgid "Standardvorlage speichern"
+msgstr "標準テンプレートを保存"
+
+#: core/templates/management/invoice_templates.html:38
+msgid "Zurück zu den Systemeinstellungen"
+msgstr "システム設定に戻る"
+
+#: core/templates/management/settings.html:17
+msgid "Einstellungen speichern"
+msgstr "設定を保存"
+
+#: core/templates/management/settings.html:18
+msgid "Verkäuferrechnungsvorlagen verwalten"
+msgstr "出品者請求書テンプレートを管理"
+
+#: core/templates/management/settings.html:23
+msgid "Aktuelles Verkäuferabrechnungslogo"
+msgstr "現在の出品者精算ロゴ"
+
+#: core/templates/management/settings.html:24
+msgid "Aktuelles globales Logo"
+msgstr "現在のグローバルロゴ"
+
+#: core/templates/management/statistics.html:6
+msgid ""
+"Berücksichtigt werden ausschließlich abgeschlossene Belege und nicht "
+"stornierte Artikelpositionen. Die Einnahmen sind Bruttoumsätze."
+msgstr ""
+"完了済みレシートおよび取り消されていない商品明細のみを集計します。収入は売上"
+"総額です。"
+
+#: core/templates/management/statistics.html:20
+msgid "Verkaufsentwicklung je Basar"
+msgstr "バザー別販売推移"
+
+#: core/templates/management/statistics.html:26
+#, python-format
+msgid "%(label)s: %(value)s Artikel"
+msgstr "%(label)s: %(value)s個の商品"
+
+#: core/templates/management/statistics.html:29
+#: core/templates/management/statistics.html:67
+#, python-format
+msgid "%(value)s Artikel"
+msgstr "%(value)s個の商品"
+
+#: core/templates/management/statistics.html:34
+#: core/templates/management/statistics.html:53
+msgid "Es gibt noch keine Basare."
+msgstr "バザーはまだありません。"
+
+#: core/templates/management/statistics.html:39
+msgid "Einnahmeentwicklung je Basar"
+msgstr "バザー別収入推移"
+
+#: core/templates/management/statistics.html:45
+#, python-format
+msgid "%(label)s: %(value)s %(currency)s"
+msgstr "%(label)s: %(value)s %(currency)s"
+
+#: core/templates/management/statistics.html:58
+msgid "Artikelverteilung nach Preis"
+msgstr "価格別商品分布"
+
+#: core/templates/management/statistics.html:64
+#, python-format
+msgid "%(value)s Artikel zu %(label)s"
+msgstr "%(label)s の商品 %(value)s個"
+
+#: core/templates/management/statistics.html:72
+msgid "Es wurden noch keine Artikel verkauft."
+msgstr "商品はまだ販売されていません。"
+
+#: core/templates/management/statistics.html:77
+msgid "Basarübersicht"
+msgstr "バザー概要"
+
+#: core/templates/partials/cookie_details.html:2
+msgid ""
+"Wir verwenden keine Cookies von Drittanbietern und binden keine Analyse- "
+"oder Werbedienste ein. Folgende technisch notwendige Cookies werden für den "
+"Betrieb genutzt:"
+msgstr ""
+"サードパーティーCookieは使用せず、分析や広告サービスも埋め込みません。運用に"
+"必要な次の技術的Cookieを使用します:"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Cookie"
+msgstr "Cookie"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Inhalt und Zweck"
+msgstr "内容と目的"
+
+#: core/templates/partials/cookie_details.html:5
+msgid "Speicherdauer"
+msgstr "保存期間"
+
+#: core/templates/partials/cookie_details.html:9
+msgid "Signierter Zustimmungsstatus. Enthält keine persönlichen Angaben."
+msgstr "署名付きの同意状態。個人情報は含まれません。"
+
+#: core/templates/partials/cookie_details.html:10
+msgid "1 Jahr"
+msgstr "1年間"
+
+#: core/templates/partials/cookie_details.html:14
+msgid ""
+"Zufällige Sitzungskennung. Anmeldestatus, ausgewählte Rolle und "
+"Kassenkontext werden serverseitig gespeichert, nicht im Cookie."
+msgstr ""
+"ランダムなセッション識別子。ログイン状態、選択中のロール、レジのコンテキスト"
+"はサーバー側に保存され、Cookieには保存されません。"
+
+#: core/templates/partials/cookie_details.html:15
+msgid "Bis zu 2 Wochen; die Sitzung kann vorher beendet werden"
+msgstr "最長2週間。セッションが先に終了する場合があります。"
+
+#: core/templates/partials/cookie_details.html:19
+msgid ""
+"Zufälliger Sicherheitstoken zum Schutz vor gefälschten "
+"Formularübermittlungen. Keine Profil- oder Verkaufsdaten."
+msgstr ""
+"偽造されたフォーム送信を防止するランダムなセキュリティトークン。プロフィール"
+"情報や販売データは含まれません。"
+
+#: core/templates/partials/cookie_details.html:20
+msgid "Bis zu 1 Jahr"
+msgstr "最長1年間"
+
+#: core/templates/partials/cookie_details.html:24
+msgid ""
+"Signierte, kurzfristige Statusmeldungen der Anwendung, zum Beispiel Hinweise "
+"nach dem Speichern. Bei größeren Meldungen werden sie serverseitig in der "
+"Sitzung abgelegt."
+msgstr ""
+"保存後のお知らせなど、アプリケーションの短期的な状態メッセージに署名します。"
+"大きなメッセージはセッション内のサーバー側に保存されます。"
+
+#: core/templates/partials/cookie_details.html:25
+msgid "Kurzzeitig, in der Regel bis zum nächsten Seitenaufruf"
+msgstr "短期間。通常は次のページ表示まで。"
+
+#: core/templates/partials/cookie_details.html:29
+msgid "Ausgewählte Sprache der Benutzeroberfläche."
+msgstr "選択されたインターフェース言語。"
+
+#: core/templates/partials/cookie_details.html:30
+msgid "Bis zum Schließen des Browsers (Sitzungscookie)"
+msgstr "ブラウザーを閉じるまで（セッションCookie）"
+
+#: core/templates/partials/cookie_details.html:35
+msgid ""
+"Ohne Zustimmung können die Anmelde-, Verkäufer- und Kassenfunktionen nicht "
+"verwendet werden. Du kannst die Zustimmung jederzeit durch Löschen der "
+"Cookies im Browser zurücknehmen; beim nächsten Besuch fragen wir erneut."
+msgstr ""
+"同意しない場合、ログイン、出品者、レジの各機能を利用できません。ブラウザーで"
+"Cookieを削除すれば、いつでも同意を撤回できます。次回の訪問時に再度確認しま"
+"す。"
+
+#: core/templates/partials/line_chart.html:2
+#, python-format
+msgid "%(title)s. Y-Achse: %(axis)s"
+msgstr "%(title)s。Y軸: %(axis)s"
+
+#: core/templates/partials/line_chart.html:31
+#: core/templates/partials/line_chart.html:32
+#, python-format
+msgid "%(label)s: %(value)s"
+msgstr "%(label)s: %(value)s"
+
+#: core/templates/partials/line_chart.html:41
+msgid "Messwerte als Tabelle anzeigen"
+msgstr "測定値を表として表示"
+
+#: core/templates/partials/line_chart.html:44
+msgid "Zeitpunkt"
+msgstr "日時"
+
+#: core/templates/partials/line_chart.html:49
+msgid "Keine Messwerte vorhanden."
+msgstr "測定値はありません。"
+
+#: core/templates/privacy_policy.html:12
+msgid "Die Datenschutzerklärung ist derzeit noch nicht hinterlegt."
+msgstr "プライバシーポリシーはまだ登録されていません。"
+
+#: core/templates/privacy_policy.html:15
+msgid "Cookies und ähnliche Technologien"
+msgstr "Cookieおよび類似技術"
+
+#: core/templates/registration/accept_consent.html:4
+msgid "Datenschutzhinweise bestätigen"
+msgstr "プライバシーに関するお知らせに同意"
+
+#: core/templates/registration/accept_consent.html:7
+msgid "Aktualisierte Datenschutzhinweise"
+msgstr "更新されたプライバシーに関するお知らせ"
+
+#: core/templates/registration/accept_consent.html:9
+#, python-format
+msgid "Version %(version)s"
+msgstr "バージョン %(version)s"
+
+#: core/templates/registration/accept_consent.html:14
+msgid "Zustimmung speichern"
+msgstr "同意を保存"
+
+#: core/templates/registration/account_deleted.html:3
+#: core/templates/registration/account_deleted.html:6
+msgid "Konto gelöscht"
+msgstr "アカウントを削除しました。"
+
+#: core/templates/registration/account_deleted.html:7
+msgid ""
+"Dein Konto und deine persönlichen Daten wurden gelöscht. Verkäufernummern, "
+"Belege und Basarabrechnungen bleiben anonymisiert erhalten."
+msgstr ""
+"アカウントと個人データは削除されました。出品者番号、レシート、バザー精算書は"
+"匿名化して保持されます。"
+
+#: core/templates/registration/account_deleted.html:8
+#: core/templates/scanner/error.html:12
+msgid "Zur Startseite"
+msgstr "ホームに戻る"
+
+#: core/templates/registration/login.html:15
+msgid "Passwort vergessen?"
+msgstr "パスワードをお忘れですか？"
+
+#: core/templates/registration/password_reset_complete.html:3
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Passwort geändert"
+msgstr "パスワードを変更しました。"
+
+#: core/templates/registration/password_reset_complete.html:4
+msgid "Jetzt anmelden"
+msgstr "今すぐログイン"
+
+#: core/templates/registration/password_reset_confirm.html:3
+msgid "Neues Passwort"
+msgstr "新しいパスワード"
+
+#: core/templates/registration/password_reset_confirm.html:6
+msgid "Neues Passwort festlegen"
+msgstr "新しいパスワードを設定"
+
+#: core/templates/registration/password_reset_confirm.html:14
+msgid "Passwort speichern"
+msgstr "パスワードを保存"
+
+#: core/templates/registration/password_reset_confirm.html:16
+msgid "Der Link ist ungültig oder abgelaufen."
+msgstr "リンクが無効か、有効期限が切れています。"
+
+#: core/templates/registration/password_reset_done.html:3
+msgid "E-Mail versendet"
+msgstr "メールを送信しました"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid "Prüfe dein Postfach"
+msgstr "受信トレイを確認してください"
+
+#: core/templates/registration/password_reset_done.html:4
+msgid ""
+"Falls ein aktives Konto zu der Adresse existiert, wurde ein Link versendet."
+msgstr "このアドレスに有効なアカウントがある場合、リンクを送信しました。"
+
+#: core/templates/registration/password_reset_email.html:2
+msgid ""
+"Du erhältst diese E-Mail, weil ein Passwort-Reset für dein Basar-Konto "
+"angefordert wurde."
+msgstr ""
+"バザーアカウントのパスワードリセットがリクエストされたため、このメールをお送"
+"りしています。"
+
+#: core/templates/registration/password_reset_email.html:4
+msgid "Öffne diesen Link, um ein neues Passwort festzulegen:"
+msgstr "次のリンクを開いて、新しいパスワードを設定してください:"
+
+#: core/templates/registration/password_reset_email.html:7
+msgid ""
+"Wenn du den Reset nicht angefordert hast, kannst du diese Nachricht "
+"ignorieren."
+msgstr "リセットを依頼していない場合は、このメッセージを無視してください。"
+
+#: core/templates/registration/password_reset_form.html:3
+#: core/templates/registration/password_reset_form.html:6
+msgid "Passwort zurücksetzen"
+msgstr "パスワードをリセット"
+
+#: core/templates/registration/password_reset_form.html:7
+msgid "Wir senden einen Link an die E-Mail-Adresse deines Kontos."
+msgstr "アカウントのメールアドレスにリンクを送信します。"
+
+#: core/templates/registration/password_reset_form.html:14
+msgid "Link senden"
+msgstr "リンクを送信"
+
+#: core/templates/registration/profile_edit.html:3
+#: core/templates/registration/profile_edit.html:6
+msgid "Benutzerdaten bearbeiten"
+msgstr "ユーザー情報を編集"
+
+#: core/templates/registration/profile_edit.html:7
+msgid "E-Mail-Adresse für die Anmeldung:"
+msgstr "ログイン用メールアドレス:"
+
+#: core/templates/registration/profile_edit.html:17
+msgid "Daten speichern"
+msgstr "情報を保存"
+
+#: core/templates/registration/profile_edit.html:21
+#: core/templates/registration/profile_edit.html:29
+msgid "Konto löschen"
+msgstr "アカウントを削除"
+
+#: core/templates/registration/profile_edit.html:22
+msgid ""
+"Deine persönlichen Daten und Einwilligungen werden gelöscht. "
+"Verkäufernummern, Belege und Abrechnungen bleiben anonymisiert erhalten, "
+"damit die Basarsummen korrekt bleiben."
+msgstr ""
+"個人データと同意情報は削除されます。バザーの合計を正確に保つため、出品者番"
+"号、レシート、精算書は匿名化して保持されます。"
+
+#: core/templates/registration/profile_edit.html:27
+msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgstr "アカウントを取り消し不可能な形で削除します。"
+
+#: core/templates/registration/register.html:8
+msgid ""
+"Vorname, Nachname, E-Mail-Adresse und Passwort sind erforderlich. "
+"Telefonnummer und Adresse sind freiwillig."
+msgstr ""
+"名、姓、メールアドレス、パスワードは必須です。電話番号と住所は任意です。"
+
+#: core/templates/registration/register.html:18
+msgid "Konto erstellen und Bestätigungslink anfordern"
+msgstr "アカウントを作成して確認リンクをリクエスト"
+
+#: core/templates/registration/registration_sent.html:3
+#: core/templates/registration/registration_sent.html:6
+msgid "E-Mail bestätigen"
+msgstr "メールアドレスを確認"
+
+#: core/templates/registration/registration_sent.html:8
+msgid "Der Bestätigungslink ist abgelaufen. Fordere einen neuen Link an."
+msgstr ""
+"確認リンクの有効期限が切れています。新しいリンクをリクエストしてください。"
+
+#: core/templates/registration/registration_sent.html:10
+msgid ""
+"Falls ein unbestätigtes Konto zu der Adresse existiert, wurde ein neuer Link "
+"versendet."
+msgstr ""
+"このアドレスに未確認のアカウントがある場合、新しいリンクを送信しました。"
+
+#: core/templates/registration/registration_sent.html:12
+#, python-format
+msgid "Ein Bestätigungslink wurde an %(email)s gesendet."
+msgstr "確認リンクを %(email)s に送信しました。"
+
+#: core/templates/registration/registration_sent.html:16
+msgid "Bestätigungslink erneut senden"
+msgstr "確認リンクを再送信"
+
+#: core/templates/registration/registration_sent.html:18
+msgid "Link erneut senden"
+msgstr "リンクを再送信"
+
+#: core/templates/role.html:3
+msgid "Ansicht auswählen"
+msgstr "表示を選択"
+
+#: core/templates/role.html:5
+msgid "Wie möchtest du fortfahren?"
+msgstr "どのように進めますか？"
+
+#: core/templates/role.html:10
+msgid "Verkäufernummern, aktuelle Basare und Historie ansehen."
+msgstr "出品者番号、現在のバザー、履歴を表示します。"
+
+#: core/templates/role.html:11
+msgid "Verkäuferansicht öffnen"
+msgstr "出品者画面を開く"
+
+#: core/templates/role.html:17
+msgid "Verkäufe an einer Kasse erfassen."
+msgstr "レジで販売を登録します。"
+
+#: core/templates/role.html:18
+msgid "Kassenansicht öffnen"
+msgstr "レジ画面を開く"
+
+#: core/templates/scanner/error.html:4
+msgid "Scanner Fehler"
+msgstr "スキャナーエラー"
+
+#: core/templates/scanner/error.html:9
+msgid "Scanner-Fehler"
+msgstr "スキャナーエラー"
+
+#: core/templates/scanner/error.html:11
+msgid "Bitte öffnen Sie in der Kasse eine neue Scanner-Session."
+msgstr "レジで新しいスキャナーセッションを開始してください。"
+
+#: core/templates/scanner/join.html:4
+msgid "QR-Code Scanner"
+msgstr "QRコードスキャナー"
+
+#: core/templates/scanner/join.html:7
+msgid "Basar-QR-Code Scanner"
+msgstr "バザーQRコードスキャナー"
+
+#: core/templates/scanner/join.html:8
+#, python-format
+msgid "Verbunden mit: <strong>%(bazaar)s</strong>"
+msgstr "接続先：<strong>%(bazaar)s</strong>"
+
+#: core/templates/scanner/join.html:11
+msgid "Scanbereit"
+msgstr "スキャン準備完了"
+
+#: core/templates/scanner/join.html:13
+msgid "Initialisiere Kamera..."
+msgstr "カメラを初期化中..."
+
+#: core/templates/scanner/join.html:24
+#| msgid "Anderen Preis eingeben"
+msgid "Oder manuell eingeben:"
+msgstr "または手動で入力："
+
+#: core/templates/scanner/join.html:29
+#| msgid "Verkäufernummer wählen"
+msgid "Verkäufernummer auswählen"
+msgstr "出品者番号を選択"
+
+#: core/templates/scanner/join.html:41
+msgid "z. B. 2,50"
+msgstr "例：2.50"
+
+#: core/templates/scanner/join.html:52 core/templates/scanner/join.html:262
+#| msgid "Artikel für %(number)s"
+msgid "Artikel übernommen"
+msgstr "商品を引き継ぎました"
+
+#: core/templates/scanner/join.html:133 core/templates/scanner/join.html:210
+msgid "Scanbereit – halte QR-Code zur Kamera"
+msgstr "スキャン準備完了 — QRコードをカメラにかざしてください"
+
+#: core/templates/scanner/join.html:144
+msgid "Kamera-Zugriff wurde verweigert"
+msgstr "カメラへのアクセスが拒否されました"
+
+#: core/templates/scanner/join.html:146
+msgid "Keine Kamera gefunden"
+msgstr "カメラが見つかりません"
+
+#: core/templates/scanner/join.html:202
+msgid "QR-Code erkannt – nächster Scan in 3 Sekunden"
+msgstr "QRコードを認識しました — 3秒後に次のスキャンが可能です"
+
+#: core/templates/scanner/join.html:258
+msgid "Fehler beim Übertragen"
+msgstr "送信中にエラーが発生しました"
+
+#: core/templates/scanner/join.html:298
+#| msgid "Bitte wähle einen gültigen Basar."
+msgid "Bitte wähle eine Verkäufernummer aus."
+msgstr "出品者番号を選択してください。"
+
+#: core/templates/scanner/join.html:302 core/views.py:1314
+msgid "Bitte gib einen gültigen Preis ein."
+msgstr "有効な価格を入力してください。"
+
+#: core/templates/seller/bazaar_details.html:3
+#, python-format
+msgid "Verkaufsdetails – %(name)s"
+msgstr "販売詳細 – %(name)s"
+
+#: core/templates/seller/bazaar_details.html:6
+#: core/templates/seller/dashboard.html:13
+msgid "Verkäufernummer:"
+msgstr "出品者番号:"
+
+#: core/templates/seller/bazaar_details.html:7
+#: core/templates/seller/dashboard.html:38
+msgid "Basartag:"
+msgstr "バザー開催日:"
+
+#: core/templates/seller/bazaar_details.html:12
+#: core/templates/seller/price_labels.html:3
+#: core/templates/seller/price_labels.html:5
+msgid "Preisschilder generieren"
+msgstr "値札を生成"
+
+#: core/templates/seller/bazaar_details.html:18
+msgid "Endgültige Abrechnung"
+msgstr "最終精算"
+
+#: core/templates/seller/bazaar_details.html:20
+msgid "Derzeitige Auszahlung"
+msgstr "現在の支払額"
+
+#: core/templates/seller/bazaar_details.html:21
+msgid "Vorläufiger Stand. Berücksichtigt sind abgeschlossene Kassenbelege."
+msgstr "暫定状況。完了済みのレジレシートを集計しています。"
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/seller/price_labels.html:40
+#: core/templates/settlement_confirm.html:32 core/views.py:1676
+#: core/views.py:1794
+msgid "Anzahl"
+msgstr "数量"
+
+#: core/templates/seller/bazaar_details.html:27
+#: core/templates/settlement_confirm.html:32
+msgid "Summe"
+msgstr "合計"
+
+#: core/templates/seller/bazaar_details.html:36
+msgid "Bisher wurden keine Artikel verkauft."
+msgstr "商品はまだ販売されていません。"
+
+#: core/templates/seller/bazaar_details.html:47 core/views.py:1831
+#, python-format
+msgid "Betreiberanteil (%(percent)s %%)"
+msgstr "運営者取り分 (%(percent)s %%)"
+
+#: core/templates/seller/bazaar_details.html:50 core/views.py:1835
+msgid "Auszahlung"
+msgstr "支払額"
+
+#: core/templates/seller/bazaar_details.html:54
+msgid "Zurück zum Verkäuferbereich"
+msgstr "出品者エリアに戻る"
+
+#: core/templates/seller/dashboard.html:8
+msgid "Aktuelle Verkäufernummern"
+msgstr "現在の出品者番号"
+
+#: core/templates/seller/dashboard.html:16
+#: core/templates/seller/dashboard.html:64
+msgid "Erfasster Umsatz:"
+msgstr "登録済み売上:"
+
+#: core/templates/seller/dashboard.html:21
+msgid "Preisschilder"
+msgstr "値札"
+
+#: core/templates/seller/dashboard.html:33
+msgid "Für einen Basar anmelden"
+msgstr "バザーに登録"
+
+#: core/templates/seller/dashboard.html:42
+msgid "Frühere Verkäufernummer wiederverwenden (optional)"
+msgstr "以前の出品者番号を再利用（任意）"
+
+#: core/templates/seller/dashboard.html:44
+msgid "Neue Nummer vergeben"
+msgstr "新しい番号を発行"
+
+#: core/templates/seller/dashboard.html:50
+msgid "Verkäufernummer anfordern"
+msgstr "出品者番号を申請"
+
+#: core/templates/seller/dashboard.html:58
+msgid "Basarhistorie"
+msgstr "バザー履歴"
+
+#: core/templates/seller/dashboard.html:65
+msgid "Abrechnung ansehen"
+msgstr "精算を表示"
+
+#: core/templates/seller/dashboard.html:71
+msgid "Noch keine aktuellen oder vergangenen Basare vorhanden."
+msgstr "現在または過去のバザーはまだありません。"
+
+#: core/templates/seller/price_labels.html:6
+#, python-format
+msgid ""
+"Basar: <strong>%(name)s</strong> · Verkäufernummer: <strong>%(number)s</"
+"strong>"
+msgstr "バザー：<strong>%(name)s</strong>・販売者番号：<strong>%(number)s</strong>"
+
+#: core/templates/seller/price_labels.html:9
+msgid "Wählen Sie die gewünschten Preise und Mengen"
+msgstr "希望する価格と数量を選択してください"
+
+#: core/templates/seller/price_labels.html:19
+#: core/templates/seller/price_labels.html:64
+#: core/templates/settlement_confirm.html:10
+#: core/templates/settlement_confirm.html:74
+#: core/templates/settlement_confirm.html:76
+msgid "PDF herunterladen"
+msgstr "PDFをダウンロード"
+
+#: core/templates/seller/price_labels.html:24
+msgid "Verfügbare Preise:"
+msgstr "利用可能な価格："
+
+#: core/templates/seller/price_labels.html:43
+msgid "Schilder"
+msgstr "ラベル"
+
+#: core/templates/seller/price_labels.html:49
+msgid "Keine Preise in den Systemeinstellungen konfiguriert."
+msgstr "システム設定に価格が設定されていません。"
+
+#: core/templates/seller/price_labels.html:55
+#, python-format
+msgid ""
+"Jedes A4-Blatt enthält %(cols)s×%(rows)s = %(total)s kleine Preisschilder. "
+"Mit 3mm Rand um jeden QR-Code und raumfüllendem Preis. Perfekt zum "
+"Ausschneiden und Aufkleben!"
+msgstr "各A4用紙には %(cols)s×%(rows)s = %(total)s 枚の小さな値札が含まれます。各QRコードの周囲には3mmの余白があり、価格が大きく表示されます。切り取って貼り付けるのに最適です！"
+
+#: core/templates/settlement_confirm.html:6
+#, python-format
+msgid "Abrechnung: %(name)s"
+msgstr "精算: %(name)s"
+
+#: core/templates/settlement_confirm.html:7
+msgid ""
+"Der Basar ist abgeschlossen. Die Abrechnung gruppiert Verkäufe nach Preis "
+"und Anzahl; jede Verkäufernummer beginnt auf einer neuen Seite."
+msgstr ""
+"バザーは終了しました。精算では販売を価格と数量ごとにまとめ、各出品者番号を新"
+"しいページに表示します。"
+
+#: core/templates/settlement_confirm.html:9
+#, python-format
+msgid "Die Abrechnung wurde am %(created_at)s erstellt."
+msgstr "精算は %(created_at)s に作成されました。"
+
+#: core/templates/settlement_confirm.html:14
+msgid ""
+"Beim Stornieren bleibt diese Abrechnung als Historie erhalten. Danach kann "
+"der Basar wieder aktiviert und später neu abgerechnet werden."
+msgstr ""
+"取り消した後も、この精算書は履歴として保持されます。その後バザーを再度有効化"
+"し、改めて精算できます。"
+
+#: core/templates/settlement_confirm.html:15
+msgid "Abrechnung stornieren"
+msgstr "精算を取り消す"
+
+#: core/templates/settlement_confirm.html:19
+msgid ""
+"Beim Erstellen werden der konfigurierte Festbetrag pro Verkäufer und der "
+"prozentuale Betreiberanteil am Bruttoumsatz verwendet."
+msgstr ""
+"作成時には、出品者ごとに設定された固定額と、売上総額に対する運営者の割合を使"
+"用します。"
+
+#: core/templates/settlement_confirm.html:22
+msgid "Abrechnung erstellen und PDF herunterladen"
+msgstr "精算を作成してPDFをダウンロード"
+
+#: core/templates/settlement_confirm.html:25
+msgid ""
+"Eine neue Abrechnung kann erst nach Abschluss des Basars erstellt werden."
+msgstr "バザーの終了後に精算を作成できます。"
+
+#: core/templates/settlement_confirm.html:29
+msgid "Gesamtabrechnung"
+msgstr "総合精算"
+
+#: core/templates/settlement_confirm.html:30
+msgid ""
+"Alle abgeschlossenen Verkäufe zusammengefasst nach Artikelpreis. Die Tabelle "
+"hilft beim Abgleichen und Zählen der Verkaufseinnahmen."
+msgstr ""
+"完了済みの販売を商品価格ごとに集計します。この表は売上金の照合や計数に役立ち"
+"ます。"
+
+#: core/templates/settlement_confirm.html:41 core/views.py:1688
+msgid "Keine abgeschlossenen Verkäufe."
+msgstr "完了した販売はありません。"
+
+#: core/templates/settlement_confirm.html:47 core/views.py:1709
+msgid "Gesamtumsatz"
+msgstr "売上合計"
+
+#: core/templates/settlement_confirm.html:48 core/views.py:1711
+msgid "Verkäufergebühren"
+msgstr "出品者手数料"
+
+#: core/templates/settlement_confirm.html:49 core/views.py:1715
+msgid "Betreiberanteile"
+msgstr "運営者取り分"
+
+#: core/templates/settlement_confirm.html:50 core/views.py:1718
+msgid "Gesamtauszahlung"
+msgstr "支払総額"
+
+#: core/templates/settlement_confirm.html:54
+#, python-format
+msgid ""
+"Nicht abgeschlossene Kassenbelege (%(count)s) sind in diesen Summen nicht "
+"enthalten und werden im PDF separat ausgewiesen."
+msgstr ""
+"未完了のレジレシート（%(count)s件）はこれらの合計に含まれず、PDFに別途記載さ"
+"れます。"
+
+#: core/templates/settlement_confirm.html:59
+msgid "Abrechnungshistorie"
+msgstr "精算履歴"
+
+#: core/templates/settlement_confirm.html:62
+msgid "Erstellt"
+msgstr "作成日時"
+
+#: core/templates/settlement_confirm.html:68
+msgid "Aktuell"
+msgstr "現在"
+
+#: core/views.py:116 core/views.py:228
+msgid "Die Datenschutzhinweise sind noch nicht eingerichtet."
+msgstr "プライバシーに関するお知らせがまだ設定されていません。"
+
+#: core/views.py:131
+msgid "Dein Konto wurde erstellt."
+msgstr "アカウントを作成しました。"
+
+#: core/views.py:154
+msgid ""
+"Zu viele Verifizierungsanfragen. Bitte versuche es in einer Stunde erneut."
+msgstr "確認リクエストが多すぎます。1時間後にもう一度お試しください。"
+
+#: core/views.py:192
+msgid "Dein Konto wurde bestätigt."
+msgstr "アカウントを確認しました。"
+
+#: core/views.py:220
+msgid "Für diese Ansicht hast du keine Berechtigung."
+msgstr "この画面を表示する権限がありません。"
+
+#: core/views.py:237
+msgid "Deine Zustimmung wurde gespeichert."
+msgstr "同意を保存しました。"
+
+#: core/views.py:247
+msgid "Deine Benutzerdaten wurden gespeichert."
+msgstr "ユーザー情報を保存しました。"
+
+#: core/views.py:256
+msgid "Bitte bestätige zuerst die Löschung deines Kontos."
+msgstr "アカウント削除を先に確認してください。"
+
+#: core/views.py:281
+msgid ""
+"Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst einen "
+"weiteren Superadmin ein."
+msgstr ""
+"最後に残ったスーパー管理者は削除できません。先に別のスーパー管理者を設定して"
+"ください。"
+
+#: core/views.py:782
+msgid "Systemeinstellungen wurden gespeichert."
+msgstr "システム設定を保存しました。"
+
+#: core/views.py:808
+msgid "Kopie wurde angelegt und kann bearbeitet werden."
+msgstr "コピーを作成しました。編集できます。"
+
+#: core/views.py:834
+msgid "Standardvorlage für neue Basare wurde gespeichert."
+msgstr "新しいバザーの標準テンプレートを保存しました。"
+
+#: core/views.py:864
+msgid "Verkäuferrechnungsvorlage wurde gespeichert."
+msgstr "出品者請求書テンプレートを保存しました。"
+
+#: core/views.py:887
+msgid "Die schreibgeschützte Standardvorlage kann nicht gelöscht werden."
+msgstr "読み取り専用の標準テンプレートは削除できません。"
+
+#: core/views.py:891
+msgid "Bitte wähle zuerst eine andere Standardvorlage für neue Basare."
+msgstr "別のテンプレートを新しいバザーの標準に設定してください。"
+
+#: core/views.py:894
+msgid "Mindestens eine Verkäuferrechnungsvorlage muss vorhanden sein."
+msgstr "出品者請求書テンプレートを少なくとも1つ残す必要があります。"
+
+#: core/views.py:898
+msgid "Verkäuferrechnungsvorlage wurde gelöscht."
+msgstr "出品者請求書テンプレートを削除しました。"
+
+#: core/views.py:902
+msgid "Diese Vorlage wird noch von mindestens einem Basar verwendet."
+msgstr "このテンプレートは少なくとも1つのバザーで使用中です。"
+
+#: core/views.py:921
+msgid "Erstelle ein Plakat für folgende Veranstaltung."
+msgstr "次のイベントのポスターを作成してください。"
+
+#: core/views.py:923
+msgid "Standardvorgaben:"
+msgstr "標準指示:"
+
+#: core/views.py:926
+msgid "Veranstaltungsdaten:"
+msgstr "イベント情報:"
+
+#: core/views.py:927
+#, python-format
+msgid "Basar: %(name)s"
+msgstr "バザー: %(name)s"
+
+#: core/views.py:928
+#, python-format
+msgid "Beginn: %(starts_at)s"
+msgstr "開始日時: %(starts_at)s"
+
+#: core/views.py:935
+#, python-format
+msgid "Nummernvergabe möglich bis: %(deadline)s"
+msgstr "番号発行期限: %(deadline)s"
+
+#: core/views.py:954
+msgid "Basar wurde gespeichert."
+msgstr "バザーを保存しました。"
+
+#: core/views.py:1131
+msgid "Bitte stimme zuerst den Datenschutzhinweisen zu."
+msgstr "先にプライバシーに関するお知らせに同意してください。"
+
+#: core/views.py:1143
+msgid "Die Nummernvergabe für diesen Basar ist geschlossen."
+msgstr "このバザーの番号発行は締め切られています。"
+
+#: core/views.py:1147
+msgid "Du bist für diesen Basar bereits registriert."
+msgstr "このバザーにはすでに登録済みです。"
+
+#: core/views.py:1153
+msgid "Für diesen Basar sind bereits alle Verkäufernummern vergeben."
+msgstr "このバザーの出品者番号はすべて発行済みです。"
+
+#: core/views.py:1175
+msgid "Diese Verkäufernummer ist für den Basar bereits vergeben."
+msgstr "この出品者番号はこのバザーですでに使用されています。"
+
+#: core/views.py:1193
+msgid ""
+"Die Verkäufernummer konnte nicht vergeben werden. Bitte erneut versuchen."
+msgstr "出品者番号を発行できませんでした。もう一度お試しください。"
+
+#: core/views.py:1198
+#, python-format
+msgid "Deine Verkäufernummer lautet %(number)s."
+msgstr "あなたの出品者番号は %(number)s です。"
+
+#: core/views.py:1216
+msgid "Bitte wähle einen gültigen Basar."
+msgstr "有効なバザーを選択してください。"
+
+#: core/views.py:1331 core/views.py:1425
+msgid "Dieser Basar ist nicht mehr aktiv."
+msgstr "このバザーはすでに有効ではありません。"
+
+#: core/views.py:1357
+msgid "Scanner-Eingabe stimmt nicht mit dem Artikel überein."
+msgstr "スキャナー入力が商品と一致しません。"
+
+#: core/views.py:1428
+msgid "Ein leerer Beleg kann nicht abgeschlossen werden."
+msgstr "商品がないレシートは確定できません。"
+
+#: core/views.py:1475
+msgid "Bitte wähle zuerst einen Basar aus."
+msgstr "先にバザーを選択してください。"
+
+#: core/views.py:1488
+msgid "Der ausgewählte Basar ist nicht mehr aktiv."
+msgstr "選択したバザーは有効ではなくなりました。"
+
+#: core/views.py:1644
+#, python-format
+msgid "Abrechnung - %(name)s"
+msgstr "精算 - %(name)s"
+
+#: core/views.py:1664
+#, python-format
+msgid "Gesamtabrechnung: %(name)s"
+msgstr "総合精算: %(name)s"
+
+#: core/views.py:1671
+msgid ""
+"Zusammenfassung aller abgeschlossenen Verkäufe; offene Belege sind separat "
+"aufgeführt."
+msgstr "完了した販売の概要です。未完了レシートは別途記載されています。"
+
+#: core/views.py:1676 core/views.py:1794
+#, python-format
+msgid "Summe (%(currency)s)"
+msgstr "合計 (%(currency)s)"
+
+#: core/views.py:1806
+msgid "Keine verkauften Artikel."
+msgstr "販売された商品はありません。"
+
+#: core/views.py:1863
+msgid "Nicht abgerechnete, offene Kassenbelege"
+msgstr "未精算の未完了レジレシート"
+
+#: core/views.py:1869
+msgid "Diese Belege sind nicht in den Verkäuferabrechnungen enthalten."
+msgstr "これらのレシートは出品者精算書に含まれていません。"
+
+#: core/views.py:1875
+msgid "Erste Erfassung"
+msgstr "最初の登録日時"
+
+#: core/views.py:1878
+msgid "Erfasster Betrag"
+msgstr "登録金額"
+
+#: core/views.py:1977 core/views.py:2008
+msgid "Die Abrechnung ist erst nach Abschluss des Basars verfügbar."
+msgstr "精算はバザー終了後に利用できます。"
+
+#: core/views.py:2023 core/views.py:2071
+#, python-format
+msgid "basar-%(id)s-abrechnung.pdf"
+msgstr "basar-%(id)s-abrechnung.pdf"
+
+#: core/views.py:2042
+msgid "Für diesen Basar gibt es keine aktive Abrechnung zum Stornieren."
+msgstr "このバザーには取り消し可能な有効精算がありません。"
+
+#: core/views.py:2052
+msgid ""
+"Die Abrechnung wurde storniert. Der Basar kann jetzt wieder aktiviert werden."
+msgstr "精算を取り消しました。バザーを再び有効にできます。"
+
+#: core/views.py:2087
+#, python-format
+msgid "basar-%(bazaar_id)s-abrechnung-%(settlement_id)s.pdf"
+msgstr "basar-%(bazaar_id)s-abrechnung-%(settlement_id)s.pdf"
+
+#: core/views.py:2154
+#, python-format
+msgid "Benutzer '%(name)s' wurde aktualisiert."
+msgstr "ユーザー「%(name)s」が更新されました。"
+
+#: core/views.py:2181
+#| msgid "Ich möchte mein Konto unwiderruflich löschen."
+msgid "Du kannst dein eigenes Konto nicht löschen."
+msgstr "自分自身のアカウントは削除できません。"
+
+#: core/views.py:2193
+#| msgid ""
+#| "Der letzte aktive Superadmin kann nicht gelöscht werden. Richte zuerst "
+#| "einen weiteren Superadmin ein."
+msgid ""
+"Der letzte aktive Administrator kann nicht gelöscht werden. Richte zuerst "
+"einen weiteren Administrator ein."
+msgstr "最後に残った有効な管理者は削除できません。先に別の管理者を設定してください。"
+
+#: core/views.py:2221
+msgid "Benutzer wurde anonymisiert und gelöscht."
+msgstr "ユーザーは匿名化され、削除されました。"
+
+#: core/views.py:2238
+msgid "Kein Basar ausgewählt"
+msgstr "バザーが選択されていません"
+
+#: core/views.py:2243
+#| msgid "Dieser Basar ist nicht mehr aktiv."
+msgid "Basar nicht gefunden oder nicht mehr aktiv"
+msgstr "バザーが見つからないか、すでに有効ではありません"
+
+#: core/views.py:2265
+msgid "QR-Code-Bibliothek nicht installiert"
+msgstr "QRコードライブラリがインストールされていません"
+
+#: core/views.py:2302
+msgid "Ungültiger Code"
+msgstr "無効なコード"
+
+#: core/views.py:2307
+msgid "Code nicht gefunden"
+msgstr "コードが見つかりません"
+
+#: core/views.py:2314
+msgid "Session abgelaufen. Neue Session in der Kasse starten."
+msgstr "セッションの有効期限が切れました。レジで新しいセッションを開始してください。"
+
+#: core/views.py:2321
+msgid "Scanner-Session wurde geschlossen."
+msgstr "スキャナーセッションが閉じられました。"
+
+#: core/views.py:2359
+msgid "Fehlende Parameter"
+msgstr "パラメーターが不足しています"
+
+#: core/views.py:2364
+msgid "Code ungültig"
+msgstr "コードが無効です"
+
+#: core/views.py:2369
+msgid "Session abgelaufen"
+msgstr "セッションの有効期限が切れました"
+
+#: core/views.py:2375
+msgid "Scanner-Session geschlossen"
+msgstr "スキャナーセッションが閉じられました"
+
+#: core/views.py:2385
+msgid "QR-Code-Format ungültig"
+msgstr "QRコードの形式が無効です"
+
+#: core/views.py:2394
+msgid "Ungültige Werte im QR-Code"
+msgstr "QRコードに無効な値が含まれています"
+
+#: core/views.py:2406
+msgid "Rate-Limit erreicht. Bitte warten."
+msgstr "レート制限に達しました。しばらくお待ちください。"
+
+#: core/views.py:2442 core/views.py:2492
+#| msgid "Berechtigungen"
+msgid "Keine Berechtigung"
+msgstr "権限がありません"
+
+#: core/views.py:2446 core/views.py:2496
+#| msgid "Kein Ausdruck erforderlich."
+msgid "Code erforderlich"
+msgstr "コードが必要です"
+
+#: core/views.py:2451 core/views.py:2501
+#| msgid "Kassenansicht öffnen"
+msgid "Session nicht gefunden"
+msgstr "セッションが見つかりません"
+
+#: core/views.py:2623
+#| msgid "Bitte wähle zuerst einen Basar aus."
+msgid "Bitte wählen Sie mindestens einen Preis."
+msgstr "少なくとも1つの価格を選択してください。"
+
+#: core/views.py:2636
+#, python-brace-format
+msgid "Fehler beim Generieren des PDFs: {}"
+msgstr "PDFの生成中にエラーが発生しました：{}"

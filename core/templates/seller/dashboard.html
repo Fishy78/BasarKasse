@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Verkäuferbereich" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Verkäuferbereich" %}</h1>
+
+{% if current_registrations %}
+  <h2>{% translate "Aktuelle Verkäufernummern" %}</h2>
+  <div class="grid">
+    {% for registration in current_registrations %}
+      <section class="card">
+        <h3>{{ registration.bazaar.name }}</h3>
+        <p>{% translate "Verkäufernummer:" %} <strong>{{ registration.seller_number }}</strong></p>
+        {% if registration.bazaar.seller_can_view_current %}
+          {% if registration.bazaar.status == "open" %}
+            <p>{% translate "Erfasster Umsatz:" %} {{ registration.total_sales|default:"0.00"|floatformat:2 }} {{ global_currency }}</p>
+          {% endif %}
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            {% if registration.bazaar.status == "open" or registration.bazaar.status == "planned" %}
+              <a class="button" href="{% url 'seller_price_labels_form' registration.bazaar_id %}" style="flex: 1;">
+                🏷️ {% translate "Preisschilder" %}
+              </a>
+            {% endif %}
+            <a class="button secondary" href="{% url 'seller_bazaar_details' registration.bazaar_id %}">{% translate "Details" %}</a>
+          </div>
+        {% endif %}
+      </section>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if current_bazaars %}
+  <h2>{% translate "Für einen Basar anmelden" %}</h2>
+  <div class="grid">
+    {% for bazaar in current_bazaars %}
+      <section class="card">
+        <h3>{{ bazaar.name }}</h3>
+        <p>{% translate "Basartag:" %} {{ bazaar.starts_at|date:"SHORT_DATE_FORMAT" }}</p>
+        <form method="post" action="{% url 'join_bazaar' bazaar.pk %}">
+          {% csrf_token %}
+          {% if previous_registrations %}
+            <label for="reuse-{{ bazaar.pk }}">{% translate "Frühere Verkäufernummer wiederverwenden (optional)" %}</label>
+            <select id="reuse-{{ bazaar.pk }}" name="reuse_registration">
+              <option value="">{% translate "Neue Nummer vergeben" %}</option>
+              {% for previous in previous_registrations %}
+                <option value="{{ previous.pk }}">{{ previous.seller_number }} – {{ previous.bazaar.name }}</option>
+              {% endfor %}
+            </select>
+          {% endif %}
+          <button type="submit">{% translate "Verkäufernummer anfordern" %}</button>
+        </form>
+      </section>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if history_registrations %}
+  <h2>{% translate "Basarhistorie" %}</h2>
+  <div class="grid">
+    {% for registration in history_registrations %}
+      <section class="card">
+        <h3>{{ registration.bazaar.name }}</h3>
+        <p>{{ registration.bazaar.starts_at|date:"SHORT_DATE_FORMAT" }} · {% translate "Verkäufernummer" %} {{ registration.seller_number }}</p>
+        <p>{% translate "Erfasster Umsatz:" %} {{ registration.total_sales|default:"0.00"|floatformat:2 }} {{ global_currency }}</p>
+        <a class="button" href="{% url 'seller_bazaar_details' registration.bazaar_id %}">{% translate "Abrechnung ansehen" %}</a>
+      </section>
+    {% endfor %}
+  </div>
+{% endif %}
+{% if not current_bazaars and not current_registrations and not history_registrations %}
+  <p>{% translate "Noch keine aktuellen oder vergangenen Basare vorhanden." %}</p>
+{% endif %}
+{% endblock %}

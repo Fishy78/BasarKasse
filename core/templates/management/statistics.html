@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Statistiken" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Statistiken" %}</h1>
+<p>{% translate "Berücksichtigt werden ausschließlich abgeschlossene Belege und nicht stornierte Artikelpositionen. Die Einnahmen sind Bruttoumsätze." %}</p>
+<style>
+  .statistics-chart { display: grid; gap: .75rem; }
+  .statistics-row { display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(8rem, 2fr) minmax(5rem, auto); align-items: center; gap: .75rem; }
+  .statistics-label { overflow-wrap: anywhere; }
+  .statistics-track { height: 1.1rem; overflow: hidden; border-radius: .4rem; background: #e5e7eb; }
+  .statistics-bar { height: 100%; min-width: 2px; border-radius: inherit; background: #1769aa; }
+  @media (max-width: 560px) {
+    .statistics-row { grid-template-columns: minmax(0, 1fr) auto; gap: .35rem .65rem; }
+    .statistics-track { grid-column: 1 / -1; grid-row: 2; }
+  }
+</style>
+
+<section class="card">
+  <h2>{% translate "Verkaufsentwicklung je Basar" %}</h2>
+  {% if sales_chart %}
+    <div class="statistics-chart">
+      {% for row in sales_chart %}
+        <div class="statistics-row">
+          <span class="statistics-label"><a href="{% url 'bazaar_statistics' row.bazaar_id %}">{{ row.label }}</a></span>
+          <div class="statistics-track" role="img" aria-label="{% blocktranslate with label=row.label value=row.value %}{{ label }}: {{ value }} Artikel{% endblocktranslate %}">
+            <div class="statistics-bar" style="width: {{ row.bar_width }}%"></div>
+          </div>
+          <strong>{% blocktranslate with value=row.value %}{{ value }} Artikel{% endblocktranslate %}</strong>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>{% translate "Es gibt noch keine Basare." %}</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>{% translate "Einnahmeentwicklung je Basar" %}</h2>
+  {% if revenue_chart %}
+    <div class="statistics-chart">
+      {% for row in revenue_chart %}
+        <div class="statistics-row">
+          <span class="statistics-label"><a href="{% url 'bazaar_statistics' row.bazaar_id %}">{{ row.label }}</a></span>
+          <div class="statistics-track" role="img" aria-label="{% blocktranslate with label=row.label value=row.value|floatformat:2 currency=currency %}{{ label }}: {{ value }} {{ currency }}{% endblocktranslate %}">
+            <div class="statistics-bar" style="width: {{ row.bar_width }}%"></div>
+          </div>
+          <strong>{{ row.value|floatformat:2 }} {{ currency }}</strong>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>{% translate "Es gibt noch keine Basare." %}</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>{% translate "Artikelverteilung nach Preis" %}</h2>
+  {% if price_chart %}
+    <div class="statistics-chart">
+      {% for row in price_chart %}
+        <div class="statistics-row">
+          <span class="statistics-label">{{ row.label }}</span>
+          <div class="statistics-track" role="img" aria-label="{% blocktranslate with value=row.value label=row.label %}{{ value }} Artikel zu {{ label }}{% endblocktranslate %}">
+            <div class="statistics-bar" style="width: {{ row.bar_width }}%"></div>
+          </div>
+          <strong>{% blocktranslate with value=row.value %}{{ value }} Artikel{% endblocktranslate %}</strong>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>{% translate "Es wurden noch keine Artikel verkauft." %}</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>{% translate "Basarübersicht" %}</h2>
+  <table>
+    <thead><tr><th>{% translate "Basar" %}</th><th>{% translate "Beginn" %}</th><th>{% translate "Artikel" %}</th><th class="right">{% translate "Bruttoumsatz" %}</th><th></th></tr></thead>
+    <tbody>
+      {% for bazaar in bazaars %}
+        <tr>
+          <td>{{ bazaar.name }}</td>
+          <td>{{ bazaar.starts_at|date:"SHORT_DATETIME_FORMAT" }}</td>
+          <td>{{ bazaar.item_count }}</td>
+          <td class="right">{{ bazaar.revenue|floatformat:2 }} {{ currency }}</td>
+          <td><a href="{% url 'bazaar_statistics' bazaar.pk %}">{% translate "Details" %}</a></td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="5">{% translate "Es wurden noch keine Basare angelegt." %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+{% endblock %}

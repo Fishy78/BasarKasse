@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Ansicht auswählen" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Wie möchtest du fortfahren?" %}</h1>
+<div class="grid">
+  <form class="card" method="post">{% csrf_token %}
+    <input type="hidden" name="role" value="seller">
+    <h2>{% translate "Verkäufer" %}</h2>
+    <p>{% translate "Verkäufernummern, aktuelle Basare und Historie ansehen." %}</p>
+    <button type="submit">{% translate "Verkäuferansicht öffnen" %}</button>
+  </form>
+  {% if can_cashier %}
+  <form class="card" method="post">{% csrf_token %}
+    <input type="hidden" name="role" value="cashier">
+    <h2>{% translate "Kasse" %}</h2>
+    <p>{% translate "Verkäufe an einer Kasse erfassen." %}</p>
+    <button type="submit">{% translate "Kassenansicht öffnen" %}</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

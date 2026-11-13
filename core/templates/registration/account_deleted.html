@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Konto gelöscht" %}{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>{% translate "Konto gelöscht" %}</h1>
+  <p>{% translate "Dein Konto und deine persönlichen Daten wurden gelöscht. Verkäufernummern, Belege und Basarabrechnungen bleiben anonymisiert erhalten." %}</p>
+  <a class="button" href="{% url 'home' %}">{% translate "Zur Startseite" %}</a>
+</section>
+{% endblock %}

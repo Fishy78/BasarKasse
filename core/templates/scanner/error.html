@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Scanner Fehler" %}{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 400px; margin: 2rem auto; text-align: center;">
+  <h1 style="color: #a82d36;">⚠️</h1>
+  <h2>{% translate "Scanner-Fehler" %}</h2>
+  <p style="font-size: 1.1rem; margin: 1.5rem 0;">{{ error }}</p>
+  <p>{% translate "Bitte öffnen Sie in der Kasse eine neue Scanner-Session." %}</p>
+  <a href="{% url 'home' %}" class="button">{% translate "Zur Startseite" %}</a>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load safe_html %}
+{% block title %}{% translate "Datenschutzerklärung" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Datenschutzerklärung" %}</h1>
+{% if global_settings.consent_text %}
+  <section class="card consent-content">
+    {{ global_settings.consent_text|safe_html }}
+  </section>
+{% else %}
+  <p>{% translate "Die Datenschutzerklärung ist derzeit noch nicht hinterlegt." %}</p>
+{% endif %}
+<section class="card">
+  <h2>{% translate "Cookies und ähnliche Technologien" %}</h2>
+  {% include "partials/cookie_details.html" %}
+</section>
+{% endblock %}

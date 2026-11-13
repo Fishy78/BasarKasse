@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load safe_html %}
+{% block title %}{% translate "Datenschutzhinweise bestätigen" %}{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>{% translate "Aktualisierte Datenschutzhinweise" %}</h1>
+  <div class="consent-content">{{ settings.consent_text|safe_html }}</div>
+  <p>{% blocktranslate with version=settings.consent_version %}Version {{ version }}{% endblocktranslate %}</p>
+  <form method="post">{% csrf_token %}
+    <label><input style="width:auto" type="checkbox" name="consent" value="accepted" required>
+      {% translate "Ich stimme den Datenschutzhinweisen zu." %}
+    </label>
+    <button type="submit">{% translate "Zustimmung speichern" %}</button>
+  </form>
+</section>
+{% endblock %}
